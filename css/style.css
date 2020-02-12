@@ -353,11 +353,20 @@ ul#menu-main > li > a:focus {
  	padding: 1em 0;
 	}
 
+	.title{
+		font-size: calc(22px + 2vw);
+	}
+
+	.topic{
+		font-size: calc(15px + 2vw);
+	}
+
 	p{
 		padding-left: 2vw;
 		padding-right: 2vw;
-		font-size: calc(11px + 0.5vw);
+		font-size: calc(16px + 0.5vw);
 	}
+
 	.image{
 		display: block;
 		max-width: 100%;
