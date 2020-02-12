@@ -133,12 +133,11 @@ h6 {
 .topic{
 	margin-top: 2em;
 	margin-bottom: 0.1em;
-	font-size: calc(5px + 1vw);
+	font-size: calc(10px + 1vw);
 }
 
 .image_group{
 	padding-left: 15vw;
-
 }
 
 
@@ -352,5 +351,15 @@ ul#menu-main > li > a:focus {
 @media only screen  and (min-device-width : 320px)  and (max-device-width : 480px) {
  	section.section {
  	padding: 1em 0;
+	}
+
+	p{
+		padding-left: 2vw;
+		padding-right: 2vw;
+		font-size: calc(11px + 0.5vw);
+	}
+	.image{
+		display: block;
+		max-width: 100%;
 	}
 }
