@@ -1,0 +1,12 @@
+.idea
+*.pyc
+.DS_Store
+.cache
+build
+ext
+.vscode
+__pycache__
+data
+.ipynb_checkpoints
+*.so
+
