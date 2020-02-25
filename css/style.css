@@ -138,6 +138,7 @@ h6 {
 
 .image_group{
 	padding-left: 15vw;
+
 }
 
 
@@ -353,6 +354,7 @@ ul#menu-main > li > a:focus {
  	padding: 1em 0;
 	}
 
+
 	.title{
 		font-size: calc(22px + 2vw);
 	}
@@ -371,4 +373,5 @@ ul#menu-main > li > a:focus {
 		display: block;
 		max-width: 100%;
 	}
+
 }
