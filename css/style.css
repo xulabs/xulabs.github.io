@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 /*
 ===========================
@@ -378,3 +379,382 @@ ul#menu-main > li > a:focus {
 		max-width: 100%;
 	}
 }
+=======
+/*
+/*
+===========================
+CONTENTS:
+
+01 General
+02 Typography
+03 Typography in different windows
+04 Navigation
+05 Media queries
+===========================
+*/
+/* Import css */
+/* Google font */
+
+@import url("../../../../fonts.googleapis.com/css-family=Open+Sans-300,400,600,700.css")/*tpa=http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700*/;
+/* bootstrap */
+@import url("bootstrap.css")/*tpa=http://iweb-studio.com/wrapbootstrap/maxim/css/bootstrap.css*/;
+/* bootstrap responsive */
+@import url("bootstrap-responsive.css")/*tpa=http://iweb-studio.com/wrapbootstrap/maxim/css/bootstrap-responsive.css*/;
+
+/* =========================================================
+01. General
+============================================================ */
+
+div, article, section, header, footer, nav, li {
+	position:relative;
+}
+.group:after {
+	display:block;
+	height:0;
+	clear:both;
+	content:".";
+	visibility:hidden; /* For clearing */
+}
+body {
+	background:#fff;
+	color: #444;
+	font-size: 16px;
+	font-weight:300;
+	font-family:'Open Sans', Arial, sans-serif;
+}
+
+body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+::-moz-selection {
+	color:#333;
+}
+::selection {
+	color:#333;
+}
+
+/* scroll to top */
+.scrollup{
+    position:fixed;
+	width:32px;
+	height:32px;
+    bottom:20px;
+    right:20px;
+}
+
+a.scrollup {
+	outline:0;
+	text-decoration:none;
+}
+
+a.scrollup:hover,a.scrollup:active,a.scrollup:focus {
+	opacity:1;
+	text-decoration:none;
+	-webkit-transition: all 400ms ease-out 0s;	
+	   -moz-transition: all 400ms ease-out 0s;
+		 -o-transition: all 400ms ease-out 0s;
+		    transition: all 400ms ease-out 0s;
+}
+a.scrollup i:hover {
+	text-decoration:none;
+}
+
+
+/* =========================================================
+02. Typography
+============================================================ */
+
+p {
+	line-height: 1.6em;
+	margin-top: 2em;
+	padding-left: 15vw;
+	padding-right: 15vw;
+	margin-bottom: 2em;
+	font-size: calc(8px + 0.5vw);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	color: #312f2b;
+	line-height:1.1em;
+	font-family:'Open Sans', Arial, sans-serif;
+}
+h1 {
+	font-size: 30px;
+	margin-bottom:20px;
+	text-align: center;
+	
+}
+h2 {
+	font-size: 30px;
+	margin-bottom:20px;
+}
+h3 {
+	font-size: 26px;
+	margin-bottom:20px;
+}
+h4 {
+	font-size: 22px;
+	margin-bottom:20px;
+}
+h5 {
+	font-size: 18px;
+	margin-bottom:15px;
+}
+h6 {
+	font-size: 16px;
+	margin-bottom:10px;
+}
+
+.text{
+	margin-top: 0.65em;
+	margin-bottom: 0.65em;
+}
+
+.topic{
+	margin-top: 2em;
+	margin-bottom: 0.1em;
+	font-size: calc(10px + 1vw);
+}
+
+.image_group{
+	padding-left: 15vw;
+
+}
+
+
+/*
+h1{
+    font-family: 'Arial', "Time New Roman";
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    margin: 50px 50px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 30px;
+    margin: 40px 100px 40px 100px;
+}
+*/
+
+/* =========================================================
+03. Typography in different windows
+============================================================ */
+
+.home_page{
+	margin: 0px 0px 0px 0px;
+	
+}
+.title{
+	font-family: 'Arial', "Time New Roman";
+    font-size: calc(15px + 2vw);
+	font-weight: bold;
+	text-align: center;
+	margin-top: 1.35em;
+	margin-bottom: 1.25em;
+}
+.image{
+	display: block;
+	max-width: 60%;
+	height: auto;
+  	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+/* =========================================================
+04. Navigation
+============================================================ */
+
+.navbar-fixed-top .container {
+/* Uncomment to make nav expand full width */
+	background-color: #c41e3a;
+}
+.navbar .brand {
+	margin-left:0;
+	padding: 0;
+	margin-top: 1.05em;
+}
+.navbar .brand a {
+	padding: 0;
+	color: #fff;
+	font-size: 1.1em;
+	margin-left: 0;
+	font-weight: 400;
+	text-transform:uppercase;
+}
+.navbar .brand a:hover {
+	text-decoration: none;
+ transition: color .15s linear;
+ -webkit-transition: color .15s linear;
+ -moz-transition: color .15s linear;
+}
+.navbar .brand a:focus {
+	outline: none;
+}
+.navbar-inner {
+	
+	min-height: 4.75em;
+}
+.navbar-inverse .navbar-inner {
+	background-repeat: repeat;
+	border-color: #c41e3a;
+}
+.navbar-wrapper {
+	overflow:hidden;
+}
+#menu-main {
+	margin-top: 1.125em;
+}
+ul#menu-main > li > a {
+	font-weight: 600;
+	color: #fff;
+	font-size:14px;
+	text-transform:uppercase;
+}
+ul#menu-main > li > a:hover {
+	padding: 9px 15px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+ul#menu-main > li > a:focus {
+	outline:0;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	text-shadow: none;
+}
+
+/* =========================================================
+05. Media queries
+============================================================ */
+
+
+ @media (min-width: 768px) and (max-width: 979px) {
+	body {
+		padding-left:0 ;
+		padding-right:0;
+		padding:0;
+	}
+	
+	.navbar-inner {
+		background-color: #c41e3a;	
+	 	padding-right: 20px;
+	 	padding-left: 20px;
+	 
+	}
+	
+	.navbar-inner h1.brand {
+		margin-left:20px;
+	}
+	
+	.navbar-inner .btn-navbar {
+		margin:20px 20px 0;
+	}
+	
+	.container {
+	 padding-right: 20px;
+	 padding-left: 20px;
+	}	
+	.navbar-inverse .navbar-inner {
+		padding:0 0 0px;
+	}
+	
+	.nav-collapse {
+		text-align:center;
+		width:100%;
+	}
+
+}
+
+@media (max-width: 767px) {
+	body {
+		padding-left:0 ;
+		padding-right:0;
+		padding:0;
+	}
+	.navbar-inner {
+	 padding-right: 20px;
+	 padding-left: 20px;	
+	}
+	
+	.navbar-inner h1.brand {
+		margin-left:20px;
+	}
+	
+	.navbar-inner .btn-navbar {
+		margin:20px 20px 0%;
+	}
+	
+	.container {
+	 padding-right: 20px;
+	 padding-left: 20px;
+	}	
+	.navbar-inverse .navbar-inner {
+		padding:0 20px 0px;
+	}
+	
+	.nav-collapse {
+		text-align:center;
+		width:100%;
+	}
+	#portfolio-wrap .grid {
+		width: 25%;
+		background-color: #c41e3a;
+	}
+}
+    
+    /* Smaller screens ----------- */
+@media (max-width : 480px) {
+
+	#header-wrapper {
+		padding-top:80px;
+	}
+
+	#team .team-thumb {
+		 margin-right: auto;
+		 margin-left: auto;
+		 width: 150px;
+		 display: block;
+		 text-align:center;
+	}
+
+	#portfolio-wrap .grid {
+		width: 50%;
+	}
+
+}
+    
+    /* Smartphones (portrait and landscape) ----------- */
+@media only screen  and (min-device-width : 320px)  and (max-device-width : 480px) {
+ 	section.section {
+ 	padding: 1em 0;
+	}
+
+
+	.title{
+		font-size: calc(22px + 2vw);
+	}
+
+	.topic{
+		font-size: calc(15px + 2vw);
+	}
+
+	p{
+		padding-left: 2vw;
+		padding-right: 2vw;
+		font-size: calc(16px + 0.5vw);
+	}
+
+	.image{
+		display: block;
+		max-width: 100%;
+	}
+
+}
+>>>>>>> 5bd5c162ab3f444d95b9cee5375e87b32e998cdb
