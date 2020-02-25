@@ -49,7 +49,8 @@ body {
 	color:#333;
 }
 ::selection {
-	color:#333;
+    background-color:rgb(155, 206, 248);
+    text-shadow:none;
 }
 
 /* scroll to top */
@@ -77,6 +78,11 @@ a.scrollup:hover,a.scrollup:active,a.scrollup:focus {
 a.scrollup i:hover {
 	text-decoration:none;
 }
+
+/* change url link color */
+a:link { 
+	color:#c41e3a; 
+	} 
 
 
 /* =========================================================
