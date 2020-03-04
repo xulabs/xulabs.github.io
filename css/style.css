@@ -49,8 +49,8 @@ body {
 	color:#333;
 }
 ::selection {
-    background-color:rgb(155, 206, 248);
-    text-shadow:none;
+	background-color:rgb(155, 206, 248);
+	text-shadow:none;
 }
 
 /* scroll to top */
@@ -80,7 +80,7 @@ a.scrollup i:hover {
 }
 
 /* change url link color */
-a:link { 
+a { 
 	color:#c41e3a; 
 	} 
 
@@ -89,13 +89,18 @@ a:link {
 02. Typography
 ============================================================ */
 
-p {
+p, ol {
 	line-height: 1.6em;
 	margin-top: 2em;
 	padding-left: 15vw;
 	padding-right: 15vw;
 	margin-bottom: 2em;
 	font-size: calc(8px + 0.5vw);
+}
+
+li {
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -369,7 +374,7 @@ ul#menu-main > li > a:focus {
 		font-size: calc(15px + 2vw);
 	}
 
-	p{
+	p, ol{
 		padding-left: 2vw;
 		padding-right: 2vw;
 		font-size: calc(16px + 0.5vw);
