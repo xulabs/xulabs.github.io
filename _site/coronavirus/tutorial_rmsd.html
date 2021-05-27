@@ -1,0 +1,549 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Using RMSD to Compare Two Protein Structures - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Using RMSD to Compare Two Protein Structures">
+<meta property="og:url" content="http://localhost:4000/coronavirus/tutorial_rmsd">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/coronavirus/tutorial_rmsd">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/home">A Tale of Two Doctors<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 1: Protein Structure Prediction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/structure_intro">An Introduction to Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/ab_initio">Ab initio Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/homology">Homology Modeling for Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/accuracy">Comparing Protein Structures to Assess Model Accuracy<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_1">Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 2: Comparing SARS-CoV-2 and SARS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/multiseq">Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br></a></li>
+          
+            <li><a href="/coronavirus/structural_diff">Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br></a></li>
+          
+            <li><a href="/coronavirus/NAMD">Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_2">Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring ProDy)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/tutorial_ab_initio">Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_homology">Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_rmsd" class="active">Using RMSD to Compare Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_multiseq">Finding Local Differences in Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_visualization">Visualizing Specific Regions of Interest within a Protein Structure<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_NAMD">Computing the Energy Contributed by a Local Region of a Bound Complex<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_GNM">Molecular Dynamics Analysis with GNM<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_ANM">ANM Simulations Add Directionality to GNM<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Using RMSD to Compare Two Protein Structures">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Using RMSD to Compare Two Protein Structures
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#getting-started">Getting started</a></li><li><a href="#calculating-rmsd-of-two-chains">Calculating RMSD of two chains</a></li><li><a href="#merging-multiple-chains-to-compute-rmsd-of-an-overall-structure">Merging multiple chains to compute RMSD of an overall structure</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>In this tutorial, we will demonstrate how to apply the Kabsch algorithm to compute the RMSD between two protein structures. In particular, we will show how to compare the experimentally validated structure of the SARS-CoV-2 spike protein (PDB entry: <a href="http://www.rcsb.org/structure/6VXX">6vxx</a>) against one of our resulting from homology modeling. You should then feel empowered to run this comparison on our other spike protein predictions, as well as compare our <em>ab initio</em> prediction of human hemoglobin subunit alpha against its validated structure (PDB entry: <a href="http://www.rcsb.org/structure/1SI4">1si4</a>).</p>
+
+<p>Below is a folder containing all the models that we produced so far along with the experimentally validated structures. Please consult the included <code class="language-plaintext highlighter-rouge">README.txt</code> to see which PDB structure to use for comparison against each predicted structure.</p>
+
+<p><a href="../_pages/coronavirus/files/RMSD_Tutorial.zip">Download models</a></p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>This tutorial will be our first encounter with <strong>ProDy</strong>, our featured software resource in this module. ProDy is an open-source Python package that allows users to perform protein structural dynamics analysis. Its flexibility allows users to select specific parts or atoms of the structure for conducting normal mode analysis and structure comparison. If you’re not interested in following along, you can download a Jupyter notebook along with all files needed to run this tutorial below.</p>
+
+<p><a href="../tutorials/RMSD_Tutorial_Code.zip" download="">Download completed tutorial</a></p>
+
+<p>To get started, make sure that you have the following software resources installed.</p>
+
+<p><a href="https://www.python.org/downloads/" target="_blank">Python</a> (2.7, 3.5, or later)</p>
+
+<p><a href="http://prody.csb.pitt.edu/downloads/" target="_blank">ProDy</a></p>
+
+<p><a href="https://numpy.org/install/" target="_blank">NumPy</a></p>
+
+<p><a href="https://biopython.org/" target="_blank">Biopython</a></p>
+
+<p><a href="https://ipython.org/" target="_blank">IPython</a></p>
+
+<p><a href="https://matplotlib.org/" target="_blank">Matplotlib</a></p>
+
+<p>We recommend that you create a workspace (directory) for storing created files when using ProDy or storing protein <code class="language-plaintext highlighter-rouge">.pdb</code> files. Open your computer’s terminal app and navigate to this directory using the <code class="language-plaintext highlighter-rouge">cd</code> (if you are new to using a command line interface, please consult <a href="https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855" target="_blank">this introduction</a>.). Then, start IPython using the following command.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ipython</span> <span class="o">--</span><span class="n">pylab</span>
+</code></pre></div></div>
+
+<p>First, import needed packages and turn interactive mode on (you only need to do this once per session).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In[#]: from pylab import *
+In[#]: from prody import *
+In[#]: ion()
+</code></pre></div></div>
+
+<h2 id="calculating-rmsd-of-two-chains">Calculating RMSD of two chains</h2>
+
+<p>We will first compute RMSD for a single chain of the spike protein homotrimer. Because we are dealing with the entire spike protein, we will need to “match” chains that have the greatest paired similarity between our prediction and the result.</p>
+
+<p>The first built-in ProDy function that we will use, called <code class="language-plaintext highlighter-rouge">parsePDB</code>, parses a protein structure in <code class="language-plaintext highlighter-rouge">.pdb</code> format. To use our own protein structure, make sure that the <code class="language-plaintext highlighter-rouge">.pdb</code> file is in the current directory. Let’s parse in one of our models we obtained from homology modeling of the SARS-CoV-2 Spike protein, SWISS1. You can use your own SARS-CoV-2 Spike protein model that you generated. In this tutorial, our model will be called <code class="language-plaintext highlighter-rouge">swiss1.pdb</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: struct1 = parsePDB(‘swiss1.pdb’)
+</span></code></pre></div></div>
+
+<p>Because we want to find out how well <code class="language-plaintext highlighter-rouge">swiss1.pdb</code> performed, we will compare it to the determined protein structure of SARS-CoV-2 Spike protein in the Protein Data Bank. Enter the code shown below. Because the <code class="language-plaintext highlighter-rouge">.pdb</code> extension is missing, this command will prompt the console to search for <code class="language-plaintext highlighter-rouge">6vxx</code>, the SARS-CoV-2 Spike protein, from the Protein Data Bank and download the <code class="language-plaintext highlighter-rouge">.pdb</code> file into the current directory. It will then save the structure as the variable <code class="language-plaintext highlighter-rouge">struct2</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: struct2 = parsePDB(‘6vxx’)
+</span></code></pre></div></div>
+
+<p>With the protein structures parsed, we can now match chains. To do so, we use a built-in function <code class="language-plaintext highlighter-rouge">matchChains</code> with a sequence identity threshold of 75% and an overlap threshold of 80% is specified (the default is 90% for both parameters). The following function call stores the result in a 2D array called <code class="language-plaintext highlighter-rouge">matches</code>. <code class="language-plaintext highlighter-rouge">matches[i]</code> denotes the <em>i</em>-th match found between two chains that are stored as <code class="language-plaintext highlighter-rouge">matches[i][0]</code> and <code class="language-plaintext highlighter-rouge">matches[i][1]</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: matches = matchChains(struct1, struct2, seqid = 75, overlap = 80)
+</span></code></pre></div></div>
+
+<p>We will now define our own function that will print matched chains.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: def printMatch(match):
+</span><span class="p">...:</span> <span class="k">print</span><span class="p">(</span><span class="s">'Chain 1 : {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="p">...:</span> <span class="k">print</span><span class="p">(</span><span class="s">'Chain 2 : {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="p">...:</span> <span class="k">print</span><span class="p">(</span><span class="s">'Length : {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+<span class="p">...:</span> <span class="k">print</span><span class="p">(</span><span class="s">'Seq identity: {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="p">...:</span> <span class="k">print</span><span class="p">(</span><span class="s">'Seq overlap : {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+<span class="p">...:</span> <span class="k">print</span><span class="p">(</span><span class="s">'RMSD : {}</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">calcRMSD</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">match</span><span class="p">[</span><span class="mi">1</span><span class="p">])))</span>
+<span class="p">...:</span>
+</code></pre></div></div>
+
+<p>Let’s call our new function <code class="language-plaintext highlighter-rouge">printmatch</code> on our previous variable <code class="language-plaintext highlighter-rouge">matches</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: for match in matches:
+</span><span class="err">…</span><span class="p">:</span> <span class="n">printMatch</span><span class="p">(</span><span class="n">match</span><span class="p">)</span>
+<span class="err">…</span><span class="p">:</span>
+</code></pre></div></div>
+
+<p>You should see the results printed out as follows.</p>
+
+<p><img src="../assets/images/RMSDResult1.png" alt="image-center" class="align-center" /></p>
+
+<p><img src="../assets/images/RMSDResult2.png" alt="image-center" class="align-center" /></p>
+
+<p>For example, <code class="language-plaintext highlighter-rouge">matches[0][0]</code> corresponds to <code class="language-plaintext highlighter-rouge">Chain 1 : AtomMap Chain A from swiss1 -&gt; Chain A from 6vxx</code> and <code class="language-plaintext highlighter-rouge">matches[5][1]</code> corresponds to <code class="language-plaintext highlighter-rouge">Chain 2: AtomMap Chain C from 6vxx -&gt; Chain B from swiss1</code>.</p>
+
+<p>Say that we want to calculate the RMSD score between the matched <code class="language-plaintext highlighter-rouge">Chain B</code> from <code class="language-plaintext highlighter-rouge">swiss1</code> and <code class="language-plaintext highlighter-rouge">Chain B</code> from <code class="language-plaintext highlighter-rouge">6vxx</code>. This will correspond to <code class="language-plaintext highlighter-rouge">matches[4][0]</code> and <code class="language-plaintext highlighter-rouge">matches[4][1]</code>. After accessing these two structures, we need to to apply the Kabsch algorithm to superimpose and rotate the two structures so that they are as similar as possible, which we do with the built-in function <code class="language-plaintext highlighter-rouge">calcTransformation</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: first_ca = matches[4][0]
+</span><span class="n">In</span><span class="p">[</span><span class="c1">#]: second_ca = matches[4][1]
+</span><span class="n">In</span><span class="p">[</span><span class="c1">#]: calcTransformation(first_ca, second_ca).apply(first_ca);
+</span></code></pre></div></div>
+
+<p>Now that the best rotation has been found, we can determine the RMSD between the structures using the built-in function <code class="language-plaintext highlighter-rouge">calcRMSD</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: calcRMSD(first_ca, second_ca)
+</span></code></pre></div></div>
+
+<p>You should now see something like the following:</p>
+
+<p><img src="../assets/images/RMSDResult3.png" alt="image-center" class="align-center" /></p>
+
+<h2 id="merging-multiple-chains-to-compute-rmsd-of-an-overall-structure">Merging multiple chains to compute RMSD of an overall structure</h2>
+
+<p>Now that we can compare the structures of two chains, it is also possible to merge the chains and calculate the RMSD of the overall homotrimer structure. Below, we merge the three matches corresponding to matching the A chains, B chains, and C chains of the two proteins, and we then compute the RMSD of the resulting structures.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">[</span><span class="c1">#]: first_ca = matches[0][0] + matches[4][0] + matches[8][0]
+</span><span class="n">In</span><span class="p">[</span><span class="c1">#]: second_ca = matches [0][1] + matches[4][1] + matches[8][1]
+</span><span class="n">In</span><span class="p">[</span><span class="c1">#]: calcTransformation(first_ca, second_ca).apply(first_ca);
+</span><span class="n">In</span><span class="p">[</span><span class="c1">#]: calcRMSD(first_ca, second_ca)
+</span></code></pre></div></div>
+
+<p>Your results should look like the following:
+<img src="../assets/images/RMSDResult4.png" alt="image-center" class="align-center" /></p>
+
+<p>We will leave the RMSD computation for the other models we produced as an exercise.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> Apply what you have learned in this tutorial to compute the RMSD between the SARS-CoV-2 spike protein and every one of our predicted homology models, as well as between human hemoglobin subunit alpha and its <em>ab initio</em> model. Download the predicted models <a href="../_pages/coronavirus/files/RMSD_Tutorial.zip">here</a>; you should consult the included readme for reference.</p>
+
+<p>We are now ready to head back to the main text, where we will discuss the RMSD calculations for all models. Were we successful in predicting the structure of the SARS-CoV-2 spike protein?</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="accuracy#assessing-the-accuracy-of-our-structure-prediction-models" class="btn btn--primary btn--large">Return to main text</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

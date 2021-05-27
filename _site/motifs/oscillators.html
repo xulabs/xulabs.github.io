@@ -1,0 +1,491 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Building a Biological Oscillator - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Building a Biological Oscillator">
+<meta property="og:url" content="http://localhost:4000/motifs/oscillators">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/motifs/oscillators">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Finding Motifs in Transcription Factor Networks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/home">Introduction: a submicroscopic scale of interest<br><br></a></li>
+          
+            <li><a href="/motifs/transcription">Transcription and DNA-protein binding<br><br></a></li>
+          
+            <li><a href="/motifs/networks">Transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/finding">Using randomness to verify network motifs<br><br></a></li>
+          
+            <li><a href="/motifs/nar">The negative autoregulation motif<br><br></a></li>
+          
+            <li><a href="/motifs/feed">The feedforward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/oscillators" class="active">Building a biological oscillator<br><br></a></li>
+          
+            <li><a href="/motifs/conclusion">Conclusion: the importance of robustness in biological oscillations<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/tutorial_loops">Looking for loops in transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar">Comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar_mathematically_controlled">Ensuring a mathematically controlled simulation for comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_feed">Implementing the feed-forward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_oscillators">Implementing the repressilator<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_perturb">Perturbing the represillator<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/exercises">Network motif exercises</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Building a Biological Oscillator">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Building a Biological Oscillator
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#oscillators-are-everywhere-in-nature">Oscillators are everywhere in nature</a></li><li><a href="#the-repressilator-a-synthetic-biological-oscillator">The repressilator: a synthetic biological oscillator</a></li><li><a href="#interpreting-the-repressilators-oscillations">Interpreting the repressilator’s oscillations</a></li><li><a href="#the-power-of-noise">The power of noise</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="oscillators-are-everywhere-in-nature">Oscillators are everywhere in nature</h2>
+
+<p>Even if placed in a bunker, humans will maintain a roughly 24-hour cycle of sleep and wakefulness<sup id="fnref:bunker" role="doc-noteref"><a href="#fn:bunker" class="footnote">1</a></sup>. This <strong>circadian rhythm</strong> guiding our daily schedule is not unique to animals but rather is present throughout living things, including plants and even cyanobacteria<sup id="fnref:bacteria" role="doc-noteref"><a href="#fn:bacteria" class="footnote">2</a></sup>.</p>
+
+<p>Life processes like the circadian rhythm that oscillate over time are not confined to circadian rhythms. You may feel like you have some control over when you go to bed, but your heart and respiratory system both follow cyclical rhythms that are subconscious. To take a much lower level example, eukaryotic cells are governed by a strict cell cycle as the cells grow and divide.</p>
+
+<p>We might guess from what we have learned in this module that these cyclical processes must be built upon simple rules serving as a <strong>pacemaker</strong> controlling them. However, the question remains as to what these pacemakers are and how they correctly execute oscillations over and over, throughout an organism’s life.</p>
+
+<p>Researchers have identified many network motifs that facilitate oscillation, some of which are very complicated and include many components. In this lesson, we will focus on a simple three-component oscillator motif called a <strong>repressilator</strong><sup id="fnref:repress" role="doc-noteref"><a href="#fn:repress" class="footnote">3</a></sup>. In this lesson, we will implement the repressilator with a particle simulator.</p>
+
+<h2 id="the-repressilator-a-synthetic-biological-oscillator">The repressilator: a synthetic biological oscillator</h2>
+
+<p>The repressilator motif is shown in the figure below. In this motif, all three proteins are transcription factors, and they form a cycle in which <em>X</em> represses <em>Y</em>, <em>Y</em> represses <em>Z</em>, and <em>Z</em> represses <em>X</em> (hence the name). The repressilator clearly forms a feedback loop, but nothing <em>a priori</em> about this motif would indicate that it would lead to oscillation; after all, we have already seen feedback processes in this module that did not lead to oscillation.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/repressilator.png" alt="image-center" class="align-center" />
+The repressilator motif for three particles <em>X</em>, <em>Y</em>, and <em>Z</em>. <em>X</em> represses <em>Y</em>, which represses <em>Z</em>, which in turn represses <em>X</em>, forming a feedback loop.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> Try building a reaction-diffusion model for the repressilator, assuming that we start with an initial concentration of <em>X</em> and no <em>Y</em> or <em>Z</em> particles.</p>
+
+<p>To build a reaction-diffusion model accompanying the repressilator, we start with a quantity of <em>X</em> particles, and no <em>Y</em> or <em>Z</em> particles. We assume that all three particles diffuse at the same rate and degrade at the same rate.</p>
+
+<p>Furthermore, we assume that all three particles are produced as the result of an activation process by some other transcription factor(s), which we assume happens at the same rate. We will use a <strong>hidden particle</strong> <em>I</em> that serves to activate the three visible particles via the three reactions <em>I</em> → <em>I</em> + <em>X</em>, <em>I</em> → <em>I</em> + <em>Y</em>, and <em>I</em> → <em>I</em> + <em>Z</em>, all taking place at the same rate.</p>
+
+<p>In the previous lesson on the feed-forward loop, we saw that we can use the reaction <em>X</em> + <em>Y</em> → <em>X</em> to model the repression of <em>Y</em> by <em>X</em>. To complete the repressilator model, we will add the two reactions <em>Y</em> + <em>Z</em> → <em>Y</em> and <em>Z</em> + <em>X</em> → <em>Z</em>, having the same rate as the reaction <em>X</em> + <em>Y</em> → <em>X</em>.</p>
+
+<p>If you have followed our previous tutorials, then you may feel comfortable taking off the training wheels and implementing the repressilator with your own reaction-diffusion model. We also are happy to provide the following tutorial.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_oscillators" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="interpreting-the-repressilators-oscillations">Interpreting the repressilator’s oscillations</h2>
+
+<p>The figure below shows the results of our simulation by plotting the number of <em>X</em>, <em>Y</em>, and <em>Z</em> particles over time. As we can see, the system shows clear oscillatory behavior, with the concentrations of <em>X</em>, <em>Y</em>, and <em>Z</em> taking turns being at high concentration.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> Why do you think that the repressilator motif leads to this pattern of oscillations?</p>
+
+<p style="font-size: medium;"><img src="../assets/images/repress_graph.PNG" alt="image-center" class="align-center" />
+Modeling the repressilator’s concentration of particles. <em>X</em> is shown in yellow, <em>Y</em> is shown in red, and <em>Z</em> is shown in blue.</p>
+
+<p>We will attempt to provide a high-level explanation of why the repressilator produces oscillations from a simple set of rules.</p>
+
+<p>Because the concentration of <em>X</em> starts out high, with no <em>Y</em> or <em>Z</em> present, the concentration of <em>X</em> briefly increases because its rate of production exceeds its rate of degradation. Because there are no <em>Y</em> or <em>Z</em> particles present, there are no <em>Y</em> or <em>Z</em> to degrade, and the concentrations of these particles start increasing as well.</p>
+
+<p>As soon as there are some <em>Z</em> particles present, the reaction <em>Z</em> + <em>X</em> → <em>Z</em> occurs often enough for the rate of removal of <em>X</em> to exceed its rate of production, accounting for the first peak in the figure above.</p>
+
+<p>Furthermore, because the concentration of <em>X</em> particles begins high, the reaction <em>X</em> + <em>Y</em> → <em>X</em> prevents the number of <em>Y</em> particles from growing initially. This is because the remaining repression reaction (<em>Y</em> + <em>Z</em> → <em>Y</em>) has very little effect initially because the concentrations of <em>Y</em> and <em>Z</em> are both low. As a result, the rate of production of <em>Z</em> is higher than its rate of removal, and so its concentration increases quickly while the concentration of <em>Y</em> stays low.</p>
+
+<p>In summary, after an initial rise, the concentration of <em>X</em> plummets, with the concentration of <em>Z</em> rising up to replace it. The concentration of <em>Y</em> increases, but at a slower rate than that of <em>Z</em>. This situation is shown by the second (blue) peak in the figure above.</p>
+
+<p>As a result, <em>Z</em> and <em>X</em> in effect have switched roles. Because there is a high concentration of <em>Z</em>, the reaction <em>Y</em> + <em>Z</em> → <em>Y</em> will be frequent and cause the concentration of <em>Z</em> to decrease. Furthermore, because the concentration of <em>X</em> has decreased, and the concentration of <em>Y</em> is still relatively low, the reaction <em>X</em> + <em>Y</em> → <em>X</em> will occur less often, allowing the concentration of <em>Y</em> to continue to rise. Eventually, the decrease in <em>Z</em> and the increase in <em>Y</em> will account for the third peak (red) in the figure above.</p>
+
+<p>At this point, the reaction <em>X</em> + <em>Y</em> → <em>X</em> will suppress the concentration of <em>Y</em>. Because the concentration of <em>X</em> and <em>Z</em> are both lower, the reaction <em>Z</em> + <em>X</em> → <em>Z</em> will not greatly influence the concentration of <em>X</em>, which will rise to meet the following concentration of <em>Y</em>, and we have returned to our original situation, at which point the cycle will begin again.</p>
+
+<h2 id="the-power-of-noise">The power of noise</h2>
+
+<p>Take another look at the figure showing the oscillations of the repressilator. You will notice that the concentrations zigzag as they travel up or down, and that they peak at slightly different levels each time.</p>
+
+<p>This noise in the repressilator’s oscillations is due to variance as the particles travel around randomly. Specifically, the repression reactions require two particles to collide in order for the reaction to take place. Due to random chance, these collisions may occur more or less often than expected because of random chance. We should also note that some of this noise is due to low sample size: we have around 150 molecules at each peak in the above figure, but a given cell may have on the order of 1,000 to 10,000 molecules of a single protein.<sup id="fnref:noise" role="doc-noteref"><a href="#fn:noise" class="footnote">4</a></sup></p>
+
+<p>Yet the noise that appears in the repressilator’s oscillations is a feature, not a bug. As we have discussed previously, the cell’s molecular interactions are inherently random. So if we see oscillations in a simulation that includes noise arising from random chance, we can be confident that this simulation is <em>robust</em> to a certain amount of variation.</p>
+
+<p>In this module’s conclusion, we will further explore the concept of robustness as it pertains to the repressilator. What happens if our simulation experiences a much greater disturbance to the concentration of one of the particles?  Will it still be able to recover and return to the same oscillatory pattern?</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="conclusion" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:bunker" role="doc-endnote">
+      <p>Aschoff, J. (1965). Circadian rhythms in man. Science 148, 1427–1432. <a href="#fnref:bunker" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:bacteria" role="doc-endnote">
+      <p>Grobbelaar N, Huang TC, Lin HY, Chow TJ. 1986. Dinitrogen-fixing endogenous rhythm in Synechococcus RF-1. FEMS Microbiol Lett 37:173–177. doi:10.1111/j.1574-6968.1986.tb01788.x.CrossRefWeb of Science. <a href="#fnref:bacteria" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:repress" role="doc-endnote">
+      <p>Elowitz MB, Leibler S. A synthetic oscillatory network of transcriptional regulators. Nature. 2000;403(6767):335-338. doi:10.1038/35002125 <a href="#fnref:repress" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:noise" role="doc-endnote">
+      <p>Brandon Ho, Anastasia Baryshnikova, Grant W. Brown. Unification of Protein Abundance Datasets Yields a Quantitative Saccharomyces cerevisiae Proteome. Cell Systems, 2018; DOI: 10.1016/j.cels.2017.12.004 <a href="#fnref:noise" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

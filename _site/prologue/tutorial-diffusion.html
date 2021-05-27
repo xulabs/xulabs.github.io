@@ -1,0 +1,532 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Building a Diffusion Cellular Automaton with Jupyter Notebook - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Building a Diffusion Cellular Automaton with Jupyter Notebook">
+<meta property="og:url" content="http://localhost:4000/prologue/tutorial-diffusion">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/prologue/tutorial-diffusion">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Prologue: an Introduction to Biological Modeling via Random Walks and Turing Patterns</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/">Introduction: Life is random<br><br></a></li>
+          
+            <li><a href="/prologue/turing">Alan Turing and the zebra's stripes<br><br></a></li>
+          
+            <li><a href="/prologue/random-walk">An introduction to random walks<br><br></a></li>
+          
+            <li><a href="/prologue/animals">A reaction-diffusion model generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/blocks">The Gray-Scott model: a cellular automaton generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/conclusion">Conclusion: Turing patterns are fine-tuned<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/tutorial-random-walk">Simulating particle diffusion with CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/turing-cellblender">Generating Turing patterns with a reaction-diffusion simulation in CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/tutorial-diffusion" class="active">Building a diffusion cellular automaton with Jupyter notebook<br><br></a></li>
+          
+            <li><a href="/prologue/gs-jupyter">Implementing the Gray-Scott model for coarse-grained reaction-diffusion with Jupyter notebook<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Building a Diffusion Cellular Automaton with Jupyter Notebook">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Building a Diffusion Cellular Automaton with Jupyter Notebook
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In this tutorial, we will use Python to build a Jupyter notebook. We suggest only following the tutorial closely if you are familiar with Python or programming in general. If you have not installed Python, then the following software and packages will need to be installed:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Installation Link</th>
+      <th style="text-align: center">Version<sup id="fnref:version" role="doc-noteref"><a href="#fn:version" class="footnote">1</a></sup></th>
+      <th style="text-align: right">Check Install</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.python.org/downloads/">Python3</a></td>
+      <td style="text-align: center">3.7</td>
+      <td style="text-align: right"><em>python –version</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://jupyter.org/index.html">Jupyter Notebook</a></td>
+      <td style="text-align: center">4.4.0</td>
+      <td style="text-align: right"><em>jupyter –version</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://matplotlib.org/users/installing.html">matplotlib</a></td>
+      <td style="text-align: center">2.2.3</td>
+      <td style="text-align: right"><em>conda list</em> or <em>pip list</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://numpy.org/install/">numpy</a></td>
+      <td style="text-align: center">1.15.1</td>
+      <td style="text-align: right"><em>conda list</em> or <em>pip list</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.scipy.org/install.html">scipy</a></td>
+      <td style="text-align: center">1.1.0</td>
+      <td style="text-align: right"><em>conda list</em> or <em>pip list</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://imageio.readthedocs.io/en/stable/installation.html">imageio</a></td>
+      <td style="text-align: center">2.4.1</td>
+      <td style="text-align: right"><em>conda list</em> or <em>pip list</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can read more about various installation options <a href="https://realpython.com/installing-python/">here</a> or <a href="https://docs.conda.io/en/latest/">here</a>.</p>
+
+<p>Once you have Jupyter Notebook installed, create a new notebook file called <code class="language-plaintext highlighter-rouge">diffusion_automaton.ipynb</code>.</p>
+
+<p><strong>Note</strong>: You will need to save this file on the same level as another folder named <code class="language-plaintext highlighter-rouge">/dif_images</code>. ImageIO will not always create this folder automatically, so you may need to create it manually.</p>
+
+<p>You may also download the completed tutorial <a href=".../tutorials/Diffusion%20Only%20Model.ipynb" download="diffusion_only_model.ipynb">here</a>.</p>
+
+<p>We are now ready to simulate our automaton representing the diffusion of two particle species: a prey (<em>A</em>) and a predator (<em>B</em>). Enter the following into our notebook.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
+<span class="kn">import</span> <span class="nn">imageio</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<p>To simulate the diffusion process, we will rely upon an imported <strong>convolution function</strong>. The convolve function will use a specified 3 x 3 <strong>laplacian matrix</strong> to simulate diffusion as discussed in the main text. Specifically, the convolve function in this case takes two matrices, <code class="language-plaintext highlighter-rouge">mtx</code> and <code class="language-plaintext highlighter-rouge">lapl</code>, and uses <code class="language-plaintext highlighter-rouge">lapl</code> as a set of multipliers for each square in <code class="language-plaintext highlighter-rouge">mtx</code>. We can see this operation in action in the image below.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/convolution.PNG" alt="image-center" class="align-center" />
+A single step in the convolution function which takes the first matrix and adds up each cell multiplied by the number in the second matrix. Here we see (0 * 0) + (2 * ¼) + (0 * 0) + (3 * ¼) + (1 * -1) + (2 * ¼) + (1 * 0) + (1 * ¼) +(1 * 0) = 1</p>
+
+<p>Because we’re trying to describe the rate of diffusion over this system, the values in the 3 x 3 laplacian excluding the center sum to 1. In our code, the value in the center is -1 because we’ve specified the <em>change</em> in the system with the convolution function i.e. the matrix <em>dA</em>, which we then add to the original matrix <em>A</em>. Thus the total sum of the laplacian is 0 which means the total change in number of molecules due to diffusion is 0, even if the molecules are moving to new locations. We don’t want any new molecules created due to just diffusion! (This would violate the law of conservation of mass.)</p>
+
+<p>We are now ready to write a Python function <code class="language-plaintext highlighter-rouge">Diffuse</code> that we will add to our notebook. This function will take a collection of parameters:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">numIter</code>: the number of steps to run our simulation</li>
+  <li><code class="language-plaintext highlighter-rouge">A</code>, <code class="language-plaintext highlighter-rouge">B</code>: matrices containing the respective concentrations of prey and predators in each cell</li>
+  <li><code class="language-plaintext highlighter-rouge">dt</code>: the unit of time</li>
+  <li><code class="language-plaintext highlighter-rouge">dA</code>, <code class="language-plaintext highlighter-rouge">dB</code>: diffusion rates for prey and predators, respectively</li>
+  <li><code class="language-plaintext highlighter-rouge">lapl</code>: our 3 x 3 Laplacian matrix</li>
+  <li><code class="language-plaintext highlighter-rouge">plot_iter</code>: the number of steps to “skip” when animating our simulation</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">Diffuse</span><span class="p">(</span><span class="n">numIter</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">dA</span><span class="p">,</span> <span class="n">dB</span><span class="p">,</span> <span class="n">lapl</span><span class="p">,</span> <span class="n">plot_iter</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Running Simulation"</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="c1"># Run the simulation
+</span>    <span class="k">for</span> <span class="nb">iter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numIter</span><span class="p">):</span>
+        <span class="n">A_new</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="p">(</span><span class="n">dA</span> <span class="o">*</span> <span class="n">signal</span><span class="p">.</span><span class="n">convolve2d</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">lapl</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">boundary</span><span class="o">=</span><span class="s">'fill'</span><span class="p">,</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">*</span> <span class="n">dt</span>
+        <span class="n">B_new</span> <span class="o">=</span> <span class="n">B</span> <span class="o">+</span> <span class="p">(</span><span class="n">dB</span> <span class="o">*</span> <span class="n">signal</span><span class="p">.</span><span class="n">convolve2d</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">lapl</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">boundary</span><span class="o">=</span><span class="s">'fill'</span><span class="p">,</span> <span class="n">fillvalue</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">*</span> <span class="n">dt</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A_new</span><span class="p">)</span>
+        <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">B_new</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">iter</span> <span class="o">%</span> <span class="n">plot_iter</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">clf</span><span class="p">()</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">((</span><span class="n">B</span> <span class="o">/</span> <span class="p">(</span><span class="n">A</span><span class="o">+</span><span class="n">B</span><span class="p">)),</span><span class="n">cmap</span><span class="o">=</span><span class="s">'Spectral'</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
+            <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="c1"># print("Seconds since epoch =", now-start)
+</span>            <span class="c1"># plt.show()
+</span>            <span class="n">filename</span> <span class="o">=</span> <span class="s">'dif_images/diffusion_'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">iter</span><span class="p">)</span><span class="o">+</span><span class="s">'.png'</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="n">images</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">imageio</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span>
+</code></pre></div></div>
+
+<p>The following parameters will set up our problem space by defining the grid size, the number of iterations we will range through, and establishing the initial matrices <code class="language-plaintext highlighter-rouge">A</code> and <code class="language-plaintext highlighter-rouge">B</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># _*_*_*_*_*_*_*_*_* GRID PROPERTIES *_*_*_*_*_*_*_*_*_*
+</span><span class="n">grid_size</span> <span class="o">=</span> <span class="mi">101</span> <span class="c1"># Needs to be odd
+</span><span class="n">numIter</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+<span class="n">seed_size</span> <span class="o">=</span> <span class="mi">11</span> <span class="c1"># Needs to be an odd number
+</span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">ones</span><span class="p">((</span><span class="n">grid_size</span><span class="p">,</span><span class="n">grid_size</span><span class="p">))</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">grid_size</span><span class="p">,</span><span class="n">grid_size</span><span class="p">))</span>
+
+<span class="c1"># Seed the predators
+</span><span class="n">B</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">seed_size</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">seed_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> \
+<span class="nb">int</span><span class="p">(</span><span class="n">grid_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">seed_size</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">seed_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> \
+<span class="n">np</span><span class="p">.</span><span class="n">ones</span><span class="p">((</span><span class="n">seed_size</span><span class="p">,</span><span class="n">seed_size</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>The following parameters will establish the time step, the diffusion rates, and how many steps will be between frames of our animation.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># _*_*_*_*_*_*_*_*_* SIMULATION VARIABLES *_*_*_*_*_*_*_*_*_*
+</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">dA</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">dB</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">lapl</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">],[</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]])</span>
+<span class="n">plot_iter</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="n">Diffuse</span><span class="p">(</span><span class="n">numIter</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">dA</span><span class="p">,</span> <span class="n">dB</span><span class="p">,</span> <span class="n">lapl</span><span class="p">,</span> <span class="n">plot_iter</span><span class="p">)</span>
+<span class="n">imageio</span><span class="p">.</span><span class="n">mimsave</span><span class="p">(</span><span class="s">'dif_images/0diffusion_movie.gif'</span><span class="p">,</span> <span class="n">images</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>We now are ready to save and run our notebook. When you run the notebook, you should see an animation in which concentrations of predators are spreading out against a field of prey.</p>
+
+<p>Above, we used a parameter when plotting called <code class="language-plaintext highlighter-rouge">Spectral</code> that uses a <strong>color map</strong> of this name to color the images of our GIF. A color map assigns different color values to different cell values, where we are plotting a cell’s color based on its value of the concentration of predators divided by the sum of the concentrations of predators and prey. If a cell has a value close to zero for this ratio (meaning very few predators compared to prey), then it will be colored red, while if it has a value close to 1 (meaning many predators), then it will be colored dark blue. The <code class="language-plaintext highlighter-rouge">Spectral</code> color map is shown in the figure below.</p>
+
+<p><img src="../assets/images/matplotlib_colormap.png" alt="image-center" class="align-center" /></p>
+
+<p>As we return to the main text, we will discuss this animation and extend our model to be able to handle reactions as well as diffusion.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="blocks#adding-reactions-and-completing-the-gray-scott-model" class="btn btn--primary btn--large">Return to main text</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:version" role="doc-endnote">
+      <p>Other versions may be compatible with this code, but those listed are known to work for this tutorial <a href="#fnref:version" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,522 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Stochastic simulation of multiple chemical reactions in a well mixed environment - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Stochastic simulation of multiple chemical reactions in a well mixed environment">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/home_signalpart2">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/home_signalpart2">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2" class="active">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Stochastic simulation of multiple chemical reactions in a well mixed environment">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Stochastic simulation of multiple chemical reactions in a well mixed environment
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#verifying-a-theoretical-steady-state-concentration-via-stochastic-simulation">Verifying a theoretical steady state concentration via stochastic simulation</a></li><li><a href="#the-poisson-and-exponential-distributions">The Poisson and exponential distributions</a></li><li><a href="#an-overview-of-the-gillespie-algorithm">An overview of the Gillespie algorithm</a></li><li><a href="#specifying-ligand-receptor-binding-with-a-single-bionetgen-rule">Specifying ligand-receptor binding with a single BioNetGen rule</a></li><li><a href="#does-a-simulation-confirm-our-steady-state-calculations">Does a simulation confirm our steady state calculations?</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="verifying-a-theoretical-steady-state-concentration-via-stochastic-simulation">Verifying a theoretical steady state concentration via stochastic simulation</h2>
+
+<p>In the <a href="motifs">previous module</a>, we saw that we could avoid keeping track of the positions of individual diffusing particles in a simulation if we assume that these particles are <em>well-mixed</em>, i.e., uniformly distributed throughout their environment. The <em>E. coli</em> cell is so small that we will assume that the concentration of any particle in its immediate surroundings is uniform. Therefore, as a proof of concept, let us see if a well-mixed simulation replicates the steady state concentrations of particles that we just found.</p>
+
+<p>Even though we can calculate steady state concentrations by hand, we will find a particle-free simulation useful for two reasons. First, this simulation will give us snapshots of the concentrations of particles in the system over multiple time points and allow us to see how quickly the concentrations reach equilibrium. Second, we will soon expand our model of chemotaxis to have many particles and reactions that depend on each other, and direct mathematical analysis of the system like what we have done in the previous lesson will not just be tedious; it will quickly become impossible as the number of particles and reactions grows.</p>
+
+<p>The difficulty at hand is comparable to the famed “<em>n</em>-body problem” in physics. Predicting the motions of two celestial objects interacting due to gravity can be done exactly, but there is no known such solution once we add more bodies to the system.</p>
+
+<p>Our particle-free model will apply an approach called <strong>Gillespie’s Stochastic Simulation Algorithm</strong>, which is often called the <strong>Gillespie algorithm</strong> or just <strong>SSA</strong> for short. Before we explain how this algorithm works, we take a short detour to provide some needed probabilistic context.</p>
+
+<h2 id="the-poisson-and-exponential-distributions">The Poisson and exponential distributions</h2>
+
+<p>Say that you own a store and have noticed that on average, there are <em>λ</em> customers entering your store in a single hour. Let <em>X</em> denote the number of customers that enter the store in the next hour; <em>X</em> is an example of a <strong>random variable</strong> because it may change based on random chance. If we assume that customers are independent actors and that two customers cannot arrive at the exact same time, then <em>X</em> follows a distribution called a <strong>Poisson distribution</strong>; it can be shown that for a Poisson distribution, the probability that exactly <em>n</em> customers arrive in the next hour is</p>
+
+\[\mathrm{Pr}(X = n) = \dfrac{\lambda^n e^{-\lambda}}{n!}\,.\]
+
+<p>A derivation of this formula is beyond the scope of our work here, but if you are interested in one, please consider <a href="https://medium.com/@andrew.chamberlain/deriving-the-poisson-distribution-from-the-binomial-distribution-840cc1668239">this post</a> by Andrew Chamberlain.</p>
+
+<p>Furthermore, the probability of observing exactly <em>n</em> customers in <em>t</em> hours where <em>t</em> is an arbitrary positive number is</p>
+
+\[\dfrac{(\lambda t)^n e^{-\lambda t}}{n!}\,.\]
+
+<p>We can also ask how long we will typically have to wait for the next customer to arrive. Specifically, what are the chances that this customer will arrive after <em>t</em> hours? If we let <em>T</em> be the random variable corresponding to the wait time on the next customer, then the probability of <em>T</em> being at least <em>t</em> is the probability of seeing zero customers in <em>t</em> hours:</p>
+
+\[\mathrm{Pr}(T &gt; t) = \mathrm{Pr}(X = 0) = \dfrac{(\lambda t)^0 e^{-\lambda t}}{0!} = e^{-\lambda t}\,.\]
+
+<p>In other words, the probability \(\mathrm{Pr}(T &gt; t)\) decays exponentially over time as <em>t</em> increases. For this reason, the random variable <em>T</em> is said to follow an <strong>exponential distribution.</strong> It can be shown that the mean value of the exponential distribution (i.e., the average amount of time we will need to wait for the next event to occur) is 1/λ.</p>
+
+<p class="notice--primary"><strong>STOP</strong>: What is the probability Pr(<em>T</em> &lt; <em>t</em>)?</p>
+
+<h2 id="an-overview-of-the-gillespie-algorithm">An overview of the Gillespie algorithm</h2>
+
+<p>The engine of the Gillespie algorithm runs on a single question: given a well-mixed environment of particles and a reaction involving those particles taking place at some average rate, how long should we expect to wait before this reaction occurs somewhere in the environment?</p>
+
+<p>This is the same question we asked in the previous section; we have simply replaced customers entering a store with chemical reactions. Therefore, an exponential distribution can be used to model the “wait time” between individual reactions. The more reactions we have, and the faster these reactions occur, the larger the value of λ, meaning that we typically do not have to wait very long for the next reaction.</p>
+
+<p>Numerical methods exist that allow us to generate a random number simulating the wait time of an exponential distribution. By repeatedly sampling from the exponential distribution, we obtain a collection of varying wait times between consecutive occurrences of the reaction.</p>
+
+<p>Once a wait time is selected, we must determine the reaction to which this event corresponds. If the rates of the reactions are all equal, then this is an easy problem; we simply choose one of the reactions with equal probability. But if the rates of these reactions are different, then we should choose one of the reactions via a probability that is <em>weighted</em> in direct proportion to the rate of the reaction; that is, the larger the rate of the reaction, the more likely that this reaction corresponds to the current event.<sup id="fnref:Schwartz17" role="doc-noteref"><a href="#fn:Schwartz17" class="footnote">1</a></sup></p>
+
+<p>We will illustrate the Gillespie algorithm by returning to our ongoing example, in which we are modeling the forward and reverse reactions of ligand-receptor binding and dissociation, respectively. First, a wait time is chosen according to an exponential distribution with mean value 1/(<em>k</em><sub>bind</sub> + <em>k</em><sub>dissociate</sub>); that is, λ is equal to the sum of reaction rates <em>k</em><sub>bind</sub> + <em>k</em><sub>dissociate</sub>. The probability that the event corresponds to a binding reaction is given by</p>
+
+<p>Pr(<em>L</em> + <em>T</em> → <em>LT</em>) = <em>k</em><sub>bind</sub>/(<em>k</em><sub>bind</sub> + <em>k</em><sub>dissociate</sub>)</p>
+
+<p>and the probability that the event corresponds to a dissociation reaction is</p>
+
+<p>Pr(<em>LT</em> → <em>L</em> + <em>T</em>) = <em>k</em><sub>dissociate</sub>/(<em>k</em><sub>bind</sub> + <em>k</em><sub>dissociate</sub>)</p>
+
+<p class="notice--primary"><strong>STOP</strong>: Verify that these two probabilities sum to 1.</p>
+
+<p>The process of selecting a reaction is visualized in the figure below.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_visualizessa.png" alt="image-center" class="align-center" />
+A visualization of a single reaction event used by the Gillespie algorithm for ligand-receptor binding/dissociation. Red circles represent ligands (<em>L</em>), and orange wedges represent receptors (<em>T</em>). The wait time for the next reaction is drawn from an exponential distribution with mean 1/(<em>k</em><sub>bind</sub> + <em>k</em><sub>dissociate</sub>). The probability of this event corresponding to a binding or dissociation reaction is proportional to the rate of the respective reaction.</p>
+
+<h2 id="specifying-ligand-receptor-binding-with-a-single-bionetgen-rule">Specifying ligand-receptor binding with a single BioNetGen rule</h2>
+
+<p>Throughout this module, we will employ <a href="http://bionetgen.org/" target="_blank">BioNetGen</a> to build particle-free simulations of chemotaxis applying the Gillespie algorithm.</p>
+
+<p>We will have two molecules corresponding to the ligand and receptor <code class="language-plaintext highlighter-rouge">L</code> and <code class="language-plaintext highlighter-rouge">T</code> that we call <code class="language-plaintext highlighter-rouge">L(t)</code> and <code class="language-plaintext highlighter-rouge">T(l)</code>, respectively. The <code class="language-plaintext highlighter-rouge">(t)</code> specifies that molecule <code class="language-plaintext highlighter-rouge">L</code> contains a binding site with <code class="language-plaintext highlighter-rouge">T</code>, and the <code class="language-plaintext highlighter-rouge">(l)</code> specifies a component binding to <code class="language-plaintext highlighter-rouge">L</code>. We will use these components later when specifying reactions. We do not have to use <code class="language-plaintext highlighter-rouge">t</code> and <code class="language-plaintext highlighter-rouge">l</code> for this purpose, but it will make our model easier to understand.</p>
+
+<p>BioNetGen reaction rules are written similarly to chemical equations. The left side of the rule includes the reactants, which are followed by a unidirectional or bidirectional arrow, indicating the direction of the reaction, and the right side of the rule includes the products. After the reaction we indicate the rate constant of reaction; if the reaction is bi-directional, then we separate the forward and backward reaction rate constants with a comma.</p>
+
+<p>For example, to code up the bi-directional reaction <code class="language-plaintext highlighter-rouge">A + B &lt;-&gt; C</code> with forward rate <code class="language-plaintext highlighter-rouge">k1</code> and reverse rate <code class="language-plaintext highlighter-rouge">k2</code>, we would write <code class="language-plaintext highlighter-rouge">A + B &lt;-&gt; C k1, k2</code>.</p>
+
+<p>Our model consists of a single bidirectional reaction and will have only a single rule. The left side of this rule will be <code class="language-plaintext highlighter-rouge">L(t) + T(l)</code>; by specifying <code class="language-plaintext highlighter-rouge">L(t)</code> and <code class="language-plaintext highlighter-rouge">T(l)</code>, we indicate to BioNetGen that we are only interested in <em>unbound</em> ligand and receptor molecules. If we had wanted to select any ligand molecule, then we would have simply written <code class="language-plaintext highlighter-rouge">L + T</code>.</p>
+
+<p>On the right side of the rule, we will have <code class="language-plaintext highlighter-rouge">L(t!1).T(l!1)</code>, which indicates the formation of the intermediate. In BioNetGen, <code class="language-plaintext highlighter-rouge">!</code> indicates formation of a bond; and a unique character specifies the possible location of this bond. In our case, we use the character <code class="language-plaintext highlighter-rouge">1</code>, so that the bond is represented by <code class="language-plaintext highlighter-rouge">!1</code>. The symbol <code class="language-plaintext highlighter-rouge">.</code> is used to indicate that the two molecules are joined into a complex.</p>
+
+<p>Since the reaction is bidirectional, we will use <code class="language-plaintext highlighter-rouge">k_lr_bind</code> and <code class="language-plaintext highlighter-rouge">k_lr_dis</code> to denote the rates of the forward and reverse reactions, respectively. (We will specify values for these parameters later.)</p>
+
+<p>As a result, this reaction is shown below. We name our rule specifying the ligand-receptor reaction <code class="language-plaintext highlighter-rouge">LR</code>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">LR</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+</code></pre></div></div>
+
+<p>The following tutorial shows how to implement this rule in BioNetGen and use the Gillespie algorithm to determine the equilibrium of a reversible ligand-receptor binding reaction.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_lr" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="does-a-simulation-confirm-our-steady-state-calculations">Does a simulation confirm our steady state calculations?</h2>
+
+<p>We previously showed a worked example in which a system with 10,000 free ligand molecules and 7,000 free receptor molecules produced the following steady state concentrations using bonding rates of <em>k</em><sub>bind</sub> = 0.0146((molecules/µm<sup>3</sup>)<sup>-1</sup>)s<sup>-1</sup> and <em>k</em><sub>dissociate</sub> = 35s<sup>-1</sup>.</p>
+
+<ul>
+  <li>[<em>LT</em>] = 4793</li>
+  <li>[<em>L</em>] = 5207</li>
+  <li>[<em>T</em>] = 2207</li>
+</ul>
+
+<p>The BioNetGen model covered in the previous tutorial uses the same number of initial molecules and the same reaction rates. The system evolves via the Gillespie algorithm, and we track the concentration of free ligand molecules, ligand molecules bound to receptor molecules, and free receptor molecules over time. Our goal is to see whether the concentrations reach a steady-state, and whether the steady-state matches our calculation.</p>
+
+<p>The figure below demonstrates that the Gillespie algorithm quickly converges to the same values as the ones that we obtained by hand in the last lesson. As a result, we can see the power of using a particle-free stochastic simulator to quickly obtain a result without needing to perform any mathematical calculations.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_tutorial4_ssa.png" alt="image-center" class="align-center" />
+A concentration plot over time for ligand-receptor dynamics via a BioNetGen simulation employing the Gillespie algorithm. The concentrations reach a steady state at the end of the simulation that matches the concentrations identified by hand.</p>
+
+<p>Yet this simple ligand-receptor model is just the beginning of our study of chemotaxis. In the next section, we will delve into the complex biochemical details of chemotaxis. Furthermore, we will see that the Gillespie algorithm for stochastic simulations will scale easily as our model of this system grows more complex.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_biochem" class="btn btn--primary btn--large">Next lesson</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Schwartz17" role="doc-endnote">
+      <p>Schwartz R. Biological Modeling and Simulaton: A Survey of Practical Models, Algorithms, and Numerical Methods. Chapter 17.2. <a href="#fnref:Schwartz17" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,106 @@
+/*!
+ * Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+ * Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+ * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
+*/
+
+/* NoahL: Inserted to remove sidebar 
+article.page {
+    float: left;
+    width: 100%;
+} */
+
+/* Edited for YouTube embed issues */
+iframe {
+  display: block;
+  padding: 0px 10px 25px; 
+}
+
+/* Two columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+/* Variables */
+@import "minimal-mistakes/variables";
+
+/* Mixins and functions */
+@import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@include breakpoint-set("to ems", true);
+@import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
+@import "minimal-mistakes/vendor/susy/susy";
+@import "minimal-mistakes/mixins";
+
+/* Core CSS */
+@import "minimal-mistakes/reset";
+@import "minimal-mistakes/base";
+@import "minimal-mistakes/forms";
+@import "minimal-mistakes/tables";
+@import "minimal-mistakes/animations";
+
+/* Components */
+@import "minimal-mistakes/buttons";
+@import "minimal-mistakes/notices";
+@import "minimal-mistakes/masthead";
+@import "minimal-mistakes/navigation";
+@import "minimal-mistakes/footer";
+@import "minimal-mistakes/search";
+@import "minimal-mistakes/syntax";
+
+/* Utility classes */
+@import "minimal-mistakes/utilities";
+
+/* Layout specific */
+@import "minimal-mistakes/page";
+@import "minimal-mistakes/archive";
+@import "minimal-mistakes/sidebar";
+@import "minimal-mistakes/print";

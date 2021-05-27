@@ -1,0 +1,713 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Chemotactic random walk - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Chemotactic random walk">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/tutorial_walk">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/tutorial_walk">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk" class="active">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Chemotactic random walk">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Chemotactic random walk
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#simulation-files-and-dependencies">Simulation files and dependencies</a></li><li><a href="#modeling-chemotactic-walk-at-a-cellular-level">Modeling chemotactic walk at a cellular level</a></li><li><a href="#updating-run-time-before-tumbling-based-on-concentrations">Updating run time before tumbling based on concentrations</a></li><li><a href="#compare-performance-of-the-two-strategies">Compare performance of the two strategies</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>In this page, we will:</p>
+<ul>
+  <li>Simulate <em>E. coli</em> chemotaxis at a cellular level</li>
+  <li>Compare performance of chemotactic walk vs. standard random walk</li>
+  <li>Compare performances of different default tumbling frequencies.</li>
+</ul>
+
+<h2 id="simulation-files-and-dependencies">Simulation files and dependencies</h2>
+
+<p>Please download the simulation and visualization here: <a href="../downloads/downloadable/chemotaxis_compare.ipynb" download="chemotaxis_compare.ipynb">chemotaxis_compare.ipynb</a>. Detailed explanation of the model and each functions can be found in the file too.</p>
+
+<p>Please make sure the following dependencies are installed:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Installation Link</th>
+      <th style="text-align: center">Version</th>
+      <th style="text-align: right">Check install/version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.python.org/downloads/">Python3</a></td>
+      <td style="text-align: center">3.6+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">python --version</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://jupyter.org/index.html">Jupyter Notebook</a></td>
+      <td style="text-align: center">4.4.0+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">jupyter --version</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://numpy.org/install/">Numpy</a></td>
+      <td style="text-align: center">1.14.5+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">pip list | grep numpy</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://matplotlib.org/users/installing.html">Matplotlib</a></td>
+      <td style="text-align: center">3.0+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">pip list | grep matplotlib</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://python-colorspace.readthedocs.io/en/latest/installation.html">Colorspace</a> or with <a href="https://pypi.org/project/colorspace/">pip</a></td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">pip list | grep colorspace</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="modeling-chemotactic-walk-at-a-cellular-level">Modeling chemotactic walk at a cellular level</h2>
+
+<p>Our model will be based on observations from BNG simulation and <em>E. coli</em> biology.</p>
+
+<p>Ingredients and simplifying assumptions of the model:</p>
+<ul>
+  <li>Run. The background average duration of each run (<code class="language-plaintext highlighter-rouge">time_exp</code>) is a variable of interest. When the cell senses concentration change, the cell changes the expected run duration (<code class="language-plaintext highlighter-rouge">exp_run_time</code>). The duration of each run follows an exponential distribution with mean = <code class="language-plaintext highlighter-rouge">exp_run_time</code>.</li>
+  <li>Tumble. The duration of cell tumble follows an exponential distribution with mean 0.1s<sup id="fnref:Saragosti2012" role="doc-noteref"><a href="#fn:Saragosti2012" class="footnote">1</a></sup>. When it tumbles, we assume it only changes the orientation for the next run but doesn’t move in space. The degree of reorientation follows uniform distribution from 0° to 360°.</li>
+  <li>Response. As we’ve seen in the BNG model, the cell can respond to the gradient change within 0.5 seconds. In this model, we allow cells to re-measure the concentration after it runs for 0.5 seconds.</li>
+  <li>Gradient. We model an exponential gradient centered at [1500, 1500] with a concentration of 10<sup>10</sup>. All cells start at [0, 0], which has a concentration of 10<sup>2</sup>. The receptors saturate at a concentration of 10<sup>10</sup>.</li>
+  <li>Performance. The closer to the center of the gradient the better.</li>
+</ul>
+
+<p>What’s different between this more advanced model and the <a href="tutorial_purerandom">earlier model</a> using a standard random walk strategy is we decide the run duration before tumbling based on current vs. past concentrations.</p>
+
+<p>We will start from our previous model and only modify on including this ability.</p>
+
+<h2 id="updating-run-time-before-tumbling-based-on-concentrations">Updating run time before tumbling based on concentrations</h2>
+
+<p>In our standard random walk model, we sampled each run duration from an exponential distribution with mean <code class="language-plaintext highlighter-rouge">run_time_expected</code>. This time, we will include the concentrations into our sampling.</p>
+
+<p>The updated run durations adjusted with concentration changes follow an exponential distribution with mean of <code class="language-plaintext highlighter-rouge">run_time_expected_adj_conc</code>. When no gradient is present, <code class="language-plaintext highlighter-rouge">run_time_expected_adj_conc</code> = <code class="language-plaintext highlighter-rouge">run_time_expected</code>. When there is a change in ligand concentration, <code class="language-plaintext highlighter-rouge">run_time_expected_adj_conc</code> changes accordingly. The change is calculated as <code class="language-plaintext highlighter-rouge">(curr_conc - past_conc) / past_conc</code> to normalize for the exponential gradient. We model this response with <code class="language-plaintext highlighter-rouge">run_time_expected_adj_conc</code> = <code class="language-plaintext highlighter-rouge">run_time_expected</code> + 10 * <code class="language-plaintext highlighter-rouge">change</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Calculate the wait time for next tumbling event
+# Input: current concentration (float), past concentration (float), position (array [x, y]), expected run time (float)
+# Return: duration of current run (float)
+</span><span class="k">def</span> <span class="nf">run_duration</span><span class="p">(</span><span class="n">curr_conc</span><span class="p">,</span> <span class="n">past_conc</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">run_time_expected</span><span class="p">):</span>
+
+    <span class="n">curr_conc</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">curr_conc</span><span class="p">,</span> <span class="n">saturation_conc</span><span class="p">)</span> <span class="c1">#Can't detect higher concentration if receptors saturates
+</span>    <span class="n">past_conc</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">past_conc</span><span class="p">,</span> <span class="n">saturation_conc</span><span class="p">)</span>
+    <span class="n">change</span> <span class="o">=</span> <span class="p">(</span><span class="n">curr_conc</span> <span class="o">-</span> <span class="n">past_conc</span><span class="p">)</span> <span class="o">/</span> <span class="n">past_conc</span> <span class="c1">#proportion change in concentration, float
+</span>    <span class="n">run_time_expected_adj_conc</span> <span class="o">=</span> <span class="n">run_time_expected</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">change</span><span class="p">)</span> <span class="c1">#adjust based on concentration change, float
+</span>
+    <span class="k">if</span> <span class="n">run_time_expected_adj_conc</span> <span class="o">&lt;</span> <span class="mf">0.000001</span><span class="p">:</span>
+        <span class="n">run_time_expected_adj_conc</span> <span class="o">=</span> <span class="mf">0.000001</span> <span class="c1">#positive wait times
+</span>    <span class="k">elif</span> <span class="n">run_time_expected_adj_conc</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">run_time_expected</span><span class="p">:</span>
+        <span class="n">run_time_expected_adj_conc</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">run_time_expected</span>     <span class="c1">#the decrease to tumbling frequency is only to a certain extent
+</span>    <span class="c1">#Sample the duration of current run from exponential distribution, mean=run_time_expected_adj_conc
+</span>    <span class="n">curr_run_time</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">run_time_expected_adj_conc</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">curr_run_time</span>
+</code></pre></div></div>
+
+<p>For each cell, simulate through time as the following procedure:</p>
+
+<p>while <code class="language-plaintext highlighter-rouge">t</code> &lt; duration:</p>
+<ul>
+  <li>Assess the current concentration</li>
+  <li>Update current run duration <code class="language-plaintext highlighter-rouge">curr_run_time</code></li>
+  <li>If <code class="language-plaintext highlighter-rouge">curr_run_time</code> &lt; 0.5s:
+     1. run for <code class="language-plaintext highlighter-rouge">curr_run_time</code> second along current direction
+     2. Sample the duration of tumble <code class="language-plaintext highlighter-rouge">tumble_time</code> and the resulted direction
+     3. increment t by <code class="language-plaintext highlighter-rouge">curr_run_time</code> and <code class="language-plaintext highlighter-rouge">tumble_time</code></li>
+  <li>If <code class="language-plaintext highlighter-rouge">curr_run_time</code> &gt; 0.5s:
+     1. run for 0.5s along current direction
+     2. increment <code class="language-plaintext highlighter-rouge">t</code> by 0.5s (and then the cell will re-assess the new concentration, and decide the duration of next run)</li>
+</ul>
+
+<p>We need to modify our code in the following way:</p>
+<ul>
+  <li>Add concentration calculation before each run.</li>
+  <li>Replace our sampler for run duration with calling the <code class="language-plaintext highlighter-rouge">run_duration</code> function</li>
+  <li>Check the conditions with the sampled duration; only tumble after run if <code class="language-plaintext highlighter-rouge">curr_run_time</code> &lt; 0.5s</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This function performs simulation
+# Input: number of cells to simulate (int), how many seconds (int), the expected run time before tumble (float)
+# Return: the simulated trajectories paths: array of shape (num_cells, duration+1, 2)
+</span><span class="k">def</span> <span class="nf">simulate_chemotaxis</span><span class="p">(</span><span class="n">num_cells</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">run_time_expected</span><span class="p">):</span>
+
+    <span class="c1">#Takes the shape (num_cells, duration+1, 2)
+</span>    <span class="c1">#any point [x,y] on the simulated trajectories can be accessed via paths[cell, time]
+</span>    <span class="n">paths</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_cells</span><span class="p">,</span> <span class="n">duration</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">rep</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_cells</span><span class="p">):</span>
+        <span class="c1"># Initialize simulation
+</span>        <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#record the time elapse
+</span>        <span class="n">curr_position</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">start</span><span class="p">)</span> <span class="c1">#start at [0, 0]
+</span>        <span class="n">past_conc</span> <span class="o">=</span> <span class="n">calc_concentration</span><span class="p">(</span><span class="n">start</span><span class="p">)</span> <span class="c1">#Initialize concentration
+</span>        <span class="n">projection_h</span><span class="p">,</span> <span class="n">projection_v</span><span class="p">,</span> <span class="n">tumble_time</span> <span class="o">=</span> <span class="n">tumble_move</span><span class="p">()</span> <span class="c1">#Initialize direction randomly
+</span>
+        <span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">duration</span><span class="p">:</span>
+            <span class="n">curr_conc</span> <span class="o">=</span> <span class="n">calc_concentration</span><span class="p">(</span><span class="n">curr_position</span><span class="p">)</span>
+
+            <span class="n">curr_run_time</span> <span class="o">=</span> <span class="n">run_duration</span><span class="p">(</span><span class="n">curr_conc</span><span class="p">,</span> <span class="n">past_conc</span><span class="p">,</span> <span class="n">curr_position</span><span class="p">,</span> <span class="n">run_time_expected</span><span class="p">)</span> <span class="c1">#get run duration, float
+</span>
+            <span class="c1"># if run time (r) is within the step (s), run for r second and then tumble
+</span>            <span class="k">if</span> <span class="n">curr_run_time</span> <span class="o">&lt;</span> <span class="n">response_time</span><span class="p">:</span>
+                <span class="c1">#displacement on either direction is calculated as the projection * speed * time
+</span>                <span class="c1">#update current position by summing old position and displacement
+</span>                <span class="n">curr_position</span> <span class="o">=</span> <span class="n">curr_position</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">projection_h</span><span class="p">,</span> <span class="n">projection_v</span><span class="p">])</span> <span class="o">*</span> <span class="n">speed</span> <span class="o">*</span> <span class="n">curr_run_time</span>
+                <span class="n">projection_h</span><span class="p">,</span> <span class="n">projection_v</span><span class="p">,</span> <span class="n">tumble_time</span> <span class="o">=</span> <span class="n">tumble_move</span><span class="p">()</span> <span class="c1">#tumble
+</span>                <span class="n">t</span> <span class="o">+=</span> <span class="p">(</span><span class="n">curr_run_time</span> <span class="o">+</span> <span class="n">tumble_time</span><span class="p">)</span> <span class="c1">#increment time
+</span>
+            <span class="c1"># if r &gt; s, run for r; then it will be in the next iteration
+</span>            <span class="k">else</span><span class="p">:</span>
+                <span class="c1">#displacement on either direction is calculated as the projection * speed * time
+</span>                <span class="c1">#update current position by summing old position and displacement
+</span>                <span class="n">curr_position</span> <span class="o">=</span> <span class="n">curr_position</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">projection_h</span><span class="p">,</span> <span class="n">projection_v</span><span class="p">])</span> <span class="o">*</span> <span class="n">speed</span> <span class="o">*</span> <span class="n">response_time</span>
+                <span class="n">t</span> <span class="o">+=</span> <span class="n">response_time</span> <span class="c1">#no tumble here
+</span>
+            <span class="c1">#record position approximate for integer number of second
+</span>            <span class="n">curr_sec</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">curr_sec</span> <span class="o">&lt;=</span> <span class="n">duration</span><span class="p">:</span>
+                <span class="c1">#fill values from last time point to current time point
+</span>                <span class="n">paths</span><span class="p">[</span><span class="n">rep</span><span class="p">,</span> <span class="n">curr_sec</span><span class="p">]</span> <span class="o">=</span> <span class="n">curr_position</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">past_conc</span> <span class="o">=</span> <span class="n">curr_conc</span>
+
+    <span class="k">return</span> <span class="n">paths</span>
+</code></pre></div></div>
+
+<h2 id="compare-performance-of-the-two-strategies">Compare performance of the two strategies</h2>
+
+<p>Please download the simulation and visualization here: <a href="../downloads/downloadable/chemotaxis_compare.ipynb" download="chemotaxis_compare.ipynb">chemotaxis_compre.ipynb</a>.</p>
+
+<p>To compare the performance of the two strategies, we visualize the trajectories of simulation with 3 cells and compare the performance using simulation with 500 cells for each strategy.</p>
+
+<p><strong>Qualitative comparison</strong>. Run the code for Part2: Visualizing trajectories. The background color indicates concentration: white -&gt; red = low -&gt; high; black dot are starting points; red dots are the points they reached at the end of the simulation; colored points represents trajectories (one color one cell): dark -&gt; bright color = older -&gt; newer time points; blue cross indicates the goal.</p>
+
+<p>We will simulate 3 cells for 800 seconds for each of the strategies.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Run simulation for 3 cells for each strategy, plot paths
+</span><span class="n">duration</span> <span class="o">=</span> <span class="mi">800</span>   <span class="c1">#seconds, duration of the simulation
+</span><span class="n">num_cells</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">origin_to_center</span> <span class="o">=</span> <span class="n">euclidean_distance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">ligand_center</span><span class="p">)</span> <span class="c1">#Update the global constant
+</span><span class="n">run_time_expected</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">paths_rand</span> <span class="o">=</span> <span class="n">simulate_std_random</span><span class="p">(</span><span class="n">num_cells</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">run_time_expected</span><span class="p">)</span>
+<span class="n">paths_che</span> <span class="o">=</span> <span class="n">simulate_chemotaxis</span><span class="p">(</span><span class="n">num_cells</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">run_time_expected</span><span class="p">)</span>
+<span class="n">paths</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">paths_rand</span><span class="p">,</span> <span class="n">paths_che</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>The plotting is similar as before, except that this time, we will have two subplots, one for pure random walk and another for chemotactic random walk, initialized with <code class="language-plaintext highlighter-rouge">plt.subplots(1, 2)</code>. We will plot the simulation results for each strategy.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Below are all for plotting purposes
+</span><span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Pure random walk"</span><span class="p">,</span> <span class="s">"Chemotactic random walk"</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="c1">#1*2 subplots, size 16*8
+</span>
+<span class="c1">#First set color map
+</span><span class="n">mycolor</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">],</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">254</span><span class="p">],</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">250</span><span class="p">],</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">240</span><span class="p">],</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">209</span><span class="p">],</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">218</span><span class="p">,</span> <span class="mi">185</span><span class="p">],</span> <span class="p">[</span><span class="mi">251</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">171</span><span class="p">],</span> <span class="p">[</span><span class="mi">248</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">157</span><span class="p">],</span> <span class="p">[</span><span class="mi">244</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">142</span><span class="p">],</span> <span class="p">[</span><span class="mi">240</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">]]</span> <span class="c1">#from coolors：）
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mycolor</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">)):</span>
+        <span class="n">i</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">256</span><span class="p">)</span>
+<span class="n">cmap_color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">.</span><span class="n">LinearSegmentedColormap</span><span class="p">.</span><span class="n">from_list</span><span class="p">(</span><span class="s">'my_list'</span><span class="p">,</span> <span class="n">mycolor</span><span class="p">)</span> <span class="c1">#Linearly segment these colors to create a continuous color map
+</span>
+<span class="c1">#Store the concentrations for each integer position in a matrix
+</span><span class="n">conc_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">))</span> <span class="c1">#we will display from [-1000, -1000] to [3000, 3000]
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4000</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4000</span><span class="p">):</span>
+        <span class="n">conc_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">calc_concentration</span><span class="p">([</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1000</span><span class="p">]))</span>
+
+<span class="c1">#Repeat for the two strategies
+</span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="c1">#Simulate the gradient distribution, plot as a heatmap
+</span>    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">imshow</span><span class="p">(</span><span class="n">conc_matrix</span><span class="p">.</span><span class="n">T</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_color</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">'nearest'</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">],</span> <span class="n">origin</span> <span class="o">=</span> <span class="s">'lower'</span><span class="p">)</span>
+
+    <span class="c1">#Plot simulation results
+</span>    <span class="n">time_frac</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">duration</span>
+    <span class="c1">#Plot the trajectories. Time progress: dark -&gt; colorful
+</span>    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">duration</span><span class="p">):</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="mf">0.85</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">))</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.85</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="mf">0.9</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">))</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.4</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="mf">0.85</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">time_frac</span> <span class="o">*</span> <span class="n">t</span><span class="p">))</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">start</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">'ko'</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span> <span class="c1">#Mark the starting point [0, 0]
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_cells</span><span class="p">):</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'ro'</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span> <span class="c1">#Mark the terminal points for each cell
+</span>    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="s">'bX'</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span> <span class="c1">#Mark the highest concentration point [1500, 1500]
+</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">set_title</span><span class="p">(</span><span class="s">"{}</span><span class="se">\n</span><span class="s"> Average tumble every 1 s"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">methods</span><span class="p">[</span><span class="n">m</span><span class="p">]),</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">0.87</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"poisiton in μm"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">"poisiton in μm"</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Which strategy allows the cell to travel towards the higher concentration?</p>
+
+<p>Are we ready to conclude which default tumbling frequencies are the best?</p>
+
+<p><strong>Quantitative comparsion</strong>. Because of the high variations due to randomness, trajectories for 3 cells is not convincing enough. To verify your hypothesis on which strategy is better, let’s simulate 500 cells for 1500 seconds for each strategy. Run the two code for Part3: Comparing performances. Each colored line indicates a strategy, plotting average distances for the 500 cells; the shaded area is standard deviation; the grey dashed line is where concentration reaches 1e8.</p>
+
+<p>Like we did above, we run simulations for each strategies.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Run simulation for 3 cells with different background tumbling frequencies, Plot paths
+</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="mi">1500</span>   <span class="c1">#seconds, duration of the simulation
+</span><span class="n">num_cells</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">origin_to_center</span> <span class="o">=</span> <span class="n">euclidean_distance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">ligand_center</span><span class="p">)</span> <span class="c1">#Update the global constant
+</span><span class="n">run_time_expected</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">paths_rand</span> <span class="o">=</span> <span class="n">simulate_std_random</span><span class="p">(</span><span class="n">num_cells</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">run_time_expected</span><span class="p">)</span>
+<span class="n">paths_che</span> <span class="o">=</span> <span class="n">simulate_chemotaxis</span><span class="p">(</span><span class="n">num_cells</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">run_time_expected</span><span class="p">)</span>
+<span class="n">paths</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">paths_rand</span><span class="p">,</span> <span class="n">paths_che</span><span class="p">])</span>
+
+<span class="n">all_distance</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="n">num_cells</span><span class="p">,</span> <span class="n">duration</span><span class="p">))</span> <span class="c1">#Initialize to store results: methods, number, duration
+</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="c1">#two methods
+</span>    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_cells</span><span class="p">):</span> <span class="c1">#each cell
+</span>        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">duration</span><span class="p">):</span> <span class="c1">#every time point
+</span>            <span class="n">pos</span> <span class="o">=</span> <span class="n">paths</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="n">euclidean_distance</span><span class="p">(</span><span class="n">ligand_center</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+            <span class="n">all_distance</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span>
+
+<span class="n">all_dist_avg</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">all_distance</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#Calculate average over cells, array of shape (2,duration,)
+</span><span class="n">all_dist_std</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">all_distance</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#Calculate the standard deviation, array of shape (2,duration,)
+</span></code></pre></div></div>
+
+<p>And then plotting the average distance to center vs. time like in the <a href="tutorial_purerandom">previous tutorial</a>.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Below are all for plotting purposes
+#Define the colors to use
+</span><span class="n">colors1</span> <span class="o">=</span> <span class="n">colorspace</span><span class="p">.</span><span class="n">qualitative_hcl</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">200.</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">70</span><span class="p">,</span> <span class="n">pallete</span> <span class="o">=</span> <span class="s">"dynamic"</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span> <span class="c1">#Set the x-axis for plot: time points. Array of integers of shape (duration,)
+</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="c1">#Initialize the plot with 1*1 subplot of size 10*8
+</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="c1">#Get the result for this strategy
+</span>    <span class="n">mu</span><span class="p">,</span> <span class="n">sig</span> <span class="o">=</span> <span class="n">all_dist_avg</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="n">all_dist_std</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
+    <span class="c1">#Plot average distance vs. time
+</span>    <span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"{}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">methods</span><span class="p">[</span><span class="n">m</span><span class="p">]),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors1</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+    <span class="c1">#Fill in average +/- one standard deviation vs. time
+</span>    <span class="n">ax</span><span class="p">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">mu</span> <span class="o">+</span> <span class="n">sig</span><span class="p">,</span> <span class="n">mu</span> <span class="o">-</span> <span class="n">sig</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors1</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">"Average distance to highest concentration"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'time (s)'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'distance to center (µm)'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s">'gray'</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s">'dashed'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'concentration 10^8'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">'upper right'</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">.</span><span class="n">grid</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Which strategy is more efficient?</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_conclusion#comparing-the-effectiveness-of-our-two-random-walk-strategies" class="btn btn--primary btn--large">Return to main text</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Saragosti2012" role="doc-endnote">
+      <p>Saragosti J., Siberzan P., Buguin A. 2012. Modeling <em>E. coli</em> tumbles by rotational diffusion. Implications for chemotaxis. PLoS One 7(4):e35412. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3329434/">available online</a>. <a href="#fnref:Saragosti2012" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

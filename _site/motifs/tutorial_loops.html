@@ -1,0 +1,521 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Looking for Loops in Transcription Factor Networks - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Looking for Loops in Transcription Factor Networks">
+<meta property="og:url" content="http://localhost:4000/motifs/tutorial_loops">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/motifs/tutorial_loops">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Finding Motifs in Transcription Factor Networks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/home">Introduction: a submicroscopic scale of interest<br><br></a></li>
+          
+            <li><a href="/motifs/transcription">Transcription and DNA-protein binding<br><br></a></li>
+          
+            <li><a href="/motifs/networks">Transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/finding">Using randomness to verify network motifs<br><br></a></li>
+          
+            <li><a href="/motifs/nar">The negative autoregulation motif<br><br></a></li>
+          
+            <li><a href="/motifs/feed">The feedforward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/oscillators">Building a biological oscillator<br><br></a></li>
+          
+            <li><a href="/motifs/conclusion">Conclusion: the importance of robustness in biological oscillations<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/tutorial_loops" class="active">Looking for loops in transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar">Comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar_mathematically_controlled">Ensuring a mathematically controlled simulation for comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_feed">Implementing the feed-forward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_oscillators">Implementing the repressilator<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_perturb">Perturbing the represillator<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/exercises">Network motif exercises</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Looking for Loops in Transcription Factor Networks">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Looking for Loops in Transcription Factor Networks
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              
+
+            </nav>
+          </aside>
+        
+        <p>In this tutorial, we will build a Jupyter Notebook to analyze loops in the <em>E. coli</em> transcription factor network, which can be downloaded <a href=".../downloads/network_tf_tf_clean.txt" download="network_tf_tf_clean.txt">here</a>. If you would like to jump to the end of the analysis, you can download the complete Jupyter Notebook <a href=".../downloads/Network_Demo.ipynb" download="Network_Demo.ipynb">here</a>.</p>
+
+<p>You will also need the following helper file:
+<a href="https://purpleavatar.github.io/multiscale_biological_modeling/downloads/network_loader.py" download="network_loader.py">Python File</a></p>
+
+<p>Before running this tutorial, make sure that the following software and packages are installed. <strong>Warning:</strong> Be careful of the igraph installation and follow the website instructions carefully. When installing via pip or conda, specify “<em>python-igraph</em>” instead of “<em>igraph</em>”.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Installation Link</th>
+      <th style="text-align: center">Version<sup id="fnref:version" role="doc-noteref"><a href="#fn:version" class="footnote">1</a></sup></th>
+      <th style="text-align: right">Check Install</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.python.org/downloads/">Python3</a></td>
+      <td style="text-align: center">3.7</td>
+      <td style="text-align: right"><em>python –version</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://jupyter.org/index.html">Jupyter Notebook</a></td>
+      <td style="text-align: center">4.4.0</td>
+      <td style="text-align: right"><em>jupyter –version</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://igraph.org/python/doc/tutorial/install.html">python-igraph</a></td>
+      <td style="text-align: center">0.8.0</td>
+      <td style="text-align: right"><em>conda list</em> or <em>pip list</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Create a blank Jupiter notebook titled <code class="language-plaintext highlighter-rouge">loops.ipynb</code> and start editing this file below. First, we import the transcription factor network and see how many nodes and edges there are, as well as count the number of loops.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># NOTE: when installing via pip or conda, install python-igraph
+</span><span class="kn">from</span> <span class="nn">igraph</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">network_loader</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">txt_file</span> <span class="o">=</span> <span class="s">'network_tf_tf_clean.txt'</span>
+
+<span class="n">network</span><span class="p">,</span> <span class="n">vertex_names</span> <span class="o">=</span> <span class="n">open_network</span><span class="p">(</span><span class="n">txt_file</span><span class="p">)</span>
+
+<span class="c1"># how many nodes &amp; edges
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Number of nodes: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">network</span><span class="p">.</span><span class="n">vs</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Number of edges: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">network</span><span class="p">.</span><span class="n">es</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Number of self-loops: "</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Graph</span><span class="p">.</span><span class="n">is_loop</span><span class="p">(</span><span class="n">network</span><span class="p">)))</span>
+</code></pre></div></div>
+
+<p>If you run your notebook, you should obtain the following statistics.</p>
+
+<ul>
+  <li>Number of nodes:  197</li>
+  <li>Number of edges:  477</li>
+  <li>Number of self-loops:  130</li>
+</ul>
+
+<p>We can also create a visualization of the network by adding the following line of code to our network.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">vertex_label</span><span class="o">=</span><span class="n">vertex_names</span><span class="p">,</span> <span class="n">vertex_label_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+     <span class="n">edge_arrow_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edge_arrow_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">autocurve</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Running the notebook now produces the following network.</p>
+
+<p><img src="../assets/images/motifs_finding_ecoli_2.png" alt="image-center" class="align-center" /></p>
+
+<p>Our plan is to compare this network against a random network. The following code will call a function from a package to generate a random network with 197 nodes and 477 edges and plot it. It uses a built in function called <code class="language-plaintext highlighter-rouge">random.seed()</code> that takes an integer as input and uses this function to initiate a (pseudo)random number generator that will allow us to generate a random network.  There is nothing special about the input value 42 here – or is there?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">.</span><span class="n">Erdos_Renyi</span><span class="p">(</span><span class="mi">197</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="mi">477</span><span class="p">,</span><span class="n">directed</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">loops</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">edge_arrow_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edge_arrow_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">autocurve</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The resulting network is shown in the figure below.</p>
+
+<p><img src="../assets/images/motifs_finding_random.png" alt="image-center" class="align-center" /></p>
+
+<p>The question is how many edges and self-loops this network has, which is handled by the following code.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># how many nodes &amp; edges
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Number of nodes: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">vs</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Number of edges: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">es</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Number of self-loops: "</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Graph</span><span class="p">.</span><span class="n">is_loop</span><span class="p">(</span><span class="n">g</span><span class="p">)))</span>
+</code></pre></div></div>
+
+<p>This code produces the following statistics for the random network.</p>
+
+<ul>
+  <li>Number of nodes:  197</li>
+  <li>Number of edges:  477</li>
+  <li>Number of self-loops:  5</li>
+</ul>
+
+<p>The number of self-loops is significantly lower in the random network compared to the real transcription factor network.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> Change the input integer to <code class="language-plaintext highlighter-rouge">random.seed</code> to any integer you like. How does it affect the number of nodes, edges, and self-loops? Try changing the input to a few different values.</p>
+
+<p>Regardless of what seed value we use, we can confirm that the number of self-loops expected in a random graph is significantly lower than in the real <em>E. coli</em> network. Back in the main text, we will discuss this significance and then see if we can determine why autoregulation has arisen.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="finding#the-negative-autoregulation-motif" class="btn btn--primary btn--large">Return to main text</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:version" role="doc-endnote">
+      <p>Other versions may be compatible with this code, but those listed are known to work for this tutorial. <a href="#fnref:version" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

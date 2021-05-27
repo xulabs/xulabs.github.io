@@ -1,0 +1,473 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>An Introduction to Random Walks - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="An Introduction to Random Walks">
+<meta property="og:url" content="http://localhost:4000/prologue/random-walk">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/prologue/random-walk">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Prologue: an Introduction to Biological Modeling via Random Walks and Turing Patterns</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/">Introduction: Life is random<br><br></a></li>
+          
+            <li><a href="/prologue/turing">Alan Turing and the zebra's stripes<br><br></a></li>
+          
+            <li><a href="/prologue/random-walk" class="active">An introduction to random walks<br><br></a></li>
+          
+            <li><a href="/prologue/animals">A reaction-diffusion model generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/blocks">The Gray-Scott model: a cellular automaton generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/conclusion">Conclusion: Turing patterns are fine-tuned<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/tutorial-random-walk">Simulating particle diffusion with CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/turing-cellblender">Generating Turing patterns with a reaction-diffusion simulation in CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/tutorial-diffusion">Building a diffusion cellular automaton with Jupyter notebook<br><br></a></li>
+          
+            <li><a href="/prologue/gs-jupyter">Implementing the Gray-Scott model for coarse-grained reaction-diffusion with Jupyter notebook<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="An Introduction to Random Walks">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">An Introduction to Random Walks
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#the-wanderlust-of-a-single-particle">The wanderlust of a single particle</a></li><li><a href="#from-one-particle-to-many">From one particle to many</a></li><li><a href="#brownian-motion-big-numbers-in-small-spaces">Brownian motion: big numbers in small spaces</a></li><li><a href="#optional-a-proof-of-the-random-walk-theorem">(Optional) A proof of the Random Walk Theorem</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="the-wanderlust-of-a-single-particle">The wanderlust of a single particle</h2>
+
+<p>We have mentioned that our experience of the world is often influenced by the random interactions of objects that we cannot see. Our goal is to see how randomness can help us understand how zebras get their stripes, and to this end, we will consider a simpler phenomenon by observing the movement of a single particle taking a <strong>random walk</strong> in a two-dimensional plane. At each step, the particle moves a single unit in a randomly chosen direction.</p>
+
+<p class="notice--primary"><strong>STOP</strong>: After <em>n</em> steps, how far do you think the particle will have traveled (as the crow flies) from its starting point?</p>
+
+<p>Let’s generate an animation of a particle following a random walk. The video below shows a randomly walking particle, shown in red, taking 1000 steps.</p>
+
+<center>
+<iframe width="640" height="360" src="../assets/random_walk_1.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p>The distance that the particle wanders from its starting point may surprise you. And yet the astute scientist would point out that this is just a single particle; perhaps the typical particle would be much more of a homebody.</p>
+
+<p>The particle’s movements are random, but the <em>average-case</em> behavior of the particle can be predicted, as the following theorem indicates. For mathematics lovers, we explain why this theorem is true in an optional bonus section at the bottom of this page.</p>
+
+<p><strong>Random Walk Theorem:</strong> After <em>n</em> steps of unit length in a random walk, a particle will on average find itself a distance of approximately \(\sqrt{n}\) from its origin.</p>
+
+<h2 id="from-one-particle-to-many">From one particle to many</h2>
+
+<p>The Random Walk Theorem does not say that after <em>n</em> steps a particle will be exactly \(\sqrt{n}\) from the origin, any more than we would expect that in flipping a coin 2,000 times the coin will come up heads exactly 1,000 times. Yet the statement about the particle’s average behavior is powerful. If we animate the action of many independent particles following random walks, then we will see that although some particles hug their starting point and some wind up far away, most particles steadily move outward as the simulation continues.</p>
+
+<center>
+<iframe width="640" height="360" src="../assets/random_walk_200.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p>If you are interested in seeing how to build this random walk simulation as an introduction to the software that we will soon be using for biological modeling, then please visit the following software tutorial. This tutorial uses <strong>CellBlender</strong>, an add-on to the popular open graphics software program <strong>Blender</strong>, that allows us to create and visualize biological models.</p>
+
+<p>We have designed this course so that you can appreciate the key ideas behind the biological models that we build without following software tutorials. But we also provide these tutorials so that you can explore the modeling software that we have used to generate our conclusions. If you find this software helpful, perhaps you can even use this software in your own work!</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial-random-walk" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="brownian-motion-big-numbers-in-small-spaces">Brownian motion: big numbers in small spaces</h2>
+
+<p>Our experience of the world confirms what we see in the animations produced by CellBlender. The seemingly random movements of particles suspended in a medium via <strong>Brownian motion</strong> will cause those particles to move away from their starting point, even if the concentration of these particles is uniform. We understand, for example, that an infected COVID-19 patient can infect many others in an enclosed space in a short time frame. To take a less macabre example, we also know that when a cake is baking in the oven at home, we will not need to wait long for wonderful smells to waft outward from the kitchen.</p>
+
+<p>Why should a scientist care about random walks? Later in this course, we will see that the random walk model is at the core of a simple but powerful approach that bacteria like <em>E. coli</em> use to explore their environment in the hunt for food. In the next lesson, we will see that mimicking the random movements of particles will be important for building a biological model in which we allow particles to move naturally and interact when they collide.</p>
+
+<p>Before continuing, we point you to a beautiful animation illustrating just how far a single randomly moving particle can travel in a relatively small amount of time. This animation, which shows a simulation of the path taken by a glucose molecule as the result of Brownian motion, starts at 6:10 of the following excellent instructional video developed by the late Joel Stiles.</p>
+
+<center>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/KQgydF-fXvc?start=370" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p style="font-size: 100%; text-align: center;"><a href="animals" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<h2 id="optional-a-proof-of-the-random-walk-theorem">(Optional) A proof of the Random Walk Theorem</h2>
+
+<p>The Random Walk Theorem states that the average distance that a randomly walking particle will find itself from its starting point after taking <em>n</em> steps of unit length is \(\sqrt{n}\). Below, we provide a justification for why this is true for interested learners who are familiar with probability.</p>
+
+<p>Let <b>x<sub><i>i</i></sub></b> denote the random variable corresponding to the vector of the particle’s <em>i</em>-th step.  The distance <em>d</em> traveled by the particle can be represented by the sum of all the <b>x<sub><i>i</i></sub></b>,</p>
+
+\[d = \mathbf{x_1} + \mathbf{x_2} + \cdots + \mathbf{x_n} \,.\]
+
+<p>We will show that the expected value of <i>d</i><sup>2</sup> is equal to <em>n</em>. First note that</p>
+
+\[d^2 = (\mathbf{x_1} + \mathbf{x_2} + \cdots + \mathbf{x_n}) \cdot (\mathbf{x_1} + \mathbf{x_2} + \cdots + \mathbf{x_n})\,.\]
+
+<p>After expansion, we obtain</p>
+
+\[\begin{align*}
+d^2 = ~ &amp; \mathbf{x_1} \cdot (\mathbf{x_1} + \mathbf{x_2} + \cdots + \mathbf{x_n})\\
++ &amp; \mathbf{x_2} \cdot (\mathbf{x_1} + \mathbf{x_2} + \cdots + \mathbf{x_n})\\
++ &amp; \cdots\\
++ &amp; \mathbf{x_n} \cdot (\mathbf{x_1} + \mathbf{x_2} + \cdots + \mathbf{x_n}) \,.
+\end{align*}\]
+
+<p>Finally, we rearrange this equation so that the terms \(\mathbf{x_1} \cdot \mathbf{x_1}\), \(\mathbf{x_2} \cdot \mathbf{x_2}\), and so on occur first, and the remaining terms appear last. This allows us to write <i>d</i><sup>2</sup> as follows.</p>
+
+\[d^2 = \sum_{i=1}^n (\mathbf{x_i} \cdot \mathbf{x_i}) + \sum_{i \neq j} (\mathbf{x_i} \cdot \mathbf{x_j})\, .\]
+
+<p>The right side of this equation is the sum of <i>n</i><sup>2</sup> dot products.  When we take the expectation of both sides, we can apply a fundamental theorem called the “linearity of expectation”, which states that for any two random variables \(x\) and \(y\), the expectation of their sum \(\mathbb{E}(x + y)\) is equal to the sum of the corresponding expectations \(\mathbb{E}(x) + \mathbb{E}(y)\):</p>
+
+\[\mathbb{E}(d^2) = \sum_{i=1}^n \mathbb{E}(\mathbf{x_i} \cdot \mathbf{x_i}) + \sum_{i \neq j} \mathbb{E}(\mathbf{x_i} \cdot \mathbf{x_j})\, .\]
+
+<p>For any <em>i</em>, \(\mathbf{x_i} \cdot \mathbf{x_i}\) is just the length of the vector \(x_i\), which is equal to 1.  On the other hand, the expected value of the dot product of any two random unit vectors is zero.  Therefore, the right side of the above equation can be simplified to give the equation</p>
+
+\[\mathbb{E}(d^2) = \sum_{i=1}^n 1 + \sum_{i \neq j} 0 = n + 0 = n\, ,\]
+
+<p>which is what we set out to prove.</p>
+
+<p>A couple of notes before we continue. First, we did not use anything about the random walk being two-dimensional in this proof; therefore, it holds whether our particle is walking in two, three, or any number of dimensions.</p>
+
+<p>Second, we technically did not show that the expected value of \(d\) is \(\sqrt{n}\), but rather that the expected value of \(d^2\) is \(n\). It is not true that \(\mathbb{E}(d)\) is equal to \(\sqrt{n}\), but rather that as \(n\) grows, \(\mathbb{E}(d)\) grows like \(c \cdot \sqrt{n}\) for some constant factor \(c\). A proof is beyond the scope of this course, but it can be shown that as \(n\) goes off to infinity, \(\mathbb{E}(d)\) tends toward \(\sqrt{(2/\pi)} \cdot \sqrt{n}\). Who knew that the mathematics of random walks could be so complicated!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

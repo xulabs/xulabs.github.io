@@ -1,0 +1,30 @@
+begin model
+
+begin molecule types
+	A(h,t)
+end molecule types
+
+begin reaction rules
+	Initiation: A(h,t) + A(h,t) <-> A(h,t!1).A(h!1,t) 0.01,0.01
+	Polymerizationfree: A(h!+,t) + A(h,t) <-> A(h!+,t!1).A(h!1,t) 0.01,0.01
+	Polymerizationfree2: A(h,t) + A(h,t!+) <-> A(h,t!1).A(h!1,t!+) 0.01,0.01
+	Polymerizationbound: A(h!+,t) + A(h,t!+) <-> A(h!+,t!1).A(h!1,t!+) 0.01,0.01
+end reaction rules
+
+begin seed species
+	A(h,t) 1000
+end seed species
+
+begin observables
+	Species A1 A==1
+	Species A2 A==2
+	Species A3 A==3
+	Species A5 A==5
+	Species A10 A==10
+	Species A20 A==20
+	Species ALong A>=30
+end observables
+
+end model
+
+simulate({method=>"nf", t_end=>50, n_steps=>1000})

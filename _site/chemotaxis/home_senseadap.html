@@ -1,0 +1,554 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Methylation Helps Bacteria Adapt to Differing Concentrations - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Methylation Helps Bacteria Adapt to Differing Concentrations">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/home_senseadap">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/home_senseadap">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap" class="active">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Methylation Helps Bacteria Adapt to Differing Concentrations">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Methylation Helps Bacteria Adapt to Differing Concentrations
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#bacterial-tumbling-frequencies-remain-constant-despite-background-attractant-concentrations">Bacterial tumbling frequencies remain constant despite background attractant concentrations</a></li><li><a href="#bacteria-have-a-memory-of-past-concentrations-using-methylation">Bacteria have a “memory” of past concentrations using methylation</a></li><li><a href="#combinatorial-explosion-and-the-need-for-rule-based-modeling">Combinatorial explosion and the need for rule-based modeling</a></li><li><a href="#bacterial-tumbling-is-resilient-to-large-sudden-changes-in-ligand-concentration">Bacterial tumbling is resilient to large sudden changes in ligand concentration</a></li><li><a href="#additional-resources">Additional resources</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="bacterial-tumbling-frequencies-remain-constant-despite-background-attractant-concentrations">Bacterial tumbling frequencies remain constant despite background attractant concentrations</h2>
+
+<p>In the previous lesson, we explored the signal transduction pathway by which <em>E. coli</em> can change its tumbling frequency in response to a change in the concentration of an attractant. But the reality of cellular environments is that the concentration of a substance in these environments can vary across several orders of magnitude. The cell therefore needs to detect not <em>absolute</em> concentrations of a substance but rather <em>relative</em> changes so that it can move in the direction of an attractant (or away from a repellent).</p>
+
+<p class="notice--primary"><strong>STOP:</strong> Consider two bacterial cells, both of which are in well-mixed environments with fixed glucose concentrations. The first cell’s environment has a glucose concentration of <em>x</em>, and the second cell’s environment has a glucose concentration of 0.1<em>x</em>. Should the default tumbling frequency of the two cells be the same?  What if we drop a sugar cube into both environments?  Should the two cells respond in the same way or in different ways in response to the attractant?</p>
+
+<p>The ability of <em>E. coli</em> to react to <em>relative</em> changes in its environment is not  present in our current model of chemotaxis. According to our current model, if a cell is in an environment with high background concentration of an attractant, then the cell will detect a signal and lower its tumbling frequency. If the concentration continues to increase, then it may not be able to lower this frequency any further.</p>
+
+<p><em>E. coli</em> detects relative changes in its concentration via <strong>adaptation</strong> to the signal concentration. If the concentration of attractant remains constant for a period of time, then regardless of the absolute value of the concentration, the cell returns to the same background tumbling frequency. In other words, <em>E. coli</em> demonstrates <em>robustness</em> to the background concentration of attractant in maintaining its  default tumbling behavior.</p>
+
+<p>In this lesson, we will investigate the biochemical mechanism that <em>E. coli</em> uses to achieve such a robust response to environments with different background concentrations. We will then further expand the model we built in the previous lesson to see if this model can replicate the bacterium’s adaptive response.</p>
+
+<h2 id="bacteria-have-a-memory-of-past-concentrations-using-methylation">Bacteria have a “memory” of past concentrations using methylation</h2>
+
+<p>Recall from the previous lesson that in the absence of an attractant, CheW and CheA readily bind to an MCP, leading to greater autophosphorylation of CheA, which in turn phosphorylates CheY. The greater the concentration of phosphorylated CheY, the more frequently the bacterium tumbles.</p>
+
+<p>Signal transduction is achieved through phosphorylation, but <em>E. coli</em> maintains a “memory” of past environmental concentrations through a chemical process called <strong>methylation</strong>. In this  reaction, a <strong>methyl group</strong> (-CH<sub>3</sub>) is added to an organic molecule; the removal of a methyl group is called <strong>demethylation</strong>.</p>
+
+<p>Every MCP receptor contains four methylation sites, meaning that between zero and four methyl groups can be added to the receptor. On the plasma membrane, many MCPs, CheW, and CheA molecules form an array structure. Methylation reduces the negative charge on the receptors, stabilizing the array and facilitating CheA autophosphorylation. The more sites that are methylated, the higher the autophosphorylation rate of CheA, which means that CheY has a higher phosphorylation rate, and tumbling frequency increases.</p>
+
+<p>We now have two different ways that tumbling frequency can be elevated. First, if the concentration of an attractant is low, then CheW and CheA freely form a complex with the MCP, and the phosphorylation cascade passes phosphoryl groups to CheY, which interacts with the flagella and keeps tumbling frequency high. Second, an increase in MCP methylation can also boost CheA autophosphorylation and lead to an increased tumbling frequency.</p>
+
+<p>Methylation of MCPs is achieved by an additional protein called <strong>CheR</strong>. When bound to MCPs, CheR methylates ligand-bound MCPs faster<sup id="fnref:Amin2010" role="doc-noteref"><a href="#fn:Amin2010" class="footnote">1</a></sup><sup id="fnref:Terwilliger1986" role="doc-noteref"><a href="#fn:Terwilliger1986" class="footnote">2</a></sup>, and so the rate of MCP methylation by CheR is higher if the MCP is bound to a ligand.<sup id="fnref:Spiro1997" role="doc-noteref"><a href="#fn:Spiro1997" class="footnote">3</a></sup>. Therefore, say that <em>E. coli</em> encounters an increase in attractant concentration. Then the lack of a phosphorylation cascade will mean that there is less phosphorylated CheY, and so the tumbling frequency will decrease. However, if the attractant concentration levels off, then the tumbling frequency will flatten, while CheR starts methylating the MCP. Over time, the rising methylation will increase CheA autophosphorylation, bringing back the phosphorylation cascade and raising tumbling frequency back to default levels.</p>
+
+<!--
+![image-center](../assets/images/chemotaxis_methylation.png){: .align-center}
+<figcaption>The chemotaxis signal-transduction pathway with methylation included. CheA phosphorylates CheB. CheB methylates while CheR demethylates MCP. Blue curve: phosphorylation; grey curve: dephosphorylation; green arrow: methylation. Figure inspired by Parkinson Lab illustrations.[^ParkinsonLab]</figcaption>
+-->
+
+<!--
+ - MCP + CheR -> MCP-CH<sub>3</sub> + CheR
+ - CheA-P + CheB -> CheA + CheB-P
+ - CheB-P -> CheB + P
+ - MCP-CH<sub>3</sub> + CheB-P -> MCP + CheB-P
+-->
+
+<p>Just as the phosphorylation of CheY can be reversed, MCP methylation can be undone as well to prevent methylation from being permanent. In particular, an enzyme called <strong>CheB</strong>, which like CheY is phosphorylated by CheA, demethylates MCPs (as well as autodephosphorylates). The rate of an MCP’s demethylation is dependent on the extent to which the MCP is methylated. In other words, the rate of MCP methylation is higher when the MCP is in a low methylation state, and the rate of demethylation is faster when the MCP is in a high methylation state.<sup id="fnref:Spiro1997:1" role="doc-noteref"><a href="#fn:Spiro1997" class="footnote">3</a></sup></p>
+
+<p>The figure below adds CheR and CheB to provide a complete picture of the core pathways influencing chemotaxis. To model these pathways, we will need to add quite a few molecules and reactions to our current model.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_wholestory.png" alt="image-center" class="align-center" />
+The chemotaxis signal-transduction pathway with methylation included. CheA phosphorylates CheB, which methylates MCPs while CheR demethylates MCPs. Blue lines denote phosphorylation, grey lines denote dephosphorylation, and the green arrow denotes methylation. Image modified from <a href="http://chemotaxis.biology.utah.edu/Parkinson_Lab/projects/ecolichemotaxis/ecolichemotaxis.html">Parkinson Lab</a>’s illustrations.</p>
+
+<h2 id="combinatorial-explosion-and-the-need-for-rule-based-modeling">Combinatorial explosion and the need for rule-based modeling</h2>
+
+<p>Our goal is to expand the BioNetGen model that we built in the previous lesson, and then see if this model can replicate the adaptation behavior of <em>E. coli</em> in the presence of a changing attractant concentration. Before incorporating the adaptation mechanisms in our BNG model, we will first describe the reactions that BioNetGen will need.</p>
+
+<p>We begin with considering the MCP complexes. In the <a href="tutorial_phos">phosphorylation tutorial</a>, we identified two components relevant for reactions involving MCPs: a ligand-binding component <code class="language-plaintext highlighter-rouge">l</code> and a phosphorylation component <code class="language-plaintext highlighter-rouge">Phos</code>. The adaptation mechanism introduces two additional reactions: methylation of the MCP by CheR, and demethylation of the MCP by CheB.</p>
+
+<p>We also need to include binding and dissociation reactions between the MCP and CheR because under normal conditions, most CheR are bound to MCP complexes.<sup id="fnref:Lupas1989" role="doc-noteref"><a href="#fn:Lupas1989" class="footnote">4</a></sup> We will therefore introduce two additional components to the MCP molecules in addition to their phosphorylation components: <code class="language-plaintext highlighter-rouge">r</code> (denoting CheR-binding) and <code class="language-plaintext highlighter-rouge">Meth</code> (denoting methylation states). In our simulation, we will use three methylation levels (low, medium, and high) because these three states are most involved in the chemotaxis response to attractants.<sup id="fnref:Boyd1980" role="doc-noteref"><a href="#fn:Boyd1980" class="footnote">5</a></sup></p>
+
+<p>Imagine for a moment that we were attempting to specify every reaction that could take place in our model. To specify an MCP, we would need to tell the program whether it is bound to a ligand (two possible states), whether it is bound to CheR (two possible states), whether it is phosphorylated (two possible states), and which methylation state it is in (three possible states). Therefore, a given MCP has 2 · 2 · 2 · 3 = 24 total states.</p>
+
+<p>Say that we are simulating the simple reaction of a ligand binding to an MCP, which we originally wrote as <em>T</em> + <em>L</em> → <em>TL</em>. We now need this reaction to include 12 of the 24 states, which are those corresponding to the MCP being unbound to the ligand. Our simple reaction would become 12 different reactions, one for each possible unbound state of the complex molecule <em>T</em>. And if the situation were just a little more complex, with the ligand molecule <em>L</em> having <em>n</em> possible states, then we would have 12<em>n</em> reactions. Imagine trying to debug a model in which we had accidentally incorporated a typo when transcribing just one of these reactions!</p>
+
+<p>In other words, as our model grows, with multiple different states for each molecule involved in each reaction, the number of reactions we need to represent the system grows very fast; this phenomenon is called <strong>combinatorial explosion</strong>. Our model of chemotaxis is ultimately relatively straightforward, but combinatorial explosion means that building realistic models of biochemical systems at scale without a simplifying language can be daunting if not impossible.</p>
+
+<p>A major benefit of using a rule-based modeling language provided by BioNetGen is that it circumvents combinatorial explosion by consolidating many reactions into a single rule. For example, when modeling ligand-MCP binding, we can summarize the 12 different reactions with the rule “a free ligand molecule binds to an MCP that is not bound to a ligand molecule.” In the BioNetGen language, this rule is represented by the same one-line expression as it was in the previous lesson:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">LigandReceptor</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+</code></pre></div></div>
+
+<p>Why is one rule enough? Recall from our discussion of the <a href="/home_signalpart2#an-overview-of-the-gillespie-algorithm">Gillespie algorithm</a> that the wait time before the next reaction to be sampled depends only on the rate of all relevant reactions in the system. In this particular case, the rate of ligand-MCP binding depends on the total concentration of free ligands and unbound MCPs, but it does not depend on the state that an MCP is in.</p>
+
+<p>In the following tutorial, we will expand our BioNetGen model from the previous tutorial into one that can incorporate CheR binding as well as MCP methylation while avoiding combinatorial explosion. We will then examine whether this model allows us to learn anything about how a bacterium can adapt to changes in the relative concentration of attractant.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_adap" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="bacterial-tumbling-is-resilient-to-large-sudden-changes-in-ligand-concentration">Bacterial tumbling is resilient to large sudden changes in ligand concentration</h2>
+
+<p>In the figures below, we show plots of the concentration of each molecule of interest in our system for a few different cases. In each case, we suddenly change the concentration of the attractant ligand (<em>l</em><sub>0</sub>) and examine how this affects the concentration of phosphorylated CheY (the molecule whose phosphorylation is directly correlated with increased tumbling frequency). The attractant concentration will then level off; because the relative concentration is not changing, will our model reflect the hypothesis that <em>E. coli</em> can return to approximately the same steady-state concentration of phosphorylated CheY regardless of the concentration of the ligand?</p>
+
+<p>Below, we show simulation results for some different concentrations of ligand molecules added at the beginning of the simulation. First we add a relatively small amount, setting <em>l</em><sub>0</sub> equal to 10,000. The system returns so quickly to an equilibrium in phosphorylated CheY that it is difficult to think that the attractant has had any effect on tumbling frequency. (Note: time is shown in seconds on the x-axis in the following figures.)</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial_oneadd1e4.png" alt="image-center" class="align-center" /></p>
+
+<p>If instead <em>l</em><sub>0</sub> is equal to 100,000, we obtain the figure below. After a drop in the concentration of phosphorylated CheY, the system returns to equilibrium after a few minutes.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial_oneadd1e5.png" alt="image-center" class="align-center" /></p>
+
+<p>When we increase <em>l</em><sub>0</sub> by another factor of ten to 1 million, the initial drop is more pronounced, but the system is able to just as quickly return to equilibrium. Note how much higher the concentration of methylated receptors are in this figure compared to the previous figure; however, there are still a significant concentration of receptors with low methylation, indicating that the system may be able to handle a yet bigger jolt.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial_oneadd1e6.png" alt="image-center" class="align-center" /></p>
+
+<p>When we set <em>l</em><sub>0</sub> equal to 10 million, we give the system this bigger jolt. Once again, the model is resilient to this change in the concentration of the ligand after a few minutes.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial_oneadd1e7.png" alt="image-center" class="align-center" /></p>
+
+<p>Finally, with <em>l</em><sub>0</sub> equal to 100 million, we see what we might expect: the steepest drop in phosphorylated CheY yet, but a system that is able to return to equilibrium.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial_oneadd1e8.png" alt="image-center" class="align-center" /></p>
+
+<p>Our model therefore has provided compelling evidence that the <em>E. coli</em> chemotaxis system is very robust to changes in its environment. The simulated bacterium can make a very rapid change in response to a sudden change in its environment, but even if this change is significant, the system will return to its default state. This robustness in our simulation has been observed in real bacteria<sup id="fnref:Shimizu2005" role="doc-noteref"><a href="#fn:Shimizu2005" class="footnote">6</a></sup><sup id="fnref:Krembel2015" role="doc-noteref"><a href="#fn:Krembel2015" class="footnote">7</a></sup>, as well as replicated by other computational simulations<sup id="fnref:Bray1993" role="doc-noteref"><a href="#fn:Bray1993" class="footnote">8</a></sup>.</p>
+
+<p>Aren’t bacteria magnificent?</p>
+
+<p>However, our work is not done. We have simulated how a bacterium can adapt to a single sudden change in its environment, but life is about responding to changes all the time. So in the next lesson, we will further examine how our simulated <em>E. coli</em> responds in an environment in which the ligand concentration is changing constantly.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_gradient" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<h2 id="additional-resources">Additional resources</h2>
+
+<p>Some resources/reads if you are interested in the chemotaxis biology:</p>
+<ul>
+  <li>Amazing introduction to chemotaxis: Parkinson Lab <a href="http://chemotaxis.biology.utah.edu/Parkinson_Lab/projects/ecolichemotaxis/ecolichemotaxis.html">website</a>.</li>
+  <li>A good overview: by Webre et al. published in 2003. <a href="https://www.cell.com/current-biology/pdf/S0960-9822(02)01424-0.pdf">Available online</a></li>
+  <li>Details on chemotaxis pathway and MCPs: review article by Baker et al. published in 2005 <a href="https://pubmed.ncbi.nlm.nih.gov/16369945/">Available online</a>.</li>
+  <li>Details on MCPs: more recent review by Parkinson et al. published in 2015. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0966842X15000578">Available online</a>.</li>
+  <li>Modeling robustness and integral feedback: lecture note by Berg in 2008. <a href="https://www.weizmann.ac.il/mcb/UriAlon/sites/mcb.UriAlon/files/uploads/lecture_notes_-_robustness_in_bacterial_chemotaxis_.pdf">Available online</a>.</li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Amin2010" role="doc-endnote">
+      <p>Amin DN, Hazelbauer GL. 2010. Chemoreceptors in signaling complexes: shifted conformation and asymmetric coupling. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3010867/">Available online</a> <a href="#fnref:Amin2010" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Terwilliger1986" role="doc-endnote">
+      <p>Terwilliger TC, Wang JY, Koshland DE. 1986. Kinetics of Receptor Modification - the multiply methlated aspartate receptors involved in bacterial chemotaxis. The Journal of Biolobical Chemistry. <a href="https://www.jbc.org/content/261/23/10814.full.pdf">Available online</a> <a href="#fnref:Terwilliger1986" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Spiro1997" role="doc-endnote">
+      <p>Spiro PA, Parkinson JS, and Othmer H. 1997. A model of excitation and adaptation in bacterial chemotaxis. Biochemistry 94:7263-7268. <a href="https://www.pnas.org/content/94/14/7263">Available online</a>. <a href="#fnref:Spiro1997" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:Spiro1997:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:Lupas1989" role="doc-endnote">
+      <p>Lupas A., and Stock J. 1989. Phosphorylation of an N-terminal regulatory domain activates the CheB methylesterase in bacterial chemotaxis. J Bio Chem 264(29):17337-42. <a href="https://pubmed.ncbi.nlm.nih.gov/2677005/">Available online</a> <a href="#fnref:Lupas1989" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Boyd1980" role="doc-endnote">
+      <p>Boyd A., and Simon MI. 1980. Multiple electrophoretic forms of methyl-accepting chemotaxis proteins generated by stimulus-elicited methylation in Escherichia coli. Journal of Bacteriology 143(2):809-815. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC294367/pdf/jbacter00569-0269.pdf">Available online</a> <a href="#fnref:Boyd1980" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Shimizu2005" role="doc-endnote">
+      <p>Shimizu TS, Delalez N, Pichler K, and Berg HC. 2005. Monitoring bacterial chemotaxis by using bioluminescence resonance energy transfer: absence of feedback from the flagellar motors. PNAS. <a href="https://www.pnas.org/content/103/7/2093/">Available online</a> <a href="#fnref:Shimizu2005" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Krembel2015" role="doc-endnote">
+      <p>Krembel A., Colin R., Sourijik V. 2015. Importance of multiple methylation sites in <em>Escherichia coli</em> chemotaxis. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0145582">Available online</a> <a href="#fnref:Krembel2015" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Bray1993" role="doc-endnote">
+      <p>Bray D, Bourret RB, Simon MI. 1993. Computer simulation of phosphorylation cascade controlling bacterial chemotaxis. Molecular Biology of the Cell. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC300951/">Available online</a> <a href="#fnref:Bray1993" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

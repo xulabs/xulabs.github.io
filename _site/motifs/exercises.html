@@ -1,0 +1,505 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Network Motifs Exercises - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Network Motifs Exercises">
+<meta property="og:url" content="http://localhost:4000/motifs/exercises">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/motifs/exercises">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Finding Motifs in Transcription Factor Networks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/home">Introduction: a submicroscopic scale of interest<br><br></a></li>
+          
+            <li><a href="/motifs/transcription">Transcription and DNA-protein binding<br><br></a></li>
+          
+            <li><a href="/motifs/networks">Transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/finding">Using randomness to verify network motifs<br><br></a></li>
+          
+            <li><a href="/motifs/nar">The negative autoregulation motif<br><br></a></li>
+          
+            <li><a href="/motifs/feed">The feedforward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/oscillators">Building a biological oscillator<br><br></a></li>
+          
+            <li><a href="/motifs/conclusion">Conclusion: the importance of robustness in biological oscillations<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/tutorial_loops">Looking for loops in transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar">Comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar_mathematically_controlled">Ensuring a mathematically controlled simulation for comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_feed">Implementing the feed-forward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_oscillators">Implementing the repressilator<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_perturb">Perturbing the represillator<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/exercises" class="active">Network motif exercises</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Network Motifs Exercises">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Network Motifs Exercises
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="identifying-feed-forward-loops-and-more-complex-motifs">Identifying Feed-Forward Loops and More Complex Motifs</h2>
+
+<p class="notice--info"><strong>Exercise 1:</strong> Modify the Jupyter notebook provided in the <a href="tutorial_loops">tutorial on loops</a> to count the number of feed-forward loops in the transcription factor network for <em>E. coli.</em></p>
+
+<p>There are eight types of feed-forward loops based on the eight different ways in which we can label the edges in the network with a “+” or a “-“ based on upregulation or downregulation.</p>
+
+<p style="text-align: center; font-size: medium;"><img src="../assets/images/ffl_types.png" alt="image-center" class="align-center" />
+The eight types of feed-forward loops.<sup id="fnref:ffl" role="doc-noteref"><a href="#fn:ffl" class="footnote">1</a></sup></p>
+
+<p class="notice--info"><strong>Exercise 2:</strong> Modify the Jupyter notebook to count the number of loops of each type present in the <em>E. coli</em> transcription factor network.</p>
+
+<p class="notice--info"><strong>Exercise 3:</strong> How many feed-forward loops would you expect to see in a random network having the same number of nodes as the <em>E. coli</em> transcription factor network? How does this compare to your answers to the previous two questions?</p>
+
+<p>More complex motifs may require more computational power to discover.</p>
+
+<p style="text-align: center; font-size: medium;"><img src="../assets/images/s_cerevisiae_tf_network.jpg" alt="image-center" class="align-center" />
+Example of different motifs within the <em>S. Cerevisiae</em> network.<sup id="fnref:scNetwork" role="doc-noteref"><a href="#fn:scNetwork" class="footnote">2</a></sup></p>
+
+<p class="notice--info"><strong>Exercise 4:</strong> Can you modify our Jupyter Notebook for motif finding to identify circular loops of transcription factor regulation, such as the multi-component loop above?</p>
+
+<h2 id="negative-autoregulation">Negative Autoregulation</h2>
+
+<p>Using the <em>NAR_comparison_equal.blend</em> file from the negative <a href="tutorial_nar_mathematically_controlled">autoregulation tutorial</a>, increase the reaction rate of X1 -&gt; X1 + Y1 to 4e4, so that the table should now look like the following:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Reactants</th>
+      <th style="text-align: center">Products</th>
+      <th style="text-align: right">Forward Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">X1’</td>
+      <td style="text-align: center">X1’ + Y1’</td>
+      <td style="text-align: right">4e5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">X2’</td>
+      <td style="text-align: center">X2’ + Y2’</td>
+      <td style="text-align: right">4e2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Y1’</td>
+      <td style="text-align: center">NULL</td>
+      <td style="text-align: right">4e2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Y2’</td>
+      <td style="text-align: center">NULL</td>
+      <td style="text-align: right">4e2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Y2’ + Y2’</td>
+      <td style="text-align: center">Y2’</td>
+      <td style="text-align: right">4e2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If we plot this graph, we can see the steady states of Y1 and Y2 are different once again.</p>
+
+<p class="notice--info"><strong>Exercise 1:</strong> Can you repair the system to find the appropriate reaction rate for X2 -&gt; X2 + Y2 to make the steady states equal once more? Are you able to adjust the reaction Y2 + Y2 -&gt; Y2 as well? Do the reaction rates scale at the same rate?</p>
+
+<p class="notice--info"><strong>Exercise 2:</strong> One way for the cell to apply stronger “brakes” to the simple regulation rate would be to simply increase the degradation rate, rather than implement negative autoregulation. Why do you think that the cell doesn’t do this?</p>
+
+<h2 id="implementing-more-network-motifs">Implementing More Network Motifs</h2>
+<p class="notice--info"><strong>Exercise 1:</strong> Use the NFSim tutorial implementing the repressilator as a basis to replicate the other network motif tutorials presented in this module.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="/" class="btn btn--primary btn--large">Next module: coming soon!</a></p>
+
+<!--
+* The following section is really good but I have no idea where it goes.
+
+## Engineering a repressilator
+
+In *A Synthetic Oscillatory Network of Transcriptional Regulators* by Elowitz and Leibler[^oscillator], the repressilator model we have simulated in CellBlender was successfully tested in a real E. coli cell (an *in vivo* experiment). Instead of the X, Y, Z molecules we used in our simulation, the authors inserted the genes *TetR*, *LacI*, and *cI*. These genes were set up in the same arrangement as our simulation, however there were key differences in the scale of the model. Our simulation was carried out in a single space with approximately 300 molecules per species. The reactions were carried out on the order of around 600 reactions per time step for 120,000 steps.
+
+![image-center](../assets/images/repressilator_ecoli.png){: .align-center}
+The repressilator model used in Elowitz and Leibler's *E. coli* system.
+{: style="text-align: center;"}
+
+In contrast, Elowitz and Leibler described a model with a variety of different reaction rates, such as a 0.0005 promoter strength, 20 proteins created per transcript, and a protein half-life of 10 minutes. Interestingly, this scale led to oscillations occurring with a periodicity that spanned different generations of E. coli! Nevertheless, the real E. coli repressilator systems showed clear patterns of oscillations with robustness to interruptions and disturbances. How would our simulations hold up to interruptions, and why is this kind of behavior needed in oscillators?  
+
+![image-center](../assets/images/nf_sim_interrupted_break.PNG){: .align-center}
+
+![image-center](../assets/images/nf_sim_interrupted_long.PNG){: .align-center}
+
+![image-center](../assets/images/nf_sim_interrupted_spike.PNG){: .align-center}
+-->
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:ffl" role="doc-endnote">
+      <p>Image adapted from Mangan, S., &amp; Alon, U. (2003). Structure and function of the feed-forward loop network motif. Proceedings of the National Academy of Sciences of the United States of America, 100(21), 11980–11985. https://doi.org/10.1073/pnas.2133841100 <a href="#fnref:ffl" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:scNetwork" role="doc-endnote">
+      <p>Lee, T. I., Rinaldi, N. J., Robert, F., Odom, D. T., Bar-Joseph, Z., Gerber, G. K., … Young, R. A. (2002). Transcriptional regulatory networks in Saccharomyces cerevisiae. Science, 298(5594), 799–804. https://doi.org/10.1126/science.1075090 <a href="#fnref:scNetwork" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

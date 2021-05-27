@@ -1,0 +1,580 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Computing the Energy Contributed by a Local Region of a Bound Complex - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Computing the Energy Contributed by a Local Region of a Bound Complex">
+<meta property="og:url" content="http://localhost:4000/coronavirus/tutorial_NAMD">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/coronavirus/tutorial_NAMD">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/home">A Tale of Two Doctors<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 1: Protein Structure Prediction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/structure_intro">An Introduction to Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/ab_initio">Ab initio Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/homology">Homology Modeling for Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/accuracy">Comparing Protein Structures to Assess Model Accuracy<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_1">Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 2: Comparing SARS-CoV-2 and SARS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/multiseq">Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br></a></li>
+          
+            <li><a href="/coronavirus/structural_diff">Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br></a></li>
+          
+            <li><a href="/coronavirus/NAMD">Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_2">Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring ProDy)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/tutorial_ab_initio">Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_homology">Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_rmsd">Using RMSD to Compare Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_multiseq">Finding Local Differences in Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_visualization">Visualizing Specific Regions of Interest within a Protein Structure<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_NAMD" class="active">Computing the Energy Contributed by a Local Region of a Bound Complex<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_GNM">Molecular Dynamics Analysis with GNM<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_ANM">ANM Simulations Add Directionality to GNM<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Computing the Energy Contributed by a Local Region of a Bound Complex">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Computing the Energy Contributed by a Local Region of a Bound Complex
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#creating-a-protein-structure-file">Creating a protein structure file</a></li><li><a href="#using-namd-energy-to-compute-the-energy-of-the-sars-cov-2-rbd-loop-region">Using NAMD Energy to compute the energy of the SARS-CoV-2 RBD loop region</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>In this tutorial, we will show how to use NAMD Energy to calculate the interaction energy for a bound complex, as well as to determine how much a given region of this complex contributes to the overall potential energy. We will use the chimeric SARS-CoV-2 RBD-ACE2 complex (PDB entry: <a href="https://www.rcsb.org/structure/6vw1" target="_blank">6vw1</a>) and compute the interaction energy contributed by the loop site that we identified as a region of structural difference in a <a href="structural_diff">previous lesson</a>.</p>
+
+<p>To determine the energy contributed by a region of a complex, we will need a “force field”, an energy function with a collection of parameters that determine the energy of a given structure based on the positional relationships between atoms. There are many different force fields depending on the specific type of system being studied (e.g. DNA, RNA, lipids, proteins). There are many different approaches for generating a force field; for example, <a href=" https://www.charmm.org/" target="_blank">Chemistry at Harvard Macromolecular Mechanics (CHARMM)</a><sup id="fnref:charmm" role="doc-noteref"><a href="#fn:charmm" class="footnote">1</a></sup> offers a popular collection of force fields.</p>
+
+<p>To get started, make sure to have installed VMD and know how to load molecules into the program; if you need a refresher, visit the <a href="tutorial_multiseq" target="_blank">VMD and Multiseq Tutorial</a>. Then, download <a href="https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=NAMD" target="_blank">NAMD</a>; you may be asked to provide the path to your NAMD installation.</p>
+
+<h2 id="creating-a-protein-structure-file">Creating a protein structure file</h2>
+
+<p>NAMD needs to utilize the information in the force field to calculate the potential energy of a protein. To do this, it needs a <strong>protein structure file (PSF)</strong>. A PSF, which is molecule-specific, contains all the information required to apply a force field to a molecular system.<sup id="fnref:PSF" role="doc-noteref"><a href="#fn:PSF" class="footnote">2</a></sup> Fortunately, there are programs that can generate a PSF given a force field and a <code class="language-plaintext highlighter-rouge">.pdb</code> file containing a protein structure. See <a href="https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node23.html" target="_blank">this NAMD tutorial</a> for more information.</p>
+
+<p>First, load <a href="https://www.rcsb.org/structure/6vw1" target="_blank">6vw1</a> into VMD. We then need to create a protein structure file of 6vw1 to simulate the molecule. We will be using the VMD plugin Atomatic PSF Builder to create the file. From <code class="language-plaintext highlighter-rouge">VMD Main</code>, click <code class="language-plaintext highlighter-rouge">Extensions &gt; Modeling &gt; Automatic PSF Builder</code>.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD1.png" alt="image-center" class="align-center" /></p>
+
+<p>In the <code class="language-plaintext highlighter-rouge">AutoPSF</code> window, make sure that the selected molecule is <code class="language-plaintext highlighter-rouge">6vw1.pdb</code> and that the output is <code class="language-plaintext highlighter-rouge">6vw1_autopsf</code>. Click <code class="language-plaintext highlighter-rouge">Load input files</code>. In step 2, click <code class="language-plaintext highlighter-rouge">Protein</code> and then <code class="language-plaintext highlighter-rouge">Guess and split chains using current selections</code>. Then click <code class="language-plaintext highlighter-rouge">Create chains</code> and then <code class="language-plaintext highlighter-rouge">Apply patches and finish PSF/PDB</code>.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD2.png" alt="image-center" class="align-center" /></p>
+
+<p>During this process, you may see an error message stating <code class="language-plaintext highlighter-rouge">MOLECULE DESTROYED</code>. If you see this message, click <code class="language-plaintext highlighter-rouge">Reset Autopsf</code> and repeat the above steps. The selected molecule will change, so make sure that the selected molecule is <code class="language-plaintext highlighter-rouge">6vw1.pdb</code> when you start over. Failed molecules remain in VMD, so deleting the failed molecule from <code class="language-plaintext highlighter-rouge">VMD Main</code> is recommended before each new attempt.</p>
+
+<p>If the PSF file is successfully created, then you will see a message stating <code class="language-plaintext highlighter-rouge">Structure complete.</code> The <code class="language-plaintext highlighter-rouge">VMD Main</code> window also will have an additional line.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD4.png" alt="image-center" class="align-center" /></p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD5.png" alt="image-center" class="align-center" /></p>
+
+<h2 id="using-namd-energy-to-compute-the-energy-of-the-sars-cov-2-rbd-loop-region">Using NAMD Energy to compute the energy of the SARS-CoV-2 RBD loop region</h2>
+
+<p>Now that we have the PSF file, we can proceed to NAMD Energy. In <code class="language-plaintext highlighter-rouge">VMD Main</code>, click <code class="language-plaintext highlighter-rouge">Extensions &gt; Analysis &gt; NAMD Energy</code>. The <code class="language-plaintext highlighter-rouge">NAMDEnergy</code> window will pop up. First, change the molecule to be the PSF file that we created.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD6.png" alt="image-center" class="align-center" /></p>
+
+<p>We now want to calculate the interaction energy between the RBD and ACE2. Recall that the corresponding chain pairs are chain A (ACE2)/chain E (RBD) and chain B (ACE2)/chain F (RBD). As we did in the previous tutorial, we will use the chain B/F pair. Put <code class="language-plaintext highlighter-rouge">protein and chain B</code> and <code class="language-plaintext highlighter-rouge">protein and chain F</code> for <code class="language-plaintext highlighter-rouge">Selection 1</code> and <code class="language-plaintext highlighter-rouge">Selection 2</code>, respectively.</p>
+
+<p>Next, we want to calculate the main protein-protein interaction energies, divided over electrostatic and van der Waals forces. Under <code class="language-plaintext highlighter-rouge">Output File</code>, enter your desired name for the results (e.g., <code class="language-plaintext highlighter-rouge">SARS-2_RBD-ACE2_energies</code>). Next, we need to give NAMDEnergy the parameter file <code class="language-plaintext highlighter-rouge">par_all36_prot.prm</code>. This file should be found at <code class="language-plaintext highlighter-rouge">VMD &gt; plugins &gt; noarch &gt; tcl &gt; readcharmmpar1.3 &gt; par_all36_prot.prm</code>. Finally, click <code class="language-plaintext highlighter-rouge">Run NAMDEnergy</code>.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD7.png" alt="image-center" class="align-center" /></p>
+
+<p>The output file will be created in your current working directory and can be opened with a simple text-editor. The values of your results may vary slightly upon repetitive calculations.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD8.png" alt="image-center" class="align-center" /></p>
+
+<p class="notice--warning"><strong>Note:</strong> You may be wondering why the interaction energy comes out to be a negative number. In physics, a negative value indicates an attractive force between two molecules, and a positive value indicates a repulsive force.</p>
+
+<p>We will now focus on the interaction energy between the SARS-CoV-2 RBD loop site (residues 482 to 486) and ACE2. In the <code class="language-plaintext highlighter-rouge">NAMDEnergy</code> window, enter <code class="language-plaintext highlighter-rouge">protein and chain B</code> for <code class="language-plaintext highlighter-rouge">Selection 1</code> and <code class="language-plaintext highlighter-rouge">protein and chain F and (resid 482 to 486)</code> for <code class="language-plaintext highlighter-rouge">Selection 2</code>. Keep all other settings the same. You should see output results similar to the following.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/NAMD9.png" alt="image-center" class="align-center" /></p>
+
+<p>The above results seem to indicate that the interaction between SARS-CoV-2 RBD and ACE2 is a favorable interaction, and that the loop region contributes to this bonding. Yet our goal was to compare the total energy of the bound RBD-ACE2 complex in SARS-CoV-2 against that of SARS-CoV, as well as to compare the energy contributed by the three regions of structural difference that we identified in the main text. We will leave these comparisons to you as an exercise, and we will discuss the results in the main text.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> First, compute the total energy of the SARS-CoV RBD complex with ACE2 (PDB entry: <a href="https://www.rcsb.org/structure/2AJF" target="_blank">2ajf</a>). How does it compare against the energy of the SARS-CoV-2 complex? Then, compute the energy contributed by hotspot 31 and hotspot 353 in SARS-CoV-2, as well as that of the regions corresponding to these regions and the loop region in SARS-CoV. (Consult the table below as needed.) How do the energy contributions of corresponding regions compare? Is this surprising, and what can we conclude?</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Model</th>
+      <th style="text-align: left">Region</th>
+      <th style="text-align: left">Selection 1</th>
+      <th style="text-align: left">Selection 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">SARS-CoV-2 (6vw1)</td>
+      <td style="text-align: left">Total</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV (2ajf)</td>
+      <td style="text-align: left">Total</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV-2 (6vw1)</td>
+      <td style="text-align: left">Loop</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F and (resid 482 to 486)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV (2ajf)</td>
+      <td style="text-align: left">Loop</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F and (resid 468 to 472)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV-2 (6vw1)</td>
+      <td style="text-align: left">Hotspot31</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F and resid 455</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV-2 (6vw1)</td>
+      <td style="text-align: left">Hotspot31</td>
+      <td style="text-align: left">protein and chain B and (resid31 or resid 35)</td>
+      <td style="text-align: left">protein and chain F</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV (2ajf)</td>
+      <td style="text-align: left">Hotspot31</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F and resid 442</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV (2ajf)</td>
+      <td style="text-align: left">Hotspot31</td>
+      <td style="text-align: left">protein and chain B and (resid 31 or resid 35)</td>
+      <td style="text-align: left">protein and chain F</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV-2 (6vw1)</td>
+      <td style="text-align: left">Hotspot353</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F and resid 501</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV-2 (6vw1)</td>
+      <td style="text-align: left">Hotspot353</td>
+      <td style="text-align: left">protein and chain B and (resid 38 or resid 353)</td>
+      <td style="text-align: left">protein and chain F</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV (2ajf)</td>
+      <td style="text-align: left">Hotspot353</td>
+      <td style="text-align: left">protein and chain B</td>
+      <td style="text-align: left">protein and chain F and resid 487</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SARS-CoV (2ajf)</td>
+      <td style="text-align: left">Hotspot353</td>
+      <td style="text-align: left">protein and chain B and (resid 38 or resid 353)</td>
+      <td style="text-align: left">protein and chain F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Note:</em> Chain B refers to ACE2 and Chain F refers to RBD</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="NAMD#differences-in-interaction-energy-with-ace2-between-sars-and-sars-cov-2" class="btn btn--primary btn--large">Return to main text</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:charmm" role="doc-endnote">
+      <p>https://www.charmmtutorial.org/index.php/The_Energy_Function <a href="#fnref:charmm" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:PSF" role="doc-endnote">
+      <p>https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node23.html <a href="#fnref:PSF" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

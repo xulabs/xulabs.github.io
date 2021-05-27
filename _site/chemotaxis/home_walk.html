@@ -1,0 +1,471 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Bacterial Runs and Tumbles - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Bacterial Runs and Tumbles">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/home_walk">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/home_walk">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk" class="active">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Bacterial Runs and Tumbles">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Bacterial Runs and Tumbles
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#e-coli-explores-its-world-via-a-random-walk">E. coli explores its world via a random walk</a></li><li><a href="#tumbling-frequency-is-constant-across-species">Tumbling frequency is constant across species</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="e-coli-explores-its-world-via-a-random-walk"><em>E. coli</em> explores its world via a random walk</h2>
+
+<p>An <em>E. coli</em> cell has between five and twelve flagella distributed on its surface.<sup id="fnref:Sim2017" role="doc-noteref"><a href="#fn:Sim2017" class="footnote">1</a></sup> Each flagellum can rotate both clockwise and counter-clockwise. When all of the flagella are rotating counter-clockwise, they form a bundle and propel the cell forward at a speed of about 20 µm per second. This speed may seem small, but it is about ten times the length of the cell per second, analogous to a car traveling at 160 kph (100 mph). When any flagellum rotates clockwise, the flagella become uncoordinated, and the bacterium stops and rotates in place.<sup id="fnref:Baker2005" role="doc-noteref"><a href="#fn:Baker2005" class="footnote">2</a></sup></p>
+
+<p>When we multi-cellular beings examine the bacterium’s movement, we see it alternate between periods of “running” in a straight line and then “tumbling” in place (see figure below). Over time, the bacterium takes what appears to be a <em>random walk</em> through its environment. Note that this <strong>run and tumble</strong> view of <em>E. coli</em> movement is similar to the exploration approach used by the Lost Immortals in the introduction.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_intro_runtumble.png" alt="image-center" class="align-center" />
+The run and tumble mechanism of bacterial movement produces a random walk. Image from <a href="http://chemotaxis.biology.utah.edu/Parkinson_Lab/projects/ecolichemotaxis/ecolichemotaxis.html">Parkinson Lab</a>.</p>
+
+<h2 id="tumbling-frequency-is-constant-across-species">Tumbling frequency is constant across species</h2>
+
+<p>In the absence of an attractant or repellent, <em>E. coli</em> stops to tumble once every 1 to 1.5 seconds.<sup id="fnref:Weis1990" role="doc-noteref"><a href="#fn:Weis1990" class="footnote">3</a></sup><sup id="fnref:Berg2000" role="doc-noteref"><a href="#fn:Berg2000" class="footnote">4</a></sup> And it is not alone in this behavior; bacteria living in environments with similar resource distributions adopt similar movements. <em>Salmonella</em> tumbles once every second<sup id="fnref:Achouri2015" role="doc-noteref"><a href="#fn:Achouri2015" class="footnote">5</a></sup>, <em>Enterococcus sacchrolyticus</em> tumbles once every 1.2 seconds, <em>Bacillus subtilis</em> tumbles once every 2 seconds<sup id="fnref:Turner2016" role="doc-noteref"><a href="#fn:Turner2016" class="footnote">6</a></sup>, and <em>Rhizobia</em> tumbles once every 1-2 seconds<sup id="fnref:Gotz1987" role="doc-noteref"><a href="#fn:Gotz1987" class="footnote">7</a></sup>. Researchers have investigated why different bacteria have different tumbling frequencies,<sup id="fnref:Rashid2019" role="doc-noteref"><a href="#fn:Rashid2019" class="footnote">8</a></sup><sup id="fnref:Mitchell2005" role="doc-noteref"><a href="#fn:Mitchell2005" class="footnote">9</a></sup> but a definitive explanation for the variation in these frequencies has not been proposed.</p>
+
+<p>Bacteria are amazingly diverse. They have evolved for over three billion years to thrive in practically every environment on the planet, including hazardous human-made environments. They manufacture compounds like antibiotics that larger organisms like ourselves cannot make. Some eukaryotes are even completely dependent upon bacteria to perform some critical task for them, from digesting their food, to camouflaging them from predators, to helping them develop organs<sup id="fnref:Yong2016" role="doc-noteref"><a href="#fn:Yong2016" class="footnote">10</a></sup>.</p>
+
+<p>And yet despite the diversity present within the bacterial kingdom, the variations in bacterial tumbling frequencies are relatively small. Is there some reason why, regardless of the species, a bacterium’s tumbling frequency tends to hover at around one tumble every second or two? It is as if there were some invisible force compelling all of these bacteria to tumble with the same frequency.</p>
+
+<p>This question is a fundamental one, and we will return to it at the close of this module after we have learned more about the biochemical basis of chemotaxis and how a bacterium can adjust its behavior in response to a chemical substance. In the process, we will see that despite bacteria being simple organisms, the mechanism they use to implement chemotaxis is far more sophisticated than we might ever imagine.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> Say that a bacterium travels 20 µm in a randomly selected direction every second.  After an hour, approximately how far will it have traveled on average?  What if we allow the bacterium to travel for a week? (Hint: recall the Random Walk Theorem from the <a href="prologue/random-walk">prologue</a>.)</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_signal" class="btn btn--primary btn--large">Next lesson</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Sim2017" role="doc-endnote">
+      <p>Sim M, Koirala S, Picton D, Strahl H, Hoskisson PA, Rao CV, Gillespie CS, Aldridge PD. 2017. Growth rate control of flagellar assembly in <em>Escherichia coli</em> strain RP437. Scientific Reports 7:41189. <a href="https://www.nature.com/articles/srep41189#:~:text=Escherichia%20coli%20is%20a%20prominent,distributed%20across%20the%20cell%20surface.">Available online</a> <a href="#fnref:Sim2017" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Baker2005" role="doc-endnote">
+      <p>Baker MD, Wolanin PM, Stock JB. 2005. Signal transduction in bacterial chemotaxis. BioEssays 28:9-22. <a href="https://pubmed.ncbi.nlm.nih.gov/16369945/">Available online</a> <a href="#fnref:Baker2005" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Weis1990" role="doc-endnote">
+      <p>Weis RM, Koshland DE. 1990. Chemotaxis in <em>Escherichia coli</em> proceeds efficiently from different initial tumble frequencies. Journal of Bacteriology 172:2. <a href="https://jb.asm.org/content/jb/172/2/1099.full.pdf">Available online</a> <a href="#fnref:Weis1990" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Berg2000" role="doc-endnote">
+      <p>Berg HC. 2000. Motile behavior of bacteria. Physics today 53(1):24. <a href="https://physicstoday.scitation.org/doi/pdf/10.1063/1.882934">Available online</a> <a href="#fnref:Berg2000" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Achouri2015" role="doc-endnote">
+      <p>Achouri S, Wright JA, Evans L, Macleod C, Fraser G, Cicuta P, Bryant CE. 2015. The frequency and duration of <em>Salmonella</em> macrophage adhesion events determines infection efficiency. Philosophical transactions B 370(1661). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4275903/">Available online</a> <a href="#fnref:Achouri2015" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Turner2016" role="doc-endnote">
+      <p>Turner L, Ping L, Neubauer M, Berg HC. 2016. Visualizing flagella while tracking bacteria. Biophysical Journal 111(3):630–639.<a href="https://pubmed.ncbi.nlm.nih.gov/27508446/">Available online</a> <a href="#fnref:Turner2016" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Gotz1987" role="doc-endnote">
+      <p>Gotz R and Schmitt R. 1987. <em>Rhizobium meliloti</em> swims by unidirectional, intermittent rotation of right-handed flagellar helices. J Bacteriol 169: 3146–3150. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC212363/">Avaialbe online</a> <a href="#fnref:Gotz1987" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Rashid2019" role="doc-endnote">
+      <p>Rashid S, Long Z, Singh S, Kohram M, Vashistha H, Navlakha S, Salman H, Oltvai ZH, Bar-Joseph Z. 2019. Adjustment in tumbling rates improves bacterial chemotaxis on obstacle-laden terrains. PNAS 116(24):11770-11775. <a href="https://www.pnas.org/content/116/24/11770">Available online</a> <a href="#fnref:Rashid2019" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Mitchell2005" role="doc-endnote">
+      <p>Mitchell JG, Kogure K. 2005. Bacterial motility: links to the environment and a driving force for microbial physics. FEMS Microbiol Ecol 55(2006):3–16. <a href="https://academic.oup.com/femsec/article/55/1/3/554107">Available online</a> <a href="#fnref:Mitchell2005" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Yong2016" role="doc-endnote">
+      <p>Ed Yong. <em>I Contain Multitudes: The Microbes Within Us and a Grander View of Life</em>. <a href="#fnref:Yong2016" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

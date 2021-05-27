@@ -1,0 +1,531 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Ab initio Protein Structure Prediction - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Ab initio Protein Structure Prediction">
+<meta property="og:url" content="http://localhost:4000/coronavirus/ab_initio">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/coronavirus/ab_initio">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/home">A Tale of Two Doctors<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 1: Protein Structure Prediction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/structure_intro">An Introduction to Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/ab_initio" class="active">Ab initio Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/homology">Homology Modeling for Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/accuracy">Comparing Protein Structures to Assess Model Accuracy<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_1">Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 2: Comparing SARS-CoV-2 and SARS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/multiseq">Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br></a></li>
+          
+            <li><a href="/coronavirus/structural_diff">Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br></a></li>
+          
+            <li><a href="/coronavirus/NAMD">Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_2">Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring ProDy)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/tutorial_ab_initio">Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_homology">Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_rmsd">Using RMSD to Compare Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_multiseq">Finding Local Differences in Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_visualization">Visualizing Specific Regions of Interest within a Protein Structure<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_NAMD">Computing the Energy Contributed by a Local Region of a Bound Complex<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_GNM">Molecular Dynamics Analysis with GNM<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_ANM">ANM Simulations Add Directionality to GNM<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Ab initio Protein Structure Prediction">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Ab initio Protein Structure Prediction
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#distributing-the-work-of-protein-structure-prediction-around-the-world">Distributing the work of protein structure prediction around the world</a></li><li><a href="#the-four-levels-of-protein-structure">The four levels of protein structure</a></li><li><a href="#proteins-seek-the-lowest-energy-conformation">Proteins seek the lowest energy conformation</a></li><li><a href="#modeling-ab-initio-structure-prediction-as-an-exploration-problem">Modeling ab initio structure prediction as an exploration problem</a></li><li><a href="#a-local-search-algorithm-for-ab-initio-structure-prediction">A local search algorithm for ab initio structure prediction</a></li><li><a href="#applying-an-ab-initio-algorithm-to-a-protein-sequence">Applying an ab initio algorithm to a protein sequence</a></li><li><a href="#toward-a-faster-approach-for-protein-structure-prediction">Toward a faster approach for protein structure prediction</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="distributing-the-work-of-protein-structure-prediction-around-the-world">Distributing the work of protein structure prediction around the world</h2>
+
+<p>The determination of the SARS-CoV-2 spike protein’s structure was remarkable because in many senses it was a community effort, dividing the computational heavy lifting over thousands of volunteers’ computers around the world. Two leading structure prediction projects, <a href="https://boinc.bakerlab.org">Rosetta@home</a> and <a href="https://foldingathome.org">Folding@home</a>, encourage volunteers to download their software and contribute to a gigantic <em>distributed</em> effort to predict protein shape. Even with a modest laptop, a user can donate some of their computer’s idle resources to contribute to the problem of protein structure prediction. But how does this software work?</p>
+
+<p>Predicting a protein’s structure using only its amino acid sequence is called <b><em>ab initio</em> structure prediction</b> (<em>ab initio</em> is from the Latin for “from the beginning”). In this lesson, we will explain a little about how <em>ab initio</em> structure prediction algorithms work.</p>
+
+<p>As we dive into structure prediction, we should be more precise about two things. First, we will specify what we mean by the “structure” of a protein. Second, although we know that a polypeptide always folds into the same final three-dimensional shape, we have not said anything about <em>why</em> a protein folds in a certain way. We will need a better understanding of how the physicochemical properties of amino acids affect a protein’s final structure.</p>
+
+<h2 id="the-four-levels-of-protein-structure">The four levels of protein structure</h2>
+
+<p>“Protein structure” is a broad term that encapsulates four different levels of description. A protein’s <strong>primary structure</strong> refers to the amino acid sequence of the polypeptide chain. The primary structure of human hemoglobin subunit alpha can be downloaded <a href="../_pages/coronavirus/files/Human_Hemoglobin_subunit_alpha_Seq.txt" download="Human_Hemoglobin_subunit_alpha_Seq.txt">here</a>, and the primary structure of the SARS-CoV-2 spike protein can be downloaded <a href="../_pages/coronavirus/files/SARS-CoV-2_spike_seq.txt" download="SARS-CoV-2_spike_seq.txt">here</a>.</p>
+
+<p>A protein’s <strong>secondary structure</strong> describes its highly regular, repeating substructures that serve as intermediate structures forming before the overall protein structure comes together. The two most common such substructures, shown in the figure below, are <strong>alpha helices</strong> (left) and <strong>beta sheets</strong> (right). Alpha helices occur when nearby amino acids wrap around to form a tube-like structure; beta sheets occur when nearby amino acids line up side-by-side to form a sheet-like structure.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_secondary_structure.png" alt="image-center" class="align-center" />
+General shape of secondary structure alpha helices (left) and beta sheets (right). Source: Cornell, B. (n.d.). <a href="https://ib.bioninja.com.au/higher-level/topic-7-nucleic-acids/73-translation/protein-structure.html">https://ib.bioninja.com.au/higher-level/topic-7-nucleic-acids/73-translation/protein-structure.html</a></p>
+
+<p>A protein’s <strong>tertiary structure</strong> describes its final 3D shape after the polypeptide chain has folded and is stable. Throughout this module, when discussing the “shape” or “structure” of a protein, we are almost exclusively referring to its tertiary structure. The figure below shows the tertiary structure of human hemoglobin subunit alpha. Note that for the sake of simplicity, the figure does not show the positions of every atom in the protein but rather represents the protein shape as a composition of secondary structures.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_tertiary_structure.png" alt="image-center" class="align-center" />
+The tertiary structure of human hemoglobin subunit alpha. Within the structure are multiple alpha helix secondary structures. Source: <a href="https://www.rcsb.org/structure/1SI4">https://www.rcsb.org/structure/1SI4</a>.</p>
+
+<p>Finally, some proteins have a <strong>quaternary structure</strong>, which describes the protein’s interaction with other copies of itself to form a single functional unit, or a <strong>multimer</strong>. Many proteins do not have a quaternary structure and function as an independent monomer. The figure below shows the quaternary structure of hemoglobin, which is a multimer consisting of two alpha subunits and two beta subunits.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_quaternary_structure.png" alt="image-center" class="align-center" />
+The quaternary structure of human hemoglobin, which consists of two alpha subunits (shown in red) and two beta subunits (shown in blue). Source: <a href="https://commons.wikimedia.org/wiki/File:1GZX_Haemoglobin.png">https://commons.wikimedia.org/wiki/File:1GZX_Haemoglobin.png</a>.</p>
+
+<p>As for SARS-CoV and SARS-CoV-2, the spike protein is a <strong>homotrimer</strong>, meaning that it is formed of three essentially identical units called <strong>chains</strong>, each one translated from the corresponding region of the coronavirus’s genome. When we talk about identifying the structure of the spike protein in this module, we typically are referring to the structure of a single chain.</p>
+
+<p>The structural units making up proteins are often hierarchical, and the spike protein is no exception. Each spike protein chain is a <strong>dimer</strong>, consisting of two subunits called <strong>S1</strong> and <strong>S2</strong>. Each of these subunits further divides into <strong>protein domains</strong>, distinct structural units within the protein that fold independently and are typically responsible for a specific interaction or function. For example, the SARS-CoV-2 spike protein has a <strong>receptor binding domain (RBD)</strong> located on the S1 subunit that is responsible for interacting with the human ACE2 enzyme; the rest of the protein does not come into contact with ACE2. We will say more about the RBD soon.</p>
+
+<h2 id="proteins-seek-the-lowest-energy-conformation">Proteins seek the lowest energy conformation</h2>
+
+<p>Now that we know a bit more about how protein structure is defined, we will discuss why proteins fold in a certain way every time. In other words, what are the factors driving nature’s magic protein folding algorithm?</p>
+
+<p>Amino acids’ variety of side chains causes the amino acids to have different chemical properties, which can lead to different conformations being more chemically “preferable” than others. For example, the table below shows the twenty standard amino acids occurring in proteins grouped by chemical properties. Nine of these amino acids are <strong>hydrophobic</strong> (also called <strong>non-polar</strong>), meaning that their side chains tend to be repelled by water, and as a result we tend to find these amino acids sheltered from the environment on the interior of the protein.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/AminoAcidChart.png" alt="image-center" class="align-center" />
+A chart of the twenty amino acid grouped by chemical properties. The side chain of each amino acid is highlighted in blue. Source: OpenStax Biology. <a href="http://cnx.org/contents/185cbf87-c72e-48f5-b51e-f14f21b5eabd@14.1">http://cnx.org/contents/185cbf87-c72e-48f5-b51e-f14f21b5eabd@14.1</a>.</p>
+
+<p>We can therefore view protein folding as finding the tertiary structure that is the most <em>stable</em> given a polypeptide’s primary structure. A central theme of the previous module on bacterial chemotaxis was that a system of chemical reactions moves toward equilibrium. The same principle is true of the magic folding algorithm; when a protein folds into its final structure, it is obtaining a conformation that minimum is as chemically stable as possible. The polypeptide starts as just a bonded chain of amino acids, but it ends as a folded protein, incorporating bonds and interactions between different parts of the protein along the way.</p>
+
+<p>To be more precise, the <strong>potential energy</strong> (sometimes called <strong>free energy</strong>) of a molecule is the energy stored within an object due to its position, state, and arrangement. In molecular mechanics, the potential energy is made up of the sum of <strong>bonded energy</strong> and <strong>non-bonded energy</strong>.</p>
+
+<p>Bonded energy derives from the protein’s covalent bonds, as well as the angles of bonds between adjacent amino acids, and the torsion angles that we saw in the previous lesson, as the protein bends and twists.</p>
+
+<p>Non-bonded energy comprises <strong>electrostatic interactions</strong> (Coulomb potential) and van <strong>der Waals interactions</strong> (Lennard-Jones potential). Electrostatic interactions refer to the attraction and repulsion force from the electric charge between pairs of atoms. For example, nonpolar amino acids are repelled by water, which is <strong>polar</strong>, meaning that its constituent atoms have electric charges. Because a water molecule’s oxygen atom has a negative charge and its hydrogen atoms have a positive charge, the molecule is not attracted to a nonpolar molecule, since opposite charges in the two molecules will not attract. As for van der Waals interactions, atoms are dynamic systems. The electrons are constantly buzzing around the nucleus, and at any given moment, they could be unevenly distributed on one side of the nucleus. Because electrons are negatively charged, the atom will have a temporary negative charge on the side with the excess electrons (and a temporary positive charge on the opposite side). These temporary charges are called  <strong>induced dipoles</strong>, and van der Waals interactions refer to the attraction and repulsion between atoms because of these induced dipoles.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/van_der_waals.png" alt="image-center" class="align-center" />
+An illustration of how induced dipoles and therefore van der Waals forces arise from random fluctuations in the positions of electrons. Source: <a href="http://universe-review.ca/F12-molecule12.htm" target="_blank">http://universe-review.ca/F12-molecule12.htm</a>.</p>
+
+<p>As the protein folds, it seeks a conformation of <em>lowest</em> total potential energy based on all these forces. For a simple analogy, imagine a ball on a slope, as shown in the following figure. Even if the ball bounces around, it will tend to move down the slope. In this analogy, the lower points on the slope correspond to lower energy conformations of a polypeptide.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/EnergyCartoon.png" alt="image-center" class="align-center" />
+An analogy for a protein folding into a lowest energy structure is a ball on a hill. As the ball is more likely to move down into a valley, a protein is more likely to fold into a low-energy conformation.</p>
+
+<h2 id="modeling-ab-initio-structure-prediction-as-an-exploration-problem">Modeling <em>ab initio</em> structure prediction as an exploration problem</h2>
+
+<p>Although a host of different algorithms have been developed for <em>ab initio</em> protein structure through the years, these algorithms all find themselves solving a similar problem.</p>
+
+<p>Biochemical research has contributed to the development of scoring functions called <strong>force fields</strong> that compute the potential energy of a candidate protein shape. As a result, for a given choice of force field, we can think of <em>ab initio</em> structure prediction as solving the following problem: given a primary structure of a polypeptide, find its tertiary structure having minimum energy. This problem exemplifies an <strong>optimization problem</strong>, where we look for an object maximizing or minimizing some function subject to restraints.</p>
+
+<p>This formulation of protein structure may not strike you as similar to anything that we have done before in this course. However, consider a bacterium exploring an environment for food, as we did in the previous module on chemotaxis. Every point in the bacterium’s “search space” is characterized by a concentration of attractant at that point, and the bacterium’s goal is to reach the point of greatest attractant concentration.</p>
+
+<p>In the case of structure prediction, our search space is the collection of all possible conformations of a given protein. And each point in this search space is characterized by the energy of the conformation at the point. Just as we imagined a ball rolling down a hill to find lower energy, we can now imagine “exploring” this space of all conformations in order to find the conformation of lowest energy. This analogy is illustrated in the hypothetical figure below, in which the height of each point is the energy of the associated conformation;  our goal, then, is to find the lowest point in this space.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/energy_landscape.png" alt="image-center" class="align-center" />
+We can imagine each conformation of a given protein as occupying a point in a landscape, in which the elevation of a point corresponds to the energy of the conformation at that point. Courtesy: David Beamish.</p>
+
+<h2 id="a-local-search-algorithm-for-ab-initio-structure-prediction">A local search algorithm for <em>ab initio</em> structure prediction</h2>
+
+<p>Now that we have conceptualized finding the most stable protein structure as exploring a search space, our next question is how to develop an algorithm to explore this space. Continuing the analogy to chemotaxis, our idea is to adapt <em>E. coli</em>’s clever <a href="chemotaxis/home_conclusion">exploration algorithm</a> from a previous lesson to our purposes. That is, at every step, we need to sense the “direction” in which the energy function decreases by the most, and then move in this direction.</p>
+
+<p>Adapting this exploration algorithm to protein structure prediction requires us to develop a notion of what it means to consider the points “near” a given conformation in a protein search space. Many <em>ab initio</em> algorithms will start at an arbitrary initial conformation and then make a variety of minor modifications to that structure (i.e., nearby points in the space), updating the current conformation to the modification that produces the greatest decrease in free energy. These algorithms then iterate the process of moving in the greatest of greatest energy decrease until we reach a conformation for which no nearby points reduce the free energy. Such an approach for structure prediction falls into a broad category of optimization algorithms called <strong>local search algorithms</strong>.</p>
+
+<p>Yet returning to the chemotaxis analogy, imagine what happens if we were to place many small sugar cubes and one large sugar cube into the bacterium’s environment. The bacterium will sense the gradient not of the large sugar cube but of its <em>nearest</em> attractant. As a result, because the smaller food sources outnumber the larger food source, the bacterium will likely not move to the point of greatest attractant concentration. In terms of bacterial exploration, this is a feature, not a bug; if the bacterium exhausts one food source, then it will just move to another. But in terms of protein structure prediction, we should be worried of winding up in such a <strong>local minimum</strong>, or a point of our search space for which no “neighboring” points have smaller score.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> Do you see any ways in which we could improve our local search approach for structure prediction?</p>
+
+<p>Fortunately, we can modify our local search algorithm in a variety of ways. First, because the initial conformation chosen has a huge influence on the final conformation that we return, we could run the algorithm multiple times with different starting conformations. This is analogous to allowing multiple bacteria to explore their environment at different starting points. Second, by allowing ourselves to move to a conformation with <em>greater</em> potential energy with some probability, we would give our local search algorithm a chance to “bounce” out of a local minimum. In an approach called <strong>simulated annealing</strong>, which is borrowed from metallurgy, we reduce the probability of increasing the free energy over time, so that the likelihood of bouncing out of a local minimum decreases over time, and eventually we will settle into a final conformation. Once again, randomness helps us solve practical problems!</p>
+
+<h2 id="applying-an-ab-initio-algorithm-to-a-protein-sequence">Applying an <em>ab initio</em> algorithm to a protein sequence</h2>
+
+<p>In the tutorial linked below, we will use the web interface of a software resource called <a href="https://zhanglab.ccmb.med.umich.edu/QUARK/">QUARK</a> to run an <em>ab initio</em> structure prediction algorithm. QUARK is even more sophisticated than the algorithm discussed in the previous section. For example, its algorithm applies a combination of <em>multiple</em> scoring functions to look for the lowest energy conformation.</p>
+
+<p>Despite the sophistication of software like QUARK, the search space of all conformations is so large (recall Levinthal’s paradox from the previous lesson) that accurately predicting large protein structures remains very difficult. Accordingly, many <em>ab initio</em> x restrict the length of a protein sequence. This is the case for QUARK, which limits us to 200 amino acids. Since the SARS-CoV-2 spike protein contains 1281 amino acids, we will instead demonstrate how to use this software on the shorter human hemoglobin subunit alpha.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_ab_initio" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="toward-a-faster-approach-for-protein-structure-prediction">Toward a faster approach for protein structure prediction</h2>
+
+<p>The figure below shows the top five structures produced by QUARK for human hemoglobin subunit alpha, along with the protein’s experimentally verified structure. It takes a keen eye to see any differences between these structures. We conclude that although <em>ab initio</em> prediction is slow, it is still able to accurately reconstruct a model of this protein from its amino acid sequence.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/ab_initio_results.png" alt="image-center" class="align-center" />
+A protein structure of human hemoglobin subunit alpha along with five <em>ab initio</em> models of this protein produced by QUARK. We can see how close all five models are to the experimentally verified structure, as shown in the superimposition of all six structures at right.</p>
+
+<p>Yet we also wonder whether we can speed up our structure prediction algorithms so that they will scale to a larger protein like the SARS-CoV-2 spike protein. In the next lesson, we will learn about another type of protein structure prediction that allows researchers to model large proteins by comparing a protein of unknown structure against a database of known structures.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> What existing protein structure(s) would you first want to consult when studying the SARS-CoV-2 spike protein?</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="homology" class="btn btn--primary btn--large">Next lesson</a></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

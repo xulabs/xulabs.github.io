@@ -1,0 +1,473 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>VMD Tutorial - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="VMD Tutorial">
+<meta property="og:url" content="http://localhost:4000/coronavirus/VMDTutorial">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/coronavirus/VMDTutorial">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/home">A Tale of Two Doctors<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 1: Protein Structure Prediction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/structure_intro">An Introduction to Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/ab_initio">Ab initio Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/homology">Homology Modeling for Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/accuracy">Comparing Protein Structures to Assess Model Accuracy<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_1">Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 2: Comparing SARS-CoV-2 and SARS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/multiseq">Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br></a></li>
+          
+            <li><a href="/coronavirus/structural_diff">Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br></a></li>
+          
+            <li><a href="/coronavirus/NAMD">Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_2">Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring ProDy)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/tutorial_ab_initio">Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_homology">Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_rmsd">Using RMSD to Compare Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_multiseq">Finding Local Differences in Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_visualization">Visualizing Specific Regions of Interest within a Protein Structure<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_NAMD">Computing the Energy Contributed by a Local Region of a Bound Complex<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_GNM">Molecular Dynamics Analysis with GNM<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_ANM">ANM Simulations Add Directionality to GNM<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="VMD Tutorial">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">VMD Tutorial
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#loading-molecules">Loading Molecules</a><ul><li><a href="#glycans">Glycans</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This is a short tutorial on how to use VMD to visualize molecules and perform some basic analysis. Before you start, make sure to have downloaded and installed <a href="https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD" target="_blank">VMD</a>.</p>
+
+<h3 id="loading-molecules">Loading Molecules</h3>
+
+<p>These steps will be on how to load molecules into VMD. We will use the example of 6vw1.</p>
+
+<p>Download the protein structure of <a href="https://www.rcsb.org/structure/6vw1" target="_blank">6vw1</a> from the protein data bank.</p>
+
+<p><img src="../_pages/coronavirus/files/Ridge%20Tutorial/Ridge0.png" /></p>
+
+<p>Next we can launch VMD and load the molecule into the program. In <em>VMD Main</em>, go to <em>File&gt;New Molecule</em>. Click on <em>Browse</em>, select the molecule (6vw1.pdb) and click <em>Load</em>.</p>
+
+<p><img src="../_pages/coronavirus/files/Ridge%20Tutorial/Ridge1.png" />
+<img src="../_pages/coronavirus/files/Ridge%20Tutorial/Ridge2.png" /></p>
+
+<p>The molecule should now be listed in <em>VMD Main</em> as well as the visualization in the <em>OpenGL Display</em>.</p>
+
+<p><img src="../_pages/coronavirus/files/Ridge%20Tutorial/Ridge3.png" /></p>
+
+<hr />
+
+<p><strong>Section to be moved</strong></p>
+
+<h4 id="glycans">Glycans</h4>
+
+<p>For VMD, there is no specific keyword to select glycans. A workaround is to use the keywords: “not protein and not water”. To recreate the basic VMD visualizations from the module of the open-state (<a href="https://www.rcsb.org/structure/6VYB" target="_blank">6vyb</a>) of SARS-CoV-2 Spike, use the following representations. (For the protein chains, use <em>Glass3</em> for <em>Material</em>).</p>
+
+<p><img src="../_pages/coronavirus/files/GlycanImage1.png" /></p>
+
+<p>The end result should look like this:</p>
+
+<p><img src="../_pages/coronavirus/files/GlycanImage2.png" /></p>
+
+<hr />
+
+<details>
+ <summary>Visualization Exercise</summary>
+ Try to recreate the visualization of Hotspot31 for SARS-CoV-2 (same molecule as the tutorial). The important residues and their corresponding colors are listed on the left.
+
+ <img src="../_pages/coronavirus/files/Hotspot31.png" />
+</details>
+
+<hr />
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

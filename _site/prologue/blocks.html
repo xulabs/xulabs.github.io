@@ -1,0 +1,525 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The Gray-Scott Model: A Cellular Automaton Generating Turing Patterns - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="The Gray-Scott Model: A Cellular Automaton Generating Turing Patterns">
+<meta property="og:url" content="http://localhost:4000/prologue/blocks">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/prologue/blocks">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Prologue: an Introduction to Biological Modeling via Random Walks and Turing Patterns</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/">Introduction: Life is random<br><br></a></li>
+          
+            <li><a href="/prologue/turing">Alan Turing and the zebra's stripes<br><br></a></li>
+          
+            <li><a href="/prologue/random-walk">An introduction to random walks<br><br></a></li>
+          
+            <li><a href="/prologue/animals">A reaction-diffusion model generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/blocks" class="active">The Gray-Scott model: a cellular automaton generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/conclusion">Conclusion: Turing patterns are fine-tuned<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/tutorial-random-walk">Simulating particle diffusion with CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/turing-cellblender">Generating Turing patterns with a reaction-diffusion simulation in CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/tutorial-diffusion">Building a diffusion cellular automaton with Jupyter notebook<br><br></a></li>
+          
+            <li><a href="/prologue/gs-jupyter">Implementing the Gray-Scott model for coarse-grained reaction-diffusion with Jupyter notebook<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The Gray-Scott Model: A Cellular Automaton Generating Turing Patterns">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The Gray-Scott Model: A Cellular Automaton Generating Turing Patterns
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#a-coarse-grained-model-of-single-particle-diffusion">A coarse-grained model of single particle diffusion</a></li><li><a href="#slowing-down-the-rate-of-diffusion">Slowing down the rate of diffusion</a></li><li><a href="#adding-a-second-particle-to-our-diffusion-simulation">Adding a second particle to our diffusion simulation</a></li><li><a href="#adding-reactions-and-completing-the-gray-scott-model">Adding reactions and completing the Gray-Scott model</a></li><li><a href="#reflection-on-the-gray-scott-model">Reflection on the Gray-Scott model</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="a-coarse-grained-model-of-single-particle-diffusion">A coarse-grained model of single particle diffusion</h2>
+
+<p>Part of the modeler’s work is not only to build models but to look for simple models of a system that capture the essence of what is being modeled and that can be run quickly and scaled to large inputs.  Imagine, for example, how much computational power would be needed to build a particle-based model of your brain; the only way to study such a complicated system is by making simplifications.</p>
+
+<p>In our case, we have a very “fine-grained” reaction-diffusion model illustrating Turing patterns, and we will now present a faster “coarse-grained” model that will allow us to visualize Turing patterns. To do so, we will stop keeping track of individual particles and instead grid off two-dimensional space into blocks and store only the <em>concentration</em> of particles of the block (i.e., the number of particles in the block). To make things even simpler, we assume that there is some maximum concentration of particles possible, so that we can divide the number of particles by this maximum concentration and obtain a decimal number between 0 and 1.</p>
+
+<p>Let us begin with a simple example of the diffusion of only <em>A</em> particles (we will later add <em>B</em> particles as well as reactions to our model). Say that the particles are at maximum concentration in the central cell of our grid, and are present nowhere else, as the following figure illustrates.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/initial_A_concentration.png" alt="image-center" class="align-center" />
+A 5 x 5 grid showing hypothetical initial concentrations of <em>A</em> particles. Cells are labeled by numbers between 0 and 1 representing their concentration of a single particle. In this example, the central cell has maximum concentration, and no particles are contained in any other cell.</p>
+
+<p>We will now update the grid of cells after one time step in a way that mimics diffusion. To do so, we will spread out the concentration of particles in each square to its eight neighbors; one way of doing so is to assume that 20% of the current cell’s concentration diffuses to each of its four adjacent neighbors, and that 5% of the cell’s concentration diffuses to its four diagonal neighbors. Because the central square in our ongoing example is the only cell with any particles, the updated concentrations of our particle after a single time step are shown in the following figure.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/A_concentration_one_time_step.png" alt="image-center" class="align-center" />
+A grid showing an update to the system in the previous figure after diffusion of particles after a single time step.</p>
+
+<p>After an additional time step, the particles continue to diffuse outward. For example, each diagonal neighbor of the central cell in the above figure, which has a concentration of 0.05, will lose all of its particles in the next step. This cell will also gain 20% of the particles from two of its adjacent neighbors, along with 5% of the particles from the central square (which doesn’t have any particles). This makes the updated concentration of this cell equal to 0.2(0.2) + 0.2(0.2) + 0.05(0) = 0.04 + 0.04 + 0 = 0.08.</p>
+
+<p>Each of the four cells adjacent to the central square will receive 20% of the particles from two of its adjacent neighbors, which have a concentration of 0.05 each. Such a cell will also receive 5% of the particles from two of its diagonal neighbors, which have a concentration of 0.2. Therefore, the updated concentration of each of these cells is 2(0.2)(0.05) + 2(0.05)(0.2) = 0.02 + 0.02 = 0.04.</p>
+
+<p>Finally, the central square receives 20% of the particles from each of its four adjacent neighbors, as well as 5% of the particles from each of its four diagonal neighbors. As a result, the central square’s concentration is updated to be 4(0.2)(0.2) + 4(0.05)(0.05) = 0.16 + 0.01 = 0.17.</p>
+
+<p>As a result, the central nine squares after two time steps are as shown in the following figure.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/A_concentration_two_time_steps_partial.png" alt="image-center" class="align-center" />
+A grid showing an update to the central nine squares of the diffusion system in the previous figure after an additional time step. The cells labeled “?” are left as an exercise for the reader.</p>
+
+<p class="notice--primary"><strong>STOP</strong>: What should the values of the “?” cells be in the above figure? Note that these cells are neighbors of cells with positive concentrations after one time step, so their concentrations should be positive. Click <a href="../assets/images/A_concentration_two_time_steps_complete.png" width="300">here</a> to see the answer.</p>
+
+<p>The coarse-grained model of particle diffusion that we have built is a variant of a <strong>cellular automaton</strong>, or a grid of cells in which we use fixed rules to update the status of a cell based on its current status and those of its neighbors. Cellular automata form a rich area of research applied to a wide variety of fields dating back to the middle of the 20th Century; if you are interested in learning more about them from the perspective of programming, check out the <a href="http://compeau.cbd.cmu.edu/programming-for-lovers/chapter-3-building-a-self-replicating-cellular-automaton-with-top-down-programming/">Programming for Lovers</a> project.</p>
+
+<h2 id="slowing-down-the-rate-of-diffusion">Slowing down the rate of diffusion</h2>
+
+<p>There is just one problem. Our cellular automaton model of diffusion is too volatile! In a true diffusion process, all of the particles would not rush out of the central square in a single time step.</p>
+
+<p>Our solution is to add a parameter <em>d</em><sub><em>A</em></sub> representing the <em>rate</em> of diffusion of <em>A</em>. Instead of moving a cell’s entire concentration of particles to its neighbors in a single time step, we move only the fraction <em>d</em><sub><em>A</em></sub> of them.</p>
+
+<p>To revisit our original example, say that <em>d</em><sub><em>A</em></sub> is equal to 0.2. After the first time step, only 20% of the central cell’s particles will be spread to its neighbors. The figure below illustrates that the central square is updated to 0.8, its adjacent neighbors are updated to 0.2<em>d</em><sub><em>A</em></sub> = 0.04, and its diagonal neighbors are updated to 0.05<em>d</em><sub><em>A</em></sub> = 0.01.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/A_concentration_slower_diffusion.png" alt="image-center" class="align-center" />
+An updated grid of cells showing the concentration of <em>A</em> particles after one time step if <em>d</em><sub><em>A</em></sub> = 0.2.</p>
+
+<h2 id="adding-a-second-particle-to-our-diffusion-simulation">Adding a second particle to our diffusion simulation</h2>
+
+<p>We now will add particle <em>B</em> to the simulation, which also starts with 100% concentration in the central square. Recall that <em>B</em>, our “predator” molecule, diffuses half as fast as <em>A</em>, the “prey” molecule. If we set the diffusion rate <em>d</em><sub><em>B</em></sub> equal to 0.1, then our cells after a time step will be updated as shown in the figure below. This figure represents the concentration of the two particles in each cell as an ordered pair ([<em>A</em>], [<em>B</em>]).</p>
+
+<p style="font-size: medium;"><img src="../assets/images/two_particle_concentration_diffusion.png" alt="image-center" class="align-center" />
+A figure showing cellular concentrations after one time step for two particles <em>A</em> and <em>B</em> diffusing at rates <em>d</em><sub><em>A</em></sub> = 0.2 and <em>d</em><sub><em>B</em></sub> = 0.1. Each cell is labeled by the ordered pair ([<em>A</em>], [<em>B</em>]).</p>
+
+<p class="notice--primary"><strong>STOP</strong>: Update the cells in the above figure after another generation of diffusion. Use the diffusion rates <em>d</em><sub><em>A</em></sub> = 0.2 and <em>d</em><sub><em>B</em></sub> = 0.1.</p>
+
+<p>In the following tutorial, we will implement the cellular automaton using a <strong>Jupyter notebook</strong> and visualize how well this automaton mimics the diffusion of <em>A</em> and <em>B</em> particles. We will then continue on in the next section with adding reactions to our automaton model.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial-diffusion" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="adding-reactions-and-completing-the-gray-scott-model">Adding reactions and completing the Gray-Scott model</h2>
+
+<p>Now that we have established a cellular automaton for tracking concentrations of two types of particles as they diffuse, we will add the following three reactions to complete the model.</p>
+
+<ol>
+  <li>A “feed” reaction in which new <em>A</em> particles are fed into the system at a constant rate.</li>
+  <li>A “death” reaction in which <em>B</em> particles are removed from the system at a rate proportional to their current concentration.</li>
+  <li>A “reproduction” reaction <em>A</em> + 2<em>B</em> → 3<em>B</em>.</li>
+</ol>
+
+<p class="notice--primary"><strong>STOP</strong>: How might we incorporate these reactions into our automaton?</p>
+
+<p>We will address these reactions one at a time. First, we have the feed reaction, which takes place at a <strong>feed rate</strong>. It is tempting to simply add some constant value <em>f</em> to the concentration of each cell in each time step. However, we want to avoid a situation in which the concentration of <em>A</em> particles is close to 1 and the feed reaction causes the concentration of <em>A</em> particles to exceed 1.</p>
+
+<p>Instead, if a given cell has current concentration [<em>A</em>], then we will add <em>f</em>(1-[<em>A</em>]) to the concentration of the cell.  For example, if [<em>A</em>] is 0.01, then we will add 0.99<em>f</em> to the cell because the current concentration is low. If [<em>A</em>] is 0.8, then we will only add 0.2<em>f</em> to the concentration.</p>
+
+<p>Second, we consider the death reaction of <em>B</em> particles, which takes place at a <strong>kill rate</strong>. Recall from the previous lesson that the kill rate is proportional to the current concentration of <em>B</em> particles. As a result, if a cell has concentration [<em>B</em>], then for some constant <em>k</em> between 0 and 1, we will subtract <em>k</em> · [<em>B</em>] from the concentration of <em>B</em> particles.</p>
+
+<p>Third, we have the reproduction reaction <em>A</em> + 2<em>B</em> → 3<em>B</em>. The higher the concentration of <em>A</em> and <em>B</em>, the more this reaction will take place. Furthermore, because we need <em>two</em> <em>B</em> particles in order for the collision to occur, the reaction should be even more rare if we have a low concentration of <em>B</em> than if we have a low concentration of <em>A</em>. Therefore, if a given cell is represented by the concentrations ([<em>A</em>], [<em>B</em>]), then we will subtract [<em>A</em>] · [<em>B</em>]<sup>2</sup> from the concentration of <em>A</em> and add [<em>A</em>] · [<em>B</em>]<sup>2</sup> to the concentration of <em>B</em> in the next time step.</p>
+
+<p>Let us consider an example of how a single cell might update its concentration of both particle types as a result of reaction and diffusion.  Say that we have the following hypothetical parameter values:</p>
+
+<ul>
+  <li><em>d</em><sub><em>A</em></sub> = 0.2</li>
+  <li><em>d</em><sub><em>B</em></sub> = 0.1</li>
+  <li><em>f</em> = 0.3</li>
+  <li><em>k</em> = 0.4</li>
+</ul>
+
+<p>Furthermore, say that our cell has the concentrations ([<em>A</em>], [<em>B</em>]) = (0.7, 0.5). Then as a result of diffusion, the cell’s concentration of <em>A</em> will decrease by 0.7 · <em>d</em><sub><em>A</em></sub> = 0.14, and its concentration of <em>B</em> will decrease by 0.5 · <em>d</em><sub><em>B</em></sub> = 0.05. It will also receive particles from neighboring cells; for example, say that it receives an increase to its concentration of <em>A</em> by 0.08 and an increase to its concentration of <em>B</em> by 0.06 as the result of diffusion from neighbors.</p>
+
+<p>Now let us consider the three reactions. The feed reaction will cause the cell’s concentration of <em>A</em> to increase by (1 - [<em>A</em>]) · <em>f</em> = 0.09. The death reaction will cause its concentration of <em>B</em> to decrease by <em>k</em> · [<em>B</em>] = 0.2. And the reproduction reaction will mean that the concentration of <em>A</em> decreases by [<em>A</em>] · [<em>B</em>]<sup>2</sup> = 0.175, with the concentration of <em>B</em> increasing by the same amount.</p>
+
+<p>As the result of all these processes, we update the concentrations of <em>A</em> and <em>B</em> to the following values ([<em>A</em>]’, [<em>B</em>]’) in the next time step.</p>
+
+<p>[<em>A</em>]’ = 0.7 - 0.14 + 0.08 + 0.09 - 0.175 = 0.555<br />
+[<em>B</em>]’ = 0.5 - 0.05 + 0.06 - 0.2 + 0.175 = 0.485</p>
+
+<p>Applying these cell-based reaction-diffusion computations over all cells in parallel and over many generations forms a cellular automaton called the <strong>Gray-Scott</strong> model<sup id="fnref:gs" role="doc-noteref"><a href="#fn:gs" class="footnote">1</a></sup>. We should now feel confident expanding the Jupyter notebook from the previous diffusion tutorial to include the additional three reactions. The question is: will we still see Turing patterns?</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="gs-jupyter" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="reflection-on-the-gray-scott-model">Reflection on the Gray-Scott model</h2>
+
+<p>In contrast to using a particle simulator, our Jupyter Notebook demo probably produced an animation of Turing patterns in under a minute on your computer.</p>
+
+<p>To visualize the changing concentrations in each cell, we use a color map to color each cell based on its concentrations. Specifically, we plot a cell’s color based on its value of the concentration of predators divided by the sum of the concentrations of predators and prey. If a cell has a value close to zero for this ratio (meaning very few predators compared to prey), then it will be colored red, while if it has a value close to 1 (meaning many predators), then it will be colored dark blue. The <code class="language-plaintext highlighter-rouge">Spectral</code> color map that we use is shown in the figure below.</p>
+
+<p><img src="../assets/images/matplotlib_colormap.png" alt="image-center" class="align-center" /></p>
+
+<p>The following animation shows an animation of the Gray-Scott model using the parameters <em>f</em> = 0.034 and <em>k</em> = 0.095.</p>
+
+<p><img src="../assets/gs_movie.gif" alt="image-center" class="align-center" /></p>
+
+<p>If we expand the size of the simulation and add new predator locations to the grid, then the patterns become more complex as they intersect.</p>
+
+<p><img src="../assets/0_Bgs_movie.gif" alt="image-center" class="align-center" /></p>
+
+<p>If we keep the feed rate constant and tweak the kill rate ever so slightly to <em>k</em> = 0.097, then the patterns change significantly into spots.</p>
+
+<p style="font-size: medium;"><img src="../assets/0_f34_k63.gif" alt="image-center" class="align-center" /></p>
+
+<p>If we make the prey a little happier as well, raising  <em>f</em> to 0.038 and <em>k</em> to 0.099, then we have a different striped pattern.</p>
+
+<p style="font-size: medium;"><img src="../assets/0_f38_k61.gif" alt="image-center" class="align-center" /></p>
+
+<p>And if we raise <em>f</em> to 0.042 and <em>k</em> to 0.101, then again we see a spot pattern.</p>
+
+<p style="font-size: medium;"><img src="../assets/0_f42_k59.gif" alt="image-center" class="align-center" /></p>
+
+<p>The point that we are making here is that very slight changes in our model’s parameters can produce drastically different results in terms of the patterns that we witness. In this prologue’s conclusion, we will say more about this and connect this observation back to our original motivation of patterns on animals’ skin.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="conclusion" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:gs" role="doc-endnote">
+      <p>P. Gray and S.K. Scott, Autocatalytic reactions in the isothermal, continuous stirred tank reactor: isolas and other forms of multistability, Chemical Engineering Science 38 (1983) 29-43. <a href="#fnref:gs" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

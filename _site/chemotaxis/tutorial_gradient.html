@@ -1,0 +1,725 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Traveling Up an Attractant Gradient - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Traveling Up an Attractant Gradient">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/tutorial_gradient">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/tutorial_gradient">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient" class="active">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Traveling Up an Attractant Gradient">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Traveling Up an Attractant Gradient
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#modeling-an-increasing-ligand-gradient-with-a-bionetgen-function">Modeling an increasing ligand gradient with a BioNetGen function</a></li><li><a href="#running-our-updated-bionetgen-model">Running our updated BioNetGen model</a></li><li><a href="#visualizing-the-results-of-our-simulation">Visualizing the results of our simulation</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>In the <a href="tutorial_adap">previous tutorial</a>, we modeled how bacteria react and adapt to a one-time addition of attractants. In real life, bacteria don’t suddenly drop into an environment with more attractants; instead, they explore a variable environment. In this tutorial, we will adapt our model to simulate a bacterium as it travels up an exponentially increasing concentration gradient.</p>
+
+<p>We will also explore defining and using <strong>functions</strong>, a feature of BioNetGen that will allow us to specify reaction rules in which the reaction rates are dependent on the current state of the system.</p>
+
+<p>To get started, create a copy of your <code class="language-plaintext highlighter-rouge">adaptation.bngl</code> file from the adaptation tutorial and save it as <code class="language-plaintext highlighter-rouge">addition.bngl</code>. If you would rather not follow along below, you can download a completed BioNetGen file here: <a href="../downloads/downloadable/addition.bngl" download="addition.bngl">addition.bngl</a></p>
+
+<p>We also will build a Jupyter notebook in this tutorial for plotting the concentrations of molecules over time. You should create a file called <code class="language-plaintext highlighter-rouge">plotter_up.ipynb</code>; if you would rather not follow along, we provide a completed notebook here:
+<a href="../downloads/downloadable/plotter_up.ipynb" download="plotter_up.ipynb">plotter_up.ipynb</a></p>
+
+<p>Before running this notebook, make sure the following dependencies are installed.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Installation Link</th>
+      <th style="text-align: center">Version</th>
+      <th style="text-align: right">Check install/version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.python.org/downloads/">Python3</a></td>
+      <td style="text-align: center">3.6+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">python --version</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://jupyter.org/index.html">Jupyter Notebook</a></td>
+      <td style="text-align: center">4.4.0+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">jupyter --version</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://numpy.org/install/">Numpy</a></td>
+      <td style="text-align: center">1.14.5+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">pip list \| grep numpy</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://matplotlib.org/users/installing.html">Matplotlib</a></td>
+      <td style="text-align: center">3.0+</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">pip list \| grep matplotlib</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://python-colorspace.readthedocs.io/en/latest/installation.html">Colorspace</a> or with <a href="https://pypi.org/project/colorspace/">pip</a></td>
+      <td style="text-align: center">any</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">pip list \| grep colorspace</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="modeling-an-increasing-ligand-gradient-with-a-bionetgen-function">Modeling an increasing ligand gradient with a BioNetGen function</h2>
+
+<p>Our BioNetGen model will largely stay the same, except for the fact that we are changing the concentration of ligand over time. To model an increasing concentration of ligand corresponding to a bacterium moving up an attractant gradient, we will increase the background ligand concentration at an exponential rate.</p>
+
+<p>We will simulate an increase in attractant concentration by using a “dummy reaction” <em>L</em> → 2<em>L</em> in which one ligand molecule becomes two. To do so, we will add the following reaction to the <code class="language-plaintext highlighter-rouge">reaction rules</code> section.</p>
+
+<p>As we have observed earlier in this module, when the ligand concentration is very high, receptors are saturated, and the cell can no longer detect a change in ligand concentration. If you explored the <a href="tutorial_adap">adaptation simulation</a>, then you saw that this occurs after <em>l</em><sub>0</sub> passes <code class="language-plaintext highlighter-rouge">1e8</code>; we will therefore cap the allowable ligand concentration at this value.</p>
+
+<p>We can cap our ligand concentration by defining the rate of the dummy reaction using a function <code class="language-plaintext highlighter-rouge">add_Rate()</code>. This function requires another observable, <code class="language-plaintext highlighter-rouge">AllLigand</code>. By adding the line <code class="language-plaintext highlighter-rouge">Molecules AllLigand L</code> in the <code class="language-plaintext highlighter-rouge">observables</code> section, <code class="language-plaintext highlighter-rouge">AllLigand</code> will record the total concentration of ligand in the system at each time step (both bound and unbound). As for our reaction, if <code class="language-plaintext highlighter-rouge">AllLigand</code> is less than <code class="language-plaintext highlighter-rouge">1e8</code>, then the dummy reaction should take place at some given rate <code class="language-plaintext highlighter-rouge">k_add</code>. Otherwise, <code class="language-plaintext highlighter-rouge">AllLigand</code> exceeds<code class="language-plaintext highlighter-rouge">1e8</code>, and we will set the rate of the dummy reaction to zero. This can be achieved with a <code class="language-plaintext highlighter-rouge">functions</code> section in BioNetGen using the following <code class="language-plaintext highlighter-rouge">if</code> statement to branch based on the value of <code class="language-plaintext highlighter-rouge">AllLigand</code>.</p>
+
+<p><strong>Important note:</strong> Please ensure that the <code class="language-plaintext highlighter-rouge">functions</code> section occurs before the <code class="language-plaintext highlighter-rouge">reaction rules</code> section in your BioNetGen file.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">functions</span>
+	<span class="n">addRate</span><span class="p">()</span> <span class="o">=</span> <span class="k">if</span><span class="p">(</span><span class="no">AllLigand</span><span class="o">&gt;</span><span class="mf">1e8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">k_add</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">functions</span>
+</code></pre></div></div>
+
+<p>Now we are ready to add our dummy reaction to the <code class="language-plaintext highlighter-rouge">reaction rules</code> section with a reaction rate of <code class="language-plaintext highlighter-rouge">addRate()</code>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Simulate an exponentially increasing gradient using a dummy reaction</span>
+<span class="no">LAdd</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">addRate</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Now that we have defined our dummy reaction, we should specify the default rate of this reaction <code class="language-plaintext highlighter-rouge">k_add</code> in the <code class="language-plaintext highlighter-rouge">parameters</code> section. We first will try a value of <code class="language-plaintext highlighter-rouge">k_add</code> of 0.1/s with an initial ligand concentration <code class="language-plaintext highlighter-rouge">L0</code> of <code class="language-plaintext highlighter-rouge">1e4</code>. This means that the model is simulating a gradient of d[<em>L</em>]/dt = 0.1[<em>L</em>]. If <code class="language-plaintext highlighter-rouge">L0</code> is <code class="language-plaintext highlighter-rouge">1e4</code>, then the solution to this differential equation is [L] = 1000e<sup>0.1<em>t</em></sup> molecules per second.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">k_add</span> <span class="mf">0.1</span>
+<span class="no">L0</span> <span class="mf">1e4</span>
+</code></pre></div></div>
+
+<h2 id="running-our-updated-bionetgen-model">Running our updated BioNetGen model</h2>
+
+<p>Because we have largely kept the same model from the adaptation tutorial, we are ready to simulate. Please make sure that the following lines appear after <code class="language-plaintext highlighter-rouge">end model</code> so that we can run our simulation for 1000 seconds.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">generate_network</span><span class="p">({</span><span class="n">overwrite</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">})</span>
+<span class="n">simulate</span><span class="p">({</span><span class="nb">method</span><span class="o">=&gt;</span><span class="s2">"ssa"</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=&gt;</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=&gt;</span><span class="mi">500</span><span class="p">})</span>
+</code></pre></div></div>
+
+<p>The following code contains our complete simulation, which you can also download here:
+<a href="../downloads/downloadable/addition.bngl" download="addition.bngl">addition.bngl</a></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">model</span>
+
+<span class="k">begin</span> <span class="n">molecule</span> <span class="n">types</span>
+	<span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+	<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="o">~</span><span class="no">B</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">CheZ</span><span class="p">()</span>
+	<span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">molecule</span> <span class="n">types</span>
+
+<span class="k">begin</span> <span class="n">observables</span>
+	<span class="no">Molecules</span> <span class="n">bound_ligand</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">phosphorylated_CheY</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">low_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">medium_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">high_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">phosphorylated_CheB</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="no">AllLigand</span> <span class="no">L</span>
+<span class="k">end</span> <span class="n">observables</span>
+
+<span class="k">begin</span> <span class="n">parameters</span>
+	<span class="no">NaV2</span> <span class="mf">6.02e8</span>   <span class="c1">#Unit conversion to cellular concentration M/L -&gt; #/um^3</span>
+	<span class="n">miu</span> <span class="mf">1e-6</span>
+
+	<span class="no">L0</span> <span class="mf">1e4</span>
+	<span class="no">T0</span> <span class="mi">7000</span>
+	<span class="no">CheY0</span> <span class="mi">20000</span>
+	<span class="no">CheZ0</span> <span class="mi">6000</span>
+	<span class="no">CheR0</span> <span class="mi">120</span>
+	<span class="no">CheB0</span> <span class="mi">250</span>
+
+	<span class="n">k_lr_bind</span> <span class="mf">8.8e6</span><span class="o">/</span><span class="no">NaV2</span>   <span class="c1">#ligand-receptor binding</span>
+	<span class="n">k_lr_dis</span> <span class="mi">35</span>            <span class="c1">#ligand-receptor dissociation</span>
+
+	<span class="n">k_TaUnbound_phos</span> <span class="mf">7.5</span>   <span class="c1">#receptor complex autophosphorylation</span>
+
+	<span class="n">k_Y_phos</span> <span class="mf">3.8e6</span><span class="o">/</span><span class="no">NaV2</span>    <span class="c1">#receptor complex phosphorylates Y</span>
+	<span class="n">k_Y_dephos</span> <span class="mf">8.6e5</span><span class="o">/</span><span class="no">NaV2</span>  <span class="c1">#Z dephosphoryaltes Y</span>
+
+	<span class="n">k_TR_bind</span> <span class="mf">2e7</span><span class="o">/</span><span class="no">NaV2</span>          <span class="c1">#Receptor-CheR binding</span>
+	<span class="n">k_TR_dis</span>  <span class="mi">1</span>            <span class="c1">#Receptor-CheR dissociaton</span>
+	<span class="n">k_TaR_meth</span> <span class="mf">0.08</span>        <span class="c1">#CheR methylates receptor complex</span>
+
+	<span class="n">k_B_phos</span> <span class="mf">1e5</span><span class="o">/</span><span class="no">NaV2</span>      <span class="c1">#CheB phosphorylation by receptor complex</span>
+	<span class="n">k_B_dephos</span> <span class="mf">0.17</span>        <span class="c1">#CheB autodephosphorylation</span>
+
+	<span class="n">k_Tb_demeth</span> <span class="mf">5e4</span><span class="o">/</span><span class="no">NaV2</span>   <span class="c1">#CheB demethylates receptor complex</span>
+	<span class="n">k_Tc_demeth</span> <span class="mf">2e4</span><span class="o">/</span><span class="no">NaV2</span>   <span class="c1">#CheB demethylates receptor complex</span>
+
+	<span class="n">k_add</span> <span class="mf">0.1</span>              <span class="c1">#Ligand increase</span>
+
+<span class="k">end</span> <span class="n">parameters</span>
+
+<span class="k">begin</span> <span class="n">functions</span>
+	<span class="n">addRate</span><span class="p">()</span> <span class="o">=</span> <span class="k">if</span><span class="p">(</span><span class="no">AllLigand</span><span class="o">&gt;</span><span class="mf">1e8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">k_add</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">functions</span>
+
+<span class="k">begin</span> <span class="n">reaction</span> <span class="n">rules</span>
+	<span class="no">LigandReceptor</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+
+	<span class="c1">#Receptor complex (specifically CheA) autophosphorylation</span>
+	<span class="c1">#Rate dependent on methylation and binding states</span>
+	<span class="c1">#Also on free vs. bound with ligand</span>
+	<span class="no">TaUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span>
+	<span class="no">TbUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.1</span>
+	<span class="no">TcUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">2.8</span>
+	<span class="no">TaLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="mi">0</span>
+	<span class="no">TbLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">0.8</span>
+	<span class="no">TcLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.6</span>
+
+	<span class="c1">#CheY phosphorylation by T and dephosphorylation by CheZ</span>
+	<span class="no">YPhos</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Y_phos</span>
+	<span class="no">YDephos</span><span class="p">:</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_Y_dephos</span>
+
+	<span class="c1">#CheR binds to and methylates receptor complex</span>
+	<span class="c1">#Rate dependent on methylation states and ligand binding</span>
+	<span class="no">TRBind</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="n">k_TR_bind</span><span class="p">,</span> <span class="n">k_TR_dis</span>
+	<span class="no">TaRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span>
+	<span class="no">TbRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="no">TaRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">30</span>
+	<span class="no">TbRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">3</span>
+
+	<span class="c1">#CheB is phosphorylated by receptor complex, and autodephosphorylates</span>
+	<span class="no">CheBphos</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_B_phos</span>
+	<span class="no">CheBdephos</span><span class="p">:</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_B_dephos</span>
+
+	<span class="c1">#CheB demethylates receptor complex</span>
+	<span class="c1">#Rate dependent on methyaltion states</span>
+	<span class="no">TbDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tb_demeth</span>
+	<span class="no">TcDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tc_demeth</span>
+
+	<span class="c1">#Simulate exponentially increasing gradient</span>
+	<span class="no">LAdd</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">addRate</span><span class="p">()</span>
+
+<span class="k">end</span> <span class="n">reaction</span> <span class="n">rules</span>
+
+<span class="k">begin</span> <span class="n">compartments</span>
+  <span class="no">EC</span>  <span class="mi">3</span>  <span class="mi">100</span>       <span class="c1">#um^3</span>
+  <span class="no">PM</span>  <span class="mi">2</span>  <span class="mi">1</span>   <span class="no">EC</span>    <span class="c1">#um^2</span>
+  <span class="no">CP</span>  <span class="mi">3</span>  <span class="mi">1</span>   <span class="no">PM</span>    <span class="c1">#um^3</span>
+<span class="k">end</span> <span class="n">compartments</span>
+
+<span class="k">begin</span> <span class="n">seed</span> <span class="n">species</span>
+	<span class="vi">@EC</span><span class="ss">:L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">L0</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.84</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.15</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.01</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.84</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.15</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.01</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@CP</span><span class="ss">:CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">CheY0</span><span class="o">*</span><span class="mf">0.71</span>
+	<span class="vi">@CP</span><span class="ss">:CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">CheY0</span><span class="o">*</span><span class="mf">0.29</span>
+	<span class="vi">@CP</span><span class="ss">:CheZ</span><span class="p">()</span> <span class="no">CheZ0</span>
+	<span class="vi">@CP</span><span class="ss">:CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">CheB0</span><span class="o">*</span><span class="mf">0.62</span>
+	<span class="vi">@CP</span><span class="ss">:CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">CheB0</span><span class="o">*</span><span class="mf">0.38</span>
+	<span class="vi">@CP</span><span class="ss">:CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">CheR0</span>
+<span class="k">end</span> <span class="n">seed</span> <span class="n">species</span>
+
+<span class="k">end</span> <span class="n">model</span>
+
+<span class="n">generate_network</span><span class="p">({</span><span class="n">overwrite</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">})</span>
+<span class="n">simulate</span><span class="p">({</span><span class="nb">method</span><span class="o">=&gt;</span><span class="s2">"ssa"</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=&gt;</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=&gt;</span><span class="mi">500</span><span class="p">})</span>
+</code></pre></div></div>
+
+<p>Save your file, then go to <code class="language-plaintext highlighter-rouge">simulation</code> and click <code class="language-plaintext highlighter-rouge">Run</code>. What happens to the concentration of phosphorylated CheY? (<strong>Note:</strong> you can deselect <code class="language-plaintext highlighter-rouge">AllLigand</code> to make the plot of the concentration of phosphorylated CheY easier to see.)</p>
+
+<p>Try the following few different values for <code class="language-plaintext highlighter-rouge">k_add</code>: 0.01, 0.03, 0.05, 0.1, 0.3, 0.5. What do these changing <code class="language-plaintext highlighter-rouge">k_add</code> values represent in the simulation? How does the system respond to the different values?</p>
+
+<p>All of your simulation results are stored in the <code class="language-plaintext highlighter-rouge">RuleBender-workspace/PROJECT_NAME/results/MODEL_NAME/TIME/</code> directory in your computer. Rename the directory with the <code class="language-plaintext highlighter-rouge">k_add</code> values instead of the time of running for simplicity.</p>
+
+<p>You will observe that CheY phosphorylation drops gradually first, instead of the instantaneous sharp drop as we add lots of ligand at once. That means, with the ligand concentration increases, the cell is able to continuously lower the tumbling frequency.</p>
+
+<!--
+Please make sure have dependencies installed:
+ - [Jupyter Notebook](https://jupyter.org/index.html)
+ - [Python3](https://www.python.org/downloads/), version 3.6+
+ - [Numpy](https://numpy.org/install/)
+ - [Matplotlib](https://matplotlib.org/users/installing.html)
+ - [Colorspace](https://python-colorspace.readthedocs.io/en/latest/installation.html) (simply [install with pip](https://pypi.org/project/colorspace/) works too)
+-->
+
+<h2 id="visualizing-the-results-of-our-simulation">Visualizing the results of our simulation</h2>
+
+<p>We are now ready to fill in <code class="language-plaintext highlighter-rouge">plotter_up.ipynb</code>, a Jupyter notebook that we will use to visualize the outcome of our simulations.</p>
+
+<p>First specify the directories, model name, species of interest, and rates. Put the <code class="language-plaintext highlighter-rouge">RuleBender-workspace/PROJECT_NAME/results/MODEL_NAME/</code> folder inside the same directory as <code class="language-plaintext highlighter-rouge">plotter_up.ipynb</code> or change the <code class="language-plaintext highlighter-rouge">model_path</code> below to point at this folder.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Specify the data to plot here.
+</span><span class="n">model_path</span> <span class="o">=</span> <span class="s">"addition"</span>  <span class="c1">#The folder containing the model
+</span><span class="n">model_name</span> <span class="o">=</span> <span class="s">"addition"</span>  <span class="c1">#Name of the model
+</span><span class="n">target</span> <span class="o">=</span> <span class="s">"phosphorylated_CheY"</span>    <span class="c1">#Target molecule
+</span><span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>  <span class="c1">#Gradients of interest
+</span></code></pre></div></div>
+
+<p>We next provide some import statements for needed dependencies.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">colorspace</span>
+</code></pre></div></div>
+
+<p>To compare the responses for different gradients, we color-code each gradient. <a href="https://python-colorspace.readthedocs.io/en/latest/hclcolorspace.html">Colorspace</a> is one of the straight-forward ways to set up a color palette. Here we use a qualitative palette with hues (<code class="language-plaintext highlighter-rouge">h</code>) equally spaced between <code class="language-plaintext highlighter-rouge">[0, 300]</code>, and constant chroma (<code class="language-plaintext highlighter-rouge">c</code>) and luminance (<code class="language-plaintext highlighter-rouge">l</code>) values.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Define the colors to use
+</span><span class="n">colors</span> <span class="o">=</span> <span class="n">colorspace</span><span class="p">.</span><span class="n">qualitative_hcl</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">300.</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">70</span><span class="p">,</span> <span class="n">pallete</span> <span class="o">=</span> <span class="s">"dynamic"</span><span class="p">)(</span><span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>The following function loads and parses the data. Once the file containing your data is loaded, we use the first row to investigate which column stores the concentration of the “target” observable species of interest. When we find that target, we will then access the time points and concentrations of this target molecule.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s">".gdat"</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">first_line</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#Read the first line
+</span>    <span class="n">cols</span> <span class="o">=</span> <span class="n">first_line</span><span class="p">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span> <span class="c1">#Get the col names (species names)
+</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">cols</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="o">!=</span> <span class="n">target</span><span class="p">:</span>
+        <span class="n">ind</span> <span class="o">+=</span> <span class="mi">1</span>                  <span class="c1">#Get col number of target molecule
+</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>  <span class="c1">#Load the file
+</span>    <span class="n">time</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>             <span class="c1">#Time points
+</span>    <span class="n">concentration</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="n">ind</span><span class="p">]</span>  <span class="c1">#Concentrations
+</span>
+    <span class="k">return</span> <span class="n">time</span><span class="p">,</span> <span class="n">concentration</span>
+</code></pre></div></div>
+
+<p>Now we will write a function to plot the time coordinates on the <em>x</em>-axis and the concentrations of the molecule at these time points on the <em>y</em>-axis. To do so, we will use the <a href="https://matplotlib.org/3.3.2/api/_as_gen/matplotlib.axes.Axes.plot.html">Matplotlib plot</a> function to plot concentrations through time for each gradient value. Time-series data will be colored by the color palette we mentioned earlier.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">concentration</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="n">legend</span> <span class="o">=</span> <span class="s">"k = "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">concentration</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">legend</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">ax</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="k">return</span>
+</code></pre></div></div>
+
+<p>The plotting function above needs to be initialized with a figure defined by the <a href="https://matplotlib.org/3.3.2/api/_as_gen/matplotlib.pyplot.subplots.html">subplot</a> function. We loop through every gradient concentration to perform the plotting. Afterward, we define labels for the <em>x</em>-axis and <em>y</em>-axis, figure title, and tick lines. The call to <code class="language-plaintext highlighter-rouge">plt.show()</code> displays the plot.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">time</span><span class="p">,</span> <span class="n">concentration</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">concentration</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"time (s)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"concentration (#molecules)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Phosphorylated CheY vs time"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">minorticks_on</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s">'minor'</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="s">'both'</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'lightgrey'</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s">':'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s">'major'</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="s">'both'</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'grey'</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.8</span> <span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s">':'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Now run the notebook. How do changing values of <code class="language-plaintext highlighter-rouge">k_add</code> impact the CheY-P concentrations? Why do you think this is?</p>
+
+<p>In the main text, we will examine the results of our plots and discuss how they can be used to infer the cell’s behavior in the presence of increasing attractant.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_gradient#steady-state-tumbling-frequency-is-robust-when-traveling-up-an-attractant-gradient" class="btn btn--primary btn--large">Return to main text</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

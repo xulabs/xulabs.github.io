@@ -1,0 +1,534 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Conclusion: The Beauty of E. coli’s Randomized Exploration Algorithm - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Conclusion: The Beauty of E. coli’s Randomized Exploration Algorithm">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/home_conclusion">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/home_conclusion">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion" class="active">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Conclusion: The Beauty of E. coli’s Randomized Exploration Algorithm">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Conclusion: The Beauty of <em>E. coli</em>’s Randomized Exploration Algorithm
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#two-randomized-exploration-strategies">Two randomized exploration strategies</a><ul><li><a href="#strategy-1-standard-random-walk">Strategy 1: Standard random walk</a></li><li><a href="#strategy-2-chemotactic-random-walk">Strategy 2: Chemotactic random walk</a></li></ul></li><li><a href="#comparing-the-effectiveness-of-our-two-random-walk-strategies">Comparing the effectiveness of our two random walk strategies</a></li><li><a href="#why-is-bacterial-background-tumbling-frequency-constant-across-species">Why is bacterial background tumbling frequency constant across species?</a></li><li><a href="#bacteria-are-even-smarter-than-we-thought">Bacteria are even smarter than we thought</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="two-randomized-exploration-strategies">Two randomized exploration strategies</h2>
+
+<p>In this final lesson of the module, we will use what we have learned about chemotaxis to build a random walk model emulating the behavior of <em>E. coli</em> within a background containing a variable concentration of attractant. The bacterium will reorient itself randomly, but it will be able to change its tumbling frequency based on the current relative concentration of attractant at its location.</p>
+
+<p>We will then compare this realistic model of bacterial movement against a baseline algorithm modeling a fixed-tumbling frequency random walk. That is, the bacterium walks for a fixed distance and then reorients itself randomly. Which exploration algorithm allows the bacterium to locate the source of the attractant more reliably? And is one algorithm faster than the other?</p>
+
+<p>We will represent a bacterium as a point in two-dimensional space. At any point (<em>x</em>, <em>y</em>), there is some concentration <em>L</em>(<em>x</em>, <em>y</em>) of ligand; furthermore, we simulate an attractant gradient by ensuring that there is a point (called the <strong>goal</strong>) at which <em>L</em>(<em>x</em>, <em>y</em>) is maximized, with the concentration of attractant diminishing as the distance from this point increases.</p>
+
+<p>Units in this space will be in µm, so that moving from (0, 0) to (0, 20) is 20µm, a distance that we know from the introduction can be covered by the bacterium in 1 second during an uninterrupted run. The bacterium will start at the <strong>origin</strong> (0, 0), which we will establish to have a ligand concentration of 100 molecules/µm<sup>3</sup>. The goal contains a maximum concentration of 10<sup>8</sup> molecules/µm<sup>3</sup> and is located at the point (1500, 1500), requiring the bacterium to travel a significant distance to locate the attractant. The concentration of ligands [<em>L</em>] grows exponentially from the origin to the goal; specifically, <em>L</em>(<em>x</em>, <em>y</em>) = 100 · 10<sup>6 · (1-<em>d</em>/<em>D</em>)</sup>, where <em>d</em> is the distance from (<em>x</em>, <em>y</em>) to the goal, and <em>D</em> is the distance from the origin to the goal.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> How can we quantify how well a bacterium has done at finding the attractant?</p>
+
+<p>To measure average-case behavior, we will run our random walk simulations many times for each of our two strategies, where each simulation lasts some fixed time <em>t</em>. (This parameter should be large enough to allow the bacterium to have enough time to reach the goal.) To compare the two strategies, we will then measure how far on average a bacterium with each strategy ends up from the goal.</p>
+
+<p>We now will specify the details of the two strategies.</p>
+
+<h3 id="strategy-1-standard-random-walk">Strategy 1: Standard random walk</h3>
+
+<p>Given a specified amount of time to run the simulation, the model takes the following steps. First, we select a random direction of movement along with a duration of our tumble. The degree of reorientation follows a uniform distribution from 0° to 360°. The duration of each tumble follows an exponential distribution with mean 0.1s<sup id="fnref:Saragosti2012" role="doc-noteref"><a href="#fn:Saragosti2012" class="footnote">1</a></sup>. As the result of a tumble, the cell only changes its orientation, not its position.</p>
+
+<p>We then select a random duration to run and let the bacterium run in that direction for the specified amount of time. The duration of each run follows an exponential distribution with mean equal to some parameter <em>t</em><sub>0</sub>, which we set equal to the experimentally verified value of 1 second.</p>
+
+<p>We then iterate these two steps of tumbling and running until the total time used is equal to the time devoted to the simulation.</p>
+
+<p>In the following tutorial, we simulate this naive strategy using a Jupyter notebook that will also help us visualize the results of the simulation. We will later use this notebook as a starting point when examining our second strategy, which attempts to mimic the response of <em>E. coli</em> to its environment based on what we have learned about chemotaxis and is described below.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_purerandom" class="btn btn--primary btn--large">Visit standard random walk tutorial</a></p>
+
+<h3 id="strategy-2-chemotactic-random-walk">Strategy 2: Chemotactic random walk</h3>
+
+<p>In our second strategy, we mimic the modified random walk that we discussed in previous lessons. The bacterium will still follow a run and tumble model, but the duration of its runs (and therefore its tumbling frequency) depends on the relative change in attractant concentration that it detects.</p>
+
+<p>To ensure a mathematically controlled comparison, we will use the same approach for determining the duration of a tumble and the resulting direction of a run as in strategy 1.</p>
+
+<p>This strategy will therefore differ only in how it chooses the length of a run. Let <em>t</em><sub>0</sub> denote the mean background run duration, which in the first strategy was equal to 1 second, and let Δ[<em>L</em>] denote the difference between the ligand concentration <em>L</em>(<em>x</em>, <em>y</em>) at the current point and the ligand concentration at the cell’s previous point. We would like to choose a simple formula for the expected run duration like <em>t</em><sub>0</sub> * (1 + 10 · Δ[<em>L</em>]). The only issue is that if Δ[<em>L</em>] is less than -0.1, then the run duration could be negative, and if Δ[<em>L</em>] is very large then we could run in one direction for too long without allowing the cell to reassess the ligand concentration.</p>
+
+<p>As a result, we will choose an expected duration for our run step by first taking the maximum of some small value close to 1 (we will use 0.000001) and <em>t</em><sub>0</sub> * (1 + 10 · Δ[<em>L</em>]); then, we take the minimum of the resulting value and 4 · <em>t</em><sub>0</sub>. We use this expected duration as the mean for an exponential distribution for this step, and sample the run duration.</p>
+
+<p>As with the first strategy, our simulated cell will alternate between tumbling and running until the total amount of time devoted to the simulation has been consumed. In the following tutorial, we will adapt the Jupyter notebook that we built in the previous tutorial to simulate this strategy. We then will compare the two strategies in the next section.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_walk" class="btn btn--primary btn--large">Visit chemotactic walk tutorial</a></p>
+
+<h2 id="comparing-the-effectiveness-of-our-two-random-walk-strategies">Comparing the effectiveness of our two random walk strategies</h2>
+
+<p>The following figure visualizes the trajectories of three cells using strategy 1 (left) and strategy 2 (right). After 500 seconds, cells using strategy 1 have traveled away from the origin, and some of them are found in locations with higher concentrations. The cells using strategy 2, however, quickly hone in on the goal and remain near it.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_traj_compare_uniform.png" alt="image-center" class="align-center" />
+Sample trajectories for the two strategies. The standard random walk strategy is shown on the left, and the chemotactic random walk is shown on the right. Regions that are more heavily colored red correspond to higher concentrations of ligand, with a goal having maximum concentration at the point (1500, 1500), which is highlighted using a blue square. A single cell’s walk is colored from darker to lighter colors across the time frame of the trajectory.</p>
+
+<p>Of course, we should be wary of our small sample size. To confirm that what we observed in these trajectories is true on average, we will compare the two strategies for many simulations. The following figure plots the cell’s average distance to the goal over 500 simulations for both strategies.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_performance_compare_uniform.png" alt="image-center" class="align-center" />
+Average distance to the goal plotted over time for 500 cellular simulations following each of the two strategies; the standard random walk is shown in red, and the chemotactic random walk is shown in blue. The shaded area for each strategy represents one standard deviation from the average.</p>
+
+<p>Using strategy 1, cells have some chance of reaching the goal because they tend to spread out over time, but there is no aspect of the strategy that would keep the cells at the goal, and so the average distance to the goal does not decrease. With strategy 2, the cells are able to get closer to the goal and remain there due to the small standard deviation in their distance to the goal.</p>
+
+<p>Strategy 2 corresponds to a very slight change in strategy 1 in which we allow the cell to run for a greater distance if it senses an increase in the attractant concentration. But the direction of travel is still <em>random</em>. So why would this strategy be so much better than a pure random walk?</p>
+
+<p>The attractant detection serves as a sort of “rubber band”. If the bacterium is traveling down an attractant gradient (i.e., away from an attractant), then it is not allowed to travel very far in a single step. If an increase of attractant is detected, then the cell can travel farther before tumbling. On average, then, this effect helps to pull the bacterium in the direction of increasing attractant, even though each of its steps is taken in a random direction.</p>
+
+<p>We have shown that a very slight change to a simple randomized algorithm can produce an elegant approach for exploring an unknown environment. But we left one more question unanswered. Why is it that a default tumbling frequency of one tumble per second appears to be evolutionarily stable across a wide range of bacteria?</p>
+
+<p>To address this question, we will make changes to <em>t</em><sub>0</sub>, the default time for a run step, and see how this affects the ability of a simulated bacterium following the chemotactic strategy to locate the goal. You may like to adjust the value of <em>t</em><sub>0</sub> in the <a href="tutorial_walk">chemotactic walk tutorial</a> before continuing on.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_tumbling_frequencies" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="why-is-bacterial-background-tumbling-frequency-constant-across-species">Why is bacterial background tumbling frequency constant across species?</h2>
+
+<p>The following figures show three trajectories for a few different values of <em>t</em><sub>0</sub> and a simulation that lasts for 800 seconds. First, we set <em>t</em><sub>0</sub> equal to 0.2 seconds and see that the bacteria are not able to walk far enough in a single step. That is, the “rubber band” effect is too rigid.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_traj_0.2_uniform.png" alt="image-center" class="align-center" />
+Three sample trajectories of a simulated cell following the chemotactic random walk strategy with a tumble every 0.2 seconds on average.</p>
+
+<p>If we increase <em>t</em><sub>0</sub> to 5.0 seconds, then the rubber band becomes too flexible, meaning that cells can run past the goal without being able to put on the brakes by tumbling.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_traj_5.0_uniform.png" alt="image-center" class="align-center" />
+Three sample trajectories of a simulated cell following the chemotactic random walk strategy with a tumble every 5 seconds on average.</p>
+
+<p>When we set <em>t</em><sub>0</sub> equal to 1.0, we see a “Goldilocks” effect in which the rubber band effect is just right. The simulated bacterium can run for long enough at a time to head quickly toward the goal, and it tumbles frequently enough to keep it there.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_traj_1.0_uniform.png" alt="image-center" class="align-center" />
+Three sample trajectories of a simulated cell following the chemotactic random walk strategy with a tumble on average of once every second.</p>
+
+<p>To make this analysis more concrete, the figure below shows a plot of average distance to the goal over time for 500 simulated cells following the chemotactic strategy for a variety of choices of <em>t</em><sub>0</sub>.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_performance_uniform.png" alt="image-center" class="align-center" />
+Average distance to the goal over time for 500 cells. Each colored line indicates the average distance to the goal over time a different value of <em>t</em><sub>0</sub>; the shaded area represents one standard deviation.</p>
+
+<p>This figure illustrates the a tradeoff between reaching the target quickly and being able to stay there. For large values of <em>t</em><sub>0</sub> (10.0, 5.0, 2.0), distances to the goal decrease very quickly at the beginning of the simulation, but the cells don’t stay there effectively. For small values of <em>t</em><sub>0</sub> (0.1, 0.2, 0.5), the cells fail to move to the ligand efficiently. When <em>t</em><sub>0</sub> is equal to 0.5 seconds, the cell is able to remain around the goal, but it takes about 400 seconds longer to reach the goal than when <em>t</em><sub>0</sub> is equal to 1.0 seconds.</p>
+
+<p>Recall the video of <em>E. coli</em> moving towards the sugar crystal that we showed at the beginning of this module, which we reproduce below. The video shows that the behavior of real <em>E. coli</em> is reflected by our simulated bacteria. Bacteria generally move towards the crystal and then remain close to it; some bacteria run by the crystal, but they then turn around to move toward the crystal again.</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/F6QMU3KD7zw" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="bacteria-are-even-smarter-than-we-thought">Bacteria are even smarter than we thought</h2>
+
+<p>If you closely examine the video above, then you may be curious about the way that bacteria turn around and head back toward the attractant. When they reorient, their behavior appears more intelligent than simply walking in a random direction. The reason for this behavior of the bacteria is that like most things in biology, the reality turns out to be more complex than we might at first imagine.</p>
+
+<p>Specifically, researchers first showed that the direction of reorientation rather follows a normal distribution with mean of 68° and standard deviation of 36°<sup id="fnref:Berg1972" role="doc-noteref"><a href="#fn:Berg1972" class="footnote">2</a></sup>. That is, the bacterium typically does not tend to make as drastic of a change to its orientation as it would in a pure random walk, which would on average have a change in orientation of 90°.</p>
+
+<p>Yet recent research has shown that the direction of the bacterium’s reorientation depends on whether the cell is traveling in the correct direction.<sup id="fnref:Saragosti2011" role="doc-noteref"><a href="#fn:Saragosti2011" class="footnote">3</a></sup> If moving up an attractant gradient, then the cell makes much smaller changes in its reorientation angle. This allows the cell to retain its orientation if it is moving in the correct direction while also to turn around quickly if it starts heading in the wrong direction. We can even see this behavior in the figure above, in which bacteria traveling toward the attractant make only very slight changes in their direction of travel, but reorient themselves more drastically if they overshoot the target.</p>
+
+<p>In this module, we have witnessed the emergence of an apparently intelligent algorithm from a simple collection of reactions that drive an organism’s biochemistry. What look like decisions made by the bacterium are in fact robust actions taken as the direct result of chemical reactions.</p>
+
+<p>Bacterial chemotaxis is probably the best understood biological system from the perspective of understanding how low-level chemical actions cause emergent behavior. But that is not to say that it is the only such system. As we pointed out in the prologue, this thread connecting chemical reactions to the behavior that we experience as life is for the most part still invisible. Although a simple system like bacterial chemotaxis can be understood concretely, a rationale for how microscopic processes drive macroscopic action is a mystery that may be unresolved for a very long time to come.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_exercise" class="btn btn--primary btn--large">Visit exercises</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Saragosti2012" role="doc-endnote">
+      <p>Saragosti J., Siberzan P., Buguin A. 2012. Modeling <em>E. coli</em> tumbles by rotational diffusion. Implications for chemotaxis. PLoS One 7(4):e35412. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3329434/">available online</a>. <a href="#fnref:Saragosti2012" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Berg1972" role="doc-endnote">
+      <p>Berg HC, Brown DA. 1972. Chemotaxis in Escherichia coli analysed by three-dimensional tracking. Nature. <a href="https://www.nature.com/articles/239500a0">Available online</a> <a href="#fnref:Berg1972" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Saragosti2011" role="doc-endnote">
+      <p>Saragosti J, Calvez V, Bournaveas, N, Perthame B, Buguin A, Silberzan P. 2011. Directional persistence of chemotactic bacteria in a traveling concentration wave. PNAS. <a href="https://www.pnas.org/content/pnas/108/39/16235.full.pdf">Available online</a> <a href="#fnref:Saragosti2011" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

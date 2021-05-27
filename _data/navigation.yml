@@ -1,0 +1,173 @@
+main:
+  - title: "NEWS"
+    url: /news/
+  - title: "PAPERS"
+    url: /papers/
+  - title: "GROUP"
+    url: /group/
+  - title: "ABOUT MIN XU"
+    url: /meet-the-team/
+  - title: "POSITION"
+    url: /position/
+  - title: "SOFTWARE"
+    url: /software/
+
+
+
+prologue:
+  - title: "Prologue: an Introduction to Biological Modeling via Random Walks and Turing Patterns"
+    children:
+      - title: "Introduction: Life is random<br><br>"
+        url: /prologue/
+      - title: "Alan Turing and the zebra's stripes<br><br>"
+        url: /prologue/turing
+      - title: "An introduction to random walks<br><br>"
+        url: /prologue/random-walk
+      - title: "A reaction-diffusion model generating Turing patterns<br><br>"
+        url: /prologue/animals
+      - title: "The Gray-Scott model: a cellular automaton generating Turing patterns<br><br>"
+        url: /prologue/blocks
+      - title: "Conclusion: Turing patterns are fine-tuned<br><br>"
+        url: /prologue/conclusion
+  - title: "Software Tutorials (featuring MCell and CellBlender)"
+    children:
+      - title: "Simulating particle diffusion with CellBlender<br><br>"
+        url: /prologue/tutorial-random-walk
+      - title: "Generating Turing patterns with a reaction-diffusion simulation in CellBlender<br><br>"
+        url: /prologue/turing-cellblender
+      - title: "Building a diffusion cellular automaton with Jupyter notebook<br><br>"
+        url: /prologue/tutorial-diffusion
+      - title: "Implementing the Gray-Scott model for coarse-grained reaction-diffusion with Jupyter notebook<br><br>"
+        url: /prologue/gs-jupyter
+
+motifs:
+  - title: "Finding Motifs in Transcription Factor Networks"
+    children:
+      - title: "Introduction: a submicroscopic scale of interest<br><br>"
+        url: /motifs/home
+      - title: "Transcription and DNA-protein binding<br><br>"
+        url: /motifs/transcription
+      - title: "Transcription factor networks<br><br>"
+        url: /motifs/networks
+      - title: "Using randomness to verify network motifs<br><br>"
+        url: /motifs/finding
+      - title: "The negative autoregulation motif<br><br>"
+        url: /motifs/nar
+      - title: "The feedforward loop motif<br><br>"
+        url: /motifs/feed
+      - title: "Building a biological oscillator<br><br>"
+        url: /motifs/oscillators
+      - title: "Conclusion: the importance of robustness in biological oscillations<br><br>"
+        url: /motifs/conclusion
+  - title: Software Tutorials (featuring MCell and CellBlender)
+    children:
+      - title: "Looking for loops in transcription factor networks<br><br>"
+        url: /motifs/tutorial_loops
+      - title: "Comparing simple regulation to negative autoregulation<br><br>"
+        url: /motifs/tutorial_nar
+      - title: "Ensuring a mathematically controlled simulation for comparing simple regulation to negative autoregulation<br><br>"
+        url: /motifs/tutorial_nar_mathematically_controlled
+      - title: "Implementing the feed-forward loop motif<br><br>"
+        url: /motifs/tutorial_feed
+      - title: "Implementing the repressilator<br><br>"
+        url: /motifs/tutorial_oscillators
+      - title: "Perturbing the represillator<br><br>"
+        url: /motifs/tutorial_perturb
+  - title: "Exercises"
+    children:
+      - title: "Network motif exercises"
+        url: /motifs/exercises
+
+chemotaxis:
+  - title: "Unpacking E. coli's Genius Exploration Algorithm"
+    children:
+      - title: "Introduction: Lost Immortals and chemotaxis<br><br>"
+        url: /chemotaxis/home
+      - title: "Bacterial runs and tumbles<br><br>"
+        url: /chemotaxis/home_walk
+      - title: "Signaling & ligand-receptor dynamics<br><br>"
+        url: /chemotaxis/home_signal
+      - title: "Stochastic simulation of chemical reactions<br><br>"
+        url: /chemotaxis/home_signalpart2
+      - title: "A biochemically accurate model of chemotaxis<br><br>"
+        url: /chemotaxis/home_biochem
+      - title: "Methylation helps bacteria adapt to differing concentrations<br><br>"
+        url: /chemotaxis/home_senseadap
+      - title: "Modeling a bacterium's response to an attractant gradient<br><br>"
+        url: /chemotaxis/home_gradient
+      - title: "Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br>"
+        url: /chemotaxis/home_conclusion
+  - title: Software Tutorials (featuring BioNetGen)
+    children:
+      - title: "Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br>"
+        url: /chemotaxis/tutorial_lr
+      - title: "Adding phosphorylation to our BioNetGen model<br><br>"
+        url: /chemotaxis/tutorial_phos
+      - title: "Modeling adaptation<br><br>"
+        url: /chemotaxis/tutorial_adap
+      - title: "Traveling up an attractant gradient<br><br>"
+        url: /chemotaxis/tutorial_gradient
+      - title: "Traveling down an attractant gradient<br><br>"
+        url: /chemotaxis/tutorial_removal
+      - title: "Modeling a pure random walk strategy<br><br>"
+        url: /chemotaxis/tutorial_purerandom
+      - title: "Modeling E. coli's sophisticated random walk algorithm<br><br>"
+        url: /chemotaxis/tutorial_walk
+      - title: "Comparing different chemotaxis default tumbling frequencies"
+        url: /chemotaxis/tutorial_tumbling_frequencies
+  - title: Exercises
+    children:
+      - title: "Exercises on Chemotaxis<br><br>"
+        url: /chemotaxis/home_exercise
+
+coronavirus:
+  - title: Introduction
+    children:
+      - title: "A Tale of Two Doctors<br><br>"
+        url: /coronavirus/home
+  - title: "Part 1: Protein Structure Prediction"
+    children:
+      - title: "An Introduction to Protein Structure Prediction<br><br>"
+        url: /coronavirus/structure_intro
+      - title: "Ab initio Protein Structure Prediction<br><br>"
+        url: /coronavirus/ab_initio
+      - title: "Homology Modeling for Protein Structure Prediction<br><br>"
+        url: /coronavirus/homology
+      - title: "Comparing Protein Structures to Assess Model Accuracy<br><br>"
+        url: /coronavirus/accuracy
+      - title: "Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br>"
+        url: /coronavirus/conclusion_part_1
+  - title: "Part 2: Comparing SARS-CoV-2 and SARS"
+    children:
+      - title: "Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br>"
+        url: /coronavirus/multiseq
+      - title: "Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br>"
+        url: /coronavirus/structural_diff
+      - title: "Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br>"
+        url: /coronavirus/NAMD
+      - title: "Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br>"
+        url: /coronavirus/conclusion_part_2
+  - title: Software Tutorials (featuring ProDy)
+    children:
+      - title: "Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br>"
+        url: /coronavirus/tutorial_ab_initio
+      - title: "Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br>"
+        url: /coronavirus/tutorial_homology
+      - title: "Using RMSD to Compare Two Protein Structures<br><br>"
+        url: /coronavirus/tutorial_rmsd
+      - title: "Finding Local Differences in Two Protein Structures<br><br>"
+        url: /coronavirus/tutorial_multiseq
+      - title: "Visualizing Specific Regions of Interest within a Protein Structure<br><br>"
+        url: /coronavirus/tutorial_visualization
+      - title: "Computing the Energy Contributed by a Local Region of a Bound Complex<br><br>"
+        url: /coronavirus/tutorial_NAMD
+      - title: "Molecular Dynamics Analysis with GNM<br><br>"
+        url: /coronavirus/tutorial_GNM
+      - title: "ANM Simulations Add Directionality to GNM<br><br>"
+        url: /coronavirus/tutorial_ANM
+
+wbcells:
+  - title: Tutorial
+    children:
+      - title: "Tutorial"
+        url: /wbcells/tutorial

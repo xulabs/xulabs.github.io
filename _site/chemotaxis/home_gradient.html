@@ -1,0 +1,486 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Modeling a Bacterium’s Response to an Attractant Gradient - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Modeling a Bacterium’s Response to an Attractant Gradient">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/home_gradient">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/home_gradient">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient" class="active">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Modeling a Bacterium’s Response to an Attractant Gradient">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Modeling a Bacterium’s Response to an Attractant Gradient
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#traveling-up-an-attractant-gradient">Traveling up an attractant gradient</a></li><li><a href="#steady-state-tumbling-frequency-is-robust-when-traveling-up-an-attractant-gradient">Steady-state tumbling frequency is robust when traveling up an attractant gradient</a></li><li><a href="#reversing-the-attractant-gradient">Reversing the attractant gradient</a></li><li><a href="#steady-state-tumbling-frequency-remains-robust-when-traveling-down-an-attractant-gradient">Steady-state tumbling frequency remains robust when traveling down an attractant gradient</a></li><li><a href="#from-changing-tumbling-frequencies-to-an-exploration-algorithm">From changing tumbling frequencies to an exploration algorithm</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="traveling-up-an-attractant-gradient">Traveling up an attractant gradient</h2>
+
+<p>In the previous lesson, we saw that <em>E. coli</em> is able to adapt its default tumbling frequency to the current background concentration of attractant. To model this behavior, we used the Gillespie algorithm and the rule-based language of BioNetGen to simulate an instantaneous increase in concentration from one stable concentration level to another.</p>
+
+<p>Yet imagine a glucose cube in an aqueous solution. As the cube dissolves, a <strong>gradient</strong> will form, with a decreasing glucose concentration that radiates outward from the cube. How will the tumbling frequency of <em>E. coli</em> change if the bacterium is moving up a gradient of increasing attractant concentration?  Will the tumbling frequency decrease continuously as well, or will the methylation pathways mentioned in the previous lesson cause more complicated behavior?</p>
+
+<p>Furthermore, once the cell reaches a region of high attractant concentration, will its default tumbling frequency stabilize to the same steady-state?  And how much does this steady-state tumbling frequency change as we alter the “steepness” of the attractant gradient (i.e., how quickly the attractant concentration increases)?</p>
+
+<p>In the following tutorial, we will modify our model from the previous lesson by increasing the concentration of the attractant ligand at an exponential rate and seeing how the concentration of phosphorylated CheY changes. Moreover, we will examine how this concentration changes as we change the gradient’s “steepness”, or the rate at which attractant ligand is increasing.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_gradient" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="steady-state-tumbling-frequency-is-robust-when-traveling-up-an-attractant-gradient">Steady-state tumbling frequency is robust when traveling up an attractant gradient</h2>
+
+<p>Recall that we used the expression [<em>L</em>] to denote the concentration of ligand <em>L</em> and <em>l</em><sub>0</sub> to denote the initial concentration of the ligand. If the concentration of the ligand is growing exponentially, then [<em>L</em>] = <em>l</em><sub>0</sub> · <em>e</em><sup><em>k</em> · t</sup>, where <em>t</em> is the time since the start and <em>k</em> is a parameter dictating exponential growth; the higher the value of <em>k</em>, the faster the growth in the ligand concentration.</p>
+
+<p>For example, the following figure depicts the concentration of phosphorylated CheY (shown in blue) over time when <em>l</em><sub>0</sub> = 1000 and <em>k</em> = 0.1. The concentration of phosphorylated CheY, and therefore the tumbling frequency, still decreases sharply as the ligand concentration increases, but after all ligands become bound to receptors (shown by the plateau in the red curve), the methylation of receptors causes the concentration of phosphorylated CheY to return to its equilibrium. In other words, for these values of <em>l</em><sub>0</sub> and <em>k</em>, the outcome is similar to when we provided an instantaneous increase in ligand, although the cell takes longer to reach a minimum concentration of phosphorylated CheY because the attractant concentration is increasing gradually.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_tutorial_addition01.png" alt="image-center" class="align-center" />
+Plots of relevant molecule concentrations in our system when the concentration of ligand grows exponentially with <em>l</em><sub>0</sub> = 1000 and <em>k</em> = 0.1. The concentration of bound ligand (shown in red) quickly hits saturation, which causes a minimum in phosphorylated CheY (and therefore a low tumbling frequency). To respond, the cell increases the methylation of receptors, which boosts the concentration of phosphorylated CheY back to equilibrium.</p>
+
+<p>Our next question is what happens as we change <em>k</em>, the growth rate of the ligand concentration. The following figure shows the results of multiple simulations in which we vary the growth parameter <em>k</em> and plot the concentration of phosphorylated CheY over time. The larger the value of <em>k</em>, the faster the increase in receptor binding, and the steeper the drop in the concentration of phosphorylated CheY.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_tutorial_addition03.png" alt="image-center" class="align-center" />
+Plots of phosphorylated CheY for different growth rates <em>k</em> of the concentration of ligand. The larger the value of <em>k</em>, the steeper the initial drop as the concentration of bound ligand becomes saturated, and the faster that the concentration of phosphorylated CheY returns to equilibrium.</p>
+
+<p>More importantly, the above figure further illustrates the <em>robustness</em> of bacterial chemotaxis to the rate of growth in ligand concentration. Whether the growth of the attractant is slow or fast, methylation will always bring the cell back to the same equilibrium concentration of phosphorylated CheY, and therefore the same background tumbling frequency.</p>
+
+<h2 id="reversing-the-attractant-gradient">Reversing the attractant gradient</h2>
+
+<p>And what if a cell is moving away from an attractant, down a concentration gradient? We would hope that the cell would be able to <em>increase</em> its tumbling frequency (i.e., increase the concentration of phosphorylated CheY), and then restore the background tumbling frequency by removing methylation.</p>
+
+<p>To simulate a decreasing gradient, we will model a cell in a high ligand concentration that is already at steady-state, meaning that methylation is also elevated. In this case, the ligand concentration will <em>decay</em> exponentially, meaning that the ligand concentration is still given by the equation [<em>L</em>] = <em>l</em><sub>0</sub> · <em>e</em><sup><em>k</em> · t</sup>, but <em>k</em> is negative.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> If <em>k</em> is negative, what happens to the plot of [<em>L</em>] = <em>l</em><sub>0</sub> · <em>e</em><sup><em>k</em> · t</sup> for decreasing values of <em>k</em>? How do you think the value of <em>k</em> will affect the concentration of phosphorylated CheY over time?</p>
+
+<p>You may like to modify the previous tutorial on your own to account for traveling down an attractant gradient. If not, we are still happy to provide a separate tutorial below.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_removal" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="steady-state-tumbling-frequency-remains-robust-when-traveling-down-an-attractant-gradient">Steady-state tumbling frequency remains robust when traveling down an attractant gradient</h2>
+
+<p>The following figure shows the plot of molecules in our model as the concentration of attractant ligand decreases exponentially with <em>l</em><sub>0</sub> = 10<sup>7</sup> and <em>k</em> equal to -0.3. As the ligand concentration decreases, the concentration of bound ligands plummet as bound ligands dissociate and there are not enough free ligands to replace the dissociating ones. In the absence of ligand-receptor binding, CheY can readily phosphorylate, causing a spike in phosphorylated CheY. Demethylation of receptors then causes the concentration of phosphorylated CheY to steadily return back to its equilibrium.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_tutorial_removal01.png" alt="image-center" class="align-center" />
+Simulating a bacterium traveling down an attractant gradient with <em>l</em><sub>0</sub> = 10<sup>7</sup> and <em>k</em> equal to -0.3. Phosphorylated CheY follows the opposite pattern to traveling up an attractant gradient, with the concentration of phosphorylated CheY rising quickly only to slowly decrease to equilibrium due to demethylation.</p>
+
+<p>To be thorough, we should also test the robustness of our model to see whether the CheY concentration will return to the same steady-state for a variety of values of <em>k</em> when <em>k</em> is negative. As in the case of an increasing gradient, the figure below shows that the more sudden the change in the concentration of attractant, the sharper the spike. And yet regardless of the value of <em>k</em>, methylation does its work to bring the concentration back to the same steady-state. More importantly, this figure and the one above are confirmed by experimental observations.<sup id="fnref:Krembel2015" role="doc-noteref"><a href="#fn:Krembel2015" class="footnote">1</a></sup></p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_tutorial_removal02.png" alt="image-center" class="align-center" />
+Varying values of <em>k</em> in our exponential decrease in the concentration of attractant ligand produce the same equilibrium concentration of phosphorylated CheY. The smaller the value of <em>k</em>, the steeper the initial spike, and the faster the recovery to steady state.</p>
+
+<h2 id="from-changing-tumbling-frequencies-to-an-exploration-algorithm">From changing tumbling frequencies to an exploration algorithm</h2>
+
+<p>We hope that in exploring this module, you have gained an appreciation for the elegant mechanism of bacterial chemotaxis, as well as the power of BioNetGen’s rule-based modeling for simulating a complex biochemical system without the need to keep track of individual particles.</p>
+
+<p>And yet we have made a major omission. <em>E. coli</em> goes to great lengths to ensure that if it detects a relative increase in concentration (i.e., an attractant gradient), then it can reduce its tumbling frequency in response. But what we have not explored is <em>why</em> this change in the bacterium’s tumbling frequency would help it find food.</p>
+
+<p>After all, the direction that a bacterium is moving at any point in time is random! So why would a decrease in tumbling frequency help  <em>E. coli</em> move toward an attractant?</p>
+
+<p>This question is a biologically deep one and it has no intuitive answer. However, in this module’s final lesson, we will build a model to explain why <em>E. coli</em>’s random-walk algorithm with a variation in tumbling frequency is in fact an extremely clever way of locating resources in a strange new land.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_conclusion" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Krembel2015" role="doc-endnote">
+      <p>Krembel A., Colin R., Sourijik V. 2015. Importance of multiple methylation sites in <em>Escherichia coli</em> chemotaxis. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0145582">Available online</a> <a href="#fnref:Krembel2015" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

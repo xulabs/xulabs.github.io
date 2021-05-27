@@ -1,0 +1,614 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>NMA Calculations - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="NMA Calculations">
+<meta property="og:url" content="http://localhost:4000/coronavirus/NMA">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/coronavirus/NMA">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/home">A Tale of Two Doctors<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 1: Protein Structure Prediction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/structure_intro">An Introduction to Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/ab_initio">Ab initio Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/homology">Homology Modeling for Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/accuracy">Comparing Protein Structures to Assess Model Accuracy<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_1">Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 2: Comparing SARS-CoV-2 and SARS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/multiseq">Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br></a></li>
+          
+            <li><a href="/coronavirus/structural_diff">Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br></a></li>
+          
+            <li><a href="/coronavirus/NAMD">Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_2">Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring ProDy)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/tutorial_ab_initio">Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_homology">Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_rmsd">Using RMSD to Compare Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_multiseq">Finding Local Differences in Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_visualization">Visualizing Specific Regions of Interest within a Protein Structure<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_NAMD">Computing the Energy Contributed by a Local Region of a Bound Complex<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_GNM">Molecular Dynamics Analysis with GNM<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_ANM">ANM Simulations Add Directionality to GNM<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="NMA Calculations">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">NMA Calculations
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#nma-introduction">NMA Introduction</a></li><li><a href="#gnm-calculation-of-the-spike-protein">GNM Calculation of the Spike Protein</a><ul><li><a href="#comparing-results">Comparing Results</a></li></ul></li><li><a href="#anm-analysis-of-the-rbd">ANM Analysis of the RBD</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="nma-introduction">NMA Introduction</h2>
+
+<p>Proteins are not static, but rather dynamic structures. These fluctuations in their structures are typically key components their functions. <strong>Molecular dynamics (MD)</strong> is all about simulating molecules to analyze the movement of the molecules, atoms, and their interactions. However, simulating large structures, such as proteins with hundreds of amino acids, can prove to be extremely computationally heavy. Fortunately, there is an alternative method of studying large-scale movements of these structures called <strong>Normal mode analysis (NMA)</strong>. NMA of proteins is based on the theory that the lowest frequency vibrational normal modes are the most functionally relavent, describing the largest movement within the protein <sup id="fnref:Skjaerven" role="doc-noteref"><a href="#fn:Skjaerven" class="footnote">1</a></sup>.</p>
+
+<p>One of the approaches for modeling a molecule is to represent atoms as nodes that are interconnected with springs, otherwise known as an <strong>elastic network model (ENM)</strong>. The motivation of using ENM is that bonds actually share many characteristics with springs. We stated that proteins are not static, but this is true because the bonds that everything together are not static either. Bonds are constantly vibrating, stretching and compressing much like that of a oscillating spring-mass system show below.</p>
+
+<iframe src="https://gfycat.com/ifr/GaseousPoliticalAlaskajingle" frameborder="0" scrolling="no" width="360" height="640"></iframe>
+<p> <a href="https://gfycat.com/gaseouspoliticalalaskajingle">via Gfycat</a></p>
+
+<p>The bonded atoms are held together by sharing electrons, but is held at specific bond length due to the attraction and repulsion forces of the negatively charged electrons and positively charged nucleus. Just like a spring, when you bring the atoms closer together then the normal (equilibrium), they will resist with greater and greater repulsion force. A popular method for performing NMA is the <strong>Gaussian network model (GNM)</strong>, the ENM for isotropic fluctuations. Isotropic describes physical properties don’t change with direction, meaning that GNM analyzes only the size of the fluctuation in the protein.</p>
+
+<p>Besides root-mean-square deviation (RMSD), we can compare protein structures by comparing how the protein fluctuates. Two proteins fluctuate differently is typically a clear indication that the internal structure is different. Therefore, we can perform NMA calculations as another approach to comparing SARS-CoV-2 and SARS S protein.</p>
+
+<p>One of the main strengths of ProDy is its capabilities for protein dynamics analysis. This includes performing NMA and visualizing the results that provide information on how the protein fluctuates. In this tutorial, we will use ProDy to perform GNM calculations on one chain of the SARS-CoV-2 S protein from the PDB entry <a href="http://www.rcsb.org/structure/6VXX" target="_blank">6vxx</a> and visualize the results into various graphs and plots.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_GNM" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="gnm-calculation-of-the-spike-protein">GNM Calculation of the Spike Protein</h2>
+<p>In the tutorial, we generated four visualizations of how the SARS-CoV-2 S protein fluctuates. Using ProDy, we performed GNM Calculations on the SARS S protein using the PDB entry(<a href="http://www.rcsb.org/structure/5xlr" target="_blank">5xlr</a>). In addition, we also performed the calculations on a single chain of the S protein for a more thorough comparison. Here, we will explain how to interpret the results and compare them to analyze the differences and similarities between the two proteins.</p>
+
+<h3 class="no_toc" id="contact-map">Contact Map</h3>
+
+<p>A protein contact map is a 2D matrix that represents the distance between all amino acid residues in the protein. In other words, it is essentially a reduced, 2D representation of a protein’s tertiary structure. Contact map is another popular method of protein structure comparison. Proteins with very similar structures will have very similar contact map patterns, and deviations within the structure can be easily inferred by seeing unique patterns in only one of the proteins. Between all pairs of amino acids, the pair is assigned the value of 1 if the two residues are closer together than a predetermined threshold distance, and 0 otherwise. The threshold for the maps below is 20 Å, meaning that amino acid pairs within 20 Å of each other are assigned the value of 1. From these maps, we see very little differences between SARS-CoV-2 and SARS S proteins, meaning that they are structurally similar.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/Contact.png" alt="image-center" class="align-center" />
+This figure shows the contact maps of the SARS-CoV-2 S protein (top-left), SARS S protein (top-right), single-chain of the SARS-CoV-2 S protein (bottom-left), and single-chain of the SARS S protein (bottom-right). The map shows every amino acid residue pair in the structure. If the distance between the residue pair is 20.0 Å or less, then a value of 1.0 is assigned and shown in the color black. We see that SARS-CoV-2 and SARS S proteins have similar maps, indicating similar structures.</p>
+
+<h3 class="no_toc" id="cross-correlation">Cross-Correlation</h3>
+
+<p>Protein residue cross-correlation shows the correlation between the fluctuations/displacement of residues. This graphical representation shows how the residues will move relative to each other. The pair is assigned the value of 1 if the fluctuations are completely correlated (move in the same direction), the value of -1 if the fluctuations are completely anticorrelated (move in opposite directions), and a value of 0 if uncorrelated (movements do not affect each other). It is typical to see a diagonal of strong cross-correlation because movements in the residue will almost always affect its direct neighbors. Positive correlations coming off the diagonal represents correlations between contiguous residues and are characteristics of secondary structures because residues in secondary structures tend to move together. Common patterns for secondary structures are triangular structures for helices and plume structures for strands. Off-diagonal correlation and anticorrellations may potential represent interesting interactions between non-contiguous residues and domains. From our results, we see that the SARS-CoV-2 and SARS S protein fluctuate similarly, supporting that they are similar structures.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/CrossCorr.png" alt="image-center" class="align-center" />
+This figure shows the cross-correlation heat maps of the SARS-CoV-2 S protein (top-left), SARS S protein (top-right), single-chain of the SARS-CoV-2 S protein (bottom-left), and single-chain of the SARS S protein (bottom-right). The x-axis and y-axis represent the amino acid residues. The map shows every residue pair in the structure and the colors represent the correlation in the fluctuations of residues. A value of 1.0 (red) means that the residues will fluctuate together in the same direction. A value of -1.0 (dark blue) means that the residues will fluctuate together in opposite directions. A value of 0.0 means no relations between the fluctuations of the residues. We see that SARS-CoV-2 and SARS S proteins have very similar maps.</p>
+
+<h3 class="no_toc" id="slow-mode-shape">Slow Mode Shape</h3>
+
+<p>NMA is based on the idea that the lowest frequency modes describe the largest movement in the structure. Below is the plot of the lowest frequency (slowest) mode calculated by ProDy. Here, the fluctuations are in arbitrary or relative units, but can interpreted as greater amplitudes represent regions of greater fluctuations. The sign of the value represents relative direction of the fluctuation, meaning that the plots can be flipped when comparing between different proteins. In the SARS-CoV-2 Chain A figure, we can see that the protein region between residues 200 and 500 is the most mobile. This region overlaps with where the RBD is located on the chain, between residues 331 to 524. This is important because it indicates the RBD being a mobile part of the S protein. Based on our results, we see that both S proteins have the same regions of great fluctuations, supporting that they have similar structures.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/SlowMode.png" alt="image-center" class="align-center" />
+This figure shows the slow mode plots of the SARS-CoV-2 S protein (top-left), SARS S protein (top-right), single-chain of the SARS-CoV-2 S protein (bottom-left), and single-chain of the SARS S protein (bottom-right). The x-axis represent the amino acid residues and the y-axis represents the fluctuations in relative units.  From the single-chain plots for both SARS-CoV-2 and SARS, we see that the residues between 200 – 500 fluctuate the most. The plots between SARS-CoV-2 and SARS are very similar, indicating similar protein fluctuations.</p>
+
+<h3 class="no_toc" id="square-fluctuation">Square Fluctuation</h3>
+
+<p>The slow mode square-fluctuation is calculated by multiplying the square of the slow mode with the variance along the mode. In this case, all the values will be positive, but the interpretation remains the same as the slow mode plot, where greater amplitudes represent regions of greater fluctuations and motions.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/SqFlucts.png" alt="image-center" class="align-center" />
+This figure shows the plots of the slow mode square fluctuation of the SARS-CoV-2 S protein (top-left), SARS S protein (top-right), single-chain of the SARS-CoV-2 S protein (bottom-left), and single-chain of the SARS S protein (bottom-right). The x-axis represent the amino acid residues and the y-axis represents the fluctuations in relative units. The interpretation is the same as the slow mode plot, but with only positive values. The plots between SARS-CoV-2 and SARS are very similar, indicating similar protein fluctuations.</p>
+
+<h3 id="comparing-results">Comparing Results</h3>
+
+<p>From all four results, we see that SARS-CoV-2 and SARS S proteins are structurally very similar. This is, perhaps, not a surprise given that they are similar in sequence and have the same function of targeting ACE2.</p>
+
+<h2 id="anm-analysis-of-the-rbd">ANM Analysis of the RBD</h2>
+
+<p>The anisotropic counterpart to GNM, where direction does matter, is called <strong>anisotropic network model (ANM)</strong>. In ANM, the direction of the fluctuations are also considered. Although ANM includes directionality, ANM typically performs worse than GNM when compared with experimental data <sup id="fnref:Yang" role="doc-noteref"><a href="#fn:Yang" class="footnote">2</a></sup>. Nonetheless, ANM calculations are useful because of the added directionality. In fact, we can use it to create animations depicting the range of motions and fluctuations of the protein.</p>
+
+<hr />
+
+<p>In this tutorial, we will use NMWiz, a GUI for ProDy and is available as a plugin for VMD, to perform ANM calculations and create the animation of the SARS-CoV-2 (chimeric) RBD using the PDB entry <a href="http://www.rcsb.org/structure/6vw1" target="_blank">6vw1</a>.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_ANM" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<p>From the tutorial, we were able to generate the cross-correlation map and square fluctuation of the SARS-CoV-2 RBD. The interpretation of these results are identical to the GNM analysis above. Following the same steps, we performed ANM analysis on the SARS RBD using the PDB entry SARS RBD (<a href="http://www.rcsb.org/structure/2ajf" target="_blank">2ajf</a> for comparison.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/ANMResults.png" alt="image-center" class="align-center" />
+This figure shows the cross-correlation map (top) and the square fluctuation plot (bottom) of SARS-CoV-2 and SARS RBD using ANM. The y-axis of the square fluctuation plot represents how much the residues fluctuate in relative units. Like the results from the GNM analysis, the map and plot are very similar between the two RBDs, indicating that they are structurally similar.</p>
+
+<p>Perhaps unsurprisingly, the maps and plots show very small differences between SARS-CoV-2 and SARS RBD, just like in the GNM calculations for the S proteins. This indicates that the two RBDs are structurally similar.</p>
+
+<p>Using NMWiz and VMD, we also created animations of the protein fluctuation calculated through ANM analysis. The following animations are of the SARS-CoV-2 RBD/SARS RBD (purple) and ACE2 (green). Important residues from the three sites of conformational differences from the previous lessens are also colored.</p>
+
+<p><em>It is important to note that fluctuation calculated by ANM provides information on possible movement and flexibility, but does not depict actual protein movements.</em></p>
+
+<h3 class="no_toc" id="sars-cov-2-spike-chimeric-rbd-6vw1">SARS-CoV-2 Spike Chimeric RBD (6vw1):</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">SARS-CoV-2 (Chimeric) RBD</th>
+      <th style="text-align: left">Purple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Resid 476 to 486 (Loop)</td>
+      <td style="text-align: left">Yellow</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 455 (Hotspot 31</td>
+      <td style="text-align: left">Blue</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 493 (Hotspot 31</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 501 (Hotspot 353)</td>
+      <td style="text-align: left">Red</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ACE2</td>
+      <td style="text-align: left">Green</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 79, 82, 83 (Loop)</td>
+      <td style="text-align: left">Silver</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 31, 35 (Hotspot 31)</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 38, 353 (Hotspot 353)</td>
+      <td style="text-align: left">Red</td>
+    </tr>
+  </tbody>
+</table>
+
+<center>
+<iframe width="640" height="360" src="../assets/6vw1_B&amp;F.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<h3 class="no_toc" id="sars-spike-rbd-2ajf">SARS Spike RBD (2ajf):</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">SARS RBD</th>
+      <th style="text-align: left">Purple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Resid 463 to 472 (Loop)</td>
+      <td style="text-align: left">Yellow</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 442 (Hotspot 31</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 487 (Hotspot 353</td>
+      <td style="text-align: left">Red</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ACE2</td>
+      <td style="text-align: left">Green</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 79, 82, 83 (Loop)</td>
+      <td style="text-align: left">Silver</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 31, 35 (Hotspot 31)</td>
+      <td style="text-align: left">Orange</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Resid 38, 353 (Hotspot 353)</td>
+      <td style="text-align: left">Red</td>
+    </tr>
+  </tbody>
+</table>
+
+<center>
+<iframe width="640" height="360" src="../assets/2ajf_B&amp;F.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p>Using both the GNM and ANM approaches for normal mode analysis of SARS-CoV-2 S protein, we saw that it is structurally very similar to the SARS S protein. As we have stated in the <a href="structural_diff">Structural and ACE2 Interaction Differences</a> and <a href="NAMD">Interaction Energy with ACE2</a> lessons, the structural differences can be very subtle yet still contribute greatly with ACE2 binding affinity.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="conclusion" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Skjaerven" role="doc-endnote">
+      <p>Skjaerven, L., Hollup, S., Reuter, N. 2009. Journal of Molecular Structure: THEOCHEM 898, 42-48. https://doi.org/10.1016/j.theochem.2008.09.024 <a href="#fnref:Skjaerven" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Yang" role="doc-endnote">
+      <p>Yang, L., Song, G., Jernigan, R. 2009. Protein elastic network models and the ranges of cooperativity. PNAS 106(30), 12347-12352. https://doi.org/10.1073/pnas.0902159106 <a href="#fnref:Yang" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

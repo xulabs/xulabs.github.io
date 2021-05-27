@@ -1,0 +1,34 @@
+begin model
+
+begin molecule types
+	L(t)
+	T(l)
+end molecule types
+
+begin observables
+	Molecules free_ligand L(t)
+	Molecules bound_ligand L(t!l).T(l!l)
+	Molecules free_receptor T(l)
+end observables
+
+begin parameters
+	NaV2 6.02e8   #Unit conversion to cellular concentration M/L -> #/um^3
+	L0 1e4        #number of ligand molecules
+	T0 7000       #number of receptor complexes
+	k_lr_bind 8.8e6/NaV2   #ligand-receptor binding
+	k_lr_dis 35            #ligand-receptor dissociation
+end parameters
+
+begin reaction rules
+	LR: L(t) + T(l) <-> L(t!1).T(l!1) k_lr_bind, k_lr_dis
+end reaction rules
+
+begin seed species
+	L(t) L0
+	T(l) T0
+end seed species
+
+end model
+
+generate_network({overwrite=>1})
+simulate({method=>"ssa", t_end=>1, n_steps=>100})

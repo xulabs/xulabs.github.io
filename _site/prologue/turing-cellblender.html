@@ -1,0 +1,595 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Generating Turing Patterns with a Reaction-Diffusion Simulation in CellBlender - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Generating Turing Patterns with a Reaction-Diffusion Simulation in CellBlender">
+<meta property="og:url" content="http://localhost:4000/prologue/turing-cellblender">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/prologue/turing-cellblender">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Prologue: an Introduction to Biological Modeling via Random Walks and Turing Patterns</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/">Introduction: Life is random<br><br></a></li>
+          
+            <li><a href="/prologue/turing">Alan Turing and the zebra's stripes<br><br></a></li>
+          
+            <li><a href="/prologue/random-walk">An introduction to random walks<br><br></a></li>
+          
+            <li><a href="/prologue/animals">A reaction-diffusion model generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/blocks">The Gray-Scott model: a cellular automaton generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/conclusion">Conclusion: Turing patterns are fine-tuned<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/tutorial-random-walk">Simulating particle diffusion with CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/turing-cellblender" class="active">Generating Turing patterns with a reaction-diffusion simulation in CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/tutorial-diffusion">Building a diffusion cellular automaton with Jupyter notebook<br><br></a></li>
+          
+            <li><a href="/prologue/gs-jupyter">Implementing the Gray-Scott model for coarse-grained reaction-diffusion with Jupyter notebook<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Generating Turing Patterns with a Reaction-Diffusion Simulation in CellBlender">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Generating Turing Patterns with a Reaction-Diffusion Simulation in CellBlender
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Load the <code class="language-plaintext highlighter-rouge">CellBlender_Tutorial_Template.blend</code> file that you generated in the <a href="tutorial-random-walk">Random Walk Tutorial</a>. You may also download the complete file <a href=".../tutorials/CellBlender_Tutorial_Template.blend" download="CellBlender_Tutorial_Template.blend">here</a>. Save this file as a new file named <code class="language-plaintext highlighter-rouge">turing_pattern.blend</code>. The completed tutorial is also available <a href=".../tutorials/turing_pattern.blend" download="turing_pattern.blend">here</a>.</p>
+
+<p>We will first visit <code class="language-plaintext highlighter-rouge">CellBlender &gt; Molecules</code> and create the <em>B</em> molecules, as shown in the screenshot below.</p>
+
+<p><img src="../assets/images/motifs_norm1.png" alt="image-center" class="align-center" /></p>
+
+<ol>
+  <li>Click on the <code class="language-plaintext highlighter-rouge">+</code> button.</li>
+  <li>Select a color (such as red).</li>
+  <li>Name the molecule <code class="language-plaintext highlighter-rouge">B</code>.</li>
+  <li>Under <code class="language-plaintext highlighter-rouge">molecule type</code>, select <code class="language-plaintext highlighter-rouge">surface molecule</code>.</li>
+  <li>Add a diffusion constant of <code class="language-plaintext highlighter-rouge">3e-6</code>. The diffusion constant indicates how many units to move the particle every time unit. (We will specify the time unit below at runtime.)</li>
+  <li>Up the scale factor to <code class="language-plaintext highlighter-rouge">2</code> (click and type <code class="language-plaintext highlighter-rouge">2</code> or use the arrows).</li>
+</ol>
+
+<p>Then, repeat the above steps to make sure that all of the following molecules are entered. We use a molecule named <code class="language-plaintext highlighter-rouge">Hidden</code> to represent a “hidden” molecule that will be used to generate <code class="language-plaintext highlighter-rouge">A</code> molecules.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Molecule Name</th>
+      <th style="text-align: center">Molecule Type</th>
+      <th style="text-align: right">Color</th>
+      <th style="text-align: right">Diffusion Constant</th>
+      <th style="text-align: right">Scale Factor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">B</td>
+      <td style="text-align: center">Surface</td>
+      <td style="text-align: right">Red</td>
+      <td style="text-align: right">3e-6</td>
+      <td style="text-align: right">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">A</td>
+      <td style="text-align: center">Surface</td>
+      <td style="text-align: right">Green</td>
+      <td style="text-align: right">6e-6</td>
+      <td style="text-align: right">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hidden</td>
+      <td style="text-align: center">Surface</td>
+      <td style="text-align: right">Blue</td>
+      <td style="text-align: right">1e-6</td>
+      <td style="text-align: right">0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now visit <code class="language-plaintext highlighter-rouge">CellBlender &gt; Molecule Placement</code> to set the following sites for releasing molecules of each of the three types. First, we will release the hidden molecules across the region so that any new <em>A</em> particles will be produced uniformly.</p>
+
+<p><img src="../assets/images/motifs_norm3.png" alt="image-center" class="align-center" /></p>
+
+<ol>
+  <li>Click on the <code class="language-plaintext highlighter-rouge">+</code> button.</li>
+  <li>Select or type in the molecule <code class="language-plaintext highlighter-rouge">Hidden</code>.</li>
+  <li>Type in the name of the Object/Region <code class="language-plaintext highlighter-rouge">Plane</code>.</li>
+  <li>Set the Quantity to Release as <code class="language-plaintext highlighter-rouge">1000</code>.</li>
+</ol>
+
+<p>Then, repeat the above steps to release an initial quantity of <em>A</em> molecules as well, using the following table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Molecule Name</th>
+      <th style="text-align: center">Object/Region</th>
+      <th style="text-align: right">Quantity to Release</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Hidden</td>
+      <td style="text-align: center">Plane</td>
+      <td style="text-align: right">1000</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">A</td>
+      <td style="text-align: center">Plane</td>
+      <td style="text-align: right">6000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We are going to release an initial collection of <em>B</em> particles in a cluster in the center of the plane. To do so, we will need a very specific initial release of these particles, and so we will not be able to use the <code class="language-plaintext highlighter-rouge">Molecule Placement</code> tab. For this reason, we need to write a Python script to place these molecules, shown below. (Don’t worry if you are not comfortable with Python.)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kn">import</span> <span class="nn">cellblender</span> <span class="k">as</span> <span class="n">cb</span>
+   <span class="n">dm</span> <span class="o">=</span> <span class="n">cb</span><span class="p">.</span><span class="n">get_data_model</span><span class="p">()</span>
+   <span class="n">mcell</span> <span class="o">=</span> <span class="n">dm</span><span class="p">[</span><span class="s">'mcell'</span><span class="p">]</span>
+   <span class="n">rels</span> <span class="o">=</span> <span class="n">mcell</span><span class="p">[</span><span class="s">'release_sites'</span><span class="p">]</span>
+   <span class="n">rlist</span> <span class="o">=</span> <span class="n">rels</span><span class="p">[</span><span class="s">'release_site_list'</span><span class="p">]</span>
+   <span class="n">point_list</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+         <span class="n">point_list</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span><span class="n">y</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
+   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+         <span class="n">point_list</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span><span class="n">y</span><span class="o">/</span><span class="mi">100</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
+   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+         <span class="n">point_list</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span> <span class="o">-</span> <span class="mf">0.8</span><span class="p">,</span><span class="n">y</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
+   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+         <span class="n">point_list</span><span class="p">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span> <span class="o">+</span> <span class="mf">0.8</span><span class="p">,</span><span class="n">y</span><span class="o">/</span><span class="mi">100</span> <span class="o">-</span> <span class="mf">0.8</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
+   <span class="n">new_rel</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="s">'data_model_version'</span> <span class="p">:</span> <span class="s">"DM_2015_11_11_1717"</span><span class="p">,</span>
+     <span class="s">'location_x'</span> <span class="p">:</span> <span class="s">"0"</span><span class="p">,</span>
+     <span class="s">'location_y'</span> <span class="p">:</span> <span class="s">"0"</span><span class="p">,</span>
+     <span class="s">'location_z'</span> <span class="p">:</span> <span class="s">"0"</span><span class="p">,</span>
+     <span class="s">'molecule'</span> <span class="p">:</span> <span class="s">"B"</span><span class="p">,</span>
+     <span class="s">'name'</span> <span class="p">:</span> <span class="s">"pred_rel"</span><span class="p">,</span>
+     <span class="s">'object_expr'</span> <span class="p">:</span> <span class="s">"arena"</span><span class="p">,</span>
+     <span class="s">'orient'</span> <span class="p">:</span> <span class="s">"'"</span><span class="p">,</span>
+     <span class="s">'pattern'</span> <span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+     <span class="s">'points_list'</span> <span class="p">:</span> <span class="n">point_list</span><span class="p">,</span>
+     <span class="s">'quantity'</span> <span class="p">:</span> <span class="s">"400"</span><span class="p">,</span>
+     <span class="s">'quantity_type'</span> <span class="p">:</span> <span class="s">"NUMBER_TO_RELEASE"</span><span class="p">,</span>
+     <span class="s">'release_probability'</span> <span class="p">:</span> <span class="s">"1"</span><span class="p">,</span>
+     <span class="s">'shape'</span> <span class="p">:</span> <span class="s">"LIST"</span><span class="p">,</span>
+     <span class="s">'site_diameter'</span> <span class="p">:</span> <span class="s">"0.01"</span><span class="p">,</span>
+     <span class="s">'stddev'</span> <span class="p">:</span> <span class="s">"0"</span>
+   <span class="p">}</span>
+   <span class="n">rlist</span><span class="p">.</span><span class="n">append</span> <span class="p">(</span> <span class="n">new_rel</span> <span class="p">)</span>
+   <span class="n">cb</span><span class="p">.</span><span class="n">replace_data_model</span> <span class="p">(</span> <span class="n">dm</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<p>Locate the <code class="language-plaintext highlighter-rouge">Outliner</code> pane on the top-right of the Blender screen. On the left of the view button in the Outliner pane, there is a code tree icon.</p>
+
+<p>Click on this icon and choose <code class="language-plaintext highlighter-rouge">Text Editor</code>. To create a new file for our code, click the <code class="language-plaintext highlighter-rouge">+</code> button. Copy and paste the code into the text editor and save it with the name <code class="language-plaintext highlighter-rouge">pred-center.py</code>.</p>
+
+<p>Next visit <code class="language-plaintext highlighter-rouge">CellBlender &gt; Scripting &gt; Data-Model Scripting &gt; Run Script</code>, as shown in the following screenshot. Select <code class="language-plaintext highlighter-rouge">Internal</code> from the Data-Model Scripting menu and click the refresh button. Click on the filename entry area next to <code class="language-plaintext highlighter-rouge">File</code> and enter <code class="language-plaintext highlighter-rouge">pred_center.py</code>. Click on <code class="language-plaintext highlighter-rouge">Run Script</code> to execute</p>
+
+<p><img src="../assets/images/outliner_script.PNG" alt="image-center" class="align-center" /></p>
+
+<p>You should see that another placement site called <code class="language-plaintext highlighter-rouge">pred_rel</code> has appeared in the <code class="language-plaintext highlighter-rouge">Molecule Placement</code> tab.</p>
+
+<p>Next go to <code class="language-plaintext highlighter-rouge">CellBlender &gt; Reactions</code> to create the reactions that will drive the system.</p>
+
+<p><img src="../assets/images/motifs_norm4.png" alt="image-center" class="align-center" /></p>
+
+<ol>
+  <li>Click on the <code class="language-plaintext highlighter-rouge">+</code> button.</li>
+  <li>Under reactants, type <code class="language-plaintext highlighter-rouge">Hidden;</code> (<strong>note:</strong> the semi-colon is important).</li>
+  <li>Under products, type <code class="language-plaintext highlighter-rouge">Hidden; + A;</code></li>
+  <li>Set the forward rate as <code class="language-plaintext highlighter-rouge">1e5</code>.</li>
+</ol>
+
+<p>Repeat these steps to ensure that we have all of the following reactions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Reactants</th>
+      <th style="text-align: center">Products</th>
+      <th style="text-align: right">Forward Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Hidden;</td>
+      <td style="text-align: center">Hidden; + A;</td>
+      <td style="text-align: right">1e5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">B;</td>
+      <td style="text-align: center">NULL</td>
+      <td style="text-align: right">1e5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">B; + B; + A;</td>
+      <td style="text-align: center">B; + B; + B;</td>
+      <td style="text-align: right">1e1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We are now ready to run our simulation. To do so, visit <code class="language-plaintext highlighter-rouge">CellBlender &gt; Run Simulation</code> and select the following options:</p>
+
+<p><img src="../assets/images/motifs_norm7.png" alt="image-center" class="align-center" /></p>
+
+<ol>
+  <li>Set the number of iterations to <code class="language-plaintext highlighter-rouge">200</code>.</li>
+  <li>Ensure the time step is set as <code class="language-plaintext highlighter-rouge">1e-6</code>.</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Export &amp; Run</code>.</li>
+</ol>
+
+<p>Once the run is complete, save your file.</p>
+
+<p>We can also now visualize our simulation. Click on <code class="language-plaintext highlighter-rouge">CellBlender &gt; Reload Visualization Data</code>. You have the option of watching the animation within the Blender window by clicking the play button at the bottom of the screen.</p>
+
+<p><img src="../assets/images/motifs_norm8.png" alt="image-center" class="align-center" /></p>
+
+<p>If you like, you can export this animation by using the following steps:</p>
+
+<p><img src="../assets/images/cellblender_render.png" alt="image-center" class="align-center" /></p>
+
+<ol>
+  <li>Click on the <code class="language-plaintext highlighter-rouge">movie</code> tab.</li>
+  <li>Scroll down to the file name.</li>
+  <li>Select a suitable location for the file.</li>
+  <li>Select the file type you would like (we suggest FFmpeg_video).</li>
+  <li>Click on <code class="language-plaintext highlighter-rouge">Render &gt; OpenGL Render Animation</code>.</li>
+</ol>
+
+<p>The movie will begin playing, and when the animation is complete, the movie file should be in the folder location you selected.</p>
+
+<p>You may be wondering how the parameters in the above simulations were chosen. The fact of the matter is that for many choices of these parameters, we will obtain behavior that does not produce an animation as interesting as what we found in this tutorial. Furthermore, try making slight changes to the feed and kill rates in the CellBlender reactions (e.g., multiplying one of them by 1.25) and watching the animation. How does a small change in parameters cause the animation to change?</p>
+
+<p>As we return to the main text, we will discuss how the patterns that we observe change as we make slight changes to these parameters. What biological conclusion can we draw from this phenomenon?</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="animals#tuning-reaction-diffusion-parameters-produces-different-turing-patterns" class="btn btn--primary btn--large">Return to main text</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

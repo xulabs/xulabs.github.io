@@ -1,0 +1,462 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Using Randomness to Verify Network Motifs - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Using Randomness to Verify Network Motifs">
+<meta property="og:url" content="http://localhost:4000/motifs/finding">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/motifs/finding">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Finding Motifs in Transcription Factor Networks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/home">Introduction: a submicroscopic scale of interest<br><br></a></li>
+          
+            <li><a href="/motifs/transcription">Transcription and DNA-protein binding<br><br></a></li>
+          
+            <li><a href="/motifs/networks">Transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/finding" class="active">Using randomness to verify network motifs<br><br></a></li>
+          
+            <li><a href="/motifs/nar">The negative autoregulation motif<br><br></a></li>
+          
+            <li><a href="/motifs/feed">The feedforward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/oscillators">Building a biological oscillator<br><br></a></li>
+          
+            <li><a href="/motifs/conclusion">Conclusion: the importance of robustness in biological oscillations<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/tutorial_loops">Looking for loops in transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar">Comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar_mathematically_controlled">Ensuring a mathematically controlled simulation for comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_feed">Implementing the feed-forward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_oscillators">Implementing the repressilator<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_perturb">Perturbing the represillator<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/exercises">Network motif exercises</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Using Randomness to Verify Network Motifs">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Using Randomness to Verify Network Motifs
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#the-loop-the-simplest-network-motif">The loop: the simplest network motif</a></li><li><a href="#using-randomness-to-determine-statistical-significance">Using randomness to determine statistical significance</a></li><li><a href="#comparing-a-real-transcription-factor-network-against-a-random-network">Comparing a real transcription factor network against a random network</a></li><li><a href="#the-negative-autoregulation-motif">The negative autoregulation motif</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="the-loop-the-simplest-network-motif">The loop: the simplest network motif</h2>
+
+<p>In the previous lesson, we introduced the transcription factor network, in which a protein <em>X</em> is connected to a protein <em>Y</em> if <em>X</em> is a transcription factor that regulates the production of <em>Y</em>. We also saw that in the <em>E. coli</em> transcription factor network, there seemed to be a large number of loops, or edges connecting <em>X</em> to <em>X</em> that correspond to the autoregulation of <em>X</em>.</p>
+
+<p>In the introduction, we briefly introduced the notion of a network motif, or a structure occurring often throughout a network. In the remainder of this module, we discuss how to identify network motifs as well as explain why they occur so often in a network. And we will start our work by studying the loop.</p>
+
+<h2 id="using-randomness-to-determine-statistical-significance">Using randomness to determine statistical significance</h2>
+
+<p>We first need to argue rigorously that a loop is indeed a motif within a transcription factor network. To do so, we will apply a paradigm that occurs throughout computational biology (and science in general) when determining whether an observation is significant. We will compare our observation against a  <em>randomly generated</em> database — the power of randomness strikes again!</p>
+
+<p>A seminal biological example of this paradigm is the search tool <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a>, which allows researchers to compare a query against a database (e.g., comparing the DNA sequence of a newly sequenced gene against a collection of many known proteins). Once BLAST finds a “hit” in which the query occurs with slight modifications within the database, it asks, “What is the <em>probability</em> that we would find a hit of the same quality of the query against a randomly generated ‘decoy’ database?” If this probability is low, then we can feel confident that the hit is statistically significant.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> How can we apply this paradigm to determine whether a transcription factor network contains a significant number of loops?</p>
+
+<h2 id="comparing-a-real-transcription-factor-network-against-a-random-network">Comparing a real transcription factor network against a random network</h2>
+
+<p>To determine whether the number of loops in the transcription factor network of <em>E. coli</em> is significant, we will compare the number of loops that we find in this network against the expected number of loops we would find in a randomly generated network. If the number of loops in the real network is much higher than the number of loops in the random network, then we have strong evidence that there is some selective force causing a loop to be a network motif.</p>
+
+<p>There are multiple ways to generate a random network, but we will use an approach developed by Edgar Gilbert in 1959<sup id="fnref:Gilbert" role="doc-noteref"><a href="#fn:Gilbert" class="footnote">1</a></sup>. Given an integer <em>n</em> and a probability <em>p</em> (between 0 and 1), we first form <em>n</em> nodes; then, for every possible pair of nodes <em>X</em> and <em>Y</em>, we connect <em>X</em> to <em>Y</em> via a directed edge with probability <em>p</em>.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> What should <em>n</em> and <em>p</em> be if we are generating a random network to compare against the <em>E. coli</em> transcription factor network?</p>
+
+<p>The full <em>E. coli</em> transcription factor network contains thousands of genes, most of which are not transcription factors. As a result, the approach described above may form a random network that connects non-transcription factors to other nodes, which we should avoid.</p>
+
+<p>Instead, we will focus on the network comprising only <em>E. coli</em> transcription factors that regulate each other. This network has 197 nodes and 477 edges, and so we will begin by forming a random network with <em>n</em> = 197 nodes.</p>
+
+<p>We then select <em>p</em> to ensure that our random network will on average have 477 edges. To do so, we note that there are <em>n</em><sup>2</sup> pairs of nodes that could have an edge connecting them (<em>n</em> choices for the starting node and <em>n</em> for the ending node). If we were to set <em>p</em> equal to 1/<em>n</em><sup>2</sup>, then we would expect on average only to see a single edge in the random network. We therefore scale this value by 477 and set <em>p</em> equal to 477/<em>n</em><sup>2</sup> so that we will see, on average, 477 edges in our random network.</p>
+
+<p>We are now ready to build a random network and compare it against the real transcription factor network. The link below will take you to a short tutorial that includes a Jupyter notebook running this comparison and demonstrating that the number of loops in the <em>E. coli</em> transcription factor network is significant. You may also feel free to skip ahead to the section below, which discusses the results of this tutorial.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_loops" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="the-negative-autoregulation-motif">The negative autoregulation motif</h2>
+
+<p>In a random network containing <em>n</em> nodes, the probability that a given edge is a loop is 1/<em>n</em>. Therefore, if the network has <em>e</em> edges, then we would on average see <em>e</em>/<em>n</em> loops in the network.</p>
+
+<p>In our case, <em>n</em> is 197, and <em>e</em> is 477; therefore, on average, we will only see approximately 2.42 loops in a random network.  Yet the real <em>E. coli</em> network contains 130 loops!</p>
+
+<p>Furthermore, in a random network, we would expect about half of the edges to correspond to upregulation, and the other half to correspond to downregulation. But if you followed the tutorial linked in the previous section, then you know that of the 130 loops in the <em>E. coli</em> network, 35 correspond to upregulation and 95 correspond to downregulation.</p>
+
+<p>So, not only is autoregulation an important feature of transcription factors, but these transcription factors tend to <em>negatively</em> autoregulate. Why in the world would organisms have evolved autoregulation only to <em>slow</em> their own transcription? In the next lesson, we will begin to unravel the mystery.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="nar" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Gilbert" role="doc-endnote">
+      <p>Gilbert, E.N. (1959). “Random Graphs”. Annals of Mathematical Statistics. 30 (4): 1141–1144. doi:10.1214/aoms/1177706098. <a href="#fnref:Gilbert" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,515 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>A Biochemically Accurate Model of Chemotaxis - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="A Biochemically Accurate Model of Chemotaxis">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/home_biochem">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/home_biochem">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem" class="active">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A Biochemically Accurate Model of Chemotaxis">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">A Biochemically Accurate Model of Chemotaxis
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#transducing-a-signal-to-a-cells-interior">Transducing a signal to a cell’s interior</a></li><li><a href="#chemotaxis-pathway">Chemotaxis pathway</a></li><li><a href="#adding-phosphorylation-events-to-our-model-of-chemotaxis">Adding phosphorylation events to our model of chemotaxis</a></li><li><a href="#tumbling-frequency-and-changing-ligand-concentrations">Tumbling frequency and changing ligand concentrations</a></li><li><a href="#so--whats-the-big-deal">So … what’s the big deal?</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="transducing-a-signal-to-a-cells-interior">Transducing a signal to a cell’s interior</h2>
+
+<p>In the previous two lessons, we discussed how a cell recognizes an extracellular signal when receptor proteins on the cell’s surface bond to ligands, and how to model the reversible ligand-receptor reaction using stochastic simulation via the Gillespie algorithm. We now turn to the question of how the cell conveys the extracellular signal it detects via ligand-receptor bonding to the cell’s interior in order to produce an action via the process of signal transduction. For example, if <em>E. coli</em> senses an increase in the concentration of glucose, meaning that more ligand-receptor bonding is taking place at the receptor that recognizes glucose, how is <em>E. coli</em> able to change its behavior as a result of this increased bonding?</p>
+
+<p>The engine of signal transduction is a series of <strong>phosphorylation</strong> events. Phosphorylation is a chemical reaction that attaches a phosphoryl group (PO<sub>3</sub><sup>-</sup>) to an organic molecule.  Phosphoryl modifications serve as an information exchange of sorts because they activate or deactivate certain enzymes.</p>
+
+<p>A phosphoryl group usually comes from one of two sources. First, the phosphoryl can be broken off of an <strong>adenosine triphosphate (ATP)</strong> molecule, the “energy currency” of the cell, producing <strong>adenosine diphosphate (ADP)</strong>. Second, the phosphoryl can be exchanged from a phosphorylated molecule that has had its phosphoryl group removed in a <strong>dephosphorylation</strong> reaction.</p>
+
+<p>In the case of chemotaxis, a sequence of phosphorylation events inside <em>E. coli</em> called a <strong>phosphorylation cascade</strong> serves to transmit information within the cell about the amount of ligand bonding being detected on the exterior of the cell. In this lesson, we discuss the details of how this cascade of chemical reactions leads to a change in bacterial movement.</p>
+
+<h2 id="chemotaxis-pathway">Chemotaxis pathway</h2>
+
+<p>A high-level view of the transduction pathway for chemotaxis is shown in the figure below. The cell membrane contains receptors called <strong>methyl-accepting chemotaxis proteins (MCPs)</strong>.  The MCPs, which bridge the cellular membrane, bond to ligand stimuli in the cell exterior, and then also bond to other proteins on the inside of the cell. The pathway includes a number of additional proteins, which all start with the prefix <em>Che</em> (short for “chemotaxis”). In what follows, we explain the reactions detailed in this figure.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxisphosnew.png" alt="image-center" class="align-center" />
+A summary of the chemotaxis transduction pathway. A ligand binding signal is propagated through CheA and CheY phosphorylation, which leads to a response of clockwise flagellar rotation. The blue curved arrow denotes phosphorylation, the grey curved arrow denotes dephosphorylation, and the blue dashed arrow denotes a chemical interaction. Figure is a simplification of <a href="http://chemotaxis.biology.utah.edu/Parkinson_Lab/projects/ecolichemotaxis/ecolichemotaxis.html">Parkinson Lab</a>’s illustrations.</p>
+
+<p>On the interior of the cellular membrane, MCPs form complexes with two proteins called <strong>CheW</strong> and <strong>CheA</strong>; in the absence of MCP-ligand bonding, this complex is more stable. When bound to the complex, the CheA molecule <strong>autophosphorylates</strong>, meaning that it adds a phosphoryl group taken from ATP to <em>itself</em> — a concept that might seem mystical if you have not already followed our discussion of autoregulation in the <a href="motifs/nar">previous module</a>.</p>
+
+<p>If CheA is phosphorylated, then it can pass on the phosphoryl group to a molecule called <strong>CheY</strong>, which interacts with the flagellum in the following way. Each flagellum has a protein complex called the <strong>flagellar motor switch</strong> that is responsible for controlling the direction of flagellar rotation. The interaction of this protein complex with phosphorylated CheY induces the change of flagellar rotation from counter-clockwise to clockwise. As we discussed earlier in this module, this change in flagellar rotation causes the bacterium to tumble, which in the absence of an increase in attractant occurs every 1 to 1.5 seconds.</p>
+
+<p>Yet when a ligand binds to the MCP, the MCP undergoes conformation changes, which reduce the stability of the complex with CheW and CheA. As a result, CheA is less readily able to autophosphorylate, which means that it does not phosphorylate CheY, and so because there is less phosphorylated CheY, the tumbling frequency decreases.</p>
+
+<p>In other words, the exchange of phosphoryl groups means that a ligand exterior to the cell can indirectly serve as an inhibitor for phosphorylated CheA as well as phosphorylated CheY. Thus, ligand binding <em>causes</em> fewer flagellar interactions and in turn less tumbling of the bacterium.</p>
+
+<p>It is critical that as part of this process, a high concentration of phosphorylated CheY can be decreased if a ligand is detected; otherwise, the cell will not be able to change its tumbling frequency. To this end, the cell needs a complementary reaction that reverses the phosphorylation of CheY; this dephosphorylation reaction is catalyzed by an enzyme called <strong>CheZ</strong>.</p>
+
+<h2 id="adding-phosphorylation-events-to-our-model-of-chemotaxis">Adding phosphorylation events to our model of chemotaxis</h2>
+
+<p>We would like to simulate the reactions driving chemotaxis signal transduction and see what happens if the bacterium “senses an attractant”, meaning that the attractant ligand’s concentration increases and leads to more receptor-ligand binding. To do so, we will build on the particle-free model for ligand-receptor dynamics that we introduced in the previous lesson.</p>
+
+<p>This model will be more complicated than any we have introduced thus far in the course. We will need to account for both bound and unbound MCP molecules, as well as phosphorylated and unphosphorylated CheA and CheY enzymes. We will also need to model phosphorylation reactions of CheA that depend on the current concentrations of bound and unbound MCP molecules.</p>
+
+<p>We introduced BioNetGen in a <a href="tutorial_lr">previous tutorial</a> when implementing the Gillespie algorithm for our computation of the equilibrium of bound ligand-receptor complexes. However, BioNetGen is useful not only for running particle-free simulations, but also because it implements its own language for <strong>rule-based modeling</strong>.</p>
+
+<p>Say that we were to specify all reactions using the style of modeling reactions used in previous modules. We would need one particle type to represent bound MCP molecules, another particle type to represent ligands, and a third to represent bound complexes. A bound complex molecule binds with CheA and CheW and can be either phosphorylated or unphosphorylated, necessitating two different molecule types. In turn, CheY can be phosphorylated or unphosphorylated as well, requiring two more particles.</p>
+
+<p>Instead, the BioNetGen language will allow us to conceptualize this system much more concisely using rules that can apply to particles that are in a variety of states. First, we will make the simplifying assumption about our system that the receptor includes CheA and CheW, so that we do not need to represent these as separate particles. The BioNetGen representation of the four particles in our system is shown below. The notation <code class="language-plaintext highlighter-rouge">Phos~U~P</code> indicates that a given molecule type can be either phosphorylated or unphosphorylated, so that we do not need multiple different particles to represent the molecule.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>             <span class="c1">#ligand molecule</span>
+<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>    <span class="c1">#receptor complex</span>
+<span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+<span class="no">CheZ</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The conciseness of BioNetGen’s molecule representation allows us to represent our reactions concisely as well. First, we reproduce the binding and dissociation reactions from the <a href="tutorial_lr">ligand-receptor binding tutorial</a>; please refer to this tutorial for an explanation of the specific notation used in the rest of this section.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">LigandReceptor</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+</code></pre></div></div>
+
+<p>Second, we represent the phosphorylation of the MCP complex. Recall that the phosphorylation of CheA can happen at different rates depending on whether the MCP is bound or not, and so we will need two different reactions to represent these different rates. We will assume that the phosphorylation of the MCP occurs at one fifth the rate when it is bound.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">FreeTP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_T_phos</span>
+<span class="no">BoundTP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_T_phos</span><span class="o">*</span><span class="mf">0.2</span>
+</code></pre></div></div>
+
+<p>Finally, we represent the phosphorylation and dephosphorylation of CheY. The former requires a phosphorylated MCP receptor, while the latter is done with the help of a CheZ molecule.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">YP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Y_phos</span>
+<span class="no">YDep</span><span class="p">:</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_Y_dephos</span>
+</code></pre></div></div>
+
+<p>Now that we have written these reactions representing the chemotaxis signal transduction pathway, we would like to see what happens when we <em>change</em> the concentrations of the ligand. Ideally, the bacterium should be able to distinguish between different ligand concentrations. That is, the higher the concentration of an attractant ligand, the lower the concentration of phosphorylated CheY, and the lower the tumbling frequency of the bacterium.</p>
+
+<p>But does higher attractant concentration in our model really lead to a lower concentration of CheY? Let’s find out by incorporating the phosphorylation pathway into our ligand-receptor model in the following BioNetGen tutorial.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_phos" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="tumbling-frequency-and-changing-ligand-concentrations">Tumbling frequency and changing ligand concentrations</h2>
+
+<p>The following figure shows the concentrations of phosphorylated CheA and CheY in a system at equilibrium in the absence of ligand. As we might expect, we see the concentrations of these particles remain at steady-state (with some noise in the concentrations), and we can presume that the cell stays at its background tumbling frequency.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial5.png" alt="image-center" class="align-center" /></p>
+
+<p>The sudden addition of 5,000 attractant ligand molecules increases the concentration of bound receptors, therefore leading to less CheA autophosphorylation, and less phosphorylated CheY.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial6.png" alt="image-center" class="align-center" /></p>
+
+<p>If we instead add 100,000 attractant molecules, then we see an even more drastic decrease in phosphorylated CheA and CheY.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial7.png" alt="image-center" class="align-center" /></p>
+
+<p>In other words, the BNG simulation is confirming that an increase in attractant reduces the concentration of phosphorylated CheY, which therefore lowers the tumbling frequency.</p>
+
+<!--
+
+The cell also has MCPs that detect repellents and serve to *increase* CheA autophosphorylation. The following two figures show what happens when we add 5,000 and 100,000 repellent molecules to our simulation, which increases the phosphorylation of both CheA and CheY.
+
+![image-center](../assets/images/chemotaxis_tutorial_phosrepel5e3.png){: .align-center}
+
+![image-center](../assets/images/chemotaxis_tutorial_phosrepel1e5.png){: .align-center}
+-->
+
+<h2 id="so--whats-the-big-deal">So … what’s the big deal?</h2>
+
+<p>You may not be surprised that we have been able to build a model simulating the system that <em>E. coli</em> uses to detect extracellular concentration of ligand and change its behavior accordingly. After all, the biochemistry presented here may be elegant, but it is also simple.</p>
+
+<p>But what we have shown in this lesson is just half of the story. In the next lesson, we will see that the biochemical realities of chemotaxis are even more complicated, and for good reason — this complexity will allow <em>E. coli</em> to react with surprising intelligence to a dynamic world.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_senseadap" class="btn btn--primary btn--large">Next lesson</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

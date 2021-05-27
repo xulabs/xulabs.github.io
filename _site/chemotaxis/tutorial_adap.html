@@ -1,0 +1,782 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Modeling adaptation - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Modeling adaptation">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/tutorial_adap">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/tutorial_adap">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap" class="active">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Modeling adaptation">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Modeling adaptation
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#specifying-molecule-types">Specifying molecule types</a></li><li><a href="#defining-reactions">Defining reactions</a></li><li><a href="#adding-compartments">Adding Compartments</a></li><li><a href="#specifying-concentrations-and-reaction-rates">Specifying concentrations and reaction rates</a></li><li><a href="#completing-our-adaptation-simulation">Completing our adaptation simulation</a></li><li><a href="#running-our-adaptation-model">Running our adaptation model</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>In this tutorial, we will extend the BioNetGen model covered in the <a href="tutorial_phos">phosphorylation tutorial</a> to add the methylation mechanisms described in the main text to our ongoing model of bacterial chemotaxis. Our model will be based on the <a href="https://www.pnas.org/content/94/14/7263">model</a> by Spiro et al.<sup id="fnref:Spiro1997" role="doc-noteref"><a href="#fn:Spiro1997" class="footnote">1</a></sup></p>
+
+<p>We will also add <strong>compartmentalization</strong> to our model, which will allow us to differentiate molecules that occur inside and outside of the cell.</p>
+
+<p>Finally, after running our model, we will see how methylation can be used to help the bacterium adapt to a relative change in attractant concentration. For reference, consult the figure below, reproduced from the main text, for an overview of the chemotaxis pathway.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_wholestory.png" alt="image-center" class="align-center" />
+The chemotaxis signal-transduction pathway with methylation included. CheA phosphorylates CheB, which methylates MCPs, while CheR demethylates MCPs. Blue lines denote phosphorylation, grey lines denote dephosphorylation, and the green arrow denotes methylation. Image modified from <a href="http://chemotaxis.biology.utah.edu/Parkinson_Lab/projects/ecolichemotaxis/ecolichemotaxis.html">Parkinson Lab</a>’s illustrations.</p>
+
+<p>To get started, create a copy of your file from the phosphorylation tutorial and save it as <code class="language-plaintext highlighter-rouge">adaptation.bngl</code>. If you would rather not follow along below, you can download a completed BioNetGen file here: <a href="../downloads/downloadable/adaptation.bngl" download="adaptation.bngl">adaptation.bngl</a>.</p>
+
+<h2 id="specifying-molecule-types">Specifying molecule types</h2>
+
+<p>We first will add all molecules needed for our model. As mentioned in the main text, we will assume that an MCP can have one of three methylation states: low (<code class="language-plaintext highlighter-rouge">A</code>), medium (<code class="language-plaintext highlighter-rouge">B</code>), and high (<code class="language-plaintext highlighter-rouge">C</code>). We also need to include a component that will allow for the receptor to bind to CheR. As a result, we update our MCP molecule to <code class="language-plaintext highlighter-rouge">T(l,r,Meth~A~B~C,Phos~U~P)</code>.</p>
+
+<p>Furthermore, we need to represent CheR and CheB; recall that CheR binds to and methylates receptor complexes, while CheB demethylates them. CheR can bind to <code class="language-plaintext highlighter-rouge">T</code>, so that we will need the molecule <code class="language-plaintext highlighter-rouge">CheR(t)</code>. CheB is phosphorylated by CheY, and so it will be represented as <code class="language-plaintext highlighter-rouge">CheB(Phos~U~P)</code>. Later we will specify reactions specifying how CheR and CheB change the methylation states of receptor complexes.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">begin</span> <span class="n">molecule</span> <span class="n">types</span>
+		<span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+		<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="o">~</span><span class="no">B</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+		<span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+		<span class="no">CheZ</span><span class="p">()</span>
+		<span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+		<span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+	<span class="k">end</span> <span class="n">molecule</span> <span class="n">types</span>
+</code></pre></div></div>
+
+<p>In the <code class="language-plaintext highlighter-rouge">observable</code> section, we specify that we are interested in tracking the concentrations of the bound ligand, phosphorylated CheY and CheB, and the receptor at each methylation level.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">observables</span>
+	<span class="no">Molecules</span> <span class="n">bound_ligand</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">phosphorylated_CheY</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">low_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">medium_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">high_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">phosphorylated_CheB</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">observables</span>
+</code></pre></div></div>
+
+<h2 id="defining-reactions">Defining reactions</h2>
+
+<p>We now expand our reaction rules to include methylation. First, we change the autophosphorylation rules of the receptor to have different rates depending on whether the receptor is bound and its current methylation level, which produces six rules. (Note: we cannot avoid combinatorial explosion in the case of these phosphorylation reactions because they take place at different rates.) In what follows, we use experimentally verified reaction rates.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Receptor complex (specifically CheA) autophosphorylation</span>
+<span class="c1">#Rate dependent on methylation and binding states</span>
+<span class="c1">#Also on free vs. bound with ligand</span>
+<span class="no">TaUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span>
+<span class="no">TbUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.1</span>
+<span class="no">TcUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">2.8</span>
+<span class="no">TaLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="mi">0</span>
+<span class="no">TbLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">0.8</span>
+<span class="no">TcLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.6</span>
+</code></pre></div></div>
+
+<p>Next, we will need reactions for CheR binding to receptor complexes and methylating them. First, we consider the binding of CheR to the receptor.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#CheR binding to receptor complex</span>
+<span class="no">TRBind</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="n">k_TR_bind</span><span class="p">,</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Second, we will need multiple reaction rules for methylation of receptors by CheR because the rate of the reaction can depend on whether a ligand is already bound to the receptor as well as the current methylation level of the receptor. This gives us four rules, since a receptor at the “high” methylation level (<code class="language-plaintext highlighter-rouge">C</code>) cannot have increased methylation. Note also that the rate of the methylation reaction is higher if the methylation level is low (<code class="language-plaintext highlighter-rouge">A</code>) and significantly higher if the receptor is already bound.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#CheR methylating the receptor complex</span>
+<span class="c1">#Rate of methylation is dependent on methylation states and ligand binding</span>
+<span class="no">TRBind</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="n">k_TR_bind</span><span class="p">,</span> <span class="n">k_TR_dis</span>
+<span class="no">TaRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span>
+<span class="no">TbRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mf">0.1</span>
+<span class="no">TaRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">30</span>
+<span class="no">TbRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">3</span>
+</code></pre></div></div>
+
+<p>Finally, we need reactions for CheB. First, we consider its phosphorylation by the receptor and its autodephosphorylation. Each of these two reactions occurs at a rate that is independent of any other state of the receptor or CheB.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#CheB is phosphorylated by receptor complex, and autodephosphorylates</span>
+<span class="no">CheBphos</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_B_phos</span>
+<span class="no">CheBdephos</span><span class="p">:</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_B_dephos</span>
+</code></pre></div></div>
+
+<p>CheB also demethylates the receptor complex, at a rate that depends on the current methylation state. (We do not include state <code class="language-plaintext highlighter-rouge">A</code> since it cannot be further demthylated.)</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#CheB demethylates receptor complex</span>
+<span class="c1">#Rate dependent on methylation states</span>
+<span class="no">TbDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tb_demeth</span>
+<span class="no">TcDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tc_demeth</span>
+</code></pre></div></div>
+
+<p>We are now ready to combine the above reaction rules with the reaction rules we are inheriting from the original model (ligand-receptor binding and CheY phosphorylation/dephosphorylation) to give us a complete set of reaction rules.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">reaction</span> <span class="n">rules</span>
+  <span class="c1">#Ligand-receptor binding</span>
+	<span class="no">LigandReceptor</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+
+  <span class="c1">#CheY phosphorylation by T and dephosphorylation by CheZ</span>
+  <span class="no">YPhos</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Y_phos</span>
+  <span class="no">YDephos</span><span class="p">:</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_Y_dephos</span>
+
+	<span class="c1">#Receptor complex (specifically CheA) autophosphorylation</span>
+	<span class="c1">#Rate dependent on methylation and binding states</span>
+	<span class="c1">#Also on free vs. bound with ligand</span>
+	<span class="no">TaUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span>
+	<span class="no">TbUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.1</span>
+	<span class="no">TcUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">2.8</span>
+	<span class="no">TaLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="mi">0</span>
+	<span class="no">TbLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">0.8</span>
+	<span class="no">TcLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.6</span>
+
+	<span class="c1">#CheY phosphorylation by T and dephosphorylation by CheZ</span>
+	<span class="no">YP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Y_phos</span>
+	<span class="no">YDep</span><span class="p">:</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_Y_dephos</span>
+
+	<span class="c1">#CheR binds to and methylates receptor complex</span>
+	<span class="c1">#Rate dependent on methylation states and ligand binding</span>
+	<span class="no">TRBind</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="n">k_TR_bind</span><span class="p">,</span> <span class="n">k_TR_dis</span>
+	<span class="no">TaRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span>
+	<span class="no">TbRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="no">TaRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">30</span>
+	<span class="no">TbRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">3</span>
+
+	<span class="c1">#CheB is phosphorylated by receptor complex, and autodephosphorylates</span>
+	<span class="no">CheBphos</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_B_phos</span>
+	<span class="no">CheBdephos</span><span class="p">:</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_B_dephos</span>
+
+	<span class="c1">#CheB demethylates receptor complex</span>
+	<span class="c1">#Rate dependent on methyaltion states</span>
+	<span class="no">TbDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tb_demeth</span>
+	<span class="no">TcDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tc_demeth</span>
+
+<span class="k">end</span> <span class="n">reaction</span> <span class="n">rules</span>
+</code></pre></div></div>
+
+<h2 id="adding-compartments">Adding Compartments</h2>
+
+<p>In biological systems, the <strong>plasma membrane</strong> separates molecules inside of the cell from the external environment. In our chemotaxis system, ligands are outside of the cell, receptors and flagellar proteins are on the membrane, and CheY, CheR, CheB, CheZ are inside the cell.</p>
+
+<p>BioNetGen allows us to <strong>compartmentalize</strong> our model based on the location of different molecules. Although our model does not call for compartmentalization, it has value in models where we need different concentrations based on different cellular compartments, influencing the rates of reactions involving molecules within these compartments. For this reason, we will take the opportunity to add compartmentalization into our model.</p>
+
+<p>Below, we define three compartments corresponding to extra-cellular space (outside the cell), the plasma membrane, and the cytoplasm (inside the cell). Each row indicates four parameters:</p>
+
+<ol>
+  <li>the name of the compartment;</li>
+  <li>the dimension (2-D or 3-D);</li>
+  <li>surface area (2-D) or volume (3-D) of the compartment; and</li>
+  <li>the name of the parent compartment - the compartment that encloses this current compartment.</li>
+</ol>
+
+<p>If you are interested, more information on compartmentalization can be found on pages 54-55 of Sekar and Faeder’s primer on rule-based modeling: <a href="http://www.lehman.edu/academics/cmacs/documents/RuleBasedPrimer-2011.pdf">http://www.lehman.edu/academics/cmacs/documents/RuleBasedPrimer-2011.pdf</a>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">compartments</span>
+	<span class="no">EC</span>  <span class="mi">3</span>  <span class="mi">100</span>       <span class="c1">#um^3</span>
+	<span class="no">PM</span>  <span class="mi">2</span>  <span class="mi">1</span>   <span class="no">EC</span>    <span class="c1">#um^2</span>
+	<span class="no">CP</span>  <span class="mi">3</span>  <span class="mi">1</span>   <span class="no">PM</span>    <span class="c1">#um^3</span>
+<span class="k">end</span> <span class="n">compartments</span>
+</code></pre></div></div>
+
+<h2 id="specifying-concentrations-and-reaction-rates">Specifying concentrations and reaction rates</h2>
+
+<p>To add compartmentalization information in the <code class="language-plaintext highlighter-rouge">seed species</code> section of our BioNetGen model, we use the notation <code class="language-plaintext highlighter-rouge">@location</code> before the specification of the  concentrations. In what follows, we specify initial concentrations of ligand, receptor, and chemotaxis enzymes at different states.  The distribution of molecule concentrations at each state is very difficult to verify experimentally; the distribution provided here approximates equilibrium concentrations in our simulation, and they are within a biologically reasonable range.<sup id="fnref:Bray1993" role="doc-noteref"><a href="#fn:Bray1993" class="footnote">2</a></sup></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">seed</span> <span class="n">species</span>
+	<span class="vi">@EC</span><span class="ss">:L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">L0</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.84</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.15</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.01</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.84</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.15</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.01</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@CP</span><span class="ss">:CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">CheY0</span><span class="o">*</span><span class="mf">0.71</span>
+	<span class="vi">@CP</span><span class="ss">:CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">CheY0</span><span class="o">*</span><span class="mf">0.29</span>
+	<span class="vi">@CP</span><span class="ss">:CheZ</span><span class="p">()</span> <span class="no">CheZ0</span>
+	<span class="vi">@CP</span><span class="ss">:CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">CheB0</span><span class="o">*</span><span class="mf">0.62</span>
+	<span class="vi">@CP</span><span class="ss">:CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">CheB0</span><span class="o">*</span><span class="mf">0.38</span>
+	<span class="vi">@CP</span><span class="ss">:CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">CheR0</span>
+<span class="k">end</span> <span class="n">seed</span> <span class="n">species</span>
+</code></pre></div></div>
+
+<p>Finally, we need to assign values to the parameters. We will assume that we start with a zero ligand concentration.  We then assign the initial concentration of each molecule and rates of our reactions based on <em>in vivo</em> stoichiometry and parameter tuning <sup id="fnref:Li2004" role="doc-noteref"><a href="#fn:Li2004" class="footnote">3</a></sup><sup id="fnref:Stock1991" role="doc-noteref"><a href="#fn:Stock1991" class="footnote">4</a></sup>.</p>
+
+<p><strong>An important note:</strong> although we discussed reaction rules first, the <code class="language-plaintext highlighter-rouge">parameters</code> section below has to appear before the <code class="language-plaintext highlighter-rouge">reaction rules</code> section.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">parameters</span>
+	<span class="no">NaV</span> <span class="mf">6.02e8</span>   <span class="c1">#Unit conversion to cellular concentration M/L -&gt; #/um^3</span>
+	<span class="n">miu</span> <span class="mf">1e-6</span>
+
+	<span class="no">L0</span> <span class="mi">0</span>             <span class="c1">#number of molecules/cell</span>
+	<span class="no">T0</span> <span class="mi">7000</span>          <span class="c1">#number of molecules/cell</span>
+	<span class="no">CheY0</span> <span class="mi">20000</span>      <span class="c1">#number of molecules/cell</span>
+	<span class="no">CheZ0</span> <span class="mi">6000</span>       <span class="c1">#number of molecules/cell</span>
+	<span class="no">CheR0</span> <span class="mi">120</span>        <span class="c1">#number of molecules/cell</span>
+	<span class="no">CheB0</span> <span class="mi">250</span>        <span class="c1">#number of molecules/cell</span>
+
+	<span class="n">k_lr_bind</span> <span class="mf">8.8e6</span><span class="o">/</span><span class="no">NaV</span>    <span class="c1">#ligand-receptor binding</span>
+	<span class="n">k_lr_dis</span> <span class="mi">35</span>            <span class="c1">#ligand-receptor dissociation</span>
+
+	<span class="n">k_TaUnbound_phos</span> <span class="mf">7.5</span>   <span class="c1">#receptor complex autophosphorylation</span>
+
+	<span class="n">k_Y_phos</span> <span class="mf">3.8e6</span><span class="o">/</span><span class="no">NaV</span>     <span class="c1">#receptor complex phosphorylates Y</span>
+	<span class="n">k_Y_dephos</span> <span class="mf">8.6e5</span><span class="o">/</span><span class="no">NaV</span>   <span class="c1">#Z dephosphoryaltes Y</span>
+
+	<span class="n">k_TR_bind</span>  <span class="mf">2e7</span><span class="o">/</span><span class="no">NaV</span>     <span class="c1">#Receptor-CheR binding</span>
+	<span class="n">k_TR_dis</span>   <span class="mi">1</span>           <span class="c1">#Receptor-CheR dissociation</span>
+	<span class="n">k_TaR_meth</span> <span class="mf">0.08</span>        <span class="c1">#CheR methylates receptor complex</span>
+
+	<span class="n">k_B_phos</span> <span class="mf">1e5</span><span class="o">/</span><span class="no">NaV</span>       <span class="c1">#CheB phosphorylation by receptor complex</span>
+	<span class="n">k_B_dephos</span> <span class="mf">0.17</span>        <span class="c1">#CheB autodephosphorylation</span>
+
+	<span class="n">k_Tb_demeth</span> <span class="mf">5e4</span><span class="o">/</span><span class="no">NaV</span>    <span class="c1">#CheB demethylates receptor complex</span>
+	<span class="n">k_Tc_demeth</span> <span class="mf">2e4</span><span class="o">/</span><span class="no">NaV</span>    <span class="c1">#CheB demethylates receptor complex</span>
+<span class="k">end</span> <span class="n">parameters</span>
+</code></pre></div></div>
+
+<h2 id="completing-our-adaptation-simulation">Completing our adaptation simulation</h2>
+
+<p>We will be ready to simulate once we place the following code after <code class="language-plaintext highlighter-rouge">end model</code>. We will run our simulation for 800 seconds.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">generate_network</span><span class="p">({</span><span class="n">overwrite</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">})</span>
+<span class="n">simulate</span><span class="p">({</span><span class="nb">method</span><span class="o">=&gt;</span><span class="s2">"ssa"</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=&gt;</span><span class="mi">800</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=&gt;</span><span class="mi">800</span><span class="p">})</span>
+</code></pre></div></div>
+
+<p>The following code contains our complete simulation.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">model</span>
+
+<span class="k">begin</span> <span class="n">molecule</span> <span class="n">types</span>
+	<span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+	<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="o">~</span><span class="no">B</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">CheZ</span><span class="p">()</span>
+	<span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">molecule</span> <span class="n">types</span>
+
+<span class="k">begin</span> <span class="n">observables</span>
+	<span class="no">Molecules</span> <span class="n">bound_ligand</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">phosphorylated_CheY</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">low_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">medium_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">high_methyl_receptor</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">phosphorylated_CheB</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="no">CheRbound</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">observables</span>
+
+<span class="k">begin</span> <span class="n">parameters</span>
+	<span class="no">NaV2</span> <span class="mf">6.02e8</span>   <span class="c1">#Unit conversion to cellular concentration M/L -&gt; #/um^3</span>
+	<span class="n">miu</span> <span class="mf">1e-6</span>
+
+	<span class="no">L0</span> <span class="mf">1e7</span>
+	<span class="no">T0</span> <span class="mi">7000</span>
+	<span class="no">CheY0</span> <span class="mi">20000</span>
+	<span class="no">CheZ0</span> <span class="mi">6000</span>
+	<span class="no">CheR0</span> <span class="mi">120</span>
+	<span class="no">CheB0</span> <span class="mi">250</span>
+
+	<span class="n">k_lr_bind</span> <span class="mf">8.8e6</span><span class="o">/</span><span class="no">NaV2</span>   <span class="c1">#ligand-receptor binding</span>
+	<span class="n">k_lr_dis</span> <span class="mi">35</span>            <span class="c1">#ligand-receptor dissociation</span>
+
+	<span class="n">k_TaUnbound_phos</span> <span class="mf">7.5</span>   <span class="c1">#receptor complex autophosphorylation</span>
+
+	<span class="n">k_Y_phos</span> <span class="mf">3.8e6</span><span class="o">/</span><span class="no">NaV2</span>    <span class="c1">#receptor complex phosphorylates Y</span>
+	<span class="n">k_Y_dephos</span> <span class="mf">8.6e5</span><span class="o">/</span><span class="no">NaV2</span>  <span class="c1">#Z dephosphoryaltes Y</span>
+
+	<span class="n">k_TR_bind</span> <span class="mf">2e7</span><span class="o">/</span><span class="no">NaV2</span>          <span class="c1">#Receptor-CheR binding</span>
+	<span class="n">k_TR_dis</span>  <span class="mi">1</span>            <span class="c1">#Receptor-CheR dissociaton</span>
+	<span class="n">k_TaR_meth</span> <span class="mf">0.08</span>        <span class="c1">#CheR methylates receptor complex</span>
+
+	<span class="n">k_B_phos</span> <span class="mf">1e5</span><span class="o">/</span><span class="no">NaV2</span>      <span class="c1">#CheB phosphorylation by receptor complex</span>
+	<span class="n">k_B_dephos</span> <span class="mf">0.17</span>        <span class="c1">#CheB autodephosphorylation</span>
+
+	<span class="n">k_Tb_demeth</span> <span class="mf">5e4</span><span class="o">/</span><span class="no">NaV2</span>   <span class="c1">#CheB demethylates receptor complex</span>
+	<span class="n">k_Tc_demeth</span> <span class="mf">2e4</span><span class="o">/</span><span class="no">NaV2</span>   <span class="c1">#CheB demethylates receptor complex</span>
+<span class="k">end</span> <span class="n">parameters</span>
+
+<span class="k">begin</span> <span class="n">reaction</span> <span class="n">rules</span>
+	<span class="no">LR</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+
+	<span class="c1">#Receptor complex (specifically CheA) autophosphorylation</span>
+	<span class="c1">#Rate dependent on methylation and binding states</span>
+	<span class="c1">#Also on free vs. bound with ligand</span>
+	<span class="no">TaUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span>
+	<span class="no">TbUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.1</span>
+	<span class="no">TcUnboundP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">2.8</span>
+	<span class="no">TaLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="mi">0</span>
+	<span class="no">TbLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">0.8</span>
+	<span class="no">TcLigandP</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_TaUnbound_phos</span><span class="o">*</span><span class="mf">1.6</span>
+
+	<span class="c1">#CheY phosphorylation by T and dephosphorylation by CheZ</span>
+	<span class="no">YP</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Y_phos</span>
+	<span class="no">YDep</span><span class="p">:</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheZ</span><span class="p">()</span> <span class="o">+</span> <span class="no">CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_Y_dephos</span>
+
+	<span class="c1">#CheR binds to and methylates receptor complex</span>
+	<span class="c1">#Rate dependent on methylation states and ligand binding</span>
+	<span class="no">TRBind</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="n">k_TR_bind</span><span class="p">,</span> <span class="n">k_TR_dis</span>
+	<span class="no">TaRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span>
+	<span class="no">TbRUnboundMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="no">TaRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">30</span>
+	<span class="no">TbRLigandMeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="n">r!</span><span class="mi">2</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">CheR</span><span class="p">(</span><span class="n">t!</span><span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">l!</span><span class="mi">1</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span><span class="o">.</span><span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">k_TaR_meth</span><span class="o">*</span><span class="mi">3</span>
+
+	<span class="c1">#CheB is phosphorylated by receptor complex, and autodephosphorylates</span>
+	<span class="no">CheBphos</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_B_phos</span>
+	<span class="no">CheBdephos</span><span class="p">:</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="n">k_B_dephos</span>
+
+	<span class="c1">#CheB demethylates receptor complex</span>
+	<span class="c1">#Rate dependent on methyaltion states</span>
+	<span class="no">TbDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tb_demeth</span>
+	<span class="no">TcDemeth</span><span class="p">:</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">T</span><span class="p">(</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">)</span> <span class="o">+</span> <span class="no">CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="n">k_Tc_demeth</span>
+
+<span class="k">end</span> <span class="n">reaction</span> <span class="n">rules</span>
+
+<span class="k">begin</span> <span class="n">compartments</span>
+  <span class="no">EC</span>  <span class="mi">3</span>  <span class="mi">100</span>       <span class="c1">#um^3</span>
+  <span class="no">PM</span>  <span class="mi">2</span>  <span class="mi">1</span>   <span class="no">EC</span>    <span class="c1">#um^2</span>
+  <span class="no">CP</span>  <span class="mi">3</span>  <span class="mi">1</span>   <span class="no">PM</span>    <span class="c1">#um^3</span>
+<span class="k">end</span> <span class="n">compartments</span>
+
+<span class="k">begin</span> <span class="n">seed</span> <span class="n">species</span>
+	<span class="vi">@EC</span><span class="ss">:L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">L0</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.84</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.15</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.01</span><span class="o">*</span><span class="mf">0.9</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">A</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.84</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">B</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.15</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@PM</span><span class="ss">:T</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="no">Meth</span><span class="o">~</span><span class="no">C</span><span class="p">,</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">T0</span><span class="o">*</span><span class="mf">0.01</span><span class="o">*</span><span class="mf">0.1</span>
+	<span class="vi">@CP</span><span class="ss">:CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">CheY0</span><span class="o">*</span><span class="mf">0.71</span>
+	<span class="vi">@CP</span><span class="ss">:CheY</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">CheY0</span><span class="o">*</span><span class="mf">0.29</span>
+	<span class="vi">@CP</span><span class="ss">:CheZ</span><span class="p">()</span> <span class="no">CheZ0</span>
+	<span class="vi">@CP</span><span class="ss">:CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">U</span><span class="p">)</span> <span class="no">CheB0</span><span class="o">*</span><span class="mf">0.62</span>
+	<span class="vi">@CP</span><span class="ss">:CheB</span><span class="p">(</span><span class="no">Phos</span><span class="o">~</span><span class="no">P</span><span class="p">)</span> <span class="no">CheB0</span><span class="o">*</span><span class="mf">0.38</span>
+	<span class="vi">@CP</span><span class="ss">:CheR</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">CheR0</span>
+<span class="k">end</span> <span class="n">seed</span> <span class="n">species</span>
+
+<span class="k">end</span> <span class="n">model</span>
+
+<span class="n">generate_network</span><span class="p">({</span><span class="n">overwrite</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">})</span>
+<span class="n">simulate</span><span class="p">({</span><span class="nb">method</span><span class="o">=&gt;</span><span class="s2">"ssa"</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=&gt;</span><span class="mi">800</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=&gt;</span><span class="mi">800</span><span class="p">})</span>
+</code></pre></div></div>
+
+<h2 id="running-our-adaptation-model">Running our adaptation model</h2>
+
+<p>Now save your file and run the model. Because the model is at equilibrium, we will see the seemingly boring plot shown below.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial_oneadd0.png" alt="image-center" class="align-center" /></p>
+
+<p>Things get interesting when we change the initial concentration of ligand to see how the simulated bacterium will adapt. Run your simulation with <code class="language-plaintext highlighter-rouge">L0</code> = <code class="language-plaintext highlighter-rouge">1e6</code>. What happens to CheY activity? What happens to the concentration of receptors at different methylation states?</p>
+
+<p>Try a variety of different initial concentrations of ligand (<code class="language-plaintext highlighter-rouge">L0</code> = <code class="language-plaintext highlighter-rouge">1e4</code>, <code class="language-plaintext highlighter-rouge">1e5</code>, <code class="language-plaintext highlighter-rouge">1e6</code>, <code class="language-plaintext highlighter-rouge">1e7</code>, <code class="language-plaintext highlighter-rouge">1e8</code>), paying attention to the concentration of phosphorylated CheY. How does the concentration change depending on initial ligand concentration?</p>
+
+<p>Then try to further raise the ligand concentration to <code class="language-plaintext highlighter-rouge">1e9</code> and <code class="language-plaintext highlighter-rouge">1e10</code>. How does this affect the outcome of the simulation? Why?</p>
+
+<p>Next, try only simulating the first 10 seconds to zoom into what happens to the system at the start. How quickly does CheY concentration reach a minimum?  How long does the cell take to return to the original concentration of phosphorylated CheY (i.e., the background tumbling frequency)?</p>
+
+<p>Back in the main text, we will examine how a sudden change in the concentration of unbound ligand can cause a quick change in the tumbling frequency of the bacterium, followed by a slow return to its original frequency. We will also see how the extent to which this tumbling frequency is disturbed is dependent upon differences in the initial concentration of ligand.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_senseadap#bacterial-tumbling-is-resilient-to-large-sudden-changes-in-ligand-concentration" class="btn btn--primary btn--large">Return to main text</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Spiro1997" role="doc-endnote">
+      <p>Spiro PA, Parkinson JS, and Othmer H. 1997. A model of excitation and adaptation in bacterial chemotaxis. Biochemistry 94:7263-7268. <a href="https://www.pnas.org/content/94/14/7263">Available online</a>. <a href="#fnref:Spiro1997" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Bray1993" role="doc-endnote">
+      <p>Bray D, Bourret RB, Simon MI. 1993. Computer simulation of phosphorylation cascade controlling bacterial chemotaxis. Molecular Biology of the Cell. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC300951/">Available online</a> <a href="#fnref:Bray1993" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Li2004" role="doc-endnote">
+      <p>Li M, Hazelbauer GL. 2004. Cellular stoichimetry of the components of the chemotaxis signaling complex. Journal of Bacteriology. <a href="https://jb.asm.org/content/186/12/3687">Available online</a> <a href="#fnref:Li2004" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Stock1991" role="doc-endnote">
+      <p>Stock J, Lukat GS. 1991. Intracellular signal transduction networks. Annual Review of Biophysics and Biophysical Chemistry. <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev.bb.20.060191.000545">Available online</a> <a href="#fnref:Stock1991" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,539 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>An Introduction to Protein Structure Prediction - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="An Introduction to Protein Structure Prediction">
+<meta property="og:url" content="http://localhost:4000/coronavirus/structure_intro">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/coronavirus/structure_intro">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/home">A Tale of Two Doctors<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 1: Protein Structure Prediction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/structure_intro" class="active">An Introduction to Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/ab_initio">Ab initio Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/homology">Homology Modeling for Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/accuracy">Comparing Protein Structures to Assess Model Accuracy<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_1">Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 2: Comparing SARS-CoV-2 and SARS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/multiseq">Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br></a></li>
+          
+            <li><a href="/coronavirus/structural_diff">Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br></a></li>
+          
+            <li><a href="/coronavirus/NAMD">Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_2">Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring ProDy)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/tutorial_ab_initio">Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_homology">Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_rmsd">Using RMSD to Compare Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_multiseq">Finding Local Differences in Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_visualization">Visualizing Specific Regions of Interest within a Protein Structure<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_NAMD">Computing the Energy Contributed by a Local Region of a Bound Complex<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_GNM">Molecular Dynamics Analysis with GNM<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_ANM">ANM Simulations Add Directionality to GNM<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="An Introduction to Protein Structure Prediction">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">An Introduction to Protein Structure Prediction
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#determining-protein-structure-is-fundamental-to-understanding-protein-function">Determining protein structure is fundamental to understanding protein function</a></li><li><a href="#laboratory-methods-for-determining-protein-structure">Laboratory methods for determining protein structure</a></li><li><a href="#what-makes-protein-structure-prediction-so-difficult">What makes protein structure prediction so difficult?</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="determining-protein-structure-is-fundamental-to-understanding-protein-function">Determining protein structure is fundamental to understanding protein function</h2>
+
+<p>Proteins are one of the most important groups of macromolecules in living organisms, contributing to essentially all functions within them. Recall that in our <a href="../motifs/transcription">introduction to transcription</a> in a previous module, we introduced the “central dogma” of molecular biology, in which DNA is transcribed into RNA, which is then translated into protein. This process is represented in the figure reproduced below.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg" alt="image-center" class="align-center" />
+The central dogma of molecular biology states that molecular information flows from DNA in the nucleus, into the RNA that is transcribed from DNA, and then into proteins that are translated from RNA. Image courtesy: Dhorpool, Wikimedia commons user.</p>
+
+<p>In this earlier module, we focused on how master regulators called transcription factors could affect the rates at which a given gene could be transcribed into RNA and translated into protein. In this module, we investigate what happens after translation.</p>
+
+<p>Before continuing, we should be a bit more precise about what we mean by “protein”. The ribosome converts triplets of RNA nucleotides into a chain of amino acids called a <strong>polypeptide</strong>. The polypeptide will then “fold” into a three-dimensional shape; this folding happens without any outside influence as the polypeptide settles into the most stable three-dimensional structure. Even if a polypeptide chain is unfolded, it will almost always fold back into essentially the same 3-D structure in a manner of microseconds. This means that nature is applying a “magic algorithm” that produces the structure of a protein from its sequence of amino acids. But how does this algorithm work?</p>
+
+<p>This brings us to our first biological problem of interest: can we predict the shape of a protein from its amino acid sequence? This <strong>structure prediction problem</strong>, which we will focus on in the first part of this module, is simple to state but deceptively difficult. In fact, it has been an active area of biological research for several decades.</p>
+
+<p>You may be wondering why we care about protein structure. Knowing a protein’s shape is essential to starting to determine its function and how it interacts with other proteins or molecules in its environment. (There are still a few thousand human proteins whose function is unknown.) And understanding protein interactions underlies a huge amount of biological research. For example, a disease may be caused by a faulty protein, in which case researchers want to find a drug (i.e., some other chemical substance) that binds to the protein and causes some change of interest in that protein, such as inhibiting its behavior.</p>
+
+<p>For a more visual example of how protein shape affects protein function, consider the following video of a ribosome (which is a complex of RNA and proteins) translating a messenger RNA into protein. For translation to succeed, the ribosome needs to have a very precise shape including a “slot” that the messenger RNA strand can fit into and be read.</p>
+
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/TfYf_rPWUdY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>As we have seen throughout this course, molecular interactions are ruled by probability. Any two molecules may <em>interact</em>, but their rate of <em>dissociation</em> will be much higher if they do not fit together well. Furthermore, two interacting molecules need to not only collide with each other but also have the correct orientation in order to fit together.</p>
+
+<p>Because structure prediction is such a fundamental problem, researchers wish to catalog the enormously varied shapes that different proteins can have. For example, the figure below shows each “protein of the month” in 2019 named by the <strong>Protein Data Bank</strong> (<strong>PDB</strong>). But the fact remains that proteins are submicroscopic; so how did researchers determine these shapes?</p>
+
+<p style="font-size: medium;"><img src="../assets/images/different_protein_shapes_2020.jpg" alt="image-center" class="align-center" />
+Each “molecule of the month” in 2020 named by the PDB. Note how different the shapes are of all these proteins, which accomplish a wide variety of cellular tasks. Note that the SARS-CoV-2 spike protein was the molecule of the month in June 2020. Source: <a href="https://pdb101.rcsb.org/motm/motm-by-date">https://pdb101.rcsb.org/motm/motm-by-date</a>.</p>
+
+<h2 id="laboratory-methods-for-determining-protein-structure">Laboratory methods for determining protein structure</h2>
+
+<p>In this section, we will introduce two popular laboratory methods for accurately determining protein structure. These approaches are very sophisticated, and we appeal to high-quality videos explaining them if you are interested.</p>
+
+<p>In <strong>X-ray crystallography</strong> (sometimes called <strong>macromolecular crystallography</strong>), researchers first crystallize many copies of a protein and then shining an intense x-ray beam at the crystal. Light hitting the protein is diffracted, creating patterns from which the position of every atom in the protein can be inferred.  If you are interested in learning more about X-ray crystallography, check out the following excellent two-part video series from The Royal Institution.</p>
+
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/gLsC4wlrR2A" frameborder="0" allowfullscreen=""></iframe>
+
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/WJKvDUo3KRk" frameborder="0" allowfullscreen=""></iframe>
+
+<p>X-ray crystallography is over a century old, and has been the <em>de facto</em> approach for protein structure determination for decades. Yet a newer method is now rapidly replacing X-ray crystallography.</p>
+
+<p>In <strong>cryo-electron microscopy</strong> (<strong>cryo-EM</strong>), researchers preserve thousands of copies of the protein in non-crystalline ice and then examine these copies with an electron microscope. Check out the following YouTube video from the University of California San Francisco for a detailed discussion of cryo-EM.</p>
+
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Qq8DO-4BnIY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Unfortunately, laboratory approaches for structure determination are expensive. X-ray crystallography costs upward of $2,000 per protein; furthermore, crystallizing a protein is a challenging task, and each copy of the protein must line up in the same way, which does not work for very flexible proteins. As for cryo-EM, an electron microscope is a very complicated machine that costs hundreds of thousands or millions of dollars (one microscope housed at Lawrence Berkeley National Lab cost $27 million).</p>
+
+<p>Protein structures that have been determined experimentally are typically stored in the PDB, which we mentioned above. As of early 2020, this database contained over 160,000 proteins, most of which have been added since 2000.</p>
+
+<p>Before we set aside structure prediction, consider that a 2016 study estimated that humans have between 620,000 and 6.13 million protein isoforms (i.e., differently-shaped protein variants) <sup id="fnref:Ponomarenko" role="doc-noteref"><a href="#fn:Ponomarenko" class="footnote">1</a></sup>. If we hope to catalog the proteins of all living things, then our work is just beginning.</p>
+
+<p>Another issue with laboratory methods of structure determination is that they require the ability to isolate the actual physical proteins. For example, to study bacterial proteins, we need to culture bacteria, and yet microbiologists have estimated that less than 2% of bacteria can currently be cultured in the lab.<sup id="fnref:Wade" role="doc-noteref"><a href="#fn:Wade" class="footnote">2</a></sup></p>
+
+<p>What, then, can we do? Fortunately, although identifying protein structure is difficult, researchers have spent decades cataloging the genomes of thousands of species. Because of the central dogma of molecular biology, we know that much of this DNA winds up being translated into protein. As a result, biologists know the <em>sequence</em> of amino acids making up many proteins whose structures are unknown. In our case, although the SARS-CoV-2 genome had been sequenced in January 2020, the structure of its spike protein was unknown. Can we therefore use the sequence of amino acids corresponding to the SARS-CoV-2 spike protein to predict the protein’s 3-D shape? In other words, can we reverse engineer the magic algorithm that nature uses for protein folding?</p>
+
+<h2 id="what-makes-protein-structure-prediction-so-difficult">What makes protein structure prediction so difficult?</h2>
+
+<p>Unfortunately, predicting protein structure from amino acid sequence is a very challenging problem. On the one hand, small perturbations in the primary structure of a protein can drastically change the protein’s shape and even render it useless. On the other, different amino acids can have similar chemical properties, and so some mutations will hardly change the shape of the protein at all. As a result, two very different amino acid sequences can fold into proteins with similar shapes and comparable function.</p>
+
+<p>For example, the following figure compares both the sequences and structures of hemoglobin subunit alpha from humans (<em>Homo sapiens</em>; PDB: <a href="https://www.rcsb.org/structure/1SI4">1si4</a> shortfin mako sharks (<em>Isurus oxyrinchus</em> ; PDB: <a href="https://www.rcsb.org/structure/3mkb">3mkb</a> and emus (<em>Dromaius novaehollandia</em>; PDB: <a href="https://www.rcsb.org/structure/3wtg">3wtg</a>. Hemoglobin is the oxygen-transport protein in the blood, consisting of two alpha “subunit” proteins and two beta subunit proteins that combine into a protein complex; because hemoglobin is well-studied and much shorter than the SARS-CoV-2 spike protein, we will use it as an example throughout this module. The subunit alpha proteins across the three species are markedly different in terms of primary structure, and yet their 3-D structures are essentially identical.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/SequenceStructureExample.png" alt="image-center" class="align-center" />
+(Top) An amino acid sequence comparison of the first 40 (out of 140) amino acids of hemoglobin subunit alpha for three species: human, mako shark, and emu. A column is colored blue if all three species have the same amino acid, white if two species have the same amino acid, and red if all amino acids are different. Sequence identity calculates the number of positions in two amino acid sequences that share the same character. (Bottom) Side by side comparisons of the 3-D structures of the three proteins. The final figure on the right superimposes the first three structures to highlight their similarities.</p>
+
+<p>Another reason why protein structure prediction is so difficult is because a polypeptide is very flexible, with the ability to rotate in multiple ways at each amino acid, which means that the polypeptide is able to fold into a staggering number of different shapes. A good analogy for polypeptide flexibility is the “Rubik’s Twist” puzzle, shown below, which consists of a linear chain of flexible blocks that can form a huge number of different shapes.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/rubiks_twist.gif" alt="image-center" class="align-center" />
+An animation of Rubik’s twist forming into a ball and then back into a linear chain. Source: <a href="https://grabcad.com/library/rubik-s-snake-1">https://grabcad.com/library/rubik-s-snake-1</a>.</p>
+
+<p>To explain why the protein is so flexible, we should say a bit more about the molecular structure of a polypeptide.</p>
+
+<p>An amino acid is formed of four parts. In the center, a carbon atom (called the <strong>alpha carbon</strong>) is connected to four different molecules: a hydrogen atom (H), a <strong>carboxyl group</strong> (–COOH), an <strong>amino group</strong> (-NH<sub>2</sub>), and a <strong>side chain</strong> (denoted “R” and often called an R group). The side chain is a molecule that differs between different amino acids and ranges in mass from a single hydrogen atom (glycine) all the way up to -C<sub>8</sub>H<sub>7</sub>N (tryptophan). The simplified structure of an amino acid is shown in the figure below.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/AminoAcid.png" alt="image-center" class="align-center" /></p>
+
+<p>To form a polypeptide chain, consecutive amino acids are linked together during a condensation reaction in which the amino group of one amino acid is joined to the carboxyl group of another, while a water molecule (H<sub>2</sub>O) is expelled. This reaction is illustrated by the figure below.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/dipeptide_reaction.png" alt="image-center" class="align-center" />
+A condensation reaction joins two amino acids into a “dipeptide” by joining the amino group of one amino acid to the carboxyl group of the other. Source: <a href="https://bit.ly/3q0Ph8V">https://bit.ly/3q0Ph8V</a>.</p>
+
+<p>The resulting bond that is produced between the carbon atom of one amino acid’s carboxyl group and the nitrogen atom of the next amino acid’s amino group, called a <strong>peptide bond</strong>, is very strong. The peptide has very little rotation around this bond, which is almost always locked at 180°. As peptide bonds are formed between adjacent amino acids, the polypeptide chain takes shape, as shown in the figure below.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/Backbone.png" alt="image-center" class="align-center" />
+A protein backbone formed of three amino acids.</p>
+
+<p>However, the bonds <em>within</em> an amino acid, joining the alpha carbon to its carboxyl group and amino group, are not as rigid. Like the Rubik’s twist, the polypeptide is free to rotate around these two bonds. This rotation produces two angles of interest, called the <strong>phi angle (φ)</strong> and <strong>psi angle (ψ)</strong> (see figure below), which are formed at the alpha carbon’s connections to its amino group and carboxyl group, respectively.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/torsion_angles.png" alt="image-center" class="align-center" />
+A polypeptide chain of multiple amino acids with the torsion angles φ and ψ indicated. The angle ω indicates the angle of the peptide bond, which is typically 180°. Image courtesy: Adam Rędzikowski.</p>
+
+<p>Below is an excellent video from Jacob Elmer illustrating how changing φ and ψ at a single amino acid can drastically reorient a protein’s shape.</p>
+
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/1usemtIYe_s" frameborder="0" allowfullscreen=""></iframe>
+
+<p>A polypeptide with <em>n</em> amino acids will have <em>n</em> - 1 peptide bonds, meaning that its shape is influenced by <em>n</em> - 1 phi angles and 99 <em>n</em> - 1 psi angles. If each bond has <em>k</em> stable conformations, then there are <em>k</em><sup>2<em>n</em>-2</sup> total possible conformations of the polypeptide. For example, if <em>k</em> is 3 and <em>n</em> is just 100 (a short polypeptide), then the number of potential protein structures is more than the number of atoms in the universe! The ability for the protein to reliably find a single conformation using the magic algorithm despite such an enormous number of potential shapes is called <strong>Levinthal’s paradox</strong>.<sup id="fnref:Levinthal" role="doc-noteref"><a href="#fn:Levinthal" class="footnote">3</a></sup></p>
+
+<p>Although protein structure prediction is difficult, it is not impossible; the protein folding approach that nature uses is not, after all, magic.  In the next lesson, we will examine how existing software attempts to replicate nature’s magic algorithm for folding a polypeptide chain into a 3-D protein structure. We will then place ourselves in the shoes of early SARS-CoV-2 researchers working before the structure of the virus’s spike protein had been experimentally validated to see if we can predict its structure and give biologists a head start on fighting the pandemic.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="ab_initio" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Ponomarenko" role="doc-endnote">
+      <p>Ponomarenko, E. A., Poverennaya, E. V., Ilgisonis, E. V., Pyatnitskiy, M. A., Kopylov, A. T., Zgoda, V. G., Lisitsa, A. V., &amp; Archakov, A. I. 2016. The Size of the Human Proteome: The Width and Depth. International journal of analytical chemistry, 2016, 7436849. https://doi.org/10.1155/2016/7436849 <a href="#fnref:Ponomarenko" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Wade" role="doc-endnote">
+      <p>Wade W. 2002. Unculturable bacteria–the uncharacterized organisms that cause oral infections. Journal of the Royal Society of Medicine, 95(2), 81–83. https://doi.org/10.1258/jrsm.95.2.81 <a href="#fnref:Wade" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Levinthal" role="doc-endnote">
+      <p>Levinthal, C. 1969. How to Fold Graciously. Mossbaur Spectroscopy in Biological Systems, Proceedings of a meeting held at Allerton House, Monticello, Illinois. eds. Debrunner, P., Tsibris, J.C.M., Munck, E. University of Illinois Press Pages 22-24. <a href="#fnref:Levinthal" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,661 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Conclusion: From Static Protein Analysis to Molecular Dynamics - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Conclusion: From Static Protein Analysis to Molecular Dynamics">
+<meta property="og:url" content="http://localhost:4000/coronavirus/conclusion_part_2_draft">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/coronavirus/conclusion_part_2_draft">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/home">A Tale of Two Doctors<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 1: Protein Structure Prediction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/structure_intro">An Introduction to Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/ab_initio">Ab initio Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/homology">Homology Modeling for Protein Structure Prediction<br><br></a></li>
+          
+            <li><a href="/coronavirus/accuracy">Comparing Protein Structures to Assess Model Accuracy<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_1">Part 1 Conclusion: Protein Structure Prediction is Solved! (Kinda)<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Part 2: Comparing SARS-CoV-2 and SARS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/multiseq">Searching for Local Differences in the SARS-CoV and SARS-CoV-2 Spike Proteins<br><br></a></li>
+          
+            <li><a href="/coronavirus/structural_diff">Analyzing Structural Differences in the Bonding of SARS-CoV and SARS-CoV-2 with the ACE2 Enzyme<br><br></a></li>
+          
+            <li><a href="/coronavirus/NAMD">Quantifying the Interaction Energy Between the SARS-CoV-2 Spike Protein and ACE2<br><br></a></li>
+          
+            <li><a href="/coronavirus/conclusion_part_2">Part 2 Conclusion: From Static Protein Analysis to Molecular Dynamics<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring ProDy)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/coronavirus/tutorial_ab_initio">Using ab initio Modeling to Predict the Structure of Hemoglobin Subunit Alpha<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_homology">Using Homology Modeling to Predict the Structure of the SARS-CoV-2 Spike Protein<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_rmsd">Using RMSD to Compare Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_multiseq">Finding Local Differences in Two Protein Structures<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_visualization">Visualizing Specific Regions of Interest within a Protein Structure<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_NAMD">Computing the Energy Contributed by a Local Region of a Bound Complex<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_GNM">Molecular Dynamics Analysis with GNM<br><br></a></li>
+          
+            <li><a href="/coronavirus/tutorial_ANM">ANM Simulations Add Directionality to GNM<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Conclusion: From Static Protein Analysis to Molecular Dynamics">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Conclusion: From Static Protein Analysis to Molecular Dynamics
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#modeling-protein-bonds-using-tiny-springs">Modeling protein bonds using tiny springs</a></li><li><a href="#introduction-to-gnm">Introduction to GNM</a><ul><li><a href="#cross-correlation-map">Cross-Correlation Map</a></li><li><a href="#mean-square-fluctuations--b-factor">Mean-square Fluctuations &amp; B-factor</a></li><li><a href="#slow-modes">Slow Modes</a></li><li><a href="#anm">ANM</a></li></ul></li><li><a href="#performing-gnm-calculations-on-proteins-in-the-pdb">Performing GNM calculations on proteins in the PDB</a></li><li><a href="#gnm-analysis-of-sars-cov-2-spike-protein">GNM analysis of SARS-CoV-2 Spike Protein</a><ul><li><a href="#slow-mode-shape-of-sars-cov-2-spike">Slow Mode Shape of SARS-CoV-2 Spike</a></li><li><a href="#cross-correlation-of-sars-cov-2-spike">Cross-Correlation of SARS-CoV-2 Spike</a></li></ul></li><li><a href="#summing-up">Summing Up</a><ul><li><a href="#mutations-and-the-emergence-of-new-strains">Mutations and the emergence of new strains</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="modeling-protein-bonds-using-tiny-springs">Modeling protein bonds using tiny springs</h2>
+
+<p>To conclude part 2 of this module, we transition from the static study of proteins to the field of <strong>molecular dynamics (MD)</strong>, in which we simulate the movement of proteins’ atoms, along with their interactions as they move.</p>
+
+<p>You may think that simulating the movments of proteins with hundreds of amino acids will be a hopeless task. After all, predicting the static structure of a protein has occupied biologists for decades! Yet part of what makes structure prediction so challenging is that the “search space” of potential shapes is so enormous. Once we have established the static structure of a protein, its dynamic behavior will not allow it to deviate greatly from this static structure, and so the space of potential structures is automatically narrowed down to those that are similar to the static structure.</p>
+
+<p>A protein’s molecular bonds are constantly vibrating, stretching and compressing, much like that of the oscillating mass-spring system shown in the figure below. Bonded atoms are held together by sharing electrons and are held at specific bond length due to the attraction and repulsion forces of the negatively charged electrons and positively charged nucleus. If you push the atoms closer together or pull them farther apart, they will “bounce back” to their equilibrium.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/mass-spring.gif" alt="image-center" class="align-center" />
+A mass-spring system in which a mass is attached to the end of a spring. The more we move the mass from its equilibrium, the greater its resistance and the more it will be repelled back toward equilibrium. Courtesy: <a href="flippingphysics.com">flippingphysics.com</a>.</p>
+
+<p>In an <strong>elastic network model (ENM)</strong>, we imagine nearby alpha carbons of a protein structure to be connected by springs. Because distant atoms will not influence each other, we will only connect two alpha carbons if they are within some threshold distance of each other (the default threshold used by ProDy is seven angstroms).</p>
+
+<p>A major strength of ProDy is its implementation of a <strong>Gaussian network model (GNM)</strong>, an ENM for molecular dynamics; the GNM is called “Gaussian” because protein bond movements follow normally distributed (Gaussian) distributions around their equilibria. Furthermore, this model is <strong>isotropic</strong>, meaning that it only considers the magnitude of force exerted on the springs between nearby molecules and ignores any global effect on the directions of these forces.</p>
+
+<p>Although it may seem that atomic movements are frantic and random, the movements of protein atoms are in fact heavily coordinated, owing to the evolution of the proteins to perform replicable tasks. As a result, the oscillations of these particles are often highly structured and can be summarized by using a combination of functions explaining them, or <strong>modes</strong>. (For those familiar with Fourier analysis, this is analogous to the fact that a function under certain conditions can be approximated using a sum of sine and cosine waves.) The paradigm resulting from the insight of breaking down oscillations into a comparatively small number of modes that summarize them is called <strong>normal mode analysis (NMA)</strong> and powers the elastic model that ProDy implements.</p>
+
+<h2 id="introduction-to-gnm">Introduction to GNM</h2>
+
+<p>Performing GNM analysis on a protein gives us a fairly accurate understanding of how the protein is structured, particularly on the flexibility of the proteinand how each residue moves relative to the rest. In this section, we will revisit the human hemoglobin (<a href="https://www.rcsb.org/structure/1a3n" target="_blank">1A3N.pdb</a>) to peform GNM analysis. Recall that in GNM, the target molecule is represented using ENM. Therefore, the first step in GNM analysis is to convert hemoglobin into a system of nodes and springs. As mentioned above, this can be easily done by stripping the protein to only alpha carbons and connecting alpha carbons that are within a threshold distance. Generally, the threshold distance for GNM is set between 7 to 8 Å.</p>
+
+<!--
+Study by Kundu et al. showing that 7.3 Å being the optimal cutoff across a set of 113 proteins.
+-->
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_enm.png" alt="image-center" class="align-center" />
+Conversion of human hemoglobin (left) to an elastic network model with cutoff distance of 7.3 Å (right).</p>
+
+<p>Each node in the model is subject to <strong>Gaussian fluctuations</strong> that cause it to deviate in position from its equilibrium. As a direct consequence, the distance between nodes will also undergo Gaussian fluctuations. For a given node <em>i</em> and node <em>j</em>, the equilibrium position is represented by the equilibrium position vector \(R_i^0\) and \(R_j^0\). The fluctuation for node <em>i</em> and node <em>j</em> is represented by instantaneous fluction vectors \(\Delta R_i\) and \(\Delta R_j\). The distance between node <em>i</em> and node <em>j</em> at equilibrium is represented by the equilibrium distance vector \(R_{ij}^0\), and the distance between nodes <em>i</em> and <em>j</em> in fluctuation is represented by the instantaneous distance vector \(R_{ij}\). Finally, we can calculate the fluctionation in the distance, \(\Delta R_{ij} = R_{ij} - R_{ij}^0 = \Delta R_j - \Delta R_i\).</p>
+
+<p style="font-size: medium;"><img src="../assets/images/gaussian_fluctuations.png" alt="image-center" class="align-center" />
+Schematic showing gaussian fluctuations between two nodes. Equilibrium positions of node <em>i</em> and node <em>j</em> are represented by distance vectors \(R_i^0\) and \(R_j^0\). The equilibrium distance between the nodes is labelled \(R_{ij}^0\). The instantaneous fluction vectors, are labelled \(\Delta R_i\) and \(\Delta R_j\) and the instantaneous distance vector is labeled \(\Delta R_{ij}\). Image courtesy of Ahmet Bakan.</p>
+
+<p>The next step is to construct a <strong>Kirchhoff matrix</strong>, also known as the <strong>Laplacian matrix</strong> or <strong>connectivity matrix</strong>, represented by the symbol \(\Gamma\). Commonly used in graph theory, the Kirchhoff matrix is essentially a square matrix representation of a graph. By transforming the protein into a set of connected nodes, we are converting the protein into a graph. Therefore, the Kirchhoff matrix can be used to represent the protein, allowing us to go from a biochemistry problem to a linear algebra problem. In this case, the Kirchhoff matrix is the matrix representation of which pairs of residues are connected. There are also some useful properties of the Kirchhoff matrix that we will take advantage of later on. The matrix is constructed as follows:</p>
+
+\[\Gamma_{ij} = \begin{cases} &amp; -1 \text{ if $i \neq j$ and $R_{ij} \leq r_c$}\\ &amp;  0 \text{ if $i \neq j$ and $R_{ij} &gt; r_c$} \end{cases}\]
+
+\[\Gamma_{ii} = -\sum_j \Gamma_{ij}\]
+
+<p>where \(r_c\) is the threshold distance. Simply put, if residue i and residue j are connected, then the value of position i,j in the matrix will be -1. If they are not connected, the the value will be 0. The values of the diagonals, i.e. position i,i, correspond to the total number of connections of residue i.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/kirchhoff_example.png" alt="image-center" class="align-center" />
+Toy structure and the corresponding Kirchhoff matrix.</p>
+
+<p>One of the most common analysis using GNM is on the coordinated movement between residues as the protein fluctuates. More specifically, we want to see how each residue will move relative to other residues, or the <strong>cross-correlation</strong> between the residues. Recall that we are representing the fluctuations as vectors (see Gaussian Fluctuations). Therefore, for some residue <em>i</em> and residue <em>j</em>, we are trying to compute how much of the fluctation vector \(\Delta R_i\) points in the the same direction as the fluctuation vector \(\Delta R_j\). To do this, we need to compute the <strong>inner product</strong> of the vectors, denoted by the angle brackets: \(\langle \rangle\), which is a generalization of the dot product. In other words, computing the inner product between the fluctuation vectors is synonomous to computing the cross-correlation between the residues. As such, the cross-correlation between residue <em>i</em> and residue <em>j</em> is often represented as \(\langle \Delta R_i \cdot \Delta R_j \rangle\). It turns out that the inner product is correlated to the inverse of the Kirchhoff matrix, allowing us to simply invert the Kirchhoff matrix. The cross-correlation between some residue <em>i</em> and residue <em>j</em> can be mathmatically calculated as follows:</p>
+
+\[\langle \Delta R_i \cdot \Delta R_j \rangle = \frac{3 k_B T}{\gamma} \left[ \Gamma^{-1} \right]_{ij}\]
+
+<p>where \(k_B\) is the Boltzmann constant, \(\gamma\) is the spring constant (stiffness of the spring), and \(\left[ \Gamma^{-1} \right]_{ij}\) is element <em>ij</em> in the inverted Kirchhoff matrix. Similarly, we can also calculate the expectation values of the fluctuation for each residue, or the <strong>mean-square fluctuations</strong>, which is the inner product of the fluctuation vector with itself:</p>
+
+\[\langle \Delta R_i^2  \rangle = \frac{3 k_B T}{\gamma} \left[ \Gamma^{-1} \right]_{ii}\]
+
+<p>From these equations, we can see that the inverse Kirchhoff matrix fully defines both the cross-correlations between residue motions as well as the mean-square fluctions of the residues.</p>
+
+\[\left[ \Gamma^{-1} \right]_{ij} \sim \langle \Delta R_i \cdot \Delta R_j \rangle\]
+
+\[\left[ \Gamma^{-1} \right]_{ii} \sim \langle \Delta R_i^2  \rangle\]
+
+<p>However, we run into problems here because cannot simply invert the Kirchhoff matrix. In linear algebra, a matrix is invertible if and only if its determinant is zero. Unfortunately for us, one of the special properties of the Kirchhoff matrix in GNM is that the determinant is zero, and we cannot directly invert the matrix to get \(\Gamma^{-1}\). Thankfully, there is a method to compute the values of the inverted matrix by performing eigen decomposition on the matrix.</p>
+
+\[\Gamma = U \Lambda U^T\]
+
+<p>where \(U\) is the orthogonal matrix with the \(k^{th}\) column, represented by \(u_k\), corresponding to the \(k^{th}\) eigenvector of \(\Gamma\), and \(\Lambda\) is the diagonal matrix of eigenvalues, represented by \(\lambda_k\). Based on the characteristics of the Kirchhoff matrix (positive semi-definite), the first eigenvalue, \(\lambda_1\), is 0. The remaining \(N-1\) eigenvalues, as well as the eigenvectors in \(U\), actually directly describe the modes of motion that discussed earlier in this lesson. The elements of eigenvector \(u_k\) describe the distribution of residue displacements, normalized over all the residues, along the \(k^{th}\) mode axis. In other words, the motion of the \(i^{th}\) residue along the \(k^{th}\) mode is described by the \(i^{th}\) element in eigenvector \(u_k\). The corresponding eigenvalue \(\lambda_k\) describes the frequency of the \(k^{th}\) mode, where the smallest \(\lambda\) value corresponds to the lowest frequency modes, or slowest modes, that make the largest contribution to the overall protein motion.</p>
+
+<p>After eigen decomposition, we can now rewrite the cross-correlation equation as a sum of the N-1 GNM modes:</p>
+
+\[\langle \Delta R_i \cdot \Delta R_j \rangle = \frac{3 k_B T}{\gamma} \sum_{k=1}^{N-1} \left[ \lambda_k^{-1} u_k u_k^T \right]_{ij}\]
+
+<p>and similarly for mean-square fluctuation:</p>
+
+\[\langle \Delta R_i^2  \rangle = \frac{3 k_B T}{\gamma} \sum_{k=1}^{N-1} \left[ \lambda_k^{-1} u_k u_k^T \right]_{ii}\]
+
+<p>Now that we can compute the cross-correlation between residues, we can normalize the values and construct a normalized cross-correlation matrix, \(C^{(n)}\), such that:</p>
+
+\[C^{(n)}_{ij} = \frac{\langle \Delta R_i \cdot \Delta R_j \rangle}{\left[ \langle \Delta R_i \cdot \Delta R_i \rangle \langle \Delta R_j \cdot \Delta R_j \rangle \right]^{\frac{1}{2}}}\]
+
+<p>where \(C^{(n)}_{ij}\) corresponds to the orientational cross-correlation between residue <em>i</em> and residue <em>j</em>. Because we normalized the values, the range of \(C^{(n)}_{ij}\) is \([-1,1]\), where 1 means the residues are fully correlated in motion, and -1 means the residues are fully anti-correlated in motion.</p>
+
+<h3 id="cross-correlation-map">Cross-Correlation Map</h3>
+
+<p>Cross-correlation analysis provides useful insight on the structure of the protein. The regions of high correlation coming off the diagonal typically provide information on secondary structures (residues in the same secondary structure will typically move together). On the other hand, high correlation regions not near the diagonal provide information on the tertiary structure of the protein, such as protein domains and clues to which parts of the protein work together. In general, we can observe complex patterns of correlated and anti-correlated movement throughout the protein (both inter- and intrasubunit), which can act like some sort of fingerprint. We can compare the cross-correlation between regions of the same protein or the cross correlation map between two similar proteins to find differences in the correlation patterns. This would then provide clues in where the proteins or protein regions are different structurally and possibly functionally. After calculating the cross-correlation for each residue pair, we can organize the data as a matrix and then visualize it as a <strong>cross-correlation heat map</strong> like the figure below.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_cc.png" alt="image-center" class="align-center" />
+Normalized cross-correlation heat map of human hemoglobin (1A3N) using the first 20 slowest normal modes. Red regions indicate correlated residue pairs which move in the same direction; blue regions indicate anti-correlated residue pairs which move in opposite directions.</p>
+
+<p>In the cross-correlation map of human hemoglobin above, we see four squares of positive correlation along the diagonal. This represents the four subunits of hemoglobin, \(\alpha_1\), \(\beta_1\), \(\alpha_2\), and \(\beta_2\) in this order and the intrasubunit correlations. We can differentiate between the two types of subunits by comparing the correlation patterns between the four squares. We see that the same patterns can be seen between the first and third square, and the second and fourth square. Assuming that first square represents \(\alpha_1\), we can deduce that the third square represents \(\alpha_2\), and that the second and fourth square represent \(\beta\) subunits.</p>
+
+<p>The rest of the cross-correlation map (regions next to the diagonal squares) provide evidence of high intersubunit correlations between \(\alpha_1 \beta_1\)/\(\alpha_2 \beta_2\), some correlation between the \(\alpha_1 \beta_2\)/\(\alpha_2 \beta_1\), and minimal correlation between the \(\alpha_1 \alpha_2\)/\(\beta_1 \beta_2\). This agrees with experimental analysis of human hemoglobin on the interaction of the extensive, cooperative interactions between \(\alpha\) and \(\beta\) subunits, and minimal interactions between \(\alpha\) subunits and between \(\beta\) subunits <sup id="fnref:Garrett" role="doc-noteref"><a href="#fn:Garrett" class="footnote">1</a></sup>.</p>
+
+<h3 id="mean-square-fluctuations--b-factor">Mean-square Fluctuations &amp; B-factor</h3>
+
+<p>Just like cross-correlation, we can also visualize the mean-square fluctuations of the residues. This is typically done in two ways. The simplest is to directly plot the values, where the x-axis represent the residues and the y-axis represent the mean-square fluctuation \(\langle \Delta R_i^2  \rangle\). The other, more useful, method is to plot the B-factor. When performing crystallography, the displacement of atoms within the protein crystal decreases the intesity of the scattered X-ray, creating uncertainty in the positions of atoms. <strong>B-factor</strong>, also known as <strong>temperature factor</strong> or <strong>Debye-Waller factor</strong> is a measure of this uncertainty, which includes noise from positional variance of thermal protein motion, model errors, and lattice defects. B-factors are reported in addition to the atomic coordinates in the PDB entry. One of the main reason we use B-factors is that they scale with the mean-square fluctuation, such that for atom <em>i</em>:</p>
+
+\[B_i = \frac{8 \pi^2}{3} \langle \Delta R_i^2 \rangle\]
+
+<p>We can calculate the <strong>theoretical B-factors</strong> using the equation and GNM analysis, and the correlation with the <strong>experimental B-factors</strong> that are included in the PDB entry as a simple way to evaluate the GNM analysis. A study in 2009 by Lei Yang et al. compared the experimental and theoretical B-factors of 190 sufficiently different (&lt;50% similarity) protein stuctures from X-ray and found the correlation to be about 0.58 on average <sup id="fnref:Yang2" role="doc-noteref"><a href="#fn:Yang2" class="footnote">2</a></sup>. Below is a plot of the B-factor, synonomous to the mean-square fluctutation, of \(\alpha_1\). Residues with high values are those that fluctuate with greater motion or residues with greater positional uncertainty, and are colored red in the figures. In this case, we see that the residues colored in red are generally at the ends of secondary structures in the outer edges of the protein and loops (segments in between secondary structures). This is expected because protein loops typically contain highly fluctuating residues.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_b_factors.png" alt="image-center" class="align-center" />
+(Top): Human hemoglobin colored according to the GNM calculated theoretical B-factors (left) and the experimental B-factors (right). (Bottom): 2D plot comparing the theoretical and experimental B-factors of subunit \(\alpha_1\) (chain A of the protein). \(\alpha_1\) is located at the top left quarter of the protein figure. A correlation coefficient of 0.63 was calculated between the theoretical and experimental B-factors.</p>
+
+<h3 id="slow-modes">Slow Modes</h3>
+
+<p>A benefit from decomposing the protein fluctuation into individual normal modes is that we are able to observe the characteristics of slow modes separately, i.e. which residues does it affect and to what degree, or <strong>slow mode shape</strong>. This is typically done by visualizing the modes as 2D plots where the x-axis is the residue sequence and the y-axis is the inverse eigenvalues of the Kirchhoff matrix. Peaks in the plot indicate which region of residues the mode describes, with higher peaks representing greater magnitude of motions. It is also common to observe the plot of the average of multiple modes to see the collective contribution of the modes. Below is an example of slow mode shape using human hemoglobin.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_mode_shape.png" alt="image-center" class="align-center" />
+(Top): Visualization of human hemoglobin colored based on GNM slow mode shape. Red represents regions of high mobility and correspond to peaks in the plot. The first image represents the slowest mode (left) and the second image represents the average of the first 10 slowest modes (right). (Bottom): 2D plot of the slowest mode separate by the four chains of hemoglobin.</p>
+
+<p>Similar to cross-correlation, analyzing slow mode shapes will give us insight on the structure of the protein and comparing the slow mode shapes can reveal differences between protein structures. From the shape of the slowest mode of all four chains (subunits), we can see that the shape for the four subunits of hemoglobin are quite similar. However, it is important to realize that the slowest mode only captures the largest movements of the protein. Therefore, we cannot say with certainty that the four subunits are as structurally similar as the slow mode shape, although from the cross-correlation map patterns and experimental studies, we know that subunit \(\alpha\) and subunit \(\beta\) are similar but have structural differences. As mentioned before, we can also view the average shape of the modes. Below is the slow mode plot of the slowest ten modes of hemoglobin. Here, we can see a stark difference between two groups of subunits/chains, where the \(\alpha\) subunits (chains A and C) share a very similar slow mode shape while the \(\beta\) subunits (chains B and D) share a different, yet similar, slow mode shape as well.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_mode_shape_avg.png" alt="image-center" class="align-center" />
+The average mode shape of the slowest ten modes of human hemoglobin using GNM.</p>
+
+<p>There are two more commonly used plots used in mode analysis. The first is called the <strong>frequency dispersion</strong> of the modes, which is the plot of representing the frequency of each mode. The y-axis represents the reciprocal of the corresponding eigenvalue of the mode, where a higher value indicates a slow mode with low frequency, which are expected to be highly related to biological functions.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_frequency.png" alt="image-center" class="align-center" />
+The frequency dispersion of modes in human hemoglobin. Higher values indicates low frequency, slower modes that are likely to be highly relative to biological functions.</p>
+
+<p>The <strong>degree of collectivity</strong> is the measure of the extent of structural elements, in this case residues, that move together for each mode. The degree of collectivity of the \(k^{th}\) mode is calculated by the following equation:</p>
+
+\[Collectivity_k = \frac{1}{N} e^{- \sum^N_i \Delta R_i^2 ln \Delta R_i^2}\]
+
+<p>where N is the total number of residues. A high degree of collectivity indicates that the mode is highly cooperative and engages in a large portion of the structure. Low degree of collectivity indicates that the mode only affects a small region. Modes of high degree of collectivity are generally believed to be functionally relevant nodes and are usually found at the low frequency end of the mode spectrum.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_collectivity.png" alt="image-center" class="align-center" />
+The degree of collectivitiy of modes in human hemoglobin. Higher values indicate modes that describe a large portion of the protein while low values indicate modes that describe small local regions.</p>
+
+<h3 id="anm">ANM</h3>
+
+<p>The anisotropic counterpart to GNM, in which the direction of fluctuations is also considered, is called <strong>anisotropic network model (ANM)</strong>. The main difference in ANM analysis is that a Hessian matrix, \(H\), is used in place of the Kirchhoff matrix. Each element \(H_{ij}\) in the matrix is a 3x3 matrix that contain anisotropic information about the orientation of node <em>i</em> and node <em>j</em>. The calculations proceeds similarly to GNM, where eigen decomposition is used to calculate cross correlation and mean square fluctuations. Although ANM includes directionality, it typically performs worse than GNM when compared with experimental data <sup id="fnref:Yang" role="doc-noteref"><a href="#fn:Yang" class="footnote">3</a></sup>. However, this model offers the benefit of creating animations depicting the range of motions and fluctuations of the protein because of the inclusion of orientation. We will not go in depth regarding the intricacies of ANM calculations in this module, but we will use ANM for the purpose of creating animations to visualize protein fluctuations. Below is the animation of hemoglobin showing the ANM calculated fluctuation. Here, we can clearly see a distinction in the direction of fluctuation between the left and right side of the protein, separated by immobile regions.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/hemoglobin_anm_2.gif" alt="image-center" class="align-center" />
+Collective motions of the slowest mode in human hemoglobin from ANM calculations using DynOmics.</p>
+
+<p>Remember that hemoglobin is essentially a dimer of alpha-beta dimers. In this animation, the left and right side both represent an alpha-beta dimer. This separation in fluctuation supports our previous cross-correlation analysis, where the \(\alpha_1 \beta_1\)/\(\alpha_2 \beta_2\) interface is a dynamically variable (highly fluctuating) region due to cooperative interactions between \(\alpha\) and \(\beta\) subunits of the same dimer. The other interfaces, \(\alpha_1 \alpha_2\)/\(\beta_1 \beta_2\) and \(\alpha_1 \beta_2\)/\(\alpha_2  \beta_1\), are not dynamically variable regions because there is minimal interactions between subunits from differing dimers.</p>
+
+<p>The human hemoglobin exists in two states, the T (tense) state and the R (relaxed) state. The T state represents hemoglobin in its deoxy form, where it lacks an oxygen species. The R state represents the fully oxygenated form of hemoglobin. Our GNM/ANM results that pointed to the highly fluctuating, dynamically variable  \(\alpha_1 \beta_1\)/\(\alpha_2 \beta_2\) interface is in accordance to an important biological function of hemoglobin, its ability to transition from the T state to R2 state. This state transtion involves the rearrangement of the interface, where salt-bridges and contacts can shift up to 7 Å <sup id="fnref:Davis" role="doc-noteref"><a href="#fn:Davis" class="footnote">4</a></sup>. As such, the GNM/ANM analysis revealed that these interfaces are highly mobile and fluctuate greatly.</p>
+
+<p>This concludes the module’s introduction to the concepts behind GNM analysis. For those interested, a full treatment of the mathematics of GNMs can be found in the chapter at <a href="https://www.csb.pitt.edu/Faculty/bahar/publications/b14.pdf" target="_blank">https://www.csb.pitt.edu/Faculty/bahar/publications/b14.pdf</a>.</p>
+
+<h2 id="performing-gnm-calculations-on-proteins-in-the-pdb">Performing GNM calculations on proteins in the PDB</h2>
+
+<p>In the tutorial linked below, we will demonstrate how to easily perform GNM analysis on proteins in the Protein Data Bank. by using a web portal called <a href="http://dynomics.pitt.edu/">DynOmics</a>. DynOmics is made up of multiple components that allow us to perform GNM calculations and visualize the results into plots and figures like the ones seen in the previous section. These components include <a href="http://gnmdb.csb.pitt.edu/">iGNM 2.0</a>, a database of pre-computed GNM dynamics for all PDB structures, <a href="http://anm.csb.pitt.edu/">ANM 2.0</a>, a server for visualizing animations created using ANM, and <a href="http://enm.pitt.edu/">ENM 1.0</a>, a server with a unifying user-friendly interface for performing all GNM/ANM calculations and evaluations. In the tutorial, we will perform GNM calculations on SARS-CoV-2 Spike protein and visualize the results.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_DynOmics" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="gnm-analysis-of-sars-cov-2-spike-protein">GNM analysis of SARS-CoV-2 Spike Protein</h2>
+
+<p>In the tutorial, we performed and visualized the GNM results of SARS-CoV-2 Spike protein. Here, we will analyze the slow mode shapes and cross-correlation heat map, and then compare it with the GNM results of SARS-CoV Spike protein (PDB: <a href="https://www.rcsb.org/structure/5XLR" target="_blank">5xlr</a>).</p>
+
+<h3 id="slow-mode-shape-of-sars-cov-2-spike">Slow Mode Shape of SARS-CoV-2 Spike</h3>
+
+<p>First, we will look at the average slow mode shape of the first ten slow modes. Recall in our hemoglobin example that peaks in the mode shape indicate regions of high flexibility/fluctuation. Below is the slow mode shape and visualization of the two Spike proteins, using the colors red for high flexibility and blue for low flexibility.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/spike_slowmode_comparison.png" alt="image-center" class="align-center" />
+Average mode shape of the slowest ten modes of SARS-CoV-2 Spike (left) and SARS-CoV Spike (right). The first peak corresponds to the N-Terminal Domain (NTD) and the second peak corresponds to the Receptor Binding Domain (RBD).</p>
+
+<p>The results show that the NTD and RBD of SARS-CoV-2 Spike protein are highly flexible, which agrees with the biological functions of these regions. As we have learned, the RBD is responsible for the interaction with ACE2 on human cells. During this interaction, the RBD of one of the three chains “opens” up, exposing itself to more easily bind with ACE2. Therefore, the flexibility in this region makes sense. The other peak corresponds the NTD of the Spike protein. Similar to the RBD, the NTD of the Spike proteins also mediates viral infection, but by interacting with DC-SIGN L-SIGN receptors rather than ACE2 <sup id="fnref:Soh" role="doc-noteref"><a href="#fn:Soh" class="footnote">5</a></sup>. DC-SIGN (dendritic cell-specific intracellular adjesion molecules ICAM-r grabbing non-integrin) and L-SIGN (liver/lymph node-specific ICAM-3 grabbing non-integrin) are closely related C-type lectin that are present on macrophages and dendritic cells. This allows SARS-CoV-2 to infect different tissues such as the lungs, where ACE2 expression levels are low. The ability to infect lung cells attributes to pneumonia, the main symptom of severe COVID-19 cases. Just like the RBD, high flexibility in this domain allows the Spike protein to more easily come into contact and interact with these receptors. Comparing with the slow-mode shape of SARS-CoV Spike protein, we see that the RBD peak is slightly lower in SARS-CoV-2 Spike, but the overall slow mode shape is very similar. This supports the similarity between the two proteins in both function and structure.</p>
+
+<h3 id="cross-correlation-of-sars-cov-2-spike">Cross-Correlation of SARS-CoV-2 Spike</h3>
+
+<p>Next, we will look at the cross-correlation heat map of SARS-CoV-2 Spike and SARS-CoV Spike.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/spike_crosscorr_comparison.png" alt="image-center" class="align-center" />
+Cross-correlation heat map of SARS-CoV-2 Spike (left) and SARS-CoV Spike (right). Along the central diagonal, three identical substructures (boxed in orange) representing the three identical chains of the Spike protein can be seen. There are three regions of high correlation within each chain, representing the NTD, RBD, and the S1 domain. Throughout the heat map, the correlation patterns are shared between the two proteins (boxed in blue).</p>
+
+<p>Following the central diagonal, we see three identical substructures within each protein. Remember that the Spike proteins are trimers of identical chains (boxed in orange). Within each chain, we see three distinct regions of highly positive correlation: the NTD, RBD, and S1 domain. The protein structure of the Spike protein can be separated into two main parts, the S1 and S2 domain. The S1 domain includes the NTD and RBD, and is largely responsible for receptor interactions. The S1 protein includes the ‘stalk’ of the spike protein, which is largely responsible for the membrane fusion during infection. Between the two proteins, we see essentially the same three identical substructures along the central diagonal. In addition, we see that the correlation patterns in the off-diagonal regions (boxed in blue) are shared between the two proteins. Taken together, the results of the cross-correlation indicate that the SARS-CoV-2 and SARS-CoV Spike are highly similar in structure and likely have the same or similar function.</p>
+
+<h2 id="summing-up">Summing Up</h2>
+
+<!--
+Move this to conclusion 2?
+Finally, we would point out that although scientific research five decades ago was, like the Soviet protein institute, siloed away from the public, the COVID-19 pandemic offers an excellent example of how citizens around the world can follow and even get involved in real research.
+
+For example, the [GISAID](https://www.gisaid.org) organization published their first publicly available SARS-CoV-2 genome on December 24, 2019. Within six months, this database had grown to contain over 50,000 entries. At any point in early 2020, anyone could have grabbed their favorite SARS-CoV-2 genome, excised the sequence of the spike protein, and used one of a variety of different software resources to predict its structure. Alternatively, a more communally minded person could have enlisted their home machine as part of a global race to provide vaccine developers with accurate estimations of the protein's structure. Despite 2020 being a time of international crisis, the progress we have made in opening scientific research to the public is cause for optimism.
+-->
+
+<p>In this module, we have discussed a great deal of computational methods surrounding the analysis of proteins. We began with a discussion of the fundamental problem of determining a protein’s structure. Because experimental methods for identifying protein structure are costly and time consuming, we transitioned to discuss algorithmic approaches that do a good job of predicting a protein’s structure from its sequence of amino acids.</p>
+
+<p>We then transitioned to the problem of comparing structures for related proteins, with a lengthy case study on comparing the SARS-CoV and SARS-CoV-2 spike protein structures. We saw that the problem of quantifying the “difference” between two shapes is more challenging than it might seem, and we established both global and local structure comparison metrics. We applied these approaches to isolate three candidate regions of the SARS-CoV-2 spike protein that seem to be bound better to the ACE2 enzyme, and we quantified this binding using a localized energy function.</p>
+
+<p>We then saw that to infer a protein’s function, we need to move from studying structure to molecular dynamics, studying how the protein behaves within its environment as it flexes and bends in order to interact with other molecules.</p>
+
+<p>This is a great deal of ground to have covered, but if we would like to present an ultimate moral to this chapter, it is that biology is an extremely complex subject. The structure prediction problem is decades old and still not fully solved, and computational approaches for studying protein structure and dynamics are sophisticated. But there is just as much that we have left undiscussed. What happens after the spike protein binds to ACE2? How does the virus enter the cell? How does it replicate itself? How does it fight our immune systems, and how can we design a vaccine to fight back? We would need far more time than we have here to treat all of these topics, but if
+you are interested in an online course covering some of them, then check out the free online course <em><a href="https://sites.google.com/view/sarswars/home" target="_blank">SARS Wars: A New Hope</a></em> by our colleague <a href="https://www.cs.cmu.edu/~cjl/" target="_blank">Christopher James Langmead</a>.</p>
+
+<h3 id="mutations-and-the-emergence-of-new-strains">Mutations and the emergence of new strains</h3>
+
+<p>One of the main characteristics of life is the ability to reproduce. Of course, this includes the replication of genetic material, whether it be DNA or RNA. However, the replication process is not completely error-proof and can the biological machinery can make mistakes. These changes in the genetic material are called mutations and are the driving force in evolution. These mutations are often harmful to the organism or can have little to no effect. On rare occasions, the mutations can enhance the organism and allow it to outcompete members of the same species and pass down the positive mutation to its offsprings. As time passes, more and more members of the species will have accumulated mutations and may eventually be considered a new species or variant of the species depending on how much the genetic material has changed. Although scientists are still debating over whether viruses are alive, they are still involved in genetic replication, albiet hijacking the host’s biological machinery. Nonetheless, the constant replication of viruses often lead to mutations and creation of new strains or variants of the virus. Why else do we need annual flu shots?</p>
+
+<p>With the widespread rate of infection of COVID-19, it is inevitable for mutations to occur and create variants of the virus. In fact, there are already multiple strains that are circulating globally. The more well-known variants as of January 2021, are variant B.1.1.7 in the United Kingdom, variant 1.351 in South Africa, and variant P.1 in Brazil. From observations, it appears that these new variants are more infectious and can spread more easily <sup id="fnref:cdc" role="doc-noteref"><a href="#fn:cdc" class="footnote">6</a></sup>. However, there are still much in the unknown.</p>
+
+<p>There are important questions that need to be answered:</p>
+<ul>
+  <li>How far have the variants spread?</li>
+  <li>How do they differ from current variants?</li>
+  <li>How do their infectivity and severity differ?</li>
+  <li>How will they respond to current vaccines and treatment?</li>
+</ul>
+
+<p>As COVID-19 continues to circulate, new variants will continue to emerge, meaning that this is still an active area of study.</p>
+
+<p>Thus concludes the third module of this course. In the course’s final module, we will turn our attention to a very different type of problem. To fight a virus like SARS, your body employs a cavalry of white blood cells. Maintaining healthy levels of these cells is vital to a strong immune system, and blood reports run counts of these cells to ensure they are within normal ranges. Can we teach a computer to run this analysis automatically?</p>
+
+<p>We hope you will join us to find out!</p>
+
+<!--
+[Exercises](exercises){: .btn .btn--primary .btn--large}
+{: style="font-size: 100%; text-align: center;"}
+-->
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Garrett" role="doc-endnote">
+      <p>Garrett, R. H., Grisham, C. M., 2010. <em>Biochemistry</em>, 4th ed. Brooks/Cole, Cengage Learning. <a href="#fnref:Garrett" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Yang2" role="doc-endnote">
+      <p>Yang, L., Song, G., &amp; Jernigan, R. L. 2009. Comparisons of experimental and computed protein anisotropic temperature factors. Proteins, 76(1), 164–175. https://doi.org/10.1002/prot.22328 <a href="#fnref:Yang2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Yang" role="doc-endnote">
+      <p>Yang, L., Song, G., Jernigan, R. 2009. Protein elastic network models and the ranges of cooperativity. PNAS 106(30), 12347-12352. https://doi.org/10.1073/pnas.0902159106 <a href="#fnref:Yang" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Davis" role="doc-endnote">
+      <p>Davis, M., Tobi, D. 2014. Multiple Gaussian network modes alignments reveals dynamically variable regions: The hemoglobin case. Proteins: Structure, Function, and Bioinformatics, 82(9), 2097-2105. https://doi-org.cmu.idm.oclc.org/10.1002/prot.24565 <a href="#fnref:Davis" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Soh" role="doc-endnote">
+      <p>Soh, W. T., Liu, Y., Nakayama, E. E., Ono, C., Torii, S., Nakagami, H., Matsuura, Y., Shioda, T., Arase, H. The N-terminal domain of spike glycoprotein mediates SARS-CoV-2 infection by associating with L-SIGN and DC-SIGN. <a href="#fnref:Soh" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:cdc" role="doc-endnote">
+      <p>New COVID-19 Variants. 2021. Retrieved January 27, 2021, from https://www.cdc.gov/coronavirus/2019-ncov/transmission/variant.html <a href="#fnref:cdc" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

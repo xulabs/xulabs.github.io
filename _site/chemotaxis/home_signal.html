@@ -1,0 +1,584 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Signaling and Ligand-Receptor Dynamics - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Signaling and Ligand-Receptor Dynamics">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/home_signal">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/home_signal">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal" class="active">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Signaling and Ligand-Receptor Dynamics">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Signaling and Ligand-Receptor Dynamics
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#cells-can-detect-signals-via-bonding-to-receptor-proteins">Cells can detect signals via bonding to receptor proteins</a></li><li><a href="#modeling-ligand-receptor-dynamics">Modeling ligand-receptor dynamics</a></li><li><a href="#calculation-of-steady-state-concentration-in-a-reversible-ligand-receptor-reaction">Calculation of steady state concentration in a reversible ligand-receptor reaction</a></li><li><a href="#steady-state-ligand-receptor-concentrations-for-an-experimentally-verified-example">Steady state ligand-receptor concentrations for an experimentally verified example</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="cells-can-detect-signals-via-bonding-to-receptor-proteins">Cells can detect signals via bonding to receptor proteins</h2>
+
+<p>Chemotaxis is one example of many ways in which an organism must be able to perceive a change in its environment and react accordingly. This response is governed by a process called <strong>signal transduction</strong>, in which a cell identifies a stimulus outside the cell and then transmits this stimulus into the cell in order to effect a response.</p>
+
+<p>Although we did not focus on the details at that time, we have already seen an example of signal transduction when we discussed the activation of transcription factors in the <a href="motifs/transcription">previous module</a>. When a certain type of molecule’s extracellular concentration increases, <strong>receptor proteins</strong> on the outside of the cell have more frequent bonding with these molecules and are therefore able to detect changes in molecular concentration. This “signal” is then “transduced” via a series of internal chemical processes that changes a transcription factor into an active state.</p>
+
+<p>In the case of chemotaxis, <em>E. coli</em> has receptor proteins that detect attractants such as glucose by binding to and forming a complex with these attractant <strong>ligands</strong>. The cell also contains receptors to detect repellents, but in this module, we will focus primarily on attractants.</p>
+
+<p>In this lesson, we will discuss how the bacterium is able to detect this molecular signal; in the next lesson, we focus on how the bacterium can convert the detected signal into an internal sequence of reactions that lead to a change in movement. See the figure below for a high-level overview of this process.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/chemotaxis_signal.png" alt="image-center" class="align-center" />
+An overview of the signaling pathway of chemotaxis. The red circles represent attractant ligands(L). When ligands bind to receptors, this signal is transduced via a series of enzymes, and it finally influences the rotation direction of a flagellum. We will discuss how this response is achieved in a later lesson.</p>
+
+<h2 id="modeling-ligand-receptor-dynamics">Modeling ligand-receptor dynamics</h2>
+
+<p>Although <em>E. coli</em> has different types of surface receptors that can sense a variety of different attractant/repellent ligands in its environment, we will focus on how to model the binding of a single type of receptor to a single type of attractant ligand.</p>
+
+<p>The chemical reactions that we have considered earlier in this course are <strong>irreversible</strong>, meaning they can only proceed in one direction. For example, in the prologue’s reaction-diffusion model for <a href="prologue/animals">Turing patterns</a>, we had the reaction <em>A</em> + 2<em>B</em> → 3<em>B</em>, which we conceptualized as two predators eating a prey and reproducing. But we did not have the reverse reaction 3<em>B</em> → <em>A</em> + 2<em>B</em>.</p>
+
+<p>To model ligand-receptor dynamics, we will use a <strong>reversible</strong> reaction that proceeds continuously in both directions at possibly different rates. If a ligand collides with a receptor, then there is some probability that the two molecules will bond into a complex. But at the same time, in any unit of time, there is also some probability that a bound receptor-ligand complex will <strong>dissociate</strong> into two separate molecules. In a future module, we will discuss the biochemical details underlying what makes two molecules more or less likely to bond, but for now, we assert that the more suited a receptor is to a ligand, the higher the bonding rate and the lower the dissociation rate.</p>
+
+<p>Why should ligand-receptor bonding be reversible? First, surface receptors are typically complicated molecules, and it would be costly to an organism if it needed to keep manufacturing surface receptors rather than sometimes releasing bound ligands. Second, if complexes did not dissociate, then a brief increase in ligand concentration would be detected by an organism indefinitely. We will say more about how the cell responds to a <em>changing</em> concentration of ligand soon.</p>
+
+<p>For now, we will start building a model of ligand-receptor dynamics. We denote the receptor molecule by <em>T</em>, the ligand molecule by <em>L</em>, and the bound complex as <em>TL</em>. We have the <strong>forward reaction</strong> <em>T</em> + <em>L</em> → <em>TL</em>, which takes place at some rate <em>k</em><sub>bind</sub>, and the <strong>reverse reaction</strong> <em>TL</em> → <em>T</em> + <em>L</em>, which takes place at some rate <em>k</em><sub>dissociate</sub>. If we start with a free floating supply of <em>T</em> and <em>L</em> molecules, what will happen?</p>
+
+<p><em>TL</em> will initially be formed quickly at the expense of the free-floating <em>T</em> and <em>L</em> molecules; the reverse reaction will not occur because of the lack of <em>TL</em> complexes. As the concentration of <em>TL</em> grows and the concentrations of  <em>T</em> and <em>L</em> decrease, the rate of increase in <em>TL</em> will slow. Eventually, the number of <em>TL</em> complexes being formed by the forward reaction will balance the number of <em>TL</em> complexes being split apart by the reverse reaction. At this point, called a <strong>steady state</strong> or <strong>equilibrium</strong>, the concentration of all particles will stabilize.</p>
+
+<h2 id="calculation-of-steady-state-concentration-in-a-reversible-ligand-receptor-reaction">Calculation of steady state concentration in a reversible ligand-receptor reaction</h2>
+
+<p>In fact, we can calculate the steady state concentrations of <em>T</em> and <em>L</em> for our reversible reaction by hand.  Suppose that we begin with initial concentrations of <em>T</em> and <em>L</em> that are represented by <em>t</em><sub>0</sub> and <em>l</em><sub>0</sub>, respectively. Let [<em>L</em>], [<em>T</em>], and [<em>LT</em>] denote the concentrations of the three molecule types. And assume that the reaction rate constants <em>k</em><sub>bind</sub> and <em>k</em><sub>dissociate</sub> are fixed.</p>
+
+<p>Our goal is to find the steady state concentration of <em>LT</em>. When this occurs, we know that the rate of production of <em>LT</em> is equal to the rate of its dissociation; in other words, we know that</p>
+
+<p><em>k</em><sub>bind</sub> · [<em>L</em>] · [<em>T</em>] = <em>k</em><sub>dissociate</sub> · [<em>LT</em>].</p>
+
+<p>We also know that by the law of conservation of mass, the concentrations of <em>L</em> and <em>T</em> molecules are always constant across the system. In particular, the number of these particles is equal to their initial concentrations. That is, at any time point, we have that</p>
+
+<p>[<em>L</em>] + [<em>LT</em>] = <em>l</em><sub>0</sub></p>
+
+<p>and that</p>
+
+<p>[<em>T</em>] + [<em>LT</em>] = <em>t</em><sub>0</sub>.</p>
+
+<p>Solving these equations for [<em>L</em>] and [<em>T</em>] yields the following two equations:</p>
+
+<p>[<em>L</em>] = <em>l</em><sub>0</sub> - [<em>LT</em>]<br />
+[<em>T</em>] = <em>t</em><sub>0</sub> - [<em>LT</em>]</p>
+
+<p>We will now substitute the expressions on the right for [<em>L</em>] and [<em>T</em>] into our original steady state equation:</p>
+
+<p><em>k</em><sub>bind</sub> · (<em>l</em><sub>0</sub> - [<em>LT</em>]) · (<em>t</em><sub>0</sub> - [<em>LT</em>]) = <em>k</em><sub>dissociate</sub> · [<em>LT</em>]</p>
+
+<p>Expanding the left side of this equation gives us the following updated equation:</p>
+
+<p><em>k</em><sub>bind</sub> · [<em>LT</em>]<sup>2</sup> - (<em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> + <em>k</em><sub>bind</sub> · <em>t</em><sub>0</sub>) · [<em>LT</em>] +  = <em>k</em><sub>dissociate</sub> · [<em>LT</em>] + <em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> · <em>t</em><sub>0</sub></p>
+
+<p>Finally, we subtract the right side of this equation from both sides:</p>
+
+<p><em>k</em><sub>bind</sub> · [<em>LT</em>]<sup>2</sup> - (<em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> + <em>k</em><sub>bind</sub> · <em>t</em><sub>0</sub> + <em>k</em><sub>dissociate</sub>) · [<em>LT</em>] + <em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> · <em>t</em><sub>0</sub> = 0</p>
+
+<p>This equation may look daunting, but most of its components are constants. In fact, the only unknown is [<em>LT</em>], which makes this a quadratic equation, or an equation of the form <em>a</em> · <em>x</em><sup>2</sup> + <em>b</em> · <em>x</em> + <em>c</em> = 0 for constants <em>a</em>, <em>b</em>, and <em>c</em> and a single unknown <em>x</em>. For this quadratic equation, we have the constants <em>a</em> = <em>k</em><sub>bind</sub>, <em>b</em> = - (<em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> + <em>k</em><sub>bind</sub> · <em>t</em><sub>0</sub> + <em>k</em><sub>dissociate</sub>), and <em>c</em> = <em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> · <em>t</em><sub>0</sub>.</p>
+
+<p>The quadratic formula — which you may have thought you would never use again — tells us that the equation <em>a</em> · <em>x</em><sup>2</sup> + <em>b</em> · <em>x</em> + <em>c</em> = 0  has solutions for <em>x</em> given by the following equation:</p>
+
+\[x = \dfrac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2 \cdot a}\]
+
+<p class="notice--primary"><strong>STOP</strong>: Use the quadratic formula to solve for [<em>LT</em>] in our previous equation and find the steady state concentration of <em>LT</em>. How can we use this solution to find the steady state concentrations of <em>L</em> and <em>T</em> as well?</p>
+
+<p>Now that we have reduced the computation of the steady state concentration of <em>LT</em> to the solution of a quadratic equation, let’s compute this steady state concentration for a sample collection of parameters. We will then change the parameters and see how the steady state concentration changes.</p>
+
+<p>Say that we are given the following parameter values (the units of these parameters are not important for this toy example):</p>
+<ul>
+  <li><em>k</em><sub>bind</sub> = 2;</li>
+  <li><em>k</em><sub>dissociate</sub> = 5;</li>
+  <li><em>l</em><sub>0</sub> = 50;</li>
+  <li><em>t</em><sub>0</sub> = 50.</li>
+</ul>
+
+<p>Substituting these values into the quadratic equation, we obtain the following:</p>
+
+<ul>
+  <li><em>a</em> = <em>k</em><sub>bind</sub> = 2</li>
+  <li><em>b</em> = - (<em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> + <em>k</em><sub>bind</sub> · <em>t</em><sub>0</sub> + <em>k</em><sub>dissociate</sub>) = -205</li>
+  <li><em>c</em> = <em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> · <em>t</em><sub>0</sub> = 5000</li>
+</ul>
+
+<p>That is, we are solving the equation 2 · [<em>LT</em>]<sup>2</sup> - 205 · [<em>LT</em>] + 5000 = 0. Using the quadratic formula to solve for [<em>LT</em>] gives</p>
+
+<p>\([LT] = \dfrac{205 \pm \sqrt{205^2 - 4 \cdot 2 \cdot 5000}}{2 \cdot 2} = 51.25 \pm 11.25\).</p>
+
+<p>It would seem that there are <em>two</em> solutions: 51.25 + 11.25 = 62.5 and 51.25 - 11.25 = 40. However, because <em>l</em><sub>0</sub> and <em>t</em><sub>0</sub>, the respective initial concentrations of <em>L</em> and <em>T</em>, are both equal to 50, we cannot have that the steady state concentration of <em>LT</em> is 62.5; as a result, it must be 40.</p>
+
+<p>Now that we know the steady state concentration of <em>LT</em>, we can recover the values of [<em>L</em>] and [<em>T</em>] too:</p>
+
+<p>[<em>L</em>] = <em>l</em><sub>0</sub> - [<em>LT</em>] = 10<br />
+[<em>T</em>] = <em>t</em><sub>0</sub> - [<em>LT</em>] = 10</p>
+
+<p>What if the forward reaction were slower? We would imagine that the equilibrium concentration of <em>LT</em> would decrease, since the reverse reaction will occur faster than the forward reaction. For example, if we change <em>k</em> to 1, then we obtain the following adjusted parameter values:</p>
+
+<ul>
+  <li>
+    <p><em>a</em> = <em>k</em><sub>bind</sub> = 1</p>
+  </li>
+  <li>
+    <p><em>b</em> = - (<em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> + <em>k</em><sub>bind</sub> · <em>t</em><sub>0</sub> + <em>k</em><sub>dissociate</sub>) = -105</p>
+  </li>
+  <li>
+    <p><em>c</em> = <em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> · <em>t</em><sub>0</sub> = 2500</p>
+  </li>
+</ul>
+
+<p>In this case, if we solve for [<em>LT</em>], we obtain [<em>LT</em>] = 36.492; the steady state concentration has decreased as anticipated.</p>
+
+<p class="notice--primary"><strong>STOP</strong>: What do you think will happen to the steady state concentration of <em>LT</em> if the initial concentration (<em>l</em><sub>0</sub>) increases or decreases? What if the dissociation rate (<em>k</em><sub>dissociate</sub>) increases or decreases?  Confirm your prediction by changing the parameters above and solving the quadratic formula for [<em>LT</em>].</p>
+
+<h2 id="steady-state-ligand-receptor-concentrations-for-an-experimentally-verified-example">Steady state ligand-receptor concentrations for an experimentally verified example</h2>
+
+<p>Let’s use our formula to show how we could determine the steady state concentration of bound receptor-ligand complexes using values obtained from experimental results. We will model an <em>E. coli</em> cell with 7,000 receptor molecules in an environment containing 10,000 ligand molecules. The experimentally verified bonding rate is <em>k</em><sub>bind</sub> = 0.0146((molecules/µm<sup>3</sup>)<sup>-1</sup>)s<sup>-1</sup>, and the dissociation rate constant is <em>k</em><sub>dissociate</sub> = 35s<sup>-1</sup>.<sup id="fnref:Li2004" role="doc-noteref"><a href="#fn:Li2004" class="footnote">1</a></sup><sup id="fnref:Spiro1997" role="doc-noteref"><a href="#fn:Spiro1997" class="footnote">2</a></sup><sup id="fnref:Stock1991" role="doc-noteref"><a href="#fn:Stock1991" class="footnote">3</a></sup></p>
+
+<p>As an aside, we note that if you find the above units confusing, you are not alone. To clarify these units, consider that the concentration of a particle will be measured in (molecules/µm<sup>3</sup>), or number of molecules per unit volume. So when we multiply the bonding rate by the concentrations of <em>L</em> and <em>T</em> particles, then the units become</p>
+
+<p>((molecules/µm<sup>3</sup>)<sup>-1</sup>)s<sup>-1</sup> · (molecules/µm<sup>3</sup>) · (molecules/µm<sup>3</sup>) = (molecules/µm<sup>3</sup>)s<sup>-1</sup></p>
+
+<p>That is, the resulting units are in molecules/µm<sup>3</sup> per second, which corresponds to the rate at which the concentration of <em>LT</em> complexes is increasing.</p>
+
+<p>On the other hand, when <em>LT</em> complexes dissociate, we multiply the dissociation constant by the units of <em>LT</em> concentration and obtain the same units as before:</p>
+
+<p>(s<sup>-1</sup>) · (molecules/µm<sup>3</sup>)  = (molecules/µm<sup>3</sup>)s<sup>-1</sup>.</p>
+
+<p>For these parameters, we obtain the following constants <em>a</em>, <em>b</em>, <em>c</em> in the quadratic equation:</p>
+
+<ul>
+  <li><em>a</em> = <em>k</em><sub>bind</sub> = 0.0146</li>
+  <li><em>b</em> = - (<em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> + <em>k</em><sub>bind</sub> · <em>t</em><sub>0</sub> + <em>k</em><sub>dissociate</sub>) = -283.2</li>
+  <li><em>c</em> = <em>k</em><sub>bind</sub> · <em>l</em><sub>0</sub> · <em>t</em><sub>0</sub> = 1022000</li>
+</ul>
+
+<p>When we solve for [<em>LT</em>] in the quadratic equation, we obtain [<em>LT</em>] = 4793. Now that we have this value along with <em>l</em><sub>0</sub> and <em>t</em><sub>0</sub>, we can solve for [<em>L</em>] and [<em>T</em>] as well:</p>
+
+<p>[<em>L</em>] = <em>l</em><sub>0</sub> - [<em>LT</em>] = 5207<br />
+[<em>T</em>] = <em>t</em><sub>0</sub> - [<em>LT</em>] = 2207</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_signalpart2" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<!--
+## Extra extra
+
+BNG supports simulation with Ordinary Differential Equation (ODE) and with Stochastic Simulation Algorithm (SSA, also called Gillespie algorithm). The method is passed in as argument `method=>"ode"` or `method=>"ssa"`.
+ - ODE: When simulating a system, we need to define how the system evolves through time. In *continuous* simulation of chemical reactions, the state of the system can be reported given any point in time. The reactions rules specify the rate of change for concentration of the involved species, and they are differential equations. For example, *d[L]/dt=k<sub>dissociate</sub>[L.T] - k<sub>bind</sub>[L][T]*.[^Schwartz14]
+ - SSA: When simulating the change of the system through time, we define states of the system. Transition can happen between states that differ by one reaction event. We track the *discrete* amount of each reactants and simulate the system via transition of the states[^Schwartz17]. For example, the state can transit from [#L=100, #T=50, #L.T=0] to [#L=99, #T=49, #L.T=1], with probability determined both by reaction rate *k<sub>bind</sub>* and the the number of ways to choose the L and T molecules.[^Schwartz17] For using SSA, the measurement of abundance of molecules should actually be number of molecule instead of concentration.
+
+Remove the ODE results
+![image-center](../assets/images/chemotaxis_tutorial4.png){: .align-center}
+Concentration plot for ligand-receptor dynamics with ODE simulation. The concentrations reach a steady state at the end of the simulation.
+{: style="font-size: medium;"}
+-->
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Li2004" role="doc-endnote">
+      <p>Li M, Hazelbauer GL. 2004. Cellular stoichimetry of the components of the chemotaxis signaling complex. Journal of Bacteriology. <a href="https://jb.asm.org/content/186/12/3687">Available online</a> <a href="#fnref:Li2004" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Spiro1997" role="doc-endnote">
+      <p>Spiro PA, Parkinson JS, and Othmer H. 1997. A model of excitation and adaptation in bacterial chemotaxis. Biochemistry 94:7263-7268. <a href="https://www.pnas.org/content/94/14/7263">Available online</a>. <a href="#fnref:Spiro1997" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Stock1991" role="doc-endnote">
+      <p>Stock J, Lukat GS. 1991. Intracellular signal transduction networks. Annual Review of Biophysics and Biophysical Chemistry. <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev.bb.20.060191.000545">Available online</a> <a href="#fnref:Stock1991" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

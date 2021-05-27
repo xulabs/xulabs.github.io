@@ -1,0 +1,467 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Conclusion: The Importance of Robustness in Biological Oscillations - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Conclusion: The Importance of Robustness in Biological Oscillations">
+<meta property="og:url" content="http://localhost:4000/motifs/conclusion">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/motifs/conclusion">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Finding Motifs in Transcription Factor Networks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/home">Introduction: a submicroscopic scale of interest<br><br></a></li>
+          
+            <li><a href="/motifs/transcription">Transcription and DNA-protein binding<br><br></a></li>
+          
+            <li><a href="/motifs/networks">Transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/finding">Using randomness to verify network motifs<br><br></a></li>
+          
+            <li><a href="/motifs/nar">The negative autoregulation motif<br><br></a></li>
+          
+            <li><a href="/motifs/feed">The feedforward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/oscillators">Building a biological oscillator<br><br></a></li>
+          
+            <li><a href="/motifs/conclusion" class="active">Conclusion: the importance of robustness in biological oscillations<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/tutorial_loops">Looking for loops in transcription factor networks<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar">Comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_nar_mathematically_controlled">Ensuring a mathematically controlled simulation for comparing simple regulation to negative autoregulation<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_feed">Implementing the feed-forward loop motif<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_oscillators">Implementing the repressilator<br><br></a></li>
+          
+            <li><a href="/motifs/tutorial_perturb">Perturbing the represillator<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/motifs/exercises">Network motif exercises</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Conclusion: The Importance of Robustness in Biological Oscillations">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Conclusion: The Importance of Robustness in Biological Oscillations
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#the-need-for-robustness-in-biological-oscillators">The need for robustness in biological oscillators</a></li><li><a href="#a-coarse-grained-model-for-the-repressilator">A coarse-grained model for the repressilator</a></li><li><a href="#the-repressilator-is-robust-to-disturbance">The repressilator is robust to disturbance</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="the-need-for-robustness-in-biological-oscillators">The need for robustness in biological oscillators</h2>
+
+<p>Nothing exemplifies the need for robustness in biological systems better than oscillators. If your heart skips a beat when you are watching a horror movie, it should be able to return quickly to its natural rhythm. When you hold your breath to dive underwater, you shouldn’t hyperventilate when you return to the surface. And regardless of what functions your cells perform or what disturbances they find in their environment, they should be able to maintain a normal cell cycle.</p>
+
+<p>An excellent illustration of the robustness of the circadian clock is the body’s ability to handle jet lag. There is no apparent reason why humans would have evolved to be resilient to flying halfway around the world. And yet our circadian clock is so resilient that after a few days of fatigue and crankiness, we return to a normal daily cycle.</p>
+
+<p>In the previous lesson, we saw that the repressilator will oscillate even in a noisy environment. This behavior leads us to wonder about the extent to which the repressilator is robust. Much like the circadian clock responding to jet lag, we wonder how quickly the repressilator can respond to the jolt of a sudden disturbance in the concentrations of its particles.</p>
+
+<h2 id="a-coarse-grained-model-for-the-repressilator">A coarse-grained model for the repressilator</h2>
+
+<p>We have noted that a benefit of using a reaction-diffusion particle model to study network motifs is the inclusion of built-in noise to ensure a measure of robustness. However, as we saw in the <a href="prologue">prologue</a> with our work on Turing patterns, a downside of a particle-based model is that tracking the movements of many particles leads to a slow simulation that does not scale well given more particles or reactions.</p>
+
+<p>Although our model is ultimately interested in molecular interactions, the conclusions we have made throughout this chapter are only based on the <em>concentrations</em> of these particles. Therefore, we might imagine developing a coarser-grained version of our model that allows us to make faster conclusions about particle concentrations without keeping track of the diffusion of individual particles.</p>
+
+<p>In the prologue, we introduced a cellular automaton for simplifying the study of Turing patterns because the model at hand was dependent upon the <em>spatial</em> organization of particles because particles were present at different concentration across the grid and were diffusing at different rates. In this case, we will implement an even simpler model because we can assume that the concentrations of particles are <em>uniform</em>.</p>
+
+<p>For example, say that we are modeling a degradation reaction. If we start with 10,000 <em>X</em> particles, then after a single time step, we will simply multiply the number of <em>X</em> particles by (1-<em>r</em>), where <em>r</em> is a parameter related to the rate of the degradation reaction.</p>
+
+<p>As for a repression reaction like <em>X</em> + <em>Y</em> → <em>X</em>, we can update the concentration of <em>Y</em> particles by subtracting some factor times the current concentration of <em>Y</em> particles. This factor should be directly related to the current concentrations of both <em>X</em> and <em>Y</em>.</p>
+
+<p>We will focus on the technical details behind such a coarse-grained “particle-free” model in the next module. In the meantime, we provide a tutorial below showing how to build a particle-free simulation replicating the repressilator motif. As part of this tutorial, we will make a major disturbance to the concentration of one of the particles and see how long the disturbance lasts and whether the particle concentrations resume their oscillations.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="tutorial_perturb" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="the-repressilator-is-robust-to-disturbance">The repressilator is robust to disturbance</h2>
+
+<p>In the figure below, we show a plot of concentrations of each particle in our particle-free simulation of the repressilator, with one caveat.  Midway through the simulation, we greatly increase the concentration of <em>Y</em>.</p>
+
+<p style="font-size: medium;"><img src="../assets/images/nf_sim_interrupted.PNG" alt="image-center" class="align-center" />
+Adding a significant number of <em>Y</em> particles to our simulation produces little ultimate disturbance to the concentrations of the three particles, which return to normal oscillations within a single cycle.</p>
+
+<p>Because of the spike in the concentration of <em>Y</em>, the reaction <em>Y</em> + <em>Z</em> → <em>Y</em> suppresses the concentration of <em>Z</em> for longer than usual, and so the concentration of <em>X</em> is free to increase for longer than normal. As a result, the next peak in the concentration of <em>X</em> is higher than normal.</p>
+
+<p>We might hypothesize that this process would continue, with a tall peak in the concentration of <em>Z</em>. However, the peak in the concentration of <em>Z</em> is no taller than normal, and the next peak shows a normal concentration of <em>X</em>. In other words, the system has very quickly absorbed the blow of an increase in concentration of <em>Y</em> and returned to normal within one cycle.</p>
+
+<p>Even with a much larger jolt to the concentration of <em>Y</em>, we observe the concentrations of the three particles return to normal oscillations very quickly (figure below).</p>
+
+<p><img src="../assets/images/nf_sim_interrupted_spike.PNG" alt="image-center" class="align-center" /></p>
+
+<p>The repressilator is not the only network motif that leads to oscillations of particle concentrations, but robustness to disturbance is a shared feature of all these motifs. This having been said, the repressilator is particularly successful at stabilizing. And although there have been some attempts to study what makes oscillators robust, the process remains difficult to describe. By characterizing the number and type of interactions within the oscillator model, it has been shown that at least five reactions are typically needed to build a very robust oscillator<sup id="fnref:repress" role="doc-noteref"><a href="#fn:repress" class="footnote">1</a></sup>.</p>
+
+<p>The robustness of the repressilator also implies a bigger picture moral in biological modeling. If an underlying biological system demonstrates robustness to change, then any model of that system should also be able to withstand this change. Conversely, we should be wary of a model of a robust system that does not display this robustness.</p>
+
+<p>We have seen that even very simple network motifs can have a powerful effect on a cell’s ability to implement elegant behavior. In the next module, we will encounter a much more involved biochemical process, with far more molecules and reactions, that is used by bacteria to cleverly (and robustly) explore their environment. In fact, we will have so many particles and so many reactions that we will need to completely rethink how we set up our model. We hope that you will join us!</p>
+
+<p>In the meantime, check out the exercises below to continue developing your understanding of how transcription factor network motifs have evolved.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="exercises" class="btn btn--primary btn--large">Visit exercises</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:repress" role="doc-endnote">
+      <p>Castillo-Hair, S. M., Villota, E. R., &amp; Coronado, A. M. (2015). Design principles for robust oscillatory behavior. Systems and Synthetic Biology, 9(3), 125–133. https://doi.org/10.1007/s11693-015-9178-6 <a href="#fnref:repress" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

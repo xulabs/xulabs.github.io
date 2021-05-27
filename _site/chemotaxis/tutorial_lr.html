@@ -1,0 +1,610 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Software Tutorial: Getting Started with BioNetGen and Modeling Ligand-Receptor Dynamics - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="Software Tutorial: Getting Started with BioNetGen and Modeling Ligand-Receptor Dynamics">
+<meta property="og:url" content="http://localhost:4000/chemotaxis/tutorial_lr">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/chemotaxis/tutorial_lr">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Unpacking E. coli's Genius Exploration Algorithm</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home">Introduction: Lost Immortals and chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_walk">Bacterial runs and tumbles<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signal">Signaling & ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_signalpart2">Stochastic simulation of chemical reactions<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_biochem">A biochemically accurate model of chemotaxis<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_senseadap">Methylation helps bacteria adapt to differing concentrations<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_gradient">Modeling a bacterium's response to an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/home_conclusion">Conclusion: the beauty of E. coli's randomized exploration algorithm<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring BioNetGen)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/tutorial_lr" class="active">Getting started wtih BioNetGen and modeling ligand-receptor dynamics<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_phos">Adding phosphorylation to our BioNetGen model<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_adap">Modeling adaptation<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_gradient">Traveling up an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_removal">Traveling down an attractant gradient<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_purerandom">Modeling a pure random walk strategy<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_walk">Modeling E. coli's sophisticated random walk algorithm<br><br></a></li>
+          
+            <li><a href="/chemotaxis/tutorial_tumbling_frequencies">Comparing different chemotaxis default tumbling frequencies</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Exercises</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/chemotaxis/home_exercise">Exercises on Chemotaxis<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Software Tutorial: Getting Started with BioNetGen and Modeling Ligand-Receptor Dynamics">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Software Tutorial: Getting Started with BioNetGen and Modeling Ligand-Receptor Dynamics
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#what-is-bionetgen">What is BioNetGen?</a></li><li><a href="#installation-and-setup">Installation and setup</a></li><li><a href="#starting-with-ligand-receptor-dynamics">Starting with Ligand-Receptor Dynamics</a></li><li><a href="#specifying-molecule-types">Specifying molecule types</a></li><li><a href="#specifying-reaction-rules-and-observables">Specifying reaction rules and observables</a></li><li><a href="#initializing-unbound-molecule-counts">Initializing unbound molecule counts</a></li><li><a href="#specifying-parameters">Specifying parameters</a></li><li><a href="#specifying-simulation-commands">Specifying simulation commands</a></li><li><a href="#running-our-simulation">Running our simulation</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This collection of tutorials will gradually build up from scratch a chemotaxis simulation using <a href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BioNetGen</a>.</p>
+
+<p>In this tutorial, we will:</p>
+<ul>
+  <li>set up BioNetGen;</li>
+  <li>explore several key aspects of BioNetGen modeling: rules, species, simulation method, and parameters</li>
+  <li>use BioNetGen to model ligand-receptor dynamics and compute a steady-state concentration of ligands and receptors.</li>
+</ul>
+
+<h2 id="what-is-bionetgen">What is BioNetGen?</h2>
+
+<p><a href="http://bionetgen.org/">BioNetGen</a> is a software application for specification and simulation of rule-based modeling. In past modules, we have worked with chemical reactions that can be thought of as rules (e.g., “whenever an <em>X</em> particle and a <em>Y</em> particle collide, replace them with a single <em>X</em> particle”). The chemotaxis pathway also can be thought of as a set of biochemical rules specifying a set of mathematical equations dictating molecule concentrations. Our larger goal is to use BioNetGen to translate these rules into a reasonable chemotaxis simulation, then visualize and interpret the results.</p>
+
+<p>In this tutorial, we will focus only on modeling ligand-receptor dynamics, which we will use as a starting point for more advanced modeling later.</p>
+
+<h2 id="installation-and-setup">Installation and setup</h2>
+
+<p><a href="https://github.com/RuleWorld/rulebender/releases/tag/RuleBender-2.3.2">RuleBender</a> is the graphical interface for BioNetGen. Please <a href="https://github.com/RuleWorld/rulebender/releases/tag/RuleBender-2.3.2">download</a> the version corresponding to your operating system. Here is a step-by-step <a href="https://github.com/RuleWorld/rulebender/blob/master/docs/RuleBender-installation-guide.pdf">installation guide</a>.</p>
+
+<h2 id="starting-with-ligand-receptor-dynamics">Starting with Ligand-Receptor Dynamics</h2>
+
+<p>In this tutorial, we will build our model from scratch. If you like instead, you can download the completed simulation file here:
+<a href="../downloads/downloadable/ligand_receptor.bngl" download="ligand_receptor.bngl">ligand_receptor.bngl</a></p>
+
+<p>In our system, there are only two types of molecules: the ligand (<code class="language-plaintext highlighter-rouge">L</code>), and the receptor (<code class="language-plaintext highlighter-rouge">T</code>). (The receptor is in fact a receptor complex because it is attached to additional molecules, which we will elaborate on later). The ligand can bind to the receptor, forming an intermediate, and the complex can also dissociate. We write this reaction as <code class="language-plaintext highlighter-rouge">L + T &lt;-&gt; L.T</code>, where the formation of the intermediate is called the <strong>forward reaction</strong>, and the dissociation is called the <strong>reverse reaction</strong>.</p>
+
+<p>In our system, which starts with a quantity of free ligands and receptors, the numbers of these free molecules should drop quickly, because free ligands and free receptors are readily to meet each other. After a while, there will be more <code class="language-plaintext highlighter-rouge">L.T</code> in the system and therefore more dissociation; at the same time, because free <code class="language-plaintext highlighter-rouge">L</code> and <code class="language-plaintext highlighter-rouge">T</code> are less abundant, less binding happens. The system will gradually reach a steady-state where the rate of <code class="language-plaintext highlighter-rouge">L</code> and <code class="language-plaintext highlighter-rouge">T</code> binding equilibrates with <code class="language-plaintext highlighter-rouge">L.T</code> dissociation.</p>
+
+<p>We will simulate reaching this steady state, which means that we will need to know the following two parameters:</p>
+
+<ol>
+  <li>The rate of the forward reaction: <code class="language-plaintext highlighter-rouge">k_lr_bind [L][T]</code>, where <code class="language-plaintext highlighter-rouge">k_lr_bind</code> is the rate constant.</li>
+  <li>The rate of the reverse reaction:  <code class="language-plaintext highlighter-rouge">k_lr_dis[L.T]</code>, where <code class="language-plaintext highlighter-rouge">k_lr_dis</code> is the rate constant.</li>
+</ol>
+
+<p>Equilibrium is reached when <code class="language-plaintext highlighter-rouge">k_lr_bind [L][T]</code> = <code class="language-plaintext highlighter-rouge">k_lr_dis[L.T]</code>. Our goal in this tutorial is to use BioNetGen to determine this equilibrium in molecule concentrations as a proof of concept.</p>
+
+<p>First, open RuleBender and select <code class="language-plaintext highlighter-rouge">File &gt; New BioNetGen Project</code>.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial1.png" alt="image-center" class="align-center" /></p>
+
+<p>Save your file as <code class="language-plaintext highlighter-rouge">ligand_receptor.BioNetGenl</code>. Now you should be able to start coding on line 1.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial2.png" alt="image-center" class="align-center" /></p>
+
+<h2 id="specifying-molecule-types">Specifying molecule types</h2>
+
+<p>We will specify everything needed for this tutorial, but if you are interested, reference BioNetGen documentation can be found <a href="http://comet.lehman.cuny.edu/griffeth/BioNetGenTutorialFromBioNetWiki.pdf">here</a>.</p>
+
+<p>To specify our model, add <code class="language-plaintext highlighter-rouge">begin model</code> and <code class="language-plaintext highlighter-rouge">end model</code>. Everything below regarding the specification of the model will go between these two lines.</p>
+
+<p>We first add ligand and receptor molecules to our model under a <code class="language-plaintext highlighter-rouge">molecule types</code> section. Recall from the main text that we will call these molecules <code class="language-plaintext highlighter-rouge">L(t)</code> and <code class="language-plaintext highlighter-rouge">T(l)</code>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">begin</span> <span class="n">model</span>
+
+	<span class="k">begin</span> <span class="n">molecule</span> <span class="n">types</span>
+		<span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+		<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+	<span class="k">end</span> <span class="n">molecule</span> <span class="n">types</span>
+
+	<span class="k">end</span> <span class="n">model</span>
+</code></pre></div></div>
+
+<h2 id="specifying-reaction-rules-and-observables">Specifying reaction rules and observables</h2>
+
+<p>As discussed in the <a href="home_signalpart2">main text</a>, the ligand-receptor simulation will only need to apply a single bi-directional reaction.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">begin</span> <span class="n">reaction</span> <span class="n">rules</span>
+		<span class="no">LR</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+	<span class="k">end</span> <span class="n">reaction</span> <span class="n">rules</span>
+</code></pre></div></div>
+
+<p>Once we have specified reactions, we can define the molecules whose concentrations we are interested in tracking. These molecules are added to an  <code class="language-plaintext highlighter-rouge">observables</code> section.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">begin</span> <span class="n">observables</span>
+    <span class="no">Molecules</span> <span class="n">free_ligand</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="no">Molecules</span> <span class="n">bound_ligand</span> <span class="no">L</span><span class="p">(</span><span class="n">t!l</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!l</span><span class="p">)</span>
+    <span class="no">Molecules</span> <span class="n">free_receptor</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+  <span class="k">end</span> <span class="n">observables</span>
+</code></pre></div></div>
+
+<h2 id="initializing-unbound-molecule-counts">Initializing unbound molecule counts</h2>
+
+<p>Next, we need to specify a variable indicating the number of molecules with which we would like to initialize our simulation. We place these molecules within a <code class="language-plaintext highlighter-rouge">seed species</code> section. We are putting <code class="language-plaintext highlighter-rouge">L0</code> unbound <code class="language-plaintext highlighter-rouge">L</code> molecules, and <code class="language-plaintext highlighter-rouge">T0</code> unbound <code class="language-plaintext highlighter-rouge">T</code> molecules at the beginning; we will set these parameters later.</p>
+
+<p>Note that we do not specify an initial number of bound <code class="language-plaintext highlighter-rouge">L.T</code> complexes, meaning that the initial concentration of these complexes will be equal to zero.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">begin</span> <span class="n">seed</span> <span class="n">species</span>
+		<span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">L0</span>
+		<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="no">T0</span>
+	<span class="k">end</span> <span class="n">seed</span> <span class="n">species</span>
+</code></pre></div></div>
+
+<h2 id="specifying-parameters">Specifying parameters</h2>
+
+<p>Now we will declare all the parameters we introduced in the above sections. We will start with setting <code class="language-plaintext highlighter-rouge">L0</code>, the initial concentration of ligand, to 10,000, and <code class="language-plaintext highlighter-rouge">T0</code>, the initial concentration of receptors, to 7000. It remains to set the reaction rates for the forward and reverse reactions.</p>
+
+<p>BioNetGen is unitless, but for simplicity, we will assume that all concentrations are measured in the number of molecules per cell. The reaction rates are conventionally thought of in the units of mole (M) per second, where 1 M denotes Avogrado’s number, which is approximately 6.02 · 10<sup>23</sup>.</p>
+
+<p>Because of the differing units of molecules per cell and mole per second, we need to do some unit conversion here. The volume of an <em>E. coli</em> cell is approximately 1µm<sup>3</sup>, and so 1 mole per liter will correspond to 1 mole per 10<sup>15</sup> µm<sup>3</sup>, or 6.02 · 10<sup>8</sup> molecules per cell.</p>
+
+<p>For bimolecular reactions, the rate constant should have unit M<sup>-1</sup>s<sup>-1</sup>, and we divide with NaV to convert to (molecules/µm<sup>3</sup>)<sup>-1</sup>)s<sup>-1</sup>. For monomolecular reactions, the rate constant have unit s<sup>-1</sup>, so no unit conversion is required.</p>
+
+<p>Although the specific numbers of cellular components vary among each bacterium, the components in chemotaxis pathway follows a relatively constant ratio. For all the simulations in this tutorial, we assign the initial number for each molecule and reaction rate by first deciding a reasonable range based on <em>in vivo</em> quantities <sup id="fnref:Li2004" role="doc-noteref"><a href="#fn:Li2004" class="footnote">1</a></sup><sup id="fnref:Spiro1997" role="doc-noteref"><a href="#fn:Spiro1997" class="footnote">2</a></sup><sup id="fnref:Stock1991" role="doc-noteref"><a href="#fn:Stock1991" class="footnote">3</a></sup>. Our parameters are summarized below.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">begin</span> <span class="n">parameters</span>
+		<span class="no">NaV</span> <span class="mf">6.02e8</span>    <span class="c1">#Unit conversion M -&gt; #/µm^3</span>
+		<span class="no">L0</span> <span class="mf">1e4</span>        <span class="c1">#number of ligand molecules</span>
+		<span class="no">T0</span> <span class="mi">7000</span>       <span class="c1">#number of receptor complexes</span>
+		<span class="n">k_lr_bind</span> <span class="mf">8.8e6</span><span class="o">/</span><span class="no">NaV</span>   <span class="c1">#ligand-receptor binding</span>
+		<span class="n">k_lr_dis</span> <span class="mi">35</span>           <span class="c1">#ligand-receptor dissociation</span>
+	<span class="k">end</span> <span class="n">parameters</span>
+</code></pre></div></div>
+
+<p><strong>Important note:</strong> The <code class="language-plaintext highlighter-rouge">parameters</code> section has to appear before the <code class="language-plaintext highlighter-rouge">reaction rules</code> section.</p>
+
+<p>If you save your file, then you should see a “contact map” in the upper right corner of the window indicating the potential bonding of <code class="language-plaintext highlighter-rouge">L</code> and <code class="language-plaintext highlighter-rouge">T</code>. This contact map is currently very simplistic, but for more complicated simulations it can help visualize the interaction of species in the system.</p>
+
+<p><img src="../assets/images/chemotaxis_tutorial3.png" alt="image-center" class="align-center" /></p>
+
+<h2 id="specifying-simulation-commands">Specifying simulation commands</h2>
+
+<p>We are now ready to run our simulation. At the bottom of the model specification (i.e., after <code class="language-plaintext highlighter-rouge">end model</code>), we will add a <code class="language-plaintext highlighter-rouge">generate_network</code> and <code class="language-plaintext highlighter-rouge">simulate</code> command. The <code class="language-plaintext highlighter-rouge">simulate</code> command will take three parameters, which we specify below.</p>
+
+<p><strong>Method</strong>. We will use <code class="language-plaintext highlighter-rouge">method=&gt;"ssa"</code> throughout these tutorials, which indicate that we are using the SSA (Gillespie) algorithm that was described in the main text. BioNetGen also includes the parameters <code class="language-plaintext highlighter-rouge">method=&gt;"nf"</code> (network-free) and <code class="language-plaintext highlighter-rouge">method=&gt;"ode"</code>(ordinary differential equations) that you can try. See the following article for more details if you are interested in these two approaches: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5079481">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5079481</a>.</p>
+
+<p><strong>Time span</strong>.<code class="language-plaintext highlighter-rouge">t_end</code>, the simulation duration. BioNetGen simulation time is unitless; for simplicity, we assume our time unit is the second.</p>
+
+<p><strong>Number of Steps</strong>. <code class="language-plaintext highlighter-rouge">n_steps</code> tells the program how many time points to break the simulation into when measuring the concentrations of our observables.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">generate_network</span><span class="p">({</span><span class="n">overwrite</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">})</span>
+	<span class="n">simulate</span><span class="p">({</span><span class="nb">method</span><span class="o">=&gt;</span><span class="s2">"ssa"</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=&gt;</span><span class="mi">100</span><span class="p">})</span>
+</code></pre></div></div>
+
+<p>The following code contains our complete simulation, which you can also download here:
+<a href="../downloads/downloadable/ligand_receptor.bngl" download="ligand_receptor.bngl">ligand_receptor.bngl</a>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span> <span class="n">model</span>
+
+<span class="k">begin</span> <span class="n">molecule</span> <span class="n">types</span>
+	<span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+	<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">molecule</span> <span class="n">types</span>
+
+<span class="k">begin</span> <span class="n">observables</span>
+	<span class="no">Molecules</span> <span class="n">free_ligand</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">bound_ligand</span> <span class="no">L</span><span class="p">(</span><span class="n">t!l</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!l</span><span class="p">)</span>
+	<span class="no">Molecules</span> <span class="n">free_receptor</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">observables</span>
+
+<span class="k">begin</span> <span class="n">parameters</span>
+	<span class="no">NaV2</span> <span class="mf">6.02e8</span>   <span class="c1">#Unit conversion to cellular concentration M/L -&gt; #/um^3</span>
+	<span class="no">L0</span> <span class="mf">1e4</span>        <span class="c1">#number of ligand molecules</span>
+	<span class="no">T0</span> <span class="mi">7000</span>       <span class="c1">#number of receptor complexes</span>
+	<span class="n">k_lr_bind</span> <span class="mf">8.8e6</span><span class="o">/</span><span class="no">NaV2</span>   <span class="c1">#ligand-receptor binding</span>
+	<span class="n">k_lr_dis</span> <span class="mi">35</span>            <span class="c1">#ligand-receptor dissociation</span>
+<span class="k">end</span> <span class="n">parameters</span>
+
+<span class="k">begin</span> <span class="n">reaction</span> <span class="n">rules</span>
+	<span class="no">LR</span><span class="p">:</span> <span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;-&gt;</span> <span class="no">L</span><span class="p">(</span><span class="n">t!</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="no">T</span><span class="p">(</span><span class="n">l!</span><span class="mi">1</span><span class="p">)</span> <span class="n">k_lr_bind</span><span class="p">,</span> <span class="n">k_lr_dis</span>
+<span class="k">end</span> <span class="n">reaction</span> <span class="n">rules</span>
+
+<span class="k">begin</span> <span class="n">seed</span> <span class="n">species</span>
+	<span class="no">L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="no">L0</span>
+	<span class="no">T</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="no">T0</span>
+<span class="k">end</span> <span class="n">seed</span> <span class="n">species</span>
+
+<span class="k">end</span> <span class="n">model</span>
+
+<span class="n">generate_network</span><span class="p">({</span><span class="n">overwrite</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">})</span>
+<span class="n">simulate</span><span class="p">({</span><span class="nb">method</span><span class="o">=&gt;</span><span class="s2">"ssa"</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=&gt;</span><span class="mi">100</span><span class="p">})</span>
+</code></pre></div></div>
+
+<p class="notice--primary"><strong>STOP:</strong> Based on our results from calculating steady-state concentration by hand in the main text, predict how the concentrations will change and what the equilibrium concentrations will be.</p>
+
+<h2 id="running-our-simulation">Running our simulation</h2>
+
+<p>We are now ready to run our simulation. To do so, visit <code class="language-plaintext highlighter-rouge">Simulation</code> at the right side of the contact map and click <code class="language-plaintext highlighter-rouge">Run</code>. You can then visualize the results of the simulation, showing changes in concentration over time. These results are also stored as a .gdat file in the folder <code class="language-plaintext highlighter-rouge">result/your time of simulation</code>.</p>
+
+<p>Is the result you obtain what you expected? In the main text, we will return to this question and then learn more about the details of bacterial chemotaxis in order to expand our BioNetGen model into one that fully reflects these details.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="home_signalpart2#does-a-simulation-confirm-our-steady-state-calculations" class="btn btn--primary btn--large">Return to main text</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:Li2004" role="doc-endnote">
+      <p>Li M, Hazelbauer GL. 2004. Cellular stoichiometry of the components of the chemotaxis signaling complex. Journal of Bacteriology. <a href="https://jb.asm.org/content/186/12/3687">Available online</a> <a href="#fnref:Li2004" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Spiro1997" role="doc-endnote">
+      <p>Spiro PA, Parkinson JS, and Othmer H. 1997. A model of excitation and adaptation in bacterial chemotaxis. Biochemistry 94:7263-7268. <a href="https://www.pnas.org/content/94/14/7263">Available online</a>. <a href="#fnref:Spiro1997" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Stock1991" role="doc-endnote">
+      <p>Stock J, Lukat GS. 1991. Intracellular signal transduction networks. Annual Review of Biophysics and Biophysical Chemistry. <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev.bb.20.060191.000545">Available online</a> <a href="#fnref:Stock1991" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

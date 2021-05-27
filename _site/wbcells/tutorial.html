@@ -1,0 +1,556 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CellOrganizer Tutorial - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="CellOrganizer Tutorial">
+<meta property="og:url" content="http://localhost:4000/wbcells/tutorial">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/wbcells/tutorial">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Tutorial</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/wbcells/tutorial" class="active">Tutorial</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CellOrganizer Tutorial">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">CellOrganizer Tutorial
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#cell-organizer-tutorial">Cell Organizer Tutorial</a><ul><li><a href="#step-1-nuclear-segmentation">Step 1 Nuclear Segmentation</a></li><li><a href="#step-2-image-binarization-and-file-conversion">Step 2 Image Binarization and File Conversion</a></li><li><a href="#step-3-pca-model-generation">Step 3 PCA Model Generation</a></li><li><a href="#step-4-shape-space-visualization">Step 4 Shape Space Visualization</a></li><li><a href="#step-5-classification">Step 5 Classification</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="cell-organizer-tutorial">Cell Organizer Tutorial</h2>
+
+<p>For the following steps, a variety of software and programs are used to go through our PCA Pipeline for the Kaggle White Blood Cells dataset. Please ensure that the following pre – requisite applications have been installed before continuing.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Required Applications</th>
+      <th style="text-align: right">Terminal Command to Check Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Python (v. 3.7.3)</td>
+      <td style="text-align: right">python –version</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">R (v. 3.5.2)</td>
+      <td style="text-align: right">R –version</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">MATLAB (2016b or newer)</td>
+      <td style="text-align: right">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">CellOrganizer (v. 2.8.x)</td>
+      <td style="text-align: right">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">RStudio</td>
+      <td style="text-align: right">-</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Furthermore, we ask that you download our WBC_PCAPipeline folder onto your desktop and ensure that the following contents are available, where v represents an open directory and * represents a file:</p>
+
+<p>v WBC_PCAPipeline
+	v Data
+		v RawImgs
+			* BloodImage_00001.jpg
+			·
+			·
+			·
+			* BloodImage_00410.jpg
+		* WBC_Labels.csv
+	v Step1_Segmentation
+		* WBC_imgSeg.R
+	v Step2_Binarization
+		* WBC_imgBin.m
+	v Step3_PCAModel
+		* WBC_PCAModel.m
+	v Step4_ShapeSpaceVisualization
+		* WBC_SS_CellClass.py
+		* WBC_SS_CellType.py
+	v Step5_Classification
+	* README.pdf</p>
+
+<p>Change into the WBC_PCAPipeline directory by running the following command in a new terminal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; cd ~/Desktop/WBC_PCAPipeline
+</code></pre></div></div>
+
+<p class="notice--primary">NOTE: Please ensure the WBC_PCAPipeline file is onto your desktop. Otherwise, you will have to manually change all file paths to point to the appropriate folders on your computer. While unconventional, we’ve noticed occasional software glitches with using setwd() or pwd otherwise.</p>
+
+<h3 id="step-1-nuclear-segmentation">Step 1 Nuclear Segmentation</h3>
+
+<p>For this dataset, we would like to identify the white blood cell types by the nuclear shape since that particular feature is easy to verify with the naked eye. Moreover, the nucleus of the white blood cell(s) in each image are of a distinctly darker color than the rest of the red blood cells or platelets in the image. This allows us to implement a technique called thresholding. In thresholding, we examine each pixel in the image and reset the color value of the image according to our thresholds. If the original RGB values for the pixel are above the thresholds we set in each channel, then we reset the pixel value to white. All other pixels below the thresholds will be set to black (ideally). This way, our target, the white blood cell nucleus, is a white blob in a black background.</p>
+
+<p>Method: RStudio</p>
+
+<p>Open RStudio.
+Navigate to File –&gt; Open File
+Step through the files until you find Desktop/WBC_PCAPipeline/Step1_Segmentation/WBC_imgSeg.R.
+Source this file.
+Should you be asked in the console about upgrading dependencies during the EBImage library installation, type in a and hit Enter/Return.</p>
+
+<p class="notice--primary">NOTE: If you source the file multiple times, three directories are created each time within the Data folder with the form of SegImgs_i, ColNuc_i, and BWImgs_i,where i is a natural number. The images are only segmented into the most recently created directories (those with the largest i). Should you run into trouble and need to run this file multiple times, ensure that future filepaths are pointing to the right folders!</p>
+
+<p>After we have sourced our R file, you’ll notice the creation of three directories of the form: SegImgs_1, ColNuc_1, and BWImgs_1 within the Data folder.</p>
+
+<p>Assuming the file ran correctly, the first directory, SegImgs_1, contains all of the segmented nuclei images where the white blood cell nucleus is in white and the rest of the image is seemingly in black. The second directory, ColNuc_1, should be empty, but will eventually contain all of the segmented nuclei images, however the white blood cell nucleus will be in its original color and the rest of the image will be in black. Finally, the third directory, BWImgs_1, should be empty, but will eventually hold binarized versions (strictly black and white) of the images in SegImgs_1.</p>
+
+<p>Nuclear Segmentation Example using BloodImage_00001.jpg</p>
+
+<p><img src="../assets/images/cellorg_raw_image.png" alt="image-center" />
+<img src="../assets/images/cellorg_segmented.png" alt="image-center" class="align-center" />
+  Raw Image		             Segmented Nucleus in Greyscale</p>
+
+<h3 id="step-2-image-binarization-and-file-conversion">Step 2 Image Binarization and File Conversion</h3>
+
+<p>As mentioned in Step 1, we would ideally have black and white segmented images as a result of running the above commands. However, we would like to ensure that our segmented images are in black and white, and if not (suppose they are in greyscale), we would like to convert them into this form. Furthermore, the CellOrganizer PCA method requires all images to be in TIFF format, so this step handles that file conversion as well. To go an extra step, we also want another set of images that show the segmented nuclei in color while the background is in black.</p>
+
+<p>In this step of the pipeline, we open up MATLAB for running the binarization and file conversion code.</p>
+
+<p>Method: MATLAB</p>
+
+<p>Open MATLAB.
+Run the following commands in the MATLAB command window:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; clear
+&gt; clc
+&gt; cd ~/Desktop/WBC_PCAPipeline/Step2_Binarization
+&gt; WBC_imgBin
+</code></pre></div></div>
+
+<p>As a result, the BWImgs_1 directory will now contain binarized TIFF versions of the segmented images. That is, each greyscale image resulting from the nuclear segmentation step with have pixel values strictly of 0, which is black, or 1, which is white.
+Our other result is that the ColNuc_1 directory will now contain TIFF versions of the segmented images where the nuclei is in color and the background is in black. We won’t be using these images further along the pipeline, but they are useful to look at for visual confirmation that the majority of the nucleus is being considered for the PCA model.</p>
+
+<p>Binarization and Color Nuclear Segmentation Example using BloodImage_00001.jpg</p>
+
+<p><img src="../assets/images/cellorg_segmented.png" alt="image-center" />
+<img src="../assets/images/cellorg_segmented_color.png" alt="image-center" class="align-center" />
+Nuclear Segmentation in B/W                  Nuclear Segmentation in Color</p>
+
+<h3 id="step-3-pca-model-generation">Step 3 PCA Model Generation</h3>
+
+<p>Having completed Steps 1 and 2, all of our remaining images, and their subsequent labels, should be pre – processed and ready to train into a PCA model. In CellOrganizer, this is sampled as demo2D08.</p>
+
+<p>In this step of the pipeline, we return to MATLAB for running a modified version of CellOrganizer’s demo2D08 in order to generate the PCA model for our white blood cells. This model would then be used to plot the shape space by either cell type or cell class. Furthermore, we do some post – processing cleanup to ensure our resulting model could be easily read into the visualization code by using only the first three principal components.</p>
+
+<p>Method: MATLAB</p>
+
+<p>Open MATLAB.
+Change into your CellOrganizer directory.
+Run the following command in the MATLAB command window:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; setup
+</code></pre></div></div>
+<p>Run the following commands in the MATLAB command window:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; clear
+&gt; clc
+&gt; cd ~/Desktop/WBC_PCAPipeline/Step3_PCAModel
+&gt; WBC_PCAModel
+</code></pre></div></div>
+
+<p>As a result, the Step3_PCAModel and Step4_Visualization directories have been updated. The principal components along with the assigned label to each cell are captured in the WBC_PCA.csv file within the Step4 directory. Information about the images used and the CellOrganizer generated shape space can be found by clicking on Step3_PCAModel/report/index.html.</p>
+
+<p class="notice--primary">NOTE: For any subsequent run of the WBC_PCAModel file, make sure to delete any log and param files that have been created from a previous run. All other files will be overwritten unless preemptively removed from the WBC_PCAModel file’s access. Saving the files can be done by either compressing the files into a zip folder or removing them from the directory.</p>
+
+<p>To look at our model results, we want to do the following while in MATLAB:
+Run the following commands in the MATLAB command window:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt; load(‘WBC_PCA.mat’);
+&gt;&gt; scr = model.nuclearShapeModel.score;
+</code></pre></div></div>
+<p>Double – click on the scr variable in the Workspace window.</p>
+
+<p>In the matrix on screen, each row represents an image and each column represents the subsequent PCA components for the image. For the purpose of our shape space visualization, we will only be focusing on the first three principal components.</p>
+
+<h3 id="step-4-shape-space-visualization">Step 4 Shape Space Visualization</h3>
+
+<p>Having generated a PCA model from the images and completed the post – processing in Step 3, we are now ready to visualize our results!
+In this step of the pipeline, we open up Python to visualize the computed shape space by label. The goal is to see clusters of cells within the same region of the same type. We can classify our white blood cells by two different parameters, cell type or cell family. If we are classifying by cell type, then we are looking for clusters of neutrophils, eosinophils, basophils, lymphocytes, and monocytes. That being said, neutrophils, eosinophils, and basophils belong to the same family called granulocytes. Thus, if we are classifying by cell family, then we are looking for clusters of granulocytes, lymphocytes, and monocytes.</p>
+
+<p>Method: Python by Cell Family</p>
+
+<p>Open a new terminal.
+Run the following commands in terminal:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; cd ~/Desktop/WBC_PCAPipeline/Step4_Visualization
+&gt; python WBC_CellFamily.py
+</code></pre></div></div>
+
+<p>As a result, you can click, drag, and rotate the graphical space to see the clusters of cell classes by color (a legend can be found in the upper right - hand corner). Furthermore, an image file of this visualization is saved within the current directory under WBC_ShapeSpace_CF.png.</p>
+
+<p><img src="../assets/images/cellorg_pca_graph.png" alt="image-center" class="align-center" /></p>
+
+<p>Method: Python by Cell Type</p>
+
+<p>Open a new terminal.
+Run the following commands in terminal:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; cd ~/Desktop/WBC_PCAPipeline/Step4_Visualization
+&gt; python WBC_CellType.py
+</code></pre></div></div>
+
+<p>As a result, you can click, drag, and rotate the graphical space to see the clusters of cell classes by color (a legend can be found in the upper right - hand corner). Furthermore, an image file of this visualization is saved within the current directory under WBC_ShapeSpace_CT.png.</p>
+
+<p><img src="../assets/images/cellorg_pca_graph_cell.png" alt="image-center" class="align-center" /></p>
+
+<h3 id="step-5-classification">Step 5 Classification</h3>
+
+<p>To convert our current PCA pipeline coordinates to a format to be used in Weka, we need to convert our WBC_PCA.csv file into arff format.</p>
+
+<p>Method 1: Weka for File Conversion</p>
+
+<p>Open Weka.
+Navigate to Tools –&gt; ArffViewer.
+<img src="../assets/images/cellorg_step_2.png" alt="image-center" class="align-center" />
+Navigate to File –&gt; Open
+<img src="../assets/images/cellorg_step_3.png" alt="image-center" class="align-center" />
+Change the Files of Type option to CSV data files.
+<img src="../assets/images/cellorg_step_4.png" alt="image-center" class="align-center" />
+Locate the WBC_PCA.csv file in the Step4_ShapeSpaceVisualization folder and press Open.
+<img src="../assets/images/cellorg_step_5.png" alt="image-center" class="align-center" />
+Once all the data is loaded on screen, navigate to File –&gt; Save as … .
+<img src="../assets/images/cellorg_step_6.png" alt="image-center" class="align-center" />
+Locate the Step5_Classification folder, remove the .csv extension in the File Name field and press Save.
+<img src="../assets/images/cellorg_step_7.png" alt="image-center" class="align-center" /></p>
+
+<p>As a result, our PCA pipeline coordinates have now been converted to the file format that Weka accepts for further classification. This file should be saved as WBC_PCA.arff in the Step5_Classification subfolder of the WBC_CellClass folder.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

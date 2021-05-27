@@ -1,0 +1,514 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>A Reaction-Diffusion Model Generating Turing Patterns - Xu lab@CBD_SCS_CMU</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Xu lab@CBD_SCS_CMU">
+<meta property="og:title" content="A Reaction-Diffusion Model Generating Turing Patterns">
+<meta property="og:url" content="http://localhost:4000/prologue/animals">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/prologue/animals">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Xu lab@CBD_SCS_CMU</a>
+        <ul class="visible-links">
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/news/">NEWS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/papers/">PAPERS</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/group/">GROUP</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/meet-the-team/">ABOUT MIN XU</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/position/">POSITION</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="masthead__menu-item">
+                        <a href="/software/">SOFTWARE</a>
+                    </li>
+                
+            
+                
+                
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Take the Course    <i class="fa fa-caret-down fa-sm" aria-hidden="true"></i><span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            
+                                <li>
+                                    <a href="/prologue/">    <b>Prologue:</b> Introducing biological modeling with Turing patterns</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/motifs/home">    <b>Module 1:</b> Finding motifs in transcription factor networks</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/chemotaxis/home">    <b>Module 2:</b> Unpacking E. coli's genius exploration algorithm</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/coronavirus/home">    <b>Module 3:</b> Analyzing the coronavirus spike protein</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="">    <b>Module 4:</b> coming soon!</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+        </ul>
+        <!--
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        -->
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Prologue: an Introduction to Biological Modeling via Random Walks and Turing Patterns</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/">Introduction: Life is random<br><br></a></li>
+          
+            <li><a href="/prologue/turing">Alan Turing and the zebra's stripes<br><br></a></li>
+          
+            <li><a href="/prologue/random-walk">An introduction to random walks<br><br></a></li>
+          
+            <li><a href="/prologue/animals" class="active">A reaction-diffusion model generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/blocks">The Gray-Scott model: a cellular automaton generating Turing patterns<br><br></a></li>
+          
+            <li><a href="/prologue/conclusion">Conclusion: Turing patterns are fine-tuned<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Tutorials (featuring MCell and CellBlender)</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/prologue/tutorial-random-walk">Simulating particle diffusion with CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/turing-cellblender">Generating Turing patterns with a reaction-diffusion simulation in CellBlender<br><br></a></li>
+          
+            <li><a href="/prologue/tutorial-diffusion">Building a diffusion cellular automaton with Jupyter notebook<br><br></a></li>
+          
+            <li><a href="/prologue/gs-jupyter">Implementing the Gray-Scott model for coarse-grained reaction-diffusion with Jupyter notebook<br><br></a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A Reaction-Diffusion Model Generating Turing Patterns">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">A Reaction-Diffusion Model Generating Turing Patterns
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#from-random-walks-to-reaction-diffusion">From random walks to reaction-diffusion</a></li><li><a href="#an-example-reaction-diffusion-system">An example reaction-diffusion system</a></li><li><a href="#parameters-are-omnipresent-in-biological-modeling">Parameters are omnipresent in biological modeling</a></li><li><a href="#tuning-reaction-diffusion-parameters-produces-different-turing-patterns">Tuning reaction-diffusion parameters produces different Turing patterns</a></li><li><a href="#turings-patterns-and-klüvers-hallucinations">Turing’s patterns and Klüver’s hallucinations</a></li><li><a href="#streamlining-our-simulations">Streamlining our simulations</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="from-random-walks-to-reaction-diffusion">From random walks to reaction-diffusion</h2>
+
+<p>In the previous section, we introduced the random walk model of a particle diffusing through a medium as a result of Brownian motion. But what exactly does the random movement of particles have to do with Alan Turing and zebras?</p>
+
+<p>Turing’s insight was that remarkable patterns could emerge if we combine a simulation of diffusion with a chemical reaction, in which colliding particles interact with each other. Such a model is called a <strong>reaction-diffusion system</strong>, and the patterns that emerge in the simulation are called <strong>Turing patterns</strong> in Turing’s honor.</p>
+
+<h2 id="an-example-reaction-diffusion-system">An example reaction-diffusion system</h2>
+
+<p>We will consider a reaction-diffusion system having two types of particles, <em>A</em> and <em>B</em>. The system is not meant to represent a predator-prey relationship, but you may like to think of the <em>A</em> particles as prey and the <em>B</em> particles as predators for reasons that will become clear soon.</p>
+
+<p>Both types of particles diffuse randomly through the plane, but the <em>A</em> particles typically diffuse more quickly than the <em>B</em> particles.  In the simulation that follows, we will assume that <em>A</em> particles diffuse twice as quickly as <em>B</em> particles. In terms of the random walk, this faster rate of Brownian motion means that in a single “step”, an <em>A</em> particle moves twice as far as a <em>B</em> particle.</p>
+
+<p class="notice--primary"><strong>STOP</strong>: Say that we release one <em>A</em> particle and one <em>B</em> particle at the same location. If the two particles move via random walks, and the rate of diffusion of <em>A</em> is twice as fast, then how much farther from the origin will <em>A</em> be than <em>B</em> after <em>n</em> steps?</p>
+
+<p>We now will add some reactions to our system. The <em>A</em> particles are added into the system at some constant <strong>feed rate</strong> <em>f</em>, meaning that these particles are created as the result of other reactions that are not part of our model. In a three-dimensional system, the units of <em>f</em> are in mol/L/s, which means that every second, there are <em>f</em> moles of particles added to the system in every liter of volume. (Recall from your chemistry class long ago that one mole is 6.02214076 · 10<sup>23</sup> particles.) As a result, the concentration of the particles increases by a constant number in each time step.</p>
+
+<p>There is also a <strong>kill rate</strong> constant <em>k</em> dictating the rate of removal of the <em>B</em> particles. As a result of removal, the number of <em>B</em> particles in the system will decrease by a factor of <em>k</em> in a given time step. That is, the more <em>B</em> particles that are present, the more <em>B</em> particles will be removed.</p>
+
+<p>Note that there is a slight difference between the feed and kill reactions. In the first reaction, the number of <em>A</em> particles increases by a constant number in each time step. In the second reaction, the number of <em>B</em> particles decreases by a constant factor multiplied by the current number of <em>B</em> particles. In terms of calculus, this means that if [<em>A</em>] and [<em>B</em>] denote the concentrations of the two particle types, then in the absence of other reactions, we can write</p>
+
+<p><center>
+<em>d</em>[<em>A</em>]/<em>dt</em> = <em>f</em>
+</center></p>
+
+<p>and</p>
+
+<p><center>
+<em>d</em>[<em>B</em>]/<em>dt</em> = -<em>k</em> · <em>[B]</em>.
+</center></p>
+
+<p>Finally, our reaction-diffusion system includes the following reaction involving both particle types. The particles on the left side of this reaction are called <strong>reactants</strong> and the particles on the right side are called <strong>products</strong>.</p>
+
+<p><center><em>A</em> + 2<em>B</em> → 3<em>B</em></center></p>
+
+<p>To simulate this reaction on a particle level, if an <em>A</em> particle and two <em>B</em> particles collide with each other, then the <em>A</em> particle has some fixed probability <em>r</em> of being replaced by a third <em>B</em> particle.</p>
+
+<p>This third reaction is why we compared <em>A</em> to prey and <em>B</em> to predators, since we may like to conceptualize the reaction as two <em>B</em> particles consuming an <em>A</em> particle and producing an offspring <em>B</em> particle.</p>
+
+<h2 id="parameters-are-omnipresent-in-biological-modeling">Parameters are omnipresent in biological modeling</h2>
+
+<p>Our plan is to initiate the system with a uniform concentration of <em>A</em> particles spread across the grid and a tightly packed collection of <em>B</em> particles in the center of the grid.  But before we do this, we first point out that the results of our simulation may vary depending upon a few things.</p>
+
+<p>A <strong>parameter</strong> is a variable quantity used as input to a model. Parameters are inevitable in biological modeling (and data science in general), and as we will see, changing parameters can cause major changes in the behavior of a system.</p>
+
+<p>Note that there are four parameters relevant to our reaction-diffusion system. Three of these parameters are the feed rate (<em>f</em>) of <em>A</em> particles, the kill rate of the <em>B</em> particles (<em>k</em>), and the rate of the predator-prey reaction (<em>r</em>). The final parameter of interest corresponds to the diffusion rates (i.e., speeds) of the two types of particle. We report this as a single parameter because the diffusion rates are completely dependent on each other; once the diffusion rate of the <em>B</em> particles is set, the diffusion rate of <em>A</em> particles must be twice that of the <em>B</em> particles.</p>
+
+<p>You can think of all these parameters as dials we can turn, observing how the system changes on the macro level. For example, if we raise the diffusion rate, then the particles will be moving around and bouncing into each other more, which means that we will see more of the reaction <em>A</em> + 2<em>B</em> → 3<em>B</em>.</p>
+
+<p class="notice--primary"><strong>STOP:</strong> What will happen as we increase or decrease the feed rate <em>f</em>? What about the kill rate <em>k</em>?</p>
+
+<p>A reaction like <em>A</em> + 2<em>B</em> → 3<em>B</em> is typically thought of as occurring at a <strong>bulk reaction rate</strong>, which is the total number of reactions occurring as a function of the concentration of reactants. In the following tutorial, CellBlender uses the software <strong>MCell</strong> to simulate our reaction-diffusion model; MCell is built upon some advanced probabilistic methods that allow it to use the bulk reaction rate to determine the probability that a reaction will happen if the particles needed as reactants collide. The same goes for the feed and kill reactions; new <em>A</em> particles are formed, and old <em>B</em> particles are destroyed, via probabilities that are computed from reaction rates. For now, you can think of the rate of a reaction as directly related to its probability of occurring.</p>
+
+<p>When we return from this tutorial, we will examine the patterns that we are able to draw within this tutorial.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="turing-cellblender" class="btn btn--primary btn--large">Visit tutorial</a></p>
+
+<h2 id="tuning-reaction-diffusion-parameters-produces-different-turing-patterns">Tuning reaction-diffusion parameters produces different Turing patterns</h2>
+
+<p>For some parameter values, our reaction-diffusion system is not particularly interesting.  For example, the following animation is produced when using parameter rates in CellBlender of <em>f</em> = 1000 and <em>k</em> = 500,000. It shows that if the kill rate is too high, then the <em>B</em> particles will die out more quickly than they can be replenished by the reaction with <em>A</em> particles, and so only <em>A</em> particles will be left. In this animation, <em>A</em> particles have been colored green, and <em>B</em> particles have been colored red.</p>
+
+<center>
+<iframe width="750" height="360" src="../assets/mert_predator_dies_f1e1_r5e5.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p>On the other hand, if <em>f</em> is too high, then there will be an increase in the concentration of <em>A</em> particles. However, there will also be more interactions between <em>A</em> particles and pairs of <em>B</em> particles, and so we will see an explosion in the number of predators. The following simulation has the parameters <em>f</em> = 1,000,000 and <em>k</em> = 100,000.</p>
+
+<center>
+<iframe width="750" height="360" src="../assets/mert_f1e6_d1e5.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p>The interesting behavior in this system lies in a sweet spot of the parameters <em>f</em> and <em>k</em>. For example, consider the following visualization when <em>f</em> is equal to 100,000 and <em>k</em> is equal to 200,000. We see a very clear stripe of predators expanding outward against a background of prey, with subsequent stripes appearing at locations where there is a critical mass of predators to interact with each other.</p>
+
+<center>
+<iframe width="750" height="360" src="../assets/gray_scott_11_by_11_f_1_k_2.mp4" frameborder="0" allowfullscreen="">
+</iframe>
+</center>
+
+<p>When we hold <em>k</em> fixed and increase <em>f</em> to 140,000, the higher feed rate increases the likelihood of <em>B</em> particles encountering <em>A</em> particles, and so we see even more waves of <em>A</em> cascades.  Note the clear red-green stripes that have appeared by the end of the movie.</p>
+
+<center>
+<iframe width="750" height="360" src="../assets/gray_scott_11_by_11_f_1.4_k_2.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p>As <em>f</em> approaches <em>k</em>, the stripe structure becomes chaotic and breaks down because there are so many pockets of <em>B</em> particles that these particles constantly collide and mix with each other. The following animation shows the result of raising <em>f</em> to 175,000.</p>
+
+<center>
+<iframe width="750" height="360" src="../assets/gray_scott_11_by_11_f_1.75_k_2_new.mp4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<p>Once <em>f</em> and <em>k</em> are equal, the stripes will disappear. We might expect this to mean that the <em>B</em> particles will be uniformly distributed across a background of <em>A</em> particles. But what we see is that after an initial outward explosion of <em>B</em> particles, the system produces a mottled background, with pockets having higher or lower concentration of <em>B</em>. Pay attention to the following video at a point late in the animation. Although the concentrations of the particles are still changing, there is much less large-scale change than in earlier videos. If we freeze the video, our eye cannot help but see patterns of red and green clusters that resemble spots (or at the very least mottling).</p>
+
+<center>
+<iframe width="750" height="360" src="../assets/gray_scott_11_by_11_f_1_k_1.mp4" frameborder="0" allowfullscreen="">
+</iframe>
+</center>
+
+<h2 id="turings-patterns-and-klüvers-hallucinations">Turing’s patterns and Klüver’s hallucinations</h2>
+
+<p>When you look at the simulations above, an adjective that may have come to mind is  “trippy”. This is no accident. Research dating all the way back to the 1920s has studied the patterns that we see during visual hallucinations, which Heinrich Klüver named <strong>form constants</strong> after studying patients who had taken mescaline.<sup id="fnref:kluver" role="doc-noteref"><a href="#fn:kluver" class="footnote">1</a></sup> Form constants, which include cobwebs, tunnels, and spirals, occur across many individuals regardless of the cause of the hallucinations.</p>
+
+<p>Over five decades after Klüver’s work, researchers would determine that form constants having different shapes originate from simpler <em>linear</em> stripes of cellular activation patterns in the retina. The retina is circular, but the brain needs to convert this cellular image into a rectangular field of view; as a result, when the linear patterns are passed to the visual cortex, the hallucinating brain contorts them into the spirals and whirls that we see.<sup id="fnref:cowan" role="doc-noteref"><a href="#fn:cowan" class="footnote">2</a></sup></p>
+
+<p>Yet this research had essentially replaced one question with another: why does hallucination cause <em>patterns</em> of cellular activation in the retina? This question is still unresolved, but some researchers<sup id="fnref:quanta" role="doc-noteref"><a href="#fn:quanta" class="footnote">3</a></sup> believe that the linear patterns produced by hallucinations in the retina are in fact Turing patterns and can be explained by a reaction-diffusion model of firing neurons.</p>
+
+<h2 id="streamlining-our-simulations">Streamlining our simulations</h2>
+
+<p>Despite using advanced modeling and rendering software that has undergone years of development and optimization, each of the visualizations in this lesson took several hours to render. These simulations are computationally intensive because they require us to track the movement of tens of thousands of particles over thousands of generations.</p>
+
+<p>We wonder if it is possible to build a model of Turing patterns that does not require so much computational overhead. In other words, is there a simplification that we can make to our model that will run faster but still produce Turing patterns? We will turn our attention to this question in the next section.</p>
+
+<p style="font-size: 100%; text-align: center;"><a href="blocks" class="btn btn--primary btn--large">Next lesson</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:kluver" role="doc-endnote">
+      <p>H. Klüver. <em>Mescal and Mechanisms of Hallucinations</em>. University of Chicago Press, 1966. <a href="#fnref:kluver" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:cowan" role="doc-endnote">
+      <p>G.B. Ermentrout and J.D. Cowan. “A Mathematical Theory of Visual Hallucination Patterns”. <em>Biol. Cybernetics</em> 34, 137-150 (1979). <a href="#fnref:cowan" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:quanta" role="doc-endnote">
+      <p>J. Ouellette. “A Math Theory for Why People Hallucinate”. <em>Quanta Magazine</em>, July 30, 2018. https://www.quantamagazine.org/a-math-theory-for-why-people-hallucinate-20180730/ <a href="#fnref:quanta" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  <!-- only show related on a post page when `related: true`
+  
+  
+  -->
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <hr>
+  <a href="http://cbd.cmu.edu" target="_blank"><img align = "left" src="/biological_modeling_course/assets/images/combined_SCS_Unitmark_187_K.jpg" alt="CBD Logo" width="40%" height="40%"></a>
+  <a href="http://mmbios.pitt.edu" target="_blank"><img align="right" src="/biological_modeling_course/assets/images/MMBioS_Logo.png" alt="MMBioS Logo" width="50%" height="50%"></a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
