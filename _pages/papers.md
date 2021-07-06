@@ -10,6 +10,9 @@ layout: splash
 <p class="text"><strong>Cryo-ET analysis</strong></p>
 
 <ol>
+	<li>
+		Zeng Y, Howe G, Yi K, Zeng X, Zhang J, Chang Y, Xu M. Unsupervised Domain Alignment based Open Set Structural Recognition of Macromolecules Captured by Cryo-Electron Tomography. 2021 IEEE International Conference on Image Processing (ICIP)
+	</li>
         <li>
             Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. DISCA: high-throughput cryo-ET structural pattern mining by deep unsupervised clustering. bioRxiv. <a href="https://doi.org/10.1101/2021.05.16.444381" target="_blank">doi:10.1101/2021.05.16.444381</a>
         </li>
