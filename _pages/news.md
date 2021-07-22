@@ -7,6 +7,10 @@ layout: splash
 <p class="title">News</p>
 
 <p class="text">
+    <strong>210722</strong>: Our lab just got two papers accepted by top computer vision conference ICCV 2021. Congratulation to first authors Taylor Zeng, Gregory Howe and Xiaoyu Zhu!
+</p>
+
+<p class="text">
     <strong>210419</strong>: Congratulation Michelle Zhu and Richard Kang for receiving <a href="https://www.cmu.edu/uro/summer%20research%20fellowships/SURF" target="_blank">CMU Summer Undergraduate Research Fellowships</a> on our research projects!
 </p>
 
