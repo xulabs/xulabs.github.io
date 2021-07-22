@@ -27,8 +27,8 @@ classes: wide
 <p class="topic"><strong>Alumni</strong></p>
 <p class="text">
     <a href="https://www.linkedin.com/in/sima-behpour-95037713b" target="_blank">Sima Behpour</a> (Former Postdoctoral Associate) <br />
-    Xiaoyu Zhu (LTI, MSAII) <br />
-    Xindi Wu (RI, MSCV) <br />
+    <a href="https://www.linkedin.com/in/xiaoyuzhu3/" target="_blank"> Xiaoyu Zhu </a> (LTI, MSAII) <br />
+    <a href="hhttps://www.linkedin.com/in/xindi-cindy-wu-3ba243111/" Windi Wu </a> (RI, MSCV) <br />
     Yuchen Zeng (CBD) <br />
     <a href="https://kaiwenw.github.io/" target="_blank"> Kai Wen Wang </a> (ECE, CS) <br />
     <a href="https://www.linkedin.com/in/yixiu-zhao-a00498128/" target="_blank"> Yixiu Zhao </a> (CSD) <br />
