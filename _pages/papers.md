@@ -11,8 +11,16 @@ layout: splash
 
 <ol>
 	<li>
+		Zeng X, Howe G, Xu M. <b> End-to-end robust joint unsupervised image alignment and clustering. </b> International Conference on Computer Vision (ICCV 2021)
+	</li>
+	<li>
+		Zhu X, Chen J, Zeng X, Liang J, Li C, Liu S, Behpour S, Xu M. <b> Weakly Supervised 3D Semantic Segmentation Using Cross-Image Consensus and Inter-Voxel Affinity Relations. </b> International Conference on Computer Vision (ICCV 2021)
+	</li>
+	
+	<li>
 		Zeng Y, Howe G, Yi K, Zeng X, Zhang J, Chang Y, Xu M. Unsupervised Domain Alignment based Open Set Structural Recognition of Macromolecules Captured by Cryo-Electron Tomography. 2021 IEEE International Conference on Image Processing (ICIP)
 	</li>
+	
         <li>
             Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. DISCA: high-throughput cryo-ET structural pattern mining by deep unsupervised clustering. bioRxiv. <a href="https://doi.org/10.1101/2021.05.16.444381" target="_blank">doi:10.1101/2021.05.16.444381</a>
         </li>
