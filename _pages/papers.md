@@ -28,7 +28,7 @@ layout: splash
 			Gao S, Han R, Zeng X, Xu M, Zhang F. Macromolecules Structural Classification with a 3D Dilated Dense Network in Cryo-electron Tomography. IEEE/ACM Transactions on Computational Biology and Bioinformatics. <a href="https://doi.org/10.1109/TCBB.2021.3065986"> doi:10.1109/TCBB.2021.3065986 </a>
 		</li>
 		<li>
-			Du X, Wang H, Zhu Z, Zeng X, Chang Y, Zhang J, Xing E, Xu M. <b> Active learning to classify macromolecular structures in situ for less supervision in cryo-electron tomography.</b>  Bioinformatics. <a href="https://doi.org/10.1093/bioinformatics/btab123"> doi:10.1093/bioinformatics/btab123 </a> <a href="https://arxiv.org/abs/2102.12040"> arXiv:2102.12040 </a>
+			Du X, Wang H, Zhu Z, Zeng X, Chang Y, Zhang J, Xu M. <b> Active learning to classify macromolecular structures in situ for less supervision in cryo-electron tomography.</b>  Bioinformatics. <a href="https://doi.org/10.1093/bioinformatics/btab123"> doi:10.1093/bioinformatics/btab123 </a> <a href="https://arxiv.org/abs/2102.12040"> arXiv:2102.12040 </a>
 		</li>
 		<li>
 			Zhou B, Yu H, Zeng X, Yang X, Zhang J, Xu M. One-shot Learning with Attention-guided Segmentation in Cryo-Electron Tomography. Frontiers in Molecular Biosciences. <a href="https://doi.org/10.3389/fmolb.2020.613347"> doi:10.3389/fmolb.2020.613347 </a>
