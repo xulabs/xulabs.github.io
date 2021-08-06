@@ -30,9 +30,8 @@ layout: splash
   <p class="text">
       <p class="topic"> <strong>Biography</strong></p>
       <p>
-          Dr. Min Xu is an Assistant Professor at the <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a> in the <a href="https://www.cs.cmu.edu" target="_blank">School of Computer Science</a> at <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a>. 
+          Dr. Min Xu is an Assistant Professor at the <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a> and the <a href="https://www.ri.cmu.edu" target="_blank">Robotics Institute</a> (courtesy) in the <a href="https://www.cs.cmu.edu" target="_blank">School of Computer Science</a> at <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a>. 
           He serves as training faculty at the <a href="http://www.compbio.cmu.edu" target="_blank">Joint CMU-Pitt Ph.D. Program in Computational Biology</a>. 
-          He is also affiliated with <a href="https://www.ri.cmu.edu" target="_blank">Robotics Institute</a>. 
           He is an investigator at the National Center for Multiscale Modeling of Biological Systems.
       </p>
       <p>
