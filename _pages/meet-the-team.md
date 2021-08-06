@@ -10,7 +10,7 @@ layout: splash
   <p style="text-align: center;">
       <strong>Min Xu, Ph.D.</strong><br />
       Assistant Professor, <a href="http://www.google.com/url?q=http%3A%2F%2Fcbd.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNH2a-HoqIwz5FlmV2iqBe6MQqLAZg" target="_blank">Computational Biology Department</a><br />
-      Training faculty, <a href="http://www.google.com/url?q=http%3A%2F%2Fri.cmu.edu%2Feducation%2Facademic-programs%2Fmaster-of-science-computer-vision-mscv&sa=D&sntz=1&usg=AFQjCNF6MjntgO_YKppTAS6wa1-_1z8clg" target="_blank">Master of Science in Computer Vision</a>, <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.ri.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGcZ87enxg9p6syPq-tQXu0D1_Tcg" target="_blank">Robotics Institute</a><br />
+      Courtesy Appointment, <a href="https://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ" target="_blank">School of Computer Science</a>
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA" target="_blank">Carnegie Mellon University</a><br />
       <br />
@@ -32,7 +32,7 @@ layout: splash
       <p>
           Dr. Min Xu is an Assistant Professor at the <a href="http://www.google.com/url?q=http%3A%2F%2Fcbd.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNH2a-HoqIwz5FlmV2iqBe6MQqLAZg" target="_blank">Computational Biology Department</a> in the <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ" target="_blank">School of Computer Science</a> at <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA" target="_blank">Carnegie Mellon University</a>. 
           He serves as training faculty at the <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.compbio.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNFADTqAWyeNIUIugdw0eYUjxX2otA" target="_blank">Joint CMU-Pitt Ph.D. Program in Computational Biology</a>. 
-          He also serves as a training faculty <a href="http://www.google.com/url?q=http%3A%2F%2Fri.cmu.edu%2Feducation%2Facademic-programs%2Fmaster-of-science-computer-vision-mscv&sa=D&sntz=1&usg=AFQjCNF6MjntgO_YKppTAS6wa1-_1z8clg" target="_blank">Master of Science in Computer Vision</a> Program at <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.ri.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGcZ87enxg9p6syPq-tQXu0D1_Tcg" target="_blank">Robotics Institute</a>. 
+          He is also affiliated with <a href="https://www.ri.cmu.edu" target="_blank">Robotics Institute</a>. 
           He is an investigator at the National Center for Multiscale Modeling of Biological Systems.
       </p>
       <p>
