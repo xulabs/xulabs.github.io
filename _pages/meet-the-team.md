@@ -9,8 +9,8 @@ layout: splash
   <img class="image" src="https://user-images.githubusercontent.com/25089434/73482242-597ac080-436b-11ea-84f6-6321240648bf.png" style="display:block; margin:auto">
   <p style="text-align: center;">
       <strong>Min Xu, Ph.D.</strong><br />
-      Assistant Professor, <a href="http://www.google.com/url?q=http%3A%2F%2Fcbd.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNH2a-HoqIwz5FlmV2iqBe6MQqLAZg" target="_blank">Computational Biology Department</a><br />
-      Courtesy Faculty, <a href="https://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
+      Assistant Professor, <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a><br />
+      Courtesy Appointment, <a href="http://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ" target="_blank">School of Computer Science</a>
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA" target="_blank">Carnegie Mellon University</a><br />
       <br />
@@ -30,7 +30,7 @@ layout: splash
   <p class="text">
       <p class="topic"> <strong>Biography</strong></p>
       <p>
-          Dr. Min Xu is an Assistant Professor at the <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a> (with a Courtesy Faculty appointment at the <a href="https://www.ri.cmu.edu" target="_blank">Robotics Institute</a>) within the <a href="https://www.cs.cmu.edu" target="_blank">School of Computer Science</a> at <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a>. 
+          Dr. Min Xu is an Assistant Professor at the <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a> (with a Courtesy Appointment at the <a href="https://www.ri.cmu.edu" target="_blank">Robotics Institute</a>) within the <a href="https://www.cs.cmu.edu" target="_blank">School of Computer Science</a> at <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a>. 
           He serves as training faculty at the <a href="http://www.compbio.cmu.edu" target="_blank">Joint CMU-Pitt Ph.D. Program in Computational Biology</a>. 
           He is an investigator at the National Center for Multiscale Modeling of Biological Systems.
       </p>
