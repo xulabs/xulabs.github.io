@@ -32,7 +32,7 @@ layout: splash
       <p>
           Dr. Min Xu is an Assistant Professor at the <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a> (with a Courtesy Appointment at the <a href="https://www.ri.cmu.edu" target="_blank">Robotics Institute</a>) within the <a href="https://www.cs.cmu.edu" target="_blank">School of Computer Science</a> at <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a>. 
           He serves as training faculty at the <a href="http://www.compbio.cmu.edu" target="_blank">Joint CMU-Pitt Ph.D. Program in Computational Biology</a>. He also serves as training faculty at the <a href="https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision" target="_blank">Master of Science in Computer Vision</a> (MSCV) program at CMU. 
-          He is an investigator at the National Center for Multiscale Modeling of Biological Systems.
+          He is an investigator at the <a href="https://mmbios.pitt.edu" target="_blank"> National Center for Multiscale Modeling of Biological Systems</a>.
       </p>
       <p>
           Dr. Xu’s career has centered on developing computational methods for the study of cellular systems using imaging and omics data. 
