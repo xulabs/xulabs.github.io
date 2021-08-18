@@ -22,7 +22,9 @@ layout: splash
 
       <strong>
       <a href="https://docs.google.com/document/d/e/2PACX-1vQOw1_7_1a6HuyyvcwmtOzfliOmyz4L7giYkp3-i0MOxh-ASU0ZCjNtdYZZ4KC3UlFHdC9Gb-gzXMsi/pub" target="_blank">Curriculum Vitae</a>,
-      <a href="http://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>, <a href="https://dblp.org/pid/09/0-9" target="_blank">DBLP</a>, <a href="https://www.researchgate.net/profile/Min_Xu21" target="_blank">Research Gate</a>, and <a href="https://www.linkedin.com/in/min-xu-45b7315" target="_blank">Linkedin</a>  pages.<br />
+      <a href="http://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>, <a href="https://dblp.org/pid/09/0-9" target="_blank">DBLP</a>, <a href="https://www.researchgate.net/profile/Min_Xu21" target="_blank">Research Gate</a>,
+        <a href="https://twitter.com/xumin100" target="_blank">Twitter</a>, 
+        and <a href="https://www.linkedin.com/in/min-xu-45b7315" target="_blank">Linkedin</a>  pages.<br />
       </strong>
   </p>
 
