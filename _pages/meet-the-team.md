@@ -10,7 +10,7 @@ layout: splash
   <p style="text-align: center;">
       <strong>Min Xu, Ph.D.</strong><br />
       Assistant Professor, <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a><br />
-      Courtesy Appointment, <a href="http://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
+      Courtesy Faculty, <a href="http://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ" target="_blank">School of Computer Science</a>
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA" target="_blank">Carnegie Mellon University</a><br />
       <br />
