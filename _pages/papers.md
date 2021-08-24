@@ -40,7 +40,7 @@ layout: splash
                 Li R, Yu L, Zhou B, Zeng X, Wang Z, Yang X, Zhang J, Gao X, Jang R, Xu M. <b> Few-shot learning for classification of novel macromolecular structures in cryo-electron tomograms. PLOS Computational Biology</b>. <a href="https://doi.org/10.1371/journal.pcbi.1008227">doi:10.1371/journal.pcbi.1008227</a>
             </li>
             <li>
-                Yu L, Li R, Zeng X, Wang H, Jin J, Yang G, Jiang R, Xu M. Few Shot Domain Adaptation Macromolecule Classification]{Few Shot Domain Adaptation for in situ Macromolecule Structural Classification in Cryo-electron Tomograms. Bioinformatics (2020). <a href="https://doi.org/10.1093/bioinformatics/btaa671" target="_blank"> doi:10.1093/bioinformatics/btaa671 </a>. <a href="https://arxiv.org/abs/2007.15422">arXiv:2007.15422</a>
+                Yu L, Li R, Zeng X, Wang H, Jin J, Yang G, Jiang R, Xu M. Few Shot Domain Adaptation for in situ Macromolecule Structural Classification in Cryo-electron Tomograms. Bioinformatics (2020). <a href="https://doi.org/10.1093/bioinformatics/btaa671" target="_blank"> doi:10.1093/bioinformatics/btaa671 </a>. <a href="https://arxiv.org/abs/2007.15422">arXiv:2007.15422</a>
             </li>
             <li>
                 Liu S, Ban X, Zeng X, Zhao F, Gao Y, Wu W, Zhang H, Chen F, Hall T, Gao X, Xu Min. A Unified Framework for Packing Deformable and Non-deformable Subcellular Structures in Crowded Cryo-electron Tomogram Simulation. BMC Bioinformatics (2020).
