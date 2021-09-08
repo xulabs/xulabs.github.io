@@ -48,7 +48,7 @@ layout: splash
           Dr. Xu has published over 60 research papers in peer-reviewed top journals and conferences, such as PNAS, Bioinformatics, ISMB, CVPR, ICCV, and MICCAI. He serves as PI of US NIH R01 and NSF awards.  
   </p>
   <p>
-          Dr. Xu received an B.E. in Computer Science from the Beihang University, M.Sc from School of Computing at the National University of Singapore, M.A. in Applied Mathematics from the University of Southern California (USC), and Ph.D. in Computational Biology and Bioinformatics from USC. 
+          Dr. Xu received a B.E. in Computer Science from the Beihang University, M.Sc from School of Computing at the National University of Singapore, M.A. in Applied Mathematics from the University of Southern California (USC), and Ph.D. in Computational Biology and Bioinformatics from USC. 
           He was a postdoctoral researcher at USC.
       </p>
       
