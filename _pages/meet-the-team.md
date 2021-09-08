@@ -45,7 +45,7 @@ layout: splash
           His current research focus on Cryo-ET derived modelling of cellular organization at molecular resolution.
       </p>
       <p>
-          Dr. Xu has published over 60 research papers in peer-reviewed top journals and conferences, such as PNAS, Bioinformatics, ISMB, CVPR, ICCV, and MICCAI. He is currently serving in the editorial board of Statistical Methods in Medical Research.<br />
+          Dr. Xu has published over 60 research papers in peer-reviewed top journals and conferences, such as PNAS, Bioinformatics, ISMB, CVPR, ICCV, and MICCAI. He serves as PI of US NIH R01 and NSF awards. He is currently serving in the editorial board of Statistical Methods in Medical Research.<br />
           Dr. Xu received an B.E. in Computer Science from the Beihang University, M.Sc from School of Computing at the National University of Singapore, M.A. in Applied Mathematics from the University of Southern California (USC), and Ph.D. in Computational Biology and Bioinformatics from USC. 
           He was a postdoctoral researcher at USC.
       </p>
