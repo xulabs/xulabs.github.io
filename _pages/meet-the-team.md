@@ -37,4 +37,4 @@ Dr. Xu has published over 60 research papers in peer-reviewed top journals and c
 
 Dr. Xu received a B.E. in Computer Science from the Beihang University, M.Sc from School of Computing at the National University of Singapore, M.A. in Applied Mathematics from the University of Southern California (USC), and Ph.D. in Computational Biology and Bioinformatics from USC. He was a postdoctoral researcher at USC.
 
-**Dr. Xu does research for fun, and he enjoys working with highly talented and motivated students.**
+**Dr. Xu researches for fun, and he enjoys working with highly talented and motivated students.**
