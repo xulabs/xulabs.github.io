@@ -3,7 +3,7 @@ permalink: /news/
 title: "About Min Xu"
 layout: splash
 ---
-News
+### News
 
 **210722**: Our lab just got two papers accepted by top computer vision conference ICCV 2021\. Congratulation to first authors Taylor Zeng, Gregory Howe and Xiaoyu Zhu!
 

@@ -3,7 +3,6 @@ permalink: /group/
 title: "Group"
 classes: wide
 ---
-Group
 
 **PhD students**
 

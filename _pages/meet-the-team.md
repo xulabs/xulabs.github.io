@@ -3,19 +3,29 @@ permalink: /meet-the-team/
 title: "About Min Xu"
 layout: splash
 ---
-About Min Xu
+<p class="topic" style="text-align: center;"><strong>About Min Xu</strong></p>
 
-![](https://user-images.githubusercontent.com/25089434/73482242-597ac080-436b-11ea-84f6-6321240648bf.png)
+  <img class="image" src="https://user-images.githubusercontent.com/25089434/73482242-597ac080-436b-11ea-84f6-6321240648bf.png" style="display:block; margin:auto">
+  <p style="text-align: center;">
+      <strong>Min Xu, Ph.D.</strong><br />
+      Assistant Professor, <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a><br />
+      Courtesy Faculty, <a href="http://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
+      <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ" target="_blank">School of Computer Science</a>
+      <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA" target="_blank">Carnegie Mellon University</a><br />
+      <br />
 
-**Min Xu, Ph.D.**  
-Assistant Professor, [Computational Biology Department](http://cbd.cmu.edu)  
-Courtesy Faculty, [Robotics Institute](http://www.ri.cmu.edu)  
-[School of Computer Science](http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ) [Carnegie Mellon University](http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA)  
+      <strong>Office: </strong>
+      GHC 7709, 5000 Forbes Avenue, Pittsburgh, PA 15213<br />
+      <strong>Email: </strong>mxu1 @ cs.cmu.edu<br />
+      <br />
 
-**Office:** GHC 7709, 5000 Forbes Avenue, Pittsburgh, PA 15213  
-**Email:** mxu1 @ cs.cmu.edu  
-
-**[Curriculum Vitae](https://docs.google.com/document/d/e/2PACX-1vQOw1_7_1a6HuyyvcwmtOzfliOmyz4L7giYkp3-i0MOxh-ASU0ZCjNtdYZZ4KC3UlFHdC9Gb-gzXMsi/pub), [Google Scholar](http://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate), [DBLP](https://dblp.org/pid/09/0-9), [Research Gate](https://www.researchgate.net/profile/Min_Xu21), [Twitter](https://twitter.com/xumin100), and [Linkedin](https://www.linkedin.com/in/min-xu-45b7315) pages.**
+      <strong>
+      <a href="https://docs.google.com/document/d/e/2PACX-1vQOw1_7_1a6HuyyvcwmtOzfliOmyz4L7giYkp3-i0MOxh-ASU0ZCjNtdYZZ4KC3UlFHdC9Gb-gzXMsi/pub" target="_blank">Curriculum Vitae</a>,
+      <a href="http://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>, <a href="https://dblp.org/pid/09/0-9" target="_blank">DBLP</a>, <a href="https://www.researchgate.net/profile/Min_Xu21" target="_blank">Research Gate</a>,
+        <a href="https://twitter.com/xumin100" target="_blank">Twitter</a>, 
+        and <a href="https://www.linkedin.com/in/min-xu-45b7315" target="_blank">Linkedin</a>  pages.<br />
+      </strong>
+  </p>
 
 **Biography**
 

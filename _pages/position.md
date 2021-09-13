@@ -4,7 +4,7 @@ title: "About Min Xu"
 layout: splash
 ---
 
-# Positions
+### Positions
 
 1. [PostDoc positions](https://docs.google.com/document/d/e/2PACX-1vTKGVGHdWFSwgM4MN-r7CsshGlNbD8xlaH4sksUqep-Ir_X9avu4BqHcn8g7RCAvqwW9-9XRiGeHclq/pub) avaliable!
 2. We are looking for highly self motivated PhD students to join our lab! To the perspective PhD applicants: you are encouraged to read our publications and discuss with Prof. Xu on any new ideas based on these publications.
