@@ -3,39 +3,35 @@ permalink: /group/
 title: "Group"
 classes: wide
 ---
+Group
 
-<p class="title">Group</p>
+**PhD students**
 
+![](https://user-images.githubusercontent.com/25089434/73482248-5d0e4780-436b-11ea-92c2-16ab85109c37.jpg)
 
-<p class="topic"><strong>PhD students</strong></p>
-<img class="image" src="https://user-images.githubusercontent.com/25089434/73482248-5d0e4780-436b-11ea-92c2-16ab85109c37.jpg">
-<p class="text"><a href="https://scholar.google.com/citations?hl=en&user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Xiangrui Zeng</a></p>
+[Xiangrui Zeng](https://scholar.google.com/citations?hl=en&user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate)
 
-<p class="text"> <a href="https://duranrafid.github.io/" target="_blank"> Mostofa Rafid Uddin </a> </p>
+[Mostofa Rafid Uddin](https://duranrafid.github.io/)
 
-<p class="topic"><strong>Research assistants</strong></p>
-<p class="text">
-    Xuqian Tan (CBD, MSCB) <br />
-    Shefali Srivastava (RI, MSCV) <br />
-    Sedrick Scott Keh (MLD, MSML) <br />
-    Titas Chakraborty (CBD, MSCB) <br />
-</p>
+**Research assistants**
 
+Xuqian Tan (CBD, MSCB)  
+Shefali Srivastava (RI, MSCV)  
+Sedrick Scott Keh (MLD, MSML)  
+Titas Chakraborty (CBD, MSCB)  
 
-<p class="topic"><strong>Students in collaboration</strong></p>
-<p class="text">
-    (Please see our publication)
-</p>
+**Students in collaboration**
 
-<p class="topic"><strong>Alumni</strong></p>
-<p class="text">
-    <a href="https://www.linkedin.com/in/gregory-howe-189506178" target="_blank">  Gregory Howe </a> (MLD, MSML) <br />
-    <a href="https://www.linkedin.com/in/sima-behpour-95037713b" target="_blank">Sima Behpour</a> (Former Postdoctoral Associate) <br />
-    <a href="https://www.linkedin.com/in/xiaoyuzhu3/" target="_blank"> Xiaoyu Zhu </a> (LTI, MSAII) <br />
-    <a href="https://www.linkedin.com/in/xindi-cindy-wu-3ba243111" target="_blank"> Xindi Wu </a> (RI, MSCV) <br />
-    Yuchen Zeng (CBD) <br />
-    <a href="https://kaiwenw.github.io/" target="_blank"> Kai Wen Wang </a> (ECE, CS) <br />
-    <a href="https://www.linkedin.com/in/yixiu-zhao-a00498128/" target="_blank"> Yixiu Zhao </a> (CSD) <br />
-    <a href="https://www.linkedin.com/in/bo-zhou-514177ab/" target="_blank"> Bo Zhou </a> (RI, MSCV) <br />
-    Chang Liu (ECE) <br />
-</p>
+(Please see our publication)
+
+**Alumni**
+
+[Gregory Howe](https://www.linkedin.com/in/gregory-howe-189506178) (MLD, MSML)  
+[Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (Former Postdoctoral Associate)  
+[Xiaoyu Zhu](https://www.linkedin.com/in/xiaoyuzhu3/) (LTI, MSAII)  
+[Xindi Wu](https://www.linkedin.com/in/xindi-cindy-wu-3ba243111) (RI, MSCV)  
+Yuchen Zeng (CBD)  
+[Kai Wen Wang](https://kaiwenw.github.io/) (ECE, CS)  
+[Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (CSD)  
+[Bo Zhou](https://www.linkedin.com/in/bo-zhou-514177ab/) (RI, MSCV)  
+Chang Liu (ECE)
