@@ -37,10 +37,10 @@ layout: splash
           He is an investigator at the <a href="https://mmbios.pitt.edu" target="_blank"> National Center for Multiscale Modeling of Biological Systems</a>.
       </p>
       <p>
-          Dr. Xu’s career has centered on developing computer vision and machine learning methods for the study of cellular systems using imaging and omics data. 
-          He started his research career in the field of Computational Biology and Bioinformatics since 2000. 
-          His early work focused on developping machine learning methods for the analysis of functional genomics data. 
-          Since 2008, he started working on developping computer vision methods for the analysis of Cellular Cryo-Electron Tomography (Cryo-ET) 3D image data.
+          Dr. Xu’s career has centred on developing computer vision and machine learning methods for the study of cellular systems using imaging and omics data. 
+          He started his research career in the field of Computational Biology and Bioinformatics in 2000. 
+          His early work focused on developing machine learning methods for the analysis of functional genomics data. 
+          Since 2008, he started working on developing computer vision methods for the analysis of Cellular Cryo-Electron Tomography (Cryo-ET) 3D image data.
           He designed structural pattern mining methods and first demonstrated the feasibility of De Novo extraction of structures and spatial organizations of macromolecular complexes in single cells using Cryo-ET data.
           His current research focus on Cryo-ET derived modelling of cellular organization at molecular resolution.
       </p>
@@ -56,3 +56,4 @@ layout: splash
           <strong>Dr. Xu does research for fun, and he enjoys working with highly talented and motivated students.</strong>
       </p>
   </p>
+
