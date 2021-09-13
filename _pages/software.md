@@ -1,6 +1,6 @@
 ---
 permalink: /software/
-title: "About Min Xu"
+title: "Software"
 layout: splash
 ---
 ### Software

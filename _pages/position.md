@@ -1,6 +1,6 @@
 ---
 permalink: /position/
-title: "About Min Xu"
+title: "Position"
 layout: splash
 ---
 

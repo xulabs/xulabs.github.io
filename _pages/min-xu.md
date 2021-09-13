@@ -1,5 +1,5 @@
 ---
-permalink: /meet-the-team/
+permalink: /min-xu/
 title: "About Min Xu"
 layout: splash
 ---

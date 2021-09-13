@@ -1,6 +1,6 @@
 ---
 permalink: /news/
-title: "About Min Xu"
+title: "News"
 layout: splash
 ---
 ### News
