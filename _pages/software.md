@@ -1,12 +1,8 @@
 ---
 permalink: /software/
-title: "About Min Xu"
+title: "Software"
 layout: splash
 ---
+### Software
 
-<p class="title">Software</p>
-
-<p class="text">
-    The source code associated with our individual papers can be found at our papers page, following with each paper. 
-    All source code are deposited to <a href="https://github.com/xulabs" target="_blank">our github</a> portal. We are also in the process of integrating the algorithms into our <a href="https://github.com/xulabs/aitom" target="_blank">AITom</a> platform.
-</p>
+The source code associated with our individual papers can be found at our papers page, following with each paper. All source code are deposited to [our github](https://github.com/xulabs) portal. We are also in the process of integrating the algorithms into our [AITom](https://github.com/xulabs/aitom) platform.
