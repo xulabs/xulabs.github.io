@@ -5,7 +5,7 @@ layout: splash
 ---
 ### News
 
-**210923**: Big congratulations to our senior PhD student, Xiangrui Zeng, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
+**210923**: Big congratulations to our senior Ph.D. student, Xiangrui Zeng, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
 
 **210722**: Our lab just got two papers accepted by top computer vision conference ICCV 2021\. Congratulation to first authors Taylor Zeng, Gregory Howe and Xiaoyu Zhu!
 
