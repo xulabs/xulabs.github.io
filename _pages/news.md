@@ -5,6 +5,8 @@ layout: splash
 ---
 ### News
 
+**210923**: Big congratulations to senior PhD student, Xiangrui Zeng, for receiving CPCB PhD Program Outstanding Research Accomplishment Award!
+
 **210722**: Our lab just got two papers accepted by top computer vision conference ICCV 2021\. Congratulation to first authors Taylor Zeng, Gregory Howe and Xiaoyu Zhu!
 
 **210419**: Congratulation Michelle Zhu and Richard Kang for receiving [CMU Summer Undergraduate Research Fellowships](https://www.cmu.edu/uro/summer%20research%20fellowships/SURF) on our research projects!
