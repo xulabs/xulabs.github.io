@@ -16,7 +16,6 @@ classes: wide
 
 Xuqian Tan (CBD, MSCB)  
 Shefali Srivastava (RI, MSCV)  
-Sedrick Scott Keh (MLD, MSML)  
 Titas Chakraborty (MLD, MSML)  
 
 **Students in collaboration**
