@@ -59,6 +59,10 @@ layout: splash
 1.  Zhang S, Vasishtan D, Xu M, Topf M, Alber F. A fast mathematical programming procedure for simultaneous fitting of assembly components into cryo-EM density maps. Bioinformatics (ISMB 2010). 2010 Jun 15;26(12):i261-8.
 1.  Xu M, Zhang S, Alber F. 3D rotation invariant features for characterization of molecular density map images. IEEE International Conference on Bioinformatics & Biomedicine (BIBM 2009)
 
+**Spatial transcriptomics**
+
+1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC) 2021
+
 **Computer vision & Machine learning**
 
 1.  Yang Y, Ma Y, Zhang J, Gao X, Xu M. AttPNet: Attention-Based Deep Neural Network for 3D Point Set Analysis. Sensors. [doi:10.3390/s20195455](https://doi.org/10.3390/s20195455)
