@@ -59,6 +59,7 @@ layout: splash
 1.  Zhang S, Vasishtan D, Xu M, Topf M, Alber F. A fast mathematical programming procedure for simultaneous fitting of assembly components into cryo-EM density maps. Bioinformatics (ISMB 2010). 2010 Jun 15;26(12):i261-8.
 1.  Xu M, Zhang S, Alber F. 3D rotation invariant features for characterization of molecular density map images. IEEE International Conference on Bioinformatics & Biomedicine (BIBM 2009)
 
+
 **Spatial transcriptomics**
 
 1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC) 2021
