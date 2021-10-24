@@ -15,7 +15,6 @@ classes: wide
 **Research assistants**
 
 Xuqian Tan (CBD, MSCB)  
-Shefali Srivastava (RI, MSCV)  
 Titas Chakraborty (MLD, MSML)  
 
 **Students in collaboration**
