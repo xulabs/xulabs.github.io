@@ -8,7 +8,7 @@ layout: splash
 
 **Cryo-ET analysis**
 
-1. Bandyopadhyay H, Deng Z, Ding L, Liu S, Uddin M, Zeng X, Xu M. Cryo-shift: Reducing domain shift in cryo-electron subtomograms with unsupervised domaina daptation and randomization. Bioinformatics. Accepted
+1. Bandyopadhyay H, Deng Z, Ding L, Liu S, Uddin M, Zeng X, Xu M. Cryo-shift: Reducing domain shift in cryo-electron subtomograms with unsupervised domaina daptation and randomization. Bioinformatics. Accepted. [arXiv:2111.09114](https://arxiv.org/abs/2111.09114)
 1. Zeng X, Howe G, Xu M. **End-to-end robust joint unsupervised image alignment and clustering.** International Conference on Computer Vision (ICCV 2021)
 1. Zhu X, Chen J, Zeng X, Liang J, Li C, Liu S, Behpour S, Xu M. **Weakly Supervised 3D Semantic Segmentation Using Cross-Image Consensus and Inter-Voxel Affinity Relations.** International Conference on Computer Vision (ICCV 2021)
 1.  Zeng Y, Howe G, Yi K, Zeng X, Zhang J, Chang Y, Xu M. Unsupervised Domain Alignment based Open Set Structural Recognition of Macromolecules Captured by Cryo-Electron Tomography. 2021 IEEE International Conference on Image Processing (ICIP)
