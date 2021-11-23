@@ -72,6 +72,7 @@ layout: splash
 
 **Biomedical image analysis**
 
+1. Zhang B, Yang K, Xu M, Wu J, Cheng C. Deep learning predicts EBV status in gastric cancer based on spatial patterns of lymphocyte infiltration. Cancers. Accepted
 1.  Dong N, Kampffmeyer M, Liang X, Xu M, Voiculescu I, Xing E. Towards robust partially supervised multi-structure medical image segmentation on small-scale data. Applied Soft Computing. [doi:10.1016/j.asoc.2021.108074](https://doi.org/10.1016/j.asoc.2021.108074) [arXiv:2011.14164](https://arxiv.org/abs/2011.14164)
 1.  Dong N, Xu M, Liang X, Jiang Y, Dai W, Xing E. Neural Architecture Search for Adversarial Medical Image Segmentation. Medical Image Computing & Computer Assisted Intervention (MICCAI 2019).
 1.  Xiao Q, Zou J, Yang M, Gaudio A, Kitani K, Smailagic A, Costa P, Xu M. Improving Lesion Segmentation for Diabetic Retinopathy Using Adversarial Learning. International Conference on Image Analysis and Recognition (ICIAR 2019)
