@@ -16,6 +16,7 @@ classes: wide
 
 Xuqian Tan (CBD, MSCB)  
 Titas Chakraborty (MLD, MSML)  
+Shirley Kokane (BME)
 
 **Students in collaboration**
 
