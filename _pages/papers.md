@@ -66,7 +66,7 @@ layout: splash
 1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC) 2021
 
 **Computer vision & Machine learning**
-1. Wang T, Li X, Yang P, Hu G, Zeng X, Huang S, Xu C, Xu M. **Boosting Active Learning via Improving Test Performance.** AAAI Conference on Artificial Intelligence. (AAAI 2022)
+1. Wang T, Li X, Yang P, Hu G, Zeng X, Huang S, Xu C, Xu M. **Boosting Active Learning via Improving Test Performance.** AAAI Conference on Artificial Intelligence. (AAAI 2022) [arXiv:2112.05683](https://arxiv.org/abs/2112.05683)
 1.  Yang Y, Ma Y, Zhang J, Gao X, Xu M. AttPNet: Attention-Based Deep Neural Network for 3D Point Set Analysis. Sensors. [doi:10.3390/s20195455](https://doi.org/10.3390/s20195455)
 1.  Pang J, Yi K, Yin W, Xu M. Experimental Analysis of Legendre Decomposition in Machine Learning. [arXiv:2008.05095](https://arxiv.org/abs/2008.05095)
 
