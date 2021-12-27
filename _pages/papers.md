@@ -63,7 +63,7 @@ layout: splash
 
 **Spatial transcriptomics**
 
-1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC) 2021
+1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC 2021). [paper and presentation](https://www.bmvc2021-virtualconference.com/conference/papers/paper_1139.html)
 
 **Computer vision & Machine learning**
 1. Wang T, Li X, Yang P, Hu G, Zeng X, Huang S, Xu C, Xu M. **Boosting Active Learning via Improving Test Performance.** AAAI Conference on Artificial Intelligence. (AAAI 2022) [arXiv:2112.05683](https://arxiv.org/abs/2112.05683)
