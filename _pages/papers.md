@@ -76,7 +76,7 @@ layout: splash
 1.  Dong N, Kampffmeyer M, Liang X, Xu M, Voiculescu I, Xing E. Towards robust partially supervised multi-structure medical image segmentation on small-scale data. Applied Soft Computing. [doi:10.1016/j.asoc.2021.108074](https://doi.org/10.1016/j.asoc.2021.108074) [arXiv:2011.14164](https://arxiv.org/abs/2011.14164)
 1.  Dong N, Xu M, Liang X, Jiang Y, Dai W, Xing E. Neural Architecture Search for Adversarial Medical Image Segmentation. Medical Image Computing & Computer Assisted Intervention (MICCAI 2019).
 1.  Xiao Q, Zou J, Yang M, Gaudio A, Kitani K, Smailagic A, Costa P, Xu M. Improving Lesion Segmentation for Diabetic Retinopathy Using Adversarial Learning. International Conference on Image Analysis and Recognition (ICIAR 2019)
-1.  Wang W, Taft D, Chen Y, Zhang J, Wallace C, Xu M, Watkins S, Xing J. Learn to segment single cells with deep distance estimator and deep cell detector. Computers in Biology and Medicine. [doi:10.1016/j.compbiomed.2019.04.006](https://www.google.com/url?q=https%3A%2F%2Fdoi.org%2F10.1016%2Fj.compbiomed.2019.04.006&sa=D&sntz=1&usg=AFQjCNF0Y1Lx7OAEalJ5fy5e-PGkbppwuQ)
+1.  Wang W, Taft D, Chen Y, Zhang J, Wallace C, Xu M, Watkins S, Xing J. Learn to segment single cells with deep distance estimator and deep cell detector. Computers in Biology and Medicine. [doi:10.1016/j.compbiomed.2019.04.006](https://doi.org/10.1016/j.compbiomed.2019.04.006)
 1.  Wang Z, Dong N, DRosario S, Xu M, Xie P, Xing E. Ellipse detection of optic disc-and-cup boundary in fundas image with unsupervised domain adaptation. IEEE International Symposium on Biomedical Imaging (ISBI 2019)
 
 **Genomics**
