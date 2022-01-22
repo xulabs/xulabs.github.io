@@ -12,10 +12,6 @@ layout: splash
       Courtesy Faculty, <a href="http://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ" target="_blank">School of Computer Science</a>
       <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA" target="_blank">Carnegie Mellon University</a><br />
-  
-      Affiliated Assistant Professor, Computer Vision Department<br />
-      <a href="https://mbzuai.ac.ae" target="_blank"> Mohamed bin Zayed University of Artificial Intelligence (MBZUAI) </a>
-      <br />
 
       <strong>Office: </strong>
       GHC 7709, 5000 Forbes Avenue, Pittsburgh, PA 15213<br />
