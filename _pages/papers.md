@@ -7,7 +7,7 @@ layout: splash
 **See [here](https://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate) for the full list. See [here](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) for corresponding citations in latex bib format.**
 
 **Cryo-ET analysis**
-1. Wu X, Zeng X, Li C, Wei H, Deng H, Zhang J, Xu M. CryoETGAN: Cryo-electron Tomography Image Synthesis Via Unpaired Image Translation. Frontiers Physiology - Computational Physiology and Medicine.
+1. Wu X, Zeng X, Li C, Wei H, Deng H, Zhang J, Xu M. CryoETGAN: Cryo-electron Tomography Image Synthesis Via Unpaired Image Translation. Frontiers Physiology - Computational Physiology and Medicine. [doi:10.3389/fphys.2022.760404](https://doi.org/10.3389/fphys.2022.760404)
 1. Bandyopadhyay H, Deng Z, Ding L, Liu S, Uddin M, Zeng X, Xu M. Cryo-shift: Reducing domain shift in cryo-electron subtomograms with unsupervised domaina daptation and randomization. Bioinformatics. [doi:10.1093/bioinformatics/btab794](https://doi.org/10.1093/bioinformatics/btab794), [arXiv:2111.09114](https://arxiv.org/abs/2111.09114)
 1. Zeng X, Howe G, Xu M. **End-to-end robust joint unsupervised image alignment and clustering.** International Conference on Computer Vision (ICCV 2021)
 1. Zhu X, Chen J, Zeng X, Liang J, Li C, Liu S, Behpour S, Xu M. **Weakly Supervised 3D Semantic Segmentation Using Cross-Image Consensus and Inter-Voxel Affinity Relations.** International Conference on Computer Vision (ICCV 2021)
