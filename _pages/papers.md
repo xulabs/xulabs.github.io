@@ -72,7 +72,8 @@ layout: splash
 
 **Biomedical image analysis**
 
-1. Chandra S, Gourisaria M, GM H, Konar D, Gao X, Wang T, and Xu M. Prolificacy Assessment of  Spermatozoan via state-of-the-art Deep Learning Frameworks. IEEE Access. [doi:10.1109/ACCESS.2022.3146334](https://doi.org/10.1109/ACCESS.2022.3146334)
+1. Chharia A, Upadhyay R, Kumar V, Cheng C, Zhang J, Xu M. Deep-Precognitive Diagnosis: Preventing Future Pandemics by Novel Disease Detection with Biologically- inspired Conv-Fuzzy Network. IEEE Access. [doi:10.1109/ACCESS.2022.3153059](https://doi.org/10.1109/ACCESS.2022.3153059)
+1. Chandra S, Gourisaria M, GM H, Konar D, Gao X, Wang T, Xu M. Prolificacy Assessment of  Spermatozoan via state-of-the-art Deep Learning Frameworks. IEEE Access. [doi:10.1109/ACCESS.2022.3146334](https://doi.org/10.1109/ACCESS.2022.3146334)
 1. Zhang B, Yang K, Xu M, Wu J, Cheng C. Deep learning predicts EBV status in gastric cancer based on spatial patterns of lymphocyte infiltration. Cancers. [doi:10.3390/cancers13236002](https://doi.org/10.3390/cancers13236002)
 1.  Dong N, Kampffmeyer M, Liang X, Xu M, Voiculescu I, Xing E. Towards robust partially supervised multi-structure medical image segmentation on small-scale data. Applied Soft Computing. [doi:10.1016/j.asoc.2021.108074](https://doi.org/10.1016/j.asoc.2021.108074) [arXiv:2011.14164](https://arxiv.org/abs/2011.14164)
 1.  Dong N, Xu M, Liang X, Jiang Y, Dai W, Xing E. Neural Architecture Search for Adversarial Medical Image Segmentation. Medical Image Computing & Computer Assisted Intervention (MICCAI 2019).
