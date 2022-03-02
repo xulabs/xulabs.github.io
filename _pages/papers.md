@@ -60,19 +60,16 @@ layout: splash
 1.  Zhang S, Vasishtan D, Xu M, Topf M, Alber F. A fast mathematical programming procedure for simultaneous fitting of assembly components into cryo-EM density maps. Bioinformatics (ISMB 2010). 2010 Jun 15;26(12):i261-8.
 1.  Xu M, Zhang S, Alber F. 3D rotation invariant features for characterization of molecular density map images. IEEE International Conference on Bioinformatics & Biomedicine (BIBM 2009)
 
-
-**Spatial transcriptomics**
-
-1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC 2021). [paper and presentation](https://www.bmvc2021-virtualconference.com/conference/papers/paper_1139.html)
-
 **Computer vision & Machine learning**
+1. Uddin M, Howe G, Zeng X, Xu M. **Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations.** IEEE conference on computer vision and pattern recognition (CVPR 2022)
 1. Wang T, Li X, Yang P, Hu G, Zeng X, Huang S, Xu C, Xu M. **Boosting Active Learning via Improving Test Performance.** AAAI Conference on Artificial Intelligence. (AAAI 2022) [arXiv:2112.05683](https://arxiv.org/abs/2112.05683)
 1.  Yang Y, Ma Y, Zhang J, Gao X, Xu M. AttPNet: Attention-Based Deep Neural Network for 3D Point Set Analysis. Sensors. [doi:10.3390/s20195455](https://doi.org/10.3390/s20195455)
 1.  Pang J, Yi K, Yin W, Xu M. Experimental Analysis of Legendre Decomposition in Machine Learning. [arXiv:2008.05095](https://arxiv.org/abs/2008.05095)
 
-**Biomedical image analysis**
+**Spatial transcriptomics**
+1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC 2021). [paper and presentation](https://www.bmvc2021-virtualconference.com/conference/papers/paper_1139.html)
 
-1. Uddin M, Howe G, Zeng X, Xu M. **Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations.** IEEE conference on computer vision and pattern recognition (CVPR 2022)
+**Biomedical image analysis**
 1. Chharia A, Upadhyay R, Kumar V, Cheng C, Zhang J, Xu M. Deep-Precognitive Diagnosis: Preventing Future Pandemics by Novel Disease Detection with Biologically- inspired Conv-Fuzzy Network. IEEE Access. [doi:10.1109/ACCESS.2022.3153059](https://doi.org/10.1109/ACCESS.2022.3153059)
 1. Chandra S, Gourisaria M, GM H, Konar D, Gao X, Wang T, Xu M. Prolificacy Assessment of  Spermatozoan via state-of-the-art Deep Learning Frameworks. IEEE Access. [doi:10.1109/ACCESS.2022.3146334](https://doi.org/10.1109/ACCESS.2022.3146334)
 1. Zhang B, Yang K, Xu M, Wu J, Cheng C. Deep learning predicts EBV status in gastric cancer based on spatial patterns of lymphocyte infiltration. Cancers. [doi:10.3390/cancers13236002](https://doi.org/10.3390/cancers13236002)
