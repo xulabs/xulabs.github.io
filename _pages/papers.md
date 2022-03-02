@@ -72,6 +72,7 @@ layout: splash
 
 **Biomedical image analysis**
 
+1. Uddin M, Howe G, Zeng X, Xu M. **Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations.** IEEE conference on computer vision and pattern recognition (CVPR 2022)
 1. Chharia A, Upadhyay R, Kumar V, Cheng C, Zhang J, Xu M. Deep-Precognitive Diagnosis: Preventing Future Pandemics by Novel Disease Detection with Biologically- inspired Conv-Fuzzy Network. IEEE Access. [doi:10.1109/ACCESS.2022.3153059](https://doi.org/10.1109/ACCESS.2022.3153059)
 1. Chandra S, Gourisaria M, GM H, Konar D, Gao X, Wang T, Xu M. Prolificacy Assessment of  Spermatozoan via state-of-the-art Deep Learning Frameworks. IEEE Access. [doi:10.1109/ACCESS.2022.3146334](https://doi.org/10.1109/ACCESS.2022.3146334)
 1. Zhang B, Yang K, Xu M, Wu J, Cheng C. Deep learning predicts EBV status in gastric cancer based on spatial patterns of lymphocyte infiltration. Cancers. [doi:10.3390/cancers13236002](https://doi.org/10.3390/cancers13236002)
