@@ -5,11 +5,13 @@ layout: splash
 ---
 ### News
 
+**220302**: Congratulation to Mostofa Uddin, Gregory Howe, and Xiangrui Zeng for our following paper accepted by CVPR 2022: Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations
+
 **210923**: Big congratulations to our senior Ph.D. student, Xiangrui Zeng, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
 
 **210722**: Our lab just got two papers accepted by top computer vision conference ICCV 2021\. Congratulation to first authors Taylor Zeng, Gregory Howe and Xiaoyu Zhu!
 
-**210419**: Congratulation Michelle Zhu and Richard Kang for receiving [CMU Summer Undergraduate Research Fellowships](https://www.cmu.edu/uro/summer%20research%20fellowships/SURF) on our research projects!
+**210419**: Congratulation to Michelle Zhu and Richard Kang for receiving [CMU Summer Undergraduate Research Fellowships](https://www.cmu.edu/uro/summer%20research%20fellowships/SURF) on our research projects!
 
 **200921:** [AMD Provides Computing Resources To Support COVID-19 Research at Xu Lab](https://www.cs.cmu.edu/news/amd-provides-computing-resources-support-cbd-s-covid-19-research)
 
