@@ -1,5 +1,5 @@
 ---
-permalink: /papers/
+permalink: /publication/
 title: "Papers & Preprints"
 layout: splash
 ---

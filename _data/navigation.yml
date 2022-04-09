@@ -1,8 +1,8 @@
 main:
   - title: "NEWS"
     url: /news/
-  - title: "PAPERS"
-    url: /papers/
+  - title: "PUBLICATION"
+    url: /publication/
   - title: "GROUP"
     url: /group/
   - title: "ABOUT MIN XU"
