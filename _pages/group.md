@@ -6,21 +6,19 @@ classes: wide
 
 **Postdoctoral Associates**
 
+[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate)
+
 [Ali Dabouei](https://alldbi.github.io)
 
-**PhD students**
-
-![](https://user-images.githubusercontent.com/25089434/73482248-5d0e4780-436b-11ea-92c2-16ab85109c37.jpg)
-
-[Xiangrui Zeng](https://scholar.google.com/citations?hl=en&user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate)
+**PhD Students**
 
 [Mostofa Rafid Uddin](https://duranrafid.github.io)
 
-**Research assistants**
+**Research Assistants**
 
-Xuqian Tan (CBD, MSCB)  
 Titas Chakraborty (MLD, MSML)  
 Shirley Kokane (BME)
+Abhinand Jha (ECE)
 
 **Students in collaboration**
 
@@ -28,6 +26,7 @@ Shirley Kokane (BME)
 
 **Alumni**
 
+[Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (CBD, MSCB)  
 [Gregory Howe](https://www.linkedin.com/in/gregory-howe-189506178) (MLD, MSML)  
 [Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (Former Postdoctoral Associate)  
 [Xiaoyu Zhu](https://www.linkedin.com/in/xiaoyuzhu3/) (LTI, MSAII)  
