@@ -5,6 +5,8 @@ layout: splash
 ---
 ### News
 
+**220510**: Congratulation to Xiangrui Zeng for passing his PhD defense!
+
 **220302**: Congratulation to Mostofa Uddin, Gregory Howe, and Xiangrui Zeng for our following paper accepted by CVPR 2022: Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations
 
 **210923**: Big congratulations to our senior Ph.D. student, Xiangrui Zeng, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
