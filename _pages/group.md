@@ -4,20 +4,22 @@ title: "Group"
 classes: wide
 ---
 
-**Postdoctoral Associates**
+**Postdoctoral associates**
 
 [Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate)
 
 [Ali Dabouei](https://alldbi.github.io)
 
-**PhD Students**
+**PhD students**
 
 [Mostofa Rafid Uddin](https://duranrafid.github.io)
 
-**Research Assistants**
+**Research assistants**
 
-Titas Chakraborty (MLD, MSML)  
+Titas Chakraborty (MLD, MSML)
+
 Shirley Kokane (BME)
+
 Abhinand Jha (ECE)
 
 **Students in collaboration**
