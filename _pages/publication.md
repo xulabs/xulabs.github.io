@@ -4,7 +4,10 @@ title: "Papers & Preprints"
 layout: splash
 ---
 ### Papers and Pre-prints
+
 **See [here](https://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate) for the full list. See [here](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) for corresponding citations in latex bib format.**
+
+(Selected papers are highlighted)
 
 **Cryo-ET analysis**
 1. Wu X, Zeng X, Li C, Wei H, Deng H, Zhang J, Xu M. CryoETGAN: Cryo-electron Tomography Image Synthesis Via Unpaired Image Translation. Frontiers Physiology - Computational Physiology and Medicine. [doi:10.3389/fphys.2022.760404](https://doi.org/10.3389/fphys.2022.760404)
