@@ -4,6 +4,10 @@ title: "Group"
 classes: wide
 ---
 
+**Faculty**
+
+[Min Xu](https://xulabs.github.io/min-xu)
+
 **Postdoctoral associates**
 
 [Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate)
