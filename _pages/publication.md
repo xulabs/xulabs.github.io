@@ -10,6 +10,9 @@ layout: splash
 (Selected papers are highlighted)
 
 **Cryo-ET analysis**
+1. Zhu H, Wang C, Wang Y, Fan Z, Uddin M, Gao X, Zhang J, Zeng X, Xu M. Unsupervised multi-task learning for 3d subtomogram image alignment, clustering and segmentation. 2022 IEEE International Conference on Image Processing (ICIP)
+1. Wang T, Li B, Zhang J, Zeng X, Uddin M, Wu W, Xu M. Deep active learning for cryo-electron tomography classification. 2022 IEEE International Conference on Image Processing (ICIP)
+1. Gao S, Zeng X, Xu M, Zhang F. FSCC: Few-shot Learning for Macromolecule Classification based on Contrastive Learning and Distribution Calibration in Cryo-Electron Tomography. Frontiers in Molecular Biosciences-Molecular Diagnostics and Therapeutics. doi:10.3389/fmolb.2022.931949
 1. Wu X, Zeng X, Li C, Wei H, Deng H, Zhang J, Xu M. CryoETGAN: Cryo-electron Tomography Image Synthesis Via Unpaired Image Translation. Frontiers Physiology - Computational Physiology and Medicine. [doi:10.3389/fphys.2022.760404](https://doi.org/10.3389/fphys.2022.760404)
 1. Bandyopadhyay H, Deng Z, Ding L, Liu S, Uddin M, Zeng X, Xu M. Cryo-shift: Reducing domain shift in cryo-electron subtomograms with unsupervised domaina daptation and randomization. Bioinformatics. [doi:10.1093/bioinformatics/btab794](https://doi.org/10.1093/bioinformatics/btab794), [arXiv:2111.09114](https://arxiv.org/abs/2111.09114)
 1. Zeng X, Howe G, Xu M. **End-to-end robust joint unsupervised image alignment and clustering.** International Conference on Computer Vision (ICCV 2021)
@@ -83,7 +86,7 @@ layout: splash
 1.  Wang Z, Dong N, DRosario S, Xu M, Xie P, Xing E. Ellipse detection of optic disc-and-cup boundary in fundas image with unsupervised domain adaptation. IEEE International Symposium on Biomedical Imaging (ISBI 2019)
 
 **Genomics**
-
+1. Srinivasan S, Gong Y, Xu X, Hwang A, Xu M, Girgenti M, Zhang Jing. InsuLock: A Weakly Supervised Learning Approach for Accurate Insulator Prediction, And Variant Impact Quantification. Genes.
 1.  Chen Z, Zhang J, Liu J, Zhang Z, Zhu J, Xu M, Gerstein M. SCAN-ATAC-Sim: a scalable and efficient method for simulating single-cell ATAC-seq data from bulk-tissue experiments. Bioinformatics.
 1.  Zheng Y, Wang H, Zhang Y, Gao X, Xing E, Xu M. Poly(A)-DG: a deep-learning-based domain generalization method to identify cross-species Ploy(A) signal without prior knowledge from target species. PLOS Computational Biology. [doi:10.1371/journal.pcbi.1008297](https://doi.org/10.1371/journal.pcbi.1008297)
 1.  Xu M, Li W, James GM, Mehan MR, Zhou XJ. **Automated multidimensional phenotype profiling using large public microarray repositories**. Proc Natl Acad Sci U S A. (PNAS). 2009; 106(30), 12323 - 12328\. (Highlighted in Nature Methods 6, 632; Selected and re-published in 2010 International Medical Informatics Association Yearbook of Medical Informatics)
