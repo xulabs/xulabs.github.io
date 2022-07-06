@@ -5,6 +5,8 @@ layout: splash
 ---
 ### News
 
+**220701:** Our lab is awarded an [NSF MCB grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2205148&HistoricalAwards=false) as co-PI for developing novel methods for morphodynamics characterization of stem cell differentiation using label-free microscopies. This is a joint project with Prof. [Jianhua Xing](https://www.csb.pitt.edu/jianhua-xing) (PI) and Prof. [Sarah Hainer](https://www.biology.pitt.edu/person/sarah-hainer) (co-PI) labs.
+
 **220510**: Congratulation to Xiangrui Zeng for passing his PhD defense!
 
 **220302**: Congratulation to Mostofa Uddin, Gregory Howe, and Xiangrui Zeng for our following paper accepted by CVPR 2022: Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations
