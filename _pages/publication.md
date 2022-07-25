@@ -10,6 +10,7 @@ layout: splash
 (Selected papers are highlighted)
 
 **Cryo-ET analysis**
+1. Zeng X, Lin Z, Uddin M, Zhou B, Cheng C, Zhang J, Freyberg, Xu M. Structure Detection in Three-Dimensional Cellular Cryoelectron Tomograms by Reconstructing Two-Dimensional Annotated Tilt Series. Journal of Computational Biology. [doi:10.1089/cmb.2021.0606](https://doi.org/doi:10.1089/cmb.2021.0606)
 1. Zhu H, Wang C, Wang Y, Fan Z, Uddin M, Gao X, Zhang J, Zeng X, Xu M. Unsupervised multi-task learning for 3d subtomogram image alignment, clustering and segmentation. 2022 IEEE International Conference on Image Processing (ICIP)
 1. Wang T, Li B, Zhang J, Zeng X, Uddin M, Wu W, Xu M. Deep active learning for cryo-electron tomography classification. 2022 IEEE International Conference on Image Processing (ICIP)
 1. Gao S, Zeng X, Xu M, Zhang F. FSCC: Few-shot Learning for Macromolecule Classification based on Contrastive Learning and Distribution Calibration in Cryo-Electron Tomography. Frontiers in Molecular Biosciences-Molecular Diagnostics and Therapeutics. [doi:10.3389/fmolb.2022.931949](https://doi.org/10.3389/fmolb.2022.931949)
