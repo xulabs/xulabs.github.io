@@ -5,7 +5,7 @@ layout: splash
 ---
 ### Papers and pre-prints
 
-**See [here](https://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate) for the full list. See [here](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) for corresponding citations in latex bib format.**
+**See [here](https://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate) for the full list. See [here](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) for corresponding citations in latex bib format. The source code of many of our papers can be found in our [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md). **
 
 (Selected papers are highlighted)
 
