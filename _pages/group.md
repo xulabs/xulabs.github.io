@@ -26,6 +26,8 @@ Shirley Kokane (BME)
 
 Abhinand Jha (ECE)
 
+Viekash Vinoth Kumar (RI, MSR)
+
 **Students in collaboration**
 
 (Please see our publication)
