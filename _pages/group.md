@@ -44,22 +44,22 @@ Viekash Vinoth Kumar (RI, MSR)
 
 **Alumni**
 
-[Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (CBD, MSCB. Currently PhD candidate at Baylor Colleage of Medicine)
+[Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (CBD, MSCB. Current Position: PhD candidate at Baylor Colleage of Medicine)
 
-[Gregory Howe](https://www.linkedin.com/in/gregory-howe-189506178) (MLD, MSML)
+[Gregory Howe](https://www.linkedin.com/in/gregory-howe-189506178) (MLD, MSML. Current Position: AI Software Engineer at Stottler Henke)
 
-[Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (Former Postdoctoral Associate. Currently at Samsung Research)
+[Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (Former Postdoctoral Associate. Current Position: at Samsung Research)
 
-[Xiaoyu Zhu](https://www.linkedin.com/in/xiaoyuzhu3/) (LTI, MSAII. Currently PhD candidate at CMU LTI)
+[Xiaoyu Zhu](https://www.linkedin.com/in/xiaoyuzhu3/) (LTI, MSAII. Current Position: PhD candidate at CMU LTI)
 
-[Xindi Wu](https://www.linkedin.com/in/xindi-cindy-wu-3ba243111) (RI, MSCV. Currently PhD candidate at Princeton)
+[Xindi Wu](https://www.linkedin.com/in/xindi-cindy-wu-3ba243111) (RI, MSCV. Current Position: PhD candidate at Princeton)
 
-Yuchen Zeng (CBD.)
+Yuchen Zeng (CBD, MSCB. Current Position: Software Development Engineer at Audible)
 
-[Kai Wen Wang](https://kaiwenw.github.io/) (ECE, CS. Currently PhD candidate at Connell)
+[Kai Wen Wang](https://kaiwenw.github.io/) (ECE, CS. Current Position: PhD candidate at Connell)
 
-[Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (CSD. Currently PhD candidate at Stanford)
+[Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (CSD. Current Position: PhD candidate at Stanford)
 
-[Bo Zhou](https://www.linkedin.com/in/bo-zhou-514177ab/) (RI, MSCV. Currently PhD candidate at Yale)  
+[Bo Zhou](https://www.linkedin.com/in/bo-zhou-514177ab/) (RI, MSCV. Current Position: PhD candidate at Yale)  
 
-[Chang Liu](https://sites.google.com/view/cliu5/home/) (ECE. Currently PhD candidate at Northeastern University)
+[Chang Liu](https://sites.google.com/view/cliu5/home/) (ECE. Current Position: PhD candidate at Northeastern University)
