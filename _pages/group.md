@@ -34,6 +34,8 @@ Abhinand Jha (ECE)
 
 Viekash Vinoth Kumar (RI, MSR)
 
+Huangyuan Su (MSML, MLD)
+
 ---
 
 **Students in collaboration**
