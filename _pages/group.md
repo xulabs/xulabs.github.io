@@ -26,12 +26,6 @@ classes: wide
 
 **Research assistants**
 
-Titas Chakraborty (MLD, MSML)
-
-Shirley Kokane (BME)
-
-Abhinand Jha (ECE)
-
 Viekash Vinoth Kumar (RI, MSR)
 
 Huangyuan Su (MSML, MLD)
