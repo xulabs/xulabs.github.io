@@ -6,6 +6,7 @@ layout: splash
 ### News
 
 **220825** Our lab is awarded an [NSF IIS grant](http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=2211597) jointly with Professor [Daisuke Kihara](https://kiharalab.org/) lab, for developping methods for systematic de novo identification of macromolecular complexes in cryo-electron tomography images.
+
 **220701:** Our lab is awarded an [NSF MCB grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2205148&HistoricalAwards=false) as co-PI for developing novel methods for morphodynamics characterization of stem cell differentiation using label-free microscopies. This is a joint project with Prof. [Jianhua Xing](https://www.csb.pitt.edu/jianhua-xing) (PI) and Prof. [Sarah Hainer](https://www.biology.pitt.edu/person/sarah-hainer) (co-PI) labs.
 
 **220510**: Congratulation to Xiangrui Zeng for passing his PhD defense!
