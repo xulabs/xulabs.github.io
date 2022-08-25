@@ -44,7 +44,7 @@ Huangyuan Su (MSML, MLD)
 
 [Gregory Howe](https://www.linkedin.com/in/gregory-howe-189506178) (MLD, MSML. Current Position: AI Software Engineer at Stottler Henke)
 
-[Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (Former Postdoctoral Associate. Current Position: at Samsung Research)
+[Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (Former Postdoctoral Associate. Current Position: Senior Machine Learning Research Scientist at Samsung Research America)
 
 [Xiaoyu Zhu](https://www.linkedin.com/in/xiaoyuzhu3/) (LTI, MSAII. Current Position: PhD candidate at CMU LTI)
 
