@@ -54,8 +54,8 @@ Yuchen Zeng (CBD, MSCB. Current Position: Software Development Engineer at Audib
 
 [Kai Wen Wang](https://kaiwenw.github.io/) (ECE, CS. Current Position: PhD candidate at Connell)
 
-[Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (CSD. Current Position: PhD candidate at Stanford)
+[Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (2017-2018. CSD. Current Position: PhD candidate at Stanford)
 
-[Bo Zhou](https://www.linkedin.com/in/bo-zhou-514177ab/) (RI, MSCV. Current Position: PhD candidate at Yale)  
+[Bo Zhou](https://www.linkedin.com/in/bo-zhou-514177ab/) (2018-2019. RI, MSCV. Current Position: PhD candidate at Yale)  
 
-[Chang Liu](https://sites.google.com/view/cliu5/home/) (ECE. Current Position: PhD candidate at Northeastern University)
+[Chang Liu](https://sites.google.com/view/cliu5/home/) (2017-2018. ECE. Current Position: PhD candidate at Northeastern University)
