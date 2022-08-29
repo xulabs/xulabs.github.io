@@ -52,6 +52,8 @@ Huangyuan Su (MSML, MLD)
 
 Yuchen Zeng (2019-2020. Intern, CBD. Current Position: Software Development Engineer at Audible)
 
+[Xuefeng Du](https://www.linkedin.com/in/xuefeng-du-094723192) (2018-2021. Intern, CBD. Current Position: PhD candidate at University of Wisconsin-Madison)
+
 [Kai Wen Wang](https://kaiwenw.github.io/) (2017-2019. ECE, CS. Current Position: PhD candidate at Connell)
 
 [Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (2017-2018. CSD. Current Position: PhD candidate at Stanford)
