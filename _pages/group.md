@@ -30,6 +30,8 @@ Viekash Vinoth Kumar (RI, MSR)
 
 Huangyuan Su (MSML, MLD)
 
+Sivaramakrishnan Subramanian (RI, MSCV)
+
 ---
 
 **Students in collaboration**
@@ -50,9 +52,9 @@ Huangyuan Su (MSML, MLD)
 
 [Xindi Wu](https://www.linkedin.com/in/xindi-cindy-wu-3ba243111) (2018-2022. RI, MSCV. Current Position: PhD candidate at Princeton)
 
-Yuchen Zeng (2019-2020. Intern, CBD. Current Position: Software Development Engineer at Audible)
+Yuchen Zeng (2019-2020. CBD, Intern. Current Position: Software Development Engineer at Audible)
 
-[Xuefeng Du](https://www.linkedin.com/in/xuefeng-du-094723192) (2018-2021. Intern, CBD. Current Position: PhD candidate at University of Wisconsin-Madison)
+[Xuefeng Du](https://www.linkedin.com/in/xuefeng-du-094723192) (2018-2021. CBD, Intern. Current Position: PhD candidate at University of Wisconsin-Madison)
 
 [Kai Wen Wang](https://kaiwenw.github.io/) (2017-2019. ECE, CS. Current Position: PhD candidate at Connell)
 
