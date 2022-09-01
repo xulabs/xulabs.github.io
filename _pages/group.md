@@ -34,6 +34,8 @@ Huangyuan Su (MLD, MSML)
 
 Sivaramakrishnan Subramanian (MSCV, RI)
 
+Shirley Kokane (BME)
+
 ---
 
 **Students in collaboration**
