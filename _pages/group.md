@@ -30,7 +30,7 @@ Titas Chakraborty (MSML, MLD)
 
 Viekash Vinoth Kumar (MSR, RI)
 
-Huangyuan Su (MLD, MSML)
+Huangyuan Su (MSML, MLD)
 
 Sivaramakrishnan Subramanian (MSCV, RI)
 
