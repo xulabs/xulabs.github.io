@@ -4,27 +4,26 @@ title: "Group"
 classes: wide
 ---
 
-**Faculty**
+<h3>Faculty</h3>
 
 [Min Xu](https://xulabs.github.io/min-xu)
 
 ---
 
-**Postdoctoral associates**
+<h3>Postdoctoral associates</h3>
 
-[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate)
 
 [Ali Dabouei](https://alldbi.github.io)
 
 ---
 
-**PhD students**
+<h3>PhD students</h3>
 
 [Mostofa Rafid Uddin](https://duranrafid.github.io)
 
 ---
 
-**Research assistants**
+<h3>Research assistants</h3>
 
 Titas Chakraborty (MSML, MLD)
 
@@ -36,13 +35,16 @@ Shirley Kokane (BME)
 
 ---
 
-**Students in collaboration**
+<h3>Students in collaboration</h3>
 
 (Please see our publication)
 
 ---
 
-**Alumni**
+<h3>Alumni</h3>
+
+**[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate) (2017-2022. Former PhD Student. CPCB, CBD. Current Position: Postdoctoral research fellow, Harvard Medical School)**
+
 
 [Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (2020-2022. MSCB, CBD. Current Position: PhD candidate at Baylor Colleage of Medicine)
 
