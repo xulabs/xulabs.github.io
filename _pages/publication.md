@@ -78,6 +78,7 @@ layout: splash
 1. Cang Z, Ning X, Nie A, Xu M, Zhang J. Scan-IT: Domain segmentation of spatial transcriptomics images by graph neural network. British Machine Vision Conference (BMVC 2021). [paper and presentation](https://www.bmvc2021-virtualconference.com/conference/papers/paper_1139.html)
 
 **Biomedical image analysis**
+1. Sharif M, Demidov D, Hanif A, Yaqub M, Xu M. TransResNet: Integrating the Strengths of ViTs and CNNs for High Resolution Medical Image Segmentation via Feature Grafting. British Machine Vision Conference (BMVC) 2022
 1. Chharia A, Upadhyay R, Kumar V, Cheng C, Zhang J, Xu M. Deep-Precognitive Diagnosis: Preventing Future Pandemics by Novel Disease Detection with Biologically- inspired Conv-Fuzzy Network. IEEE Access. [doi:10.1109/ACCESS.2022.3153059](https://doi.org/10.1109/ACCESS.2022.3153059)
 1. Chandra S, Gourisaria M, GM H, Konar D, Gao X, Wang T, Xu M. Prolificacy Assessment of  Spermatozoan via state-of-the-art Deep Learning Frameworks. IEEE Access. [doi:10.1109/ACCESS.2022.3146334](https://doi.org/10.1109/ACCESS.2022.3146334)
 1. Zhang B, Yang K, Xu M, Wu J, Cheng C. Deep learning predicts EBV status in gastric cancer based on spatial patterns of lymphocyte infiltration. Cancers. [doi:10.3390/cancers13236002](https://doi.org/10.3390/cancers13236002)
