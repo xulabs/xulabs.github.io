@@ -89,6 +89,7 @@ layout: splash
 1.  Wang Z, Dong N, DRosario S, Xu M, Xie P, Xing E. Ellipse detection of optic disc-and-cup boundary in fundas image with unsupervised domain adaptation. IEEE International Symposium on Biomedical Imaging (ISBI 2019)
 
 **Genomics**
+1. Lee C, Chen Y, Duan Z, Xu M, Girgenti M, Xu K, Gerstein M, Zhang J. Venus: An efficient virus infection detection and fusion site discovery method using single-cell and bulk RNA-seq data. PLOS Computational Biology.
 1. Srinivasan S, Gong Y, Xu X, Hwang A, Xu M, Girgenti M, Zhang Jing. InsuLock: A Weakly Supervised Learning Approach for Accurate Insulator Prediction, And Variant Impact Quantification. Genes.
 1.  Chen Z, Zhang J, Liu J, Zhang Z, Zhu J, Xu M, Gerstein M. SCAN-ATAC-Sim: a scalable and efficient method for simulating single-cell ATAC-seq data from bulk-tissue experiments. Bioinformatics.
 1.  Zheng Y, Wang H, Zhang Y, Gao X, Xing E, Xu M. Poly(A)-DG: a deep-learning-based domain generalization method to identify cross-species Ploy(A) signal without prior knowledge from target species. PLOS Computational Biology. [doi:10.1371/journal.pcbi.1008297](https://doi.org/10.1371/journal.pcbi.1008297)
