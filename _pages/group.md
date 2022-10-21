@@ -35,6 +35,8 @@ Sivaramakrishnan Subramanian (MSCV, RI)
 
 Shirley Kokane (BME)
 
+Michael Maxwell (CSD)
+
 ---
 
 <h3>Students in collaboration</h3>
