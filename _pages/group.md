@@ -21,7 +21,6 @@ classes: wide
 
 [Mostofa Rafid Uddin](https://duranrafid.github.io)
 
-[Zhaoxin Fan](https://fanzhaoxin666.github.io)
 
 ---
 
