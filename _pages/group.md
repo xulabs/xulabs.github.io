@@ -26,17 +26,11 @@ classes: wide
 
 <h3>Research assistants</h3>
 
-Titas Chakraborty (MSML, MLD)
-
 Viekash Vinoth Kumar (MSR, RI)
 
-Sivaramakrishnan Subramanian (MSCV, RI)
+Yizhou Zhao (ECE)
 
-Shirley Kokane (BME)
-
-Jianyu Mao (ECE)
-
-Michael Maxwell (CSD)
+Miles Wandless (CSD)
 
 ---
 
