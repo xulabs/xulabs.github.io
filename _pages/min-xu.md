@@ -33,7 +33,7 @@ Dr. Min Xu is an Assistant Professor at the [Computational Biology Department](h
 
 Dr. Xu has a career centered around the development of computer vision and machine learning methods for the analysis of cellular systems using imaging and omics data. Working in the domain of Computational Biology and Bioinformatics since 2000, Dr. Xu has established himself as a pioneer in this field\. While his early work focused on developing machine learning methods for the analysis of functional genomics data, he later on (2008) moved onto developing computer vision methods for the analysis of Cellular Cryo-Electron Tomography (Cryo-ET) 3D image data. Dr. Xu has designed novel structural pattern mining methods and has been the first to demonstrate the feasibility of De Novo extraction of structures and spatial organizations of macromolecular complexes in single cells using Cryo-ET data. His current research focuses on Cryo-ET derived modelling of cellular organization at molecular resolution.
 
-Dr. Xu has published papers in peer-reviewed top journals and conferences, such as PNAS, Bioinformatics, PLOS Computational Biology, ISMB, CVPR, ICCV, AAAI, and MICCAI. He serves as PI of US NIH R01 and NSF awards.
+Dr. Xu has published papers in peer-reviewed top journals and conferences, such as PNAS, Bioinformatics, PLOS Computational Biology, Structure, ISMB, CVPR, ICCV, AAAI, and MICCAI. He serves as PI of US NIH R01 and NSF awards.
 
 Dr. Xu received a B.E. in Computer Science from the Beihang University, M.Sc from School of Computing at the National University of Singapore, M.A. in Applied Mathematics from the University of Southern California (USC), and Ph.D. in Computational Biology and Bioinformatics from USC. He was a postdoctoral researcher at USC.
 
