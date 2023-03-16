@@ -34,6 +34,12 @@ Miles Wandless (CSD)
 
 ---
 
+<h3>Visiting scholars</h3>
+
+Zhaoxin Fan
+
+---
+
 <h3>Students in collaboration</h3>
 
 (Please see our publication)
