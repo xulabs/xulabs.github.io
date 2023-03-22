@@ -36,7 +36,7 @@ Miles Wandless (CSD)
 
 <h3>Visiting scholars</h3>
 
-Zhaoxin Fan
+[Zhaoxin Fan](https://fanzhaoxin666.github.io/)
 
 ---
 
