@@ -10,7 +10,7 @@ layout: splash
 (Selected papers are highlighted)
 
 **Cryo-ET analysis**
-1. Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. **High-throughput cryo-ET structural pattern mining by deep unsupervised clustering.** Proceedings of the National Academy of Sciences (direct submission). [doi:10.1101/2021.05.16.444381](https://doi.org/10.1101/2021.05.16.444381)
+1. Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. **High-throughput cryo-ET structural pattern mining by deep unsupervised clustering.** Proceedings of the National Academy of Sciences (direct submission). [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
 1. Kim H, Uddin M, Xu M, Chang Y. Computational methods toward unbiased pattern mining and structure determination in cryo-electron tomography data. Journal of Molecular Biology. [doi:10.1016/j.jmb.2023.168068](https://doi.org/10.1016/j.jmb.2023.168068)
 1. Gupta T, He X, Uddin M, Zeng X, Zhou A, Zhang J, Freyberg, Xu M. Self-supervised learning for macromolecular structure classification based on cryo-electron tomograms. Frontiers in Physiology. [doi: 10.3389/fphys.2022.957484](https://doi.org/10.3389/fphys.2022.957484)
 1. Zeng X, Lin Z, Uddin M, Zhou B, Cheng C, Zhang J, Freyberg, Xu M. Structure Detection in Three-Dimensional Cellular Cryoelectron Tomograms by Reconstructing Two-Dimensional Annotated Tilt Series. Journal of Computational Biology. [doi:10.1089/cmb.2021.0606](https://doi.org/10.1089/cmb.2021.0606)
