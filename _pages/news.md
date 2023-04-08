@@ -5,6 +5,8 @@ layout: splash
 ---
 ### News
 
+**230407** Congratulations Xiangrui Zeng for his first authored [structural pattern mining paper](https://www.pnas.org/doi/10.1073/pnas.2213149120) getting published at Proceedings of the National Academy of Sciences!
+
 **230127** Congratulations Miles Wandless for receiving Highway to Undergraduate Research in the Academic Year (HURAY) award!
 
 **220825** Our lab is awarded an [NSF IIS grant](http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=2211597) jointly with Professor [Daisuke Kihara](https://kiharalab.org/) lab, for developping methods for systematic de novo identification of macromolecular complexes in cryo-electron tomography images.
