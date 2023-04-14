@@ -3,11 +3,13 @@ permalink: /publication/
 title: "Papers & Preprints"
 layout: splash
 ---
-### Publications
+## Publication
 
-**See [google scholar](https://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate) for the full list. See [here](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) for corresponding citations in latex bib format. The source code of many of our papers can be found in our [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md). **
+**See [google scholar](https://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate) for the full publication list.** 
 
-#### Selected papers
+[Citations](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) in latex bib format. The source code in [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md).
+
+### Selected papers
 
 1. [Cryo-ET] Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. High-throughput cryo-ET structural pattern mining by deep unsupervised clustering. Proceedings of the National Academy of Sciences (direct submission). [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
 1. [CV] Uddin M, Howe G, Zeng X, Xu M. Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations. IEEE conference on computer vision and pattern recognition (CVPR 2022). [Paper](https://openaccess.thecvf.com/content/CVPR2022/html/Uddin_Harmony_A_Generic_Unsupervised_Approach_for_Disentangling_Semantic_Content_From_CVPR_2022_paper.html)
