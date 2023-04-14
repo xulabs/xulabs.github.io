@@ -11,7 +11,7 @@ layout: splash
 
 ### Selected papers
 
-1. [Cryo-ET] Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. High-throughput cryo-ET structural pattern mining by deep unsupervised clustering. Proceedings of the National Academy of Sciences (direct submission). [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
+1. [Cryo-ET] Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. High-throughput cryo-ET structural pattern mining by deep unsupervised clustering. Proceedings of the National Academy of Sciences. [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
 1. [CV] Uddin M, Howe G, Zeng X, Xu M. Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations. IEEE conference on computer vision and pattern recognition (CVPR 2022). [Paper](https://openaccess.thecvf.com/content/CVPR2022/html/Uddin_Harmony_A_Generic_Unsupervised_Approach_for_Disentangling_Semantic_Content_From_CVPR_2022_paper.html)
 1. [ML] Wang T, Li X, Yang P, Hu G, Zeng X, Huang S, Xu C, Xu M. Boosting Active Learning via Improving Test Performance. AAAI Conference on Artificial Intelligence. (AAAI 2022) [arXiv:2112.05683](https://arxiv.org/abs/2112.05683)
 2. [Cryo-ET] Zeng X, Howe G, Xu M. End-to-end robust joint unsupervised image alignment and clustering. International Conference on Computer Vision (ICCV 2021). [doi:10.1109/iccv48922.2021.00383](https://doi.org/10.1109/iccv48922.2021.00383)
