@@ -12,5 +12,6 @@ layout: splash
 4. We are looking for motivated students to join our lab for graduate or undergraduate level collaborative research projects!
 5. We welcome international research interns! Remote interns are welcome!
 6. We also welcome remote collaborations!
+7. Students from underrepresented groups are particularly encouraged to apply!
 
 Interested please email Dr. Xu for further information.
