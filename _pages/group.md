@@ -49,12 +49,6 @@ Miles Wandless (CSD)
 
 <h3>Alumni</h3>
 
-Mohamad Mahmoud Kassab (2021-2023, MLD, MBZUAI) 
-
-Muhammad Hamza Sharif (2021-2023, CVD, MBZUAI)
-
-Hussam Osama Azzuni (2021-2022, CVD, MBZUAI)
-
 **[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate) (2017-2022. Former PhD Student. CPCB, CBD, CMU. Current Position: Postdoctoral research fellow, Harvard Medical School)**
 
 [Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (2020-2022. MSCB, CBD, CMU. Current Position: PhD candidate at Baylor Colleage of Medicine)
