@@ -49,27 +49,32 @@ Miles Wandless (CSD)
 
 <h3>Alumni</h3>
 
-**[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate) (2017-2022. Former PhD Student. CPCB, CBD. Current Position: Postdoctoral research fellow, Harvard Medical School)**
+Mohamad Mahmoud Kassab (2021-2023, MLD, MBZUAI) 
 
+Muhammad Hamza Sharif (2021-2023, CVD, MBZUAI)
 
-[Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (2020-2022. MSCB, CBD. Current Position: PhD candidate at Baylor Colleage of Medicine)
+Hussam Osama Azzuni (2021-2022, CVD, MBZUAI)
 
-[Gregory Howe](https://www.linkedin.com/in/gregory-howe-189506178) (2020-2021. MSML, MLD. Current Position: AI Software Engineer at Stottler Henke)
+**[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate) (2017-2022. Former PhD Student. CPCB, CBD, CMU. Current Position: Postdoctoral research fellow, Harvard Medical School)**
 
-[Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (2020-2021. Former Postdoctoral Associate. Current Position: Senior Machine Learning Research Scientist at Samsung Research America)
+[Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (2020-2022. MSCB, CBD, CMU. Current Position: PhD candidate at Baylor Colleage of Medicine)
 
-[Xiaoyu Zhu](https://www.linkedin.com/in/xiaoyuzhu3/) (2020-2021. MSAII, LTI. Current Position: PhD candidate at CMU LTI)
+[Gregory Howe](https://www.linkedin.com/in/gregory-howe-189506178) (2020-2021. MSML, MLD, CMU. Current Position: AI Software Engineer at Stottler Henke)
 
-[Xindi Wu](https://www.linkedin.com/in/xindi-cindy-wu-3ba243111) (2018-2022. MSCV, RI. Current Position: PhD candidate at Princeton)
+[Sima Behpour](https://www.linkedin.com/in/sima-behpour-95037713b) (2020-2021. Former Postdoctoral Associate, CMU. Current Position: Senior Machine Learning Research Scientist at Samsung Research America)
 
-Yuchen Zeng (2019-2020. CBD, Intern. Current Position: Software Development Engineer at Audible)
+[Xiaoyu Zhu](https://www.linkedin.com/in/xiaoyuzhu3/) (2020-2021. MSAII, LTI, CMU. Current Position: PhD candidate at CMU LTI)
 
-[Xuefeng Du](https://www.linkedin.com/in/xuefeng-du-094723192) (2018-2021. Intern, CBD. Current Position: PhD candidate at University of Wisconsin-Madison)
+[Xindi Wu](https://www.linkedin.com/in/xindi-cindy-wu-3ba243111) (2018-2022. MSCV, RI, CMU. Current Position: PhD candidate at Princeton)
 
-[Kai Wen Wang](https://kaiwenw.github.io/) (2017-2019. ECE, CS. Current Position: PhD candidate at Connell)
+Yuchen Zeng (2019-2020. Intern, CBD, CMU. Current Position: Software Development Engineer at Audible)
 
-[Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (2017-2018. CSD. Current Position: PhD candidate at Stanford)
+[Xuefeng Du](https://www.linkedin.com/in/xuefeng-du-094723192) (2018-2021. Intern, CBD, CMU. Current Position: PhD candidate at University of Wisconsin-Madison)
 
-[Bo Zhou](https://www.linkedin.com/in/bo-zhou-514177ab/) (2017-2019. MSCV, RI. Current Position: PhD candidate at Yale)  
+[Kai Wen Wang](https://kaiwenw.github.io/) (2017-2019. ECE, CS, CMU. Current Position: PhD candidate at Connell)
 
-[Chang Liu](https://sites.google.com/view/cliu5/home/) (2017-2018. ECE. Current Position: PhD candidate at Northeastern University)
+[Yixiu Zhao](https://www.linkedin.com/in/yixiu-zhao-a00498128/) (2017-2018. CSD, CMU. Current Position: PhD candidate at Stanford)
+
+[Bo Zhou](https://www.linkedin.com/in/bo-zhou-514177ab/) (2017-2019. MSCV, RI, CMU. Current Position: PhD candidate at Yale)  
+
+[Chang Liu](https://sites.google.com/view/cliu5/home/) (2017-2018. ECE, CMU. Current Position: PhD candidate at Northeastern University)
