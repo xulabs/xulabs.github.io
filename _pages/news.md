@@ -5,6 +5,7 @@ layout: splash
 ---
 ### News
 
+**230526** Congratulations Dr. Min Xu for receiving [NSF CAREER award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2238093) on Cryo-electron tomography derived multiscale integrative modeling of subcellular organization!
 
 **230407** Congratulations Xiangrui Zeng for his first authored [structural pattern mining paper](https://www.pnas.org/doi/10.1073/pnas.2213149120) getting published at Proceedings of the National Academy of Sciences!
 
