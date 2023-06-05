@@ -7,6 +7,8 @@ layout: splash
 
 **230526** Congratulations Dr. Min Xu for receiving [NSF CAREER award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2238093) on Cryo-electron tomography derived multiscale integrative modeling of subcellular organization!
 
+**230525** Congratulations Michael Maxwell for receiving CMU Summer Undergraduate Research Apprenticeship (SURA)!
+
 **230407** Congratulations Xiangrui Zeng for his first authored [structural pattern mining paper](https://www.pnas.org/doi/10.1073/pnas.2213149120) getting published at Proceedings of the National Academy of Sciences!
 
 **230127** Congratulations Miles Wandless for receiving Highway to Undergraduate Research in the Academic Year (HURAY) award!
@@ -15,9 +17,9 @@ layout: splash
 
 **220701:** Our lab is awarded an [NSF MCB grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2205148&HistoricalAwards=false) as co-PI for developing novel methods for morphodynamics characterization of stem cell differentiation using label-free microscopies. This is a joint project with Prof. [Jianhua Xing](https://www.csb.pitt.edu/jianhua-xing) (PI) and Prof. [Sarah Hainer](https://www.biology.pitt.edu/person/sarah-hainer) (co-PI) labs.
 
-**220510**: Congratulation to Xiangrui Zeng for passing his PhD defense!
+**220510**: Congratulation Xiangrui Zeng for passing his PhD defense!
 
-**220302**: Congratulation to Mostofa Rafid Uddin, Gregory Howe, and Xiangrui Zeng for our following paper accepted by CVPR 2022: Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations
+**220302**: Congratulation Mostofa Rafid Uddin, Gregory Howe, and Xiangrui Zeng for our following paper accepted by CVPR 2022: Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations
 
 **210923**: Big congratulations to our senior Ph.D. student, Xiangrui Zeng, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
 
