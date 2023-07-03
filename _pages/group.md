@@ -36,6 +36,8 @@ Yizhou Zhao (ECE)
 
 Miles Wandless (CSD)
 
+Mohamad Mahmoud Kassab (CVD, MBZUAI)
+
 ---
 
 <h3>Visiting scholars</h3>
@@ -51,6 +53,8 @@ Miles Wandless (CSD)
 ---
 
 <h3>Alumni</h3>
+
+[Muhammad Hamza Sharif] (2021-2023. Former master's student. CVD, MBZUAI.)
 
 **[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate) (2017-2022. Former PhD Student. CPCB, CBD, CMU. Current Position: Postdoctoral research fellow, Harvard Medical School)**
 
