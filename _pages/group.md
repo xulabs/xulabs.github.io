@@ -56,6 +56,8 @@ Mohamad Mahmoud Kassab (CVD, MBZUAI)
 
 Muhammad Hamza Sharif (2021-2023. Former master's student. CVD, MBZUAI.)
 
+Hussam Osama Azzuni (2021-2022. Former master's student. CVD, MBZUAI.)
+
 **[Xiangrui Zeng](https://scholar.google.com/citations?user=8gQLySoAAAAJ&view_op=list_works&sortby=pubdate) (2017-2022. Former PhD Student. CPCB, CBD, CMU. Current Position: Postdoctoral research fellow, Harvard Medical School)**
 
 [Xuqian Tan](https://www.linkedin.com/in/xuqian-tan-554a62119/) (2020-2022. MSCB, CBD, CMU. Current Position: PhD candidate at Baylor Colleage of Medicine)
