@@ -14,7 +14,10 @@ classes: wide
 
 [Ali Dabouei](https://alldbi.github.io)
 
-[Xiangjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
+[Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
+
+[Xueying Zhan](https://sinezhan.github.io/index.html)
+
 
 ---
 
