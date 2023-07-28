@@ -10,8 +10,9 @@ layout: splash
       <strong>Min Xu, Ph.D.</strong><br />
       Associate Professor, <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a><br />
       Courtesy Faculty, <a href="http://www.ri.cmu.edu" target="_blank"> Robotics Institute </a><br />
-      <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cs.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNHOBZa6FUtlVkCoqtax6zX1O2G-UQ" target="_blank">School of Computer Science</a>
-      <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.cmu.edu%2F&sa=D&sntz=1&usg=AFQjCNGgVsrmaGAPErZd_9YZXZtyZanpvA" target="_blank">Carnegie Mellon University</a><br />
+      <a href="http://cs.cmu.edu" target="_blank">School of Computer Science</a> <br />
+      Courtesy Faculty, <a href="http://www.ece.cmu.edu" target="_blank"> Department of Electrical and Computer Engineering </a><br />
+      <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a><br />
 
       <strong>Office: </strong>
       GHC 7709, 5000 Forbes Avenue, Pittsburgh, PA 15213<br />
@@ -29,7 +30,8 @@ layout: splash
 
 **Biography**
 
-Dr. Min Xu (徐旻) is an Associate Professor at the [Computational Biology Department](http://cbd.cmu.edu) (with a Courtesy Appointment at the [Robotics Institute](https://www.ri.cmu.edu)) within the [School of Computer Science](https://www.cs.cmu.edu) at [Carnegie Mellon University](http://www.cmu.edu). He serves as training faculty at the [Joint CMU-Pitt Ph.D. Program in Computational Biology](http://www.compbio.cmu.edu). He also serves as co-director at the [Master of Science in Computational Biology](https://www.cmu.edu/ms-compbio/people/index.html) (MSCB) program and training faculty at the [Master of Science in Computer Vision](https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision) (MSCV) program at CMU. He is an investigator at the [National Center for Multiscale Modeling of Biological Systems](https://mmbios.pitt.edu). He is also affiliated with the Computer Vision Department at the [Mohamed bin Zayed University of Artificial Intelligence](https://mbzuai.ac.ae/), UAE.
+Dr. Min Xu (徐旻) is an Associate Professor at the [Computational Biology Department](http://cbd.cmu.edu) within the [School of Computer Science](https://www.cs.cmu.edu) at [Carnegie Mellon University](http://www.cmu.edu). He also has Courtesy Appointments at the [Robotics Institute](https://www.ri.cmu.edu) and [Department of Electrical and Computer Engineering](http://www.ece.cmu.edu). 
+He serves as training faculty at the [Joint CMU-Pitt Ph.D. Program in Computational Biology](http://www.compbio.cmu.edu). He also serves as co-director at the [Master of Science in Computational Biology](https://www.cmu.edu/ms-compbio/people/index.html) (MSCB) program and training faculty at the [Master of Science in Computer Vision](https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision) (MSCV) program at CMU. He is an investigator at the [National Center for Multiscale Modeling of Biological Systems](https://mmbios.pitt.edu). He is also affiliated with the Computer Vision Department at the [Mohamed bin Zayed University of Artificial Intelligence](https://mbzuai.ac.ae/), UAE.
 
 Dr. Xu has a career centered around the development of computer vision and machine learning methods for the analysis of cellular systems using imaging and omics data. Working in the domain of Computational Biology and Bioinformatics since 2000, Dr. Xu has established himself as a pioneer in this field\. While his early work focused on developing machine learning methods for the analysis of functional genomics data, he later on (2008) moved onto developing computer vision methods for the analysis of Cellular Cryo-Electron Tomography (Cryo-ET) 3D image data. Dr. Xu has designed novel structural pattern mining methods and has been the first to demonstrate the feasibility of De Novo extraction of structures and spatial organizations of macromolecular complexes in single cells using Cryo-ET data. His current research focuses on Cryo-ET derived modelling of cellular organization at molecular resolution.
 
