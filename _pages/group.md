@@ -23,7 +23,13 @@ classes: wide
 
 <h3>PhD students</h3>
 
-[Mostofa Rafid Uddin](https://duranrafid.github.io)
+[Mostofa Rafid Uddin](https://duranrafid.github.io) (CBD)
+
+[Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) (ECE)
+
+[Weichen Yu](https://scholar.google.com/citations?hl=en&user=LeCleC4AAAAJ&sortby=pubdate) (ECE)
+
+[Chengqian Che](https://brucect2.github.io/) (RI)
 
 
 ---
@@ -31,8 +37,6 @@ classes: wide
 <h3>Research assistants</h3>
 
 Viekash Vinoth Kumar (MSR, RI)
-
-Yizhou Zhao (ECE)
 
 Miles Wandless (CSD)
 
