@@ -29,7 +29,7 @@ classes: wide
 
 [Weichen Yu](https://scholar.google.com/citations?hl=en&user=LeCleC4AAAAJ&sortby=pubdate) (ECE)
 
-[Chengqian Che](https://brucect2.github.io/) (RI)
+[Chengqian Che](https://brucect2.github.io) (RI)
 
 
 ---
