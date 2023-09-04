@@ -40,13 +40,15 @@ Viekash Vinoth Kumar (MSR, RI)
 
 Miles Wandless (CSD)
 
+Yuzhou Wang (CSD)
+
 Mohamad Mahmoud Kassab (CVD, MBZUAI)
 
 ---
 
 <h3>Visiting scholars</h3>
 
-[Zhaoxin Fan](https://fanzhaoxin666.github.io/)
+Zhaoxin Fan
 
 ---
 
