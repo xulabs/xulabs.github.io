@@ -27,8 +27,6 @@ classes: wide
 
 [Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) (ECE)
 
-[Weichen Yu](https://scholar.google.com/citations?hl=en&user=LeCleC4AAAAJ&sortby=pubdate) (ECE)
-
 [Chengqian Che](https://brucect2.github.io) (RI)
 
 
