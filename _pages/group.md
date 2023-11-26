@@ -27,8 +27,6 @@ classes: wide
 
 [Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) (ECE)
 
-[Chengqian Che](https://brucect2.github.io) (RI)
-
 
 ---
 
@@ -41,6 +39,10 @@ Miles Wandless (CSD)
 Yuzhou Wang (CSD)
 
 Mohamad Mahmoud Kassab (CVD, MBZUAI)
+
+Jack Liu (Math)
+
+Yifan Sun (Math)
 
 ---
 
