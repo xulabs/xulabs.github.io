@@ -36,19 +36,6 @@ Viekash Vinoth Kumar (MSR, RI)
 
 Miles Wandless (CSD)
 
-Yuzhou Wang (CSD)
-
-Mohamad Mahmoud Kassab (CVD, MBZUAI)
-
-Jack Liu (Math)
-
-Yifan Sun (Math)
-
----
-
-<h3>Visiting scholars</h3>
-
-Zhaoxin Fan
 
 ---
 
