@@ -11,6 +11,8 @@ layout: splash
 
 ### Selected papers
 
+1. [ET] Zeng X, Ding Y, Zhang Y, Uddin M, Dabouei A, Xu M. DUAL: deep unsupervised simultaneous simulation and denoising for cryo-electron tomography. bioRxiv. [doi:10.1101/2024.03.02.583135](https://doi.org/10.1101/2024.03.02.583135)
+1. [CV] Wu J, Zhu J, Liu Y, Jin Y, Xu M. One-Prompt to Segment All Medical Images. IEEE conference on computer vision and pattern recognition (CVPR 2024). [doi:10.48550/arXiv.2305.10300](https://doi.org/10.48550/arXiv.2305.10300)
 1. [ET] Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. High-throughput cryo-ET structural pattern mining by deep unsupervised clustering. Proceedings of the National Academy of Sciences. [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
 1. [AS,CV] Sarker N, Hakim Z, Dabouei A, Uddin M, Freyberg Z, Macwilliams A, Kangas J, Xu M. Detecting Anomalies from Liquid Transfer Videos in Automated Laboratory Setting. Frontiers in Molecular Biosciences. [doi:10.3389/fmolb.2023.1147514](https://doi.org/10.3389/fmolb.2023.1147514)
 1. [CV,ML,ET,EM] Uddin M, Howe G, Zeng X, Xu M. Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations. IEEE conference on computer vision and pattern recognition (CVPR 2022). [Paper](https://openaccess.thecvf.com/content/CVPR2022/html/Uddin_Harmony_A_Generic_Unsupervised_Approach_for_Disentangling_Semantic_Content_From_CVPR_2022_paper.html)
