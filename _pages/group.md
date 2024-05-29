@@ -12,12 +12,12 @@ classes: wide
 
 <h3>Postdoctoral associates</h3>
 
-[Ali Dabouei](https://alldbi.github.io)
 
 [Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
 
 [Xueying Zhan](https://sinezhan.github.io/index.html)
 
+[Zhengzhe Liu](https://liuzhengzhe.github.io/)
 
 ---
 
@@ -27,6 +27,11 @@ classes: wide
 
 [Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) (ECE)
 
+---
+
+<h3>Research staff</h3>
+
+Zhiqian Zheng (CBD)
 
 ---
 
@@ -35,6 +40,10 @@ classes: wide
 Viekash Vinoth Kumar (MSR, RI)
 
 Miles Wandless (CSD)
+
+Yujia Gao (LTI)
+
+Jackson Daggett (SCS)
 
 
 ---
@@ -46,6 +55,8 @@ Miles Wandless (CSD)
 ---
 
 <h3>Alumni</h3>
+
+[Ali Dabouei](https://alldbi.github.io) (2022-2024. Former Postdoctoral Associate, CMU. )
 
 Muhammad Hamza Sharif (2021-2023. Former master's student. CVD, MBZUAI.)
 
