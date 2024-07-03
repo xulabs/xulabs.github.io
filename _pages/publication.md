@@ -11,6 +11,7 @@ layout: splash
 
 ### Selected papers
 
+1. [AS,CV] Jain Y, Dabouei A, Xu M. Cross-Domain Learning for Video Anomaly Detection with Limited Supervision (ECCV 2024)
 1. [ET] Zeng X, Ding Y, Zhang Y, Uddin M, Dabouei A, Xu M. DUAL: deep unsupervised simultaneous simulation and denoising for cryo-electron tomography. bioRxiv. [doi:10.1101/2024.03.02.583135](https://doi.org/10.1101/2024.03.02.583135)
 1. [CV] Wu J, Zhu J, Liu Y, Jin Y, Xu M. One-Prompt to Segment All Medical Images. IEEE conference on computer vision and pattern recognition (CVPR 2024). [doi:10.48550/arXiv.2305.10300](https://doi.org/10.48550/arXiv.2305.10300)
 1. [ET] Zeng X, Kahng A, Xue L, Mahamid J, Chang Y, Xu M. High-throughput cryo-ET structural pattern mining by deep unsupervised clustering. Proceedings of the National Academy of Sciences. [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
