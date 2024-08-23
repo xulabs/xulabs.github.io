@@ -7,10 +7,11 @@ layout: splash
 
 **240823**: Big congratulations to our senior Ph.D. student, Mostofa Rafid Uddin, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
 
-
 **230526** Congratulations Dr. Min Xu for receiving [NSF CAREER award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2238093) on Cryo-electron tomography derived multiscale integrative modeling of subcellular organization!
 
 **230525** Congratulations Michael Maxwell for receiving CMU Summer Undergraduate Research Apprenticeship (SURA)!
+
+**230424**: Congratulations Mostofa Rafid Uddin for being awarded the CMLH fellowship!
 
 **230407** Congratulations Xiangrui Zeng for his first authored [structural pattern mining paper](https://www.pnas.org/doi/10.1073/pnas.2213149120) getting published at Proceedings of the National Academy of Sciences!
 
@@ -22,7 +23,6 @@ layout: splash
 
 **220510**: Congratulation Xiangrui Zeng for passing his PhD defense!
 
-**220415**: Congratulations Mostofa Rafid Uddin for being awarded the CMLH fellowship!
 
 **220302**: Congratulation Mostofa Rafid Uddin, Gregory Howe, and Xiangrui Zeng for our following paper accepted by CVPR 2022: Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations
 
