@@ -5,6 +5,9 @@ layout: splash
 ---
 ### News
 
+**240823**: Big congratulations to our senior Ph.D. student, Mostofa Rafid Uddin, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
+
+
 **230526** Congratulations Dr. Min Xu for receiving [NSF CAREER award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2238093) on Cryo-electron tomography derived multiscale integrative modeling of subcellular organization!
 
 **230525** Congratulations Michael Maxwell for receiving CMU Summer Undergraduate Research Apprenticeship (SURA)!
@@ -18,6 +21,8 @@ layout: splash
 **220701:** Our lab is awarded an [NSF MCB grant](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2205148&HistoricalAwards=false) as co-PI for developing novel methods for morphodynamics characterization of stem cell differentiation using label-free microscopies. This is a joint project with Prof. [Jianhua Xing](https://www.csb.pitt.edu/jianhua-xing) (PI) and Prof. [Sarah Hainer](https://www.biology.pitt.edu/person/sarah-hainer) (co-PI) labs.
 
 **220510**: Congratulation Xiangrui Zeng for passing his PhD defense!
+
+**220415**: Congratulations Mostofa Rafid Uddin for being awarded the CMLH fellowship!
 
 **220302**: Congratulation Mostofa Rafid Uddin, Gregory Howe, and Xiangrui Zeng for our following paper accepted by CVPR 2022: Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations
 

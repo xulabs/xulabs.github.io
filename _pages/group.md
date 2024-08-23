@@ -37,11 +37,6 @@ Zhiqian Zheng (CBD)
 
 <h3>Research assistants</h3>
 
-Viekash Vinoth Kumar (MSR, RI)
-
-Miles Wandless (CSD)
-
-Yujia Gao (LTI)
 
 Jackson Daggett (SCS)
 
