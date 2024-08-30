@@ -11,9 +11,9 @@ layout: splash
 
 ### Selected publications
 
-1. [ET] CryoSAM: Training-free CryoET Tomogram Segmentation with Foundation Models. Medical Image Computing & Computer Assisted Intervention (MICCAI) 2024.
+1. [ET] CryoSAM: Training-free CryoET Tomogram Segmentation with Foundation Models. Medical Image Computing & Computer Assisted Intervention (MICCAI) 2024. [doi:10.48550/arXiv.2407.06833](https://doi.org/10.48550/arXiv.2407.06833)
 1. [AS, CV] Deep Video Anomaly Detection in Automated Laboratory Setting. SSRN Preprint. [doi:10.2139/ssrn.4887151](http://dx.doi.org/10.2139/ssrn.4887151)
-1. [AS,CV] Cross-Domain Learning for Video Anomaly Detection with Limited Supervision. European Conference on Computer Vision (ECCV) 2024.
+1. [AS,CV] Cross-Domain Learning for Video Anomaly Detection with Limited Supervision. European Conference on Computer Vision (ECCV) 2024. [doi:10.48550/arXiv.2408.05191](https://doi.org/10.48550/arXiv.2408.05191)
 1. [ET] DUAL: deep unsupervised simultaneous simulation and denoising for cryo-electron tomography. bioRxiv. [doi:10.1101/2024.03.02.583135](https://doi.org/10.1101/2024.03.02.583135)
 1. [CV] One-Prompt to Segment All Medical Images. IEEE conference on computer vision and pattern recognition (CVPR) 2024. [doi:10.48550/arXiv.2305.10300](https://doi.org/10.48550/arXiv.2305.10300)
 1. [ET] High-throughput cryo-ET structural pattern mining by deep unsupervised clustering. Proceedings of the National Academy of Sciences. [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
