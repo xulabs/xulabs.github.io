@@ -10,7 +10,7 @@ layout: splash
 [Citations](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) in latex bib format. The source code in [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md).
 
 ### Selected publications
-
+1. [CV] Metric from Human: Zero-shot Monocular Metric Depth Estimation via Test-time Adaptation. NeurIPS 2024
 1. [ET] CryoSAM: Training-free CryoET Tomogram Segmentation with Foundation Models. Medical Image Computing & Computer Assisted Intervention (MICCAI) 2024. [doi:10.48550/arXiv.2407.06833](https://doi.org/10.48550/arXiv.2407.06833)
 1. [AS, CV] Deep Video Anomaly Detection in Automated Laboratory Setting. SSRN Preprint. [doi:10.2139/ssrn.4887151](http://dx.doi.org/10.2139/ssrn.4887151)
 1. [AS,CV] Cross-Domain Learning for Video Anomaly Detection with Limited Supervision. European Conference on Computer Vision (ECCV) 2024. [doi:10.48550/arXiv.2408.05191](https://doi.org/10.48550/arXiv.2408.05191)
