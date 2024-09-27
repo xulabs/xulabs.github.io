@@ -19,6 +19,8 @@ classes: wide
 
 [Zhengzhe Liu](https://liuzhengzhe.github.io/)
 
+Jingru Yang
+
 ---
 
 <h3>PhD students</h3>
