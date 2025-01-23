@@ -55,7 +55,7 @@ Mia Sanborn (CBD)
 
 <h3>Alumni</h3>
 
-[Ali Dabouei](https://alldbi.github.io) (2022-2024. Former Postdoctoral Associate, CMU. )
+[Ali Dabouei](https://alldbi.github.io) (2022-2024. Former Postdoctoral Associate, CMU. Current Position: CTO of Neptune Technologies LLC)
 
 Muhammad Hamza Sharif (2021-2023. Former master's student. CVD, MBZUAI.)
 
