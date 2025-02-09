@@ -5,7 +5,7 @@ layout: splash
 ---
 <p class="topic" style="text-align: center;"><strong>About Min Xu</strong></p>
 
-  <img class="image" src="../images/min-xu-2025.jpg" style="display:block; margin:auto; width: 60%; height: auto;">
+  <img class="image" src="https://xulabs.github.io/images/min-xu-2025.jpg" style="display:block; margin:auto; width: 60%; height: auto;">
   <p style="text-align: center;">
       <strong>Min Xu, Ph.D.</strong><br />
       Associate Professor, <a href="http://cbd.cmu.edu" target="_blank">Computational Biology Department</a><br />
