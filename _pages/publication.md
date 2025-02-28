@@ -10,6 +10,8 @@ layout: splash
 [Citations](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) in latex bib format. The source code in [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md).
 
 ### Selected publications
+1. [CV] DiffCAM: Data-Driven Saliency Maps by Capturing Feature Differences. IEEE conference on computer vision and pattern recognition (CVPR) 2025.
+1. [ET] BOE-ViT: Boosting Orientation Estimation with Equivariance in Self-Supervised 3D Subtomogram Alignment. IEEE conference on computer vision and pattern recognition (CVPR) 2025. 
 1. [AS, CV] Deep Video Anomaly Detection in Automated Laboratory Setting. Expert Systems With Applications. [doi:10.1016/j.eswa.2025.126581](https://doi.org/10.1016/j.eswa.2025.126581)
 1. [CV] Metric from Human: Zero-shot Monocular Metric Depth Estimation via Test-time Adaptation. NeurIPS 2024. [paper](https://openreview.net/pdf?id=GA8TVtxudf)
 1. [ET] CryoSAM: Training-free CryoET Tomogram Segmentation with Foundation Models. Medical Image Computing & Computer Assisted Intervention (MICCAI) 2024. [doi:10.48550/arXiv.2407.06833](https://doi.org/10.48550/arXiv.2407.06833)
