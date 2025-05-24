@@ -12,14 +12,11 @@ classes: wide
 
 <h3>Postdoctoral associates</h3>
 
-
 [Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
 
 [Xueying Zhan](https://sinezhan.github.io/index.html)
 
-[Zhengzhe Liu](https://liuzhengzhe.github.io/)
 
-Jingru Yang
 
 ---
 
@@ -54,6 +51,10 @@ Mia Sanborn (CBD)
 ---
 
 <h3>Alumni</h3>
+
+[Zhengzhe Liu](https://liuzhengzhe.github.io/) (2024, Former Postdoctoral Associate, CMU. Current Position: Assistant Professor at Lingnan University)
+
+Jingru Yang (2024, Former Postdoctoral Associate, CMU. Current: Tensent)
 
 [Ali Dabouei](https://alldbi.github.io) (2022-2024. Former Postdoctoral Associate, CMU. Current Position: CTO of Neptune Technologies LLC)
 
