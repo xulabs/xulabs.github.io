@@ -5,6 +5,8 @@ layout: splash
 ---
 ### News
 
+**250619**: Our lab is awarded an [NIH NIGMS R35 grant](https://reporter.nih.gov/search/BwyX36hq7kyzvx078Eh7rw/project-details/11090133) for developping computational methods for cell populaiton analysis on Cryo-ET images.
+
 **240823**: Big congratulations to our senior Ph.D. student, Mostofa Rafid Uddin, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
 
 **230526** Congratulations Dr. Min Xu for receiving [NSF CAREER award](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2238093) on Cryo-electron tomography derived multiscale integrative modeling of subcellular organization!
