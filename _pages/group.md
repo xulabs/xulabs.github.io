@@ -14,8 +14,7 @@ classes: wide
 
 [Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
 
-[Xueying Zhan](https://sinezhan.github.io/index.html)
-
+Xiaolong Wu
 
 
 ---
@@ -36,6 +35,7 @@ Zhiqian Zheng (CBD)
 
 <h3>Research assistants</h3>
 
+Xiaoyu Cao (BME)
 
 Jackson Daggett (SCS)
 
@@ -51,6 +51,8 @@ Mia Sanborn (CBD)
 ---
 
 <h3>Alumni</h3>
+
+[Xueying Zhan](https://sinezhan.github.io/index.html) (2023-2025, Former Postdoctoral Associate, CMU)
 
 [Zhengzhe Liu](https://liuzhengzhe.github.io/) (2024, Former Postdoctoral Associate, CMU. Current Position: Assistant Professor at Lingnan University)
 
