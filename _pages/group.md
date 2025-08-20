@@ -14,7 +14,7 @@ classes: wide
 
 [Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
 
-Xiaolong Wu
+[Xiaolong Wu](https://scholar.google.com/citations?hl=en&user=hKbbxH0AAAAJ)
 
 
 ---
