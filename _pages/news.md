@@ -5,6 +5,8 @@ layout: splash
 ---
 ### News
 
+**250826** Congratulations [Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) for receiving [SoftBank Group–ARM Fellowship](https://www.cmu.edu/news/stories/archives/2025/august/eight-carnegie-mellon-students-named-softbank-group-arm-fellows) for his contributions to  AI for Scientific Discovery!
+
 **250619**: Our lab is awarded an [NIH NIGMS R35 grant](https://reporter.nih.gov/search/BwyX36hq7kyzvx078Eh7rw/project-details/11090133) for developping computational methods for cell populaiton analysis on Cryo-ET images.
 
 **240823**: Big congratulations to our senior Ph.D. student, Mostofa Rafid Uddin, for receiving the Joint CMU-Pitt Ph.D. Program in Computational Biology Outstanding Research Accomplishment Award!
