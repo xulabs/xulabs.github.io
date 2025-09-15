@@ -25,21 +25,7 @@ classes: wide
 
 [Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) (ECE)
 
----
 
-<h3>Research staff</h3>
-
-Zhiqian Zheng (CBD)
-
----
-
-<h3>Research assistants</h3>
-
-Xiaoyu Cao (BME)
-
-Jackson Daggett (SCS)
-
-Mia Sanborn (CBD)
 
 
 ---
