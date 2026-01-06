@@ -16,6 +16,7 @@ classes: wide
 
 [Xiaolong Wu](https://scholar.google.com/citations?hl=en&user=hKbbxH0AAAAJ)
 
+[Yang Liu](https://scholar.google.com/citations?user=VPs7nXkAAAAJ)
 
 ---
 
@@ -25,7 +26,7 @@ classes: wide
 
 [Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) (ECE)
 
-
+[Seonghui Min](https://scholar.google.com/citations?user=iBOHogcAAAAJ) (CBD)
 
 
 ---
