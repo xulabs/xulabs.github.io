@@ -10,6 +10,7 @@ layout: splash
 [Citations](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) in latex bib format. The source code in [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md).
 
 ### Selected publications
+1. [AS,CV] Multi-Object System Identification from Videos. International Conference on Learning Representations (ICLR) 2026. [paper](https://openreview.net/forum?id=0ylAe3Orfy)
 1. [ET, CV] Unsupervised Identification of Protein Compositions and Conformations via Implicit Content-Transformation Disentanglement. International Conference on Computer Vision (ICCV) 2025. 
 1. [AS] Toward Material-Agnostic System Identification from Videos. International Conference on Computer Vision (ICCV) 2025. 
 1. [ET] AITom: AI-guided cryo-electron tomography image analyses toolkit. Journal of Structural Biology. [doi:10.1016/j.jsb.2025.108207](https://doi.org/10.1016/j.jsb.2025.108207)
