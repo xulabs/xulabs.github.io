@@ -14,17 +14,17 @@ classes: wide
 
 [Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
 
+[Mostofa Rafid Uddin](https://duranrafid.github.io)
+
 [Xiaolong Wu](https://scholar.google.com/citations?hl=en&user=hKbbxH0AAAAJ)
 
 [Yang Liu](https://scholar.google.com/citations?user=VPs7nXkAAAAJ)
 
+[Yuanhao Wang](https://yuanhaowang1213.github.io)
+
 ---
 
 <h3>PhD students</h3>
-
-[Mostofa Rafid Uddin](https://duranrafid.github.io) (CBD)
-
-[Yizhou Zhao](https://scholar.google.com/citations?user=nVKRaf4AAAAJ&hl=en&sortby=pubdate) (ECE)
 
 [Seonghui Min](https://scholar.google.com/citations?user=iBOHogcAAAAJ) (CBD)
 
