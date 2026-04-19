@@ -13,6 +13,8 @@ The figure above shows extracted structural patterns in cellular tomograms: (a) 
 
 ## Embodied AI for Autonomous Experimentation
 
+The integration of autonomous experimentation and high-throughput robotics is fundamentally transforming the scientific landscape by enabling precise, reproducible, and massive-scale investigations while drastically reducing resource consumption. To realize the full potential of these automated systems, we are actively exploring solutions for closed-loop Embodied AI and robotic platforms with real-time perception and autonomous decision-making capabilities. By coupling autonomous steering engines and active learning methodologies with the continuous generation of interactable 3D digital twins, we aim at establishing rigorous, predictive solutions where automated systems can visually observe physical phenomena, exhaustively simulate potential interactions, and autonomously execute the optimal experimental trajectory.
+
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-top: 30px;">
   <iframe 
     src="https://www.youtube.com/embed/t3bJR-mAqIo?si=VAxZ4X6a5fsZEvm8" 
@@ -22,3 +24,5 @@ The figure above shows extracted structural patterns in cellular tomograms: (a) 
     allowfullscreen>
   </iframe>
 </div>
+
+The video above is a demo of our ongoging project on robot manipulation for lab automation.
