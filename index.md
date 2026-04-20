@@ -8,7 +8,7 @@ layout: splash
 ## Cryo-Electron Tomography Analysis 
 
 The cell is the basic structural, functional, and biological unit of all known living organisms. It is a tiny but very complicated "living machine" that can do a lot of amazing things. However, so far we have very limited knowledge about its complicated molecular machinery due to lack of high resolution and systems level data of individual cells. Cellular Cryo-Electron Tomography is an emerging imaging technique that captures the 3D electron density distribution of cells at sub-molecular resolution and at close-to-native state. Our lab aims to use cutting-edge computation, mathematics and artificial intelligence techniques, particularly those related to computer vision, machine learning and big data, to build structural organization models using such imaging data. Such modeling would be useful for getting new insights into the machinery of cellular systems. 
-<img src="https://github.com/user-attachments/assets/735772ec-00f7-4dbb-abef-965839b2eddb" alt="Structural patterns in cellular tomograms" style="display:block; margin:auto;"/>
+<img src="https://github.com/user-attachments/assets/8bce05aa-7cb5-40f8-b50d-05b97a7b0e13" alt="Structural patterns in cellular tomograms" style="display:block; margin:auto;"/>
 
 The figure above shows extracted structural patterns in cellular tomograms. For details, see [our paper](https://doi.org/10.1073/pnas.2213149120) published at PNAS. 
 
