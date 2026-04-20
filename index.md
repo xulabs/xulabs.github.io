@@ -25,4 +25,4 @@ The integration of autonomous experimentation and high-throughput robotics is fu
   </iframe>
 </div>
 
-The video above is a demo of our ongoging project on robot manipulation for lab automation.
+The video above is a demo of our ongoing project on constructing a robot system for lab automation. In this demo, our [MRSD](https://mrsd.ri.cmu.edu) team has adapted a robot arm to transport a plate between an automatic liquid handler and shaker. The liquid handler and shaker are from our [MSAS](https://www.cmu.edu/cbd/education/msas.html) program. 
