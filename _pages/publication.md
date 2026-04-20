@@ -13,21 +13,21 @@ layout: splash
 1. [ET] Unsupervised Multi-Scale Segmentation of 3D Subcellular World with Stable Diffusion Foundation Model. IEEE conference on computer vision and pattern recognition (CVPR) 2026. Highlight
 1. [CV] MedLIME: A Distribution-Aligned and Evidence-Supported Framework for Medical Saliency Explanations. IEEE conference on computer vision and pattern recognition (CVPR) 2026. Highlight
 1. [OM] MicroFM: Physics-Guided Flow Matching for Isotropic Microscopy Reconstruction. IEEE conference on computer vision and pattern recognition (CVPR) 2026. 
-1. [AS,CV] Multi-Object System Identification from Videos. International Conference on Learning Representations (ICLR) 2026. [paper](https://openreview.net/forum?id=0ylAe3Orfy)
+1. [AE,CV] Multi-Object System Identification from Videos. International Conference on Learning Representations (ICLR) 2026. [paper](https://openreview.net/forum?id=0ylAe3Orfy)
 1. [ET, CV] Unsupervised Identification of Protein Compositions and Conformations via Implicit Content-Transformation Disentanglement. International Conference on Computer Vision (ICCV) 2025. 
-1. [AS] Toward Material-Agnostic System Identification from Videos. International Conference on Computer Vision (ICCV) 2025.
+1. [AE] Toward Material-Agnostic System Identification from Videos. International Conference on Computer Vision (ICCV) 2025.
 1. [CV] Visual instance-aware prompt tuning. ACM International Conference on Multimedia 2025. [doi:10.1145/3746027.3754858](https://doi.org/10.1145/3746027.3754858)
 1. [ET] AITom: AI-guided cryo-electron tomography image analyses toolkit. Journal of Structural Biology. [doi:10.1016/j.jsb.2025.108207](https://doi.org/10.1016/j.jsb.2025.108207)
 1. [CV] DiffCAM: Data-Driven Saliency Maps by Capturing Feature Differences. IEEE conference on computer vision and pattern recognition (CVPR) 2025. Highlight, Acceptance rate 3.7%
 1. [ET] BOE-ViT: Boosting Orientation Estimation with Equivariance in Self-Supervised 3D Subtomogram Alignment. IEEE conference on computer vision and pattern recognition (CVPR) 2025. 
-1. [AS, CV] Deep Video Anomaly Detection in Automated Laboratory Setting. Expert Systems With Applications. [doi:10.1016/j.eswa.2025.126581](https://doi.org/10.1016/j.eswa.2025.126581)
+1. [AE, CV] Deep Video Anomaly Detection in Automated Laboratory Setting. Expert Systems With Applications. [doi:10.1016/j.eswa.2025.126581](https://doi.org/10.1016/j.eswa.2025.126581)
 1. [CV] Metric from Human: Zero-shot Monocular Metric Depth Estimation via Test-time Adaptation. NeurIPS 2024. [paper](https://openreview.net/pdf?id=GA8TVtxudf)
 1. [ET] CryoSAM: Training-free CryoET Tomogram Segmentation with Foundation Models. Medical Image Computing & Computer Assisted Intervention (MICCAI) 2024. [doi:10.48550/arXiv.2407.06833](https://doi.org/10.48550/arXiv.2407.06833)
-1. [AS,CV] Cross-Domain Learning for Video Anomaly Detection with Limited Supervision. European Conference on Computer Vision (ECCV) 2024. [doi:10.1007/978-3-031-73404-5_27](https://doi.org/10.1007/978-3-031-73404-5_27) [doi:10.48550/arXiv.2408.05191](https://doi.org/10.48550/arXiv.2408.05191)
+1. [AE,CV] Cross-Domain Learning for Video Anomaly Detection with Limited Supervision. European Conference on Computer Vision (ECCV) 2024. [doi:10.1007/978-3-031-73404-5_27](https://doi.org/10.1007/978-3-031-73404-5_27) [doi:10.48550/arXiv.2408.05191](https://doi.org/10.48550/arXiv.2408.05191)
 1. [ET] DUAL: deep unsupervised simultaneous simulation and denoising for cryo-electron tomography. bioRxiv. [doi:10.1101/2024.03.02.583135](https://doi.org/10.1101/2024.03.02.583135)
 1. [CV] One-Prompt to Segment All Medical Images. IEEE conference on computer vision and pattern recognition (CVPR) 2024. [doi:10.48550/arXiv.2305.10300](https://doi.org/10.48550/arXiv.2305.10300)
 1. [ET] High-throughput cryo-ET structural pattern mining by deep unsupervised clustering. Proceedings of the National Academy of Sciences. [doi:10.1073/pnas.2213149120](https://www.pnas.org/doi/10.1073/pnas.2213149120)
-1. [AS,CV] Detecting Anomalies from Liquid Transfer Videos in Automated Laboratory Setting. Frontiers in Molecular Biosciences. [doi:10.3389/fmolb.2023.1147514](https://doi.org/10.3389/fmolb.2023.1147514)
+1. [AE,CV] Detecting Anomalies from Liquid Transfer Videos in Automated Laboratory Setting. Frontiers in Molecular Biosciences. [doi:10.3389/fmolb.2023.1147514](https://doi.org/10.3389/fmolb.2023.1147514)
 1. [CV,ML,ET,EM] Harmony: A Generic Unsupervised Approach for Disentangling Semantic Content from Parameterized Transformations. IEEE conference on computer vision and pattern recognition (CVPR 2022). [Paper](https://openaccess.thecvf.com/content/CVPR2022/html/Uddin_Harmony_A_Generic_Unsupervised_Approach_for_Disentangling_Semantic_Content_From_CVPR_2022_paper.html)
 1. [ML] Boosting Active Learning via Improving Test Performance. AAAI Conference on Artificial Intelligence (AAAI) 2022. [arXiv:2112.05683](https://arxiv.org/abs/2112.05683)
 1. [CV,ET] End-to-end robust joint unsupervised image alignment and clustering. International Conference on Computer Vision (ICCV 2021). [doi:10.1109/iccv48922.2021.00383](https://doi.org/10.1109/iccv48922.2021.00383)
@@ -49,7 +49,7 @@ Categories:
 
 * ET: Cryo-Electron Tomography
 * EM: Cryo-Electron Microscopy
-* AS: Automated Science
+* AE: Autonomous Experimentation
 * CV: Computer Vision
 * ML: Machine Learning
 * OM: Optical Microscopy
