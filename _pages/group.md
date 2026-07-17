@@ -14,8 +14,6 @@ classes: wide
 
 [Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)
 
-[Mostofa Rafid Uddin](https://duranrafid.github.io)
-
 [Xiaolong Wu](https://scholar.google.com/citations?hl=en&user=hKbbxH0AAAAJ)
 
 [Yang Liu](https://scholar.google.com/citations?user=VPs7nXkAAAAJ)
@@ -38,6 +36,8 @@ classes: wide
 ---
 
 <h3>Alumni</h3>
+
+**[Mostofa Rafid Uddin](https://duranrafid.github.io) (2020-2026, Former PhD Student, CPCB, CBD, CMU. Current Position: Research Engineer at Google)**
 
 [Xueying Zhan](https://sinezhan.github.io/index.html) (2023-2025, Former Postdoctoral Associate, CMU)
 
