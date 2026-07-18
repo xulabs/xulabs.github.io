@@ -37,7 +37,7 @@ classes: wide
 
 <h3>Alumni</h3>
 
-**[Mostofa Rafid Uddin](https://duranrafid.github.io) (2020-2026, Former PhD Student, CPCB, CBD, CMU. Current Position: Research Engineer at Google)**
+**[Mostofa Rafid Uddin](https://duranrafid.github.io) (2021-2026, Former PhD Student, CPCB, CBD, CMU. Current Position: Research Engineer at Google)**
 
 [Xueying Zhan](https://sinezhan.github.io/index.html) (2023-2025, Former Postdoctoral Associate, CMU)
 
