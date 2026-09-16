@@ -10,9 +10,12 @@ layout: splash
 [Citations](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) in latex bib format. The source code in [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md).
 
 ### Selected publications
-1. [ET] Unsupervised Multi-Scale Segmentation of 3D Subcellular World with Stable Diffusion Foundation Model. IEEE conference on computer vision and pattern recognition (CVPR) 2026. Highlight
-1. [CV] MedLIME: A Distribution-Aligned and Evidence-Supported Framework for Medical Saliency Explanations. IEEE conference on computer vision and pattern recognition (CVPR) 2026. Highlight
-1. [OM] MicroFM: Physics-Guided Flow Matching for Isotropic Microscopy Reconstruction. IEEE conference on computer vision and pattern recognition (CVPR) 2026. 
+1. [AE] LiquidLab: Benchmarking Robotic Automation for Liquid Operation in Laboratory. Conference on Robot Learning (CoRL) 2026.
+1. [ET] TopoFuse: Topology-Aware Tri-Planar Fusion for 3D Cryo-Electron Tomography Segmentation. European Conference on Computer Vision (ECCV) 2026 [paper](https://eccv.ecva.net/virtual/2026/poster/4153)
+1. [AE] O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning. European Conference on Computer Vision (ECCV) 2026 [paper](https://o-vad.github.io)
+1. [ET] Unsupervised Multi-Scale Segmentation of 3D Subcellular World with Stable Diffusion Foundation Model. IEEE conference on computer vision and pattern recognition (CVPR Highlight) 2026. [paper](https://cvpr.thecvf.com/virtual/2026/poster/39706)
+1. [CV] MedLIME: A Distribution-Aligned and Evidence-Supported Framework for Medical Saliency Explanations. IEEE conference on computer vision and pattern recognition (CVPR Highlight) 2026. [paper](https://cvpr.thecvf.com/virtual/2026/poster/37424)
+1. [OM] MicroFM: Physics-Guided Flow Matching for Isotropic Microscopy Reconstruction. IEEE conference on computer vision and pattern recognition (CVPR) 2026. [paper](https://cvpr.thecvf.com/virtual/2026/poster/40244)
 1. [AE,CV] Multi-Object System Identification from Videos. International Conference on Learning Representations (ICLR) 2026. [paper](https://openreview.net/forum?id=0ylAe3Orfy)
 1. [ET, CV] Unsupervised Identification of Protein Compositions and Conformations via Implicit Content-Transformation Disentanglement. International Conference on Computer Vision (ICCV) 2025. 
 1. [AE] Toward Material-Agnostic System Identification from Videos. International Conference on Computer Vision (ICCV) 2025.
