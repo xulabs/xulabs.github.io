@@ -10,6 +10,8 @@ layout: splash
 [Citations](https://raw.githubusercontent.com/xulabs/xulabs.github.io/master/doc/reference_xulab.bib) in latex bib format. The source code in [AITom](https://github.com/xulabs/aitom) [publication list](https://github.com/xulabs/aitom/blob/master/doc/publications.md).
 
 ### Selected publications
+1. [ET] DUIL: Deep Unsupervised Inverse Learning for in situ Macromolecular Morphology Identification. NeurIPS 2026
+1. [ML] The Unembedding Bottleneck: A Mechanistic Analysis of Single Digit Counting in LLMs. NeurIPS 2026
 1. [AE] LiquidLab: Benchmarking Robotic Automation for Liquid Operation in Laboratory. Conference on Robot Learning (CoRL) 2026.
 1. [ET] TopoFuse: Topology-Aware Tri-Planar Fusion for 3D Cryo-Electron Tomography Segmentation. European Conference on Computer Vision (ECCV) 2026 [paper](https://eccv.ecva.net/virtual/2026/poster/4153)
 1. [AE] O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning. European Conference on Computer Vision (ECCV) 2026 [paper](https://o-vad.github.io)
