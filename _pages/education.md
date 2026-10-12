@@ -5,4 +5,4 @@ layout: splash
 ---
 ## Education
 
-Our open source education platform can be found at [Xu Lab Edu](https://github.com/xulabs/edu)
+Our open source education portal can be found at [here](https://github.com/xulabs/edu)
