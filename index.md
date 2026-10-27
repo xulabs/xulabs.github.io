@@ -17,13 +17,7 @@ The figure above shows extracted structural patterns in cellular tomograms. For 
 The integration of autonomous experimentation and high-throughput robotics is fundamentally transforming the scientific landscape by enabling precise, reproducible, and massive-scale investigations while drastically reducing resource consumption. To realize the full potential of these autonomous systems, we are actively exploring solutions for closed-loop Embodied AI and robotic platforms with real-time perception and autonomous decision-making capabilities. By coupling autonomous steering engines and active learning methodologies with the continuous generation of interactable 3D digital twins, we aim to establish rigorous, predictive solutions that enable autonomous systems to visually observe physical phenomena, simulate potential interactions, and autonomously execute the optimal experimental trajectory.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-top: 30px;">
-  <iframe 
-    src="https://www.youtube.com/embed/2bIwrpye3XE?si=Hd3S7M-_JoEagYeM" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+ <iframe width="1280" height="720" src="https://www.youtube.com/embed/2bIwrpye3XE" title="Robot manipulation for autonomous experimentation demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 The video above is a demo of our ongoing project on constructing a robot system for autonomous experimentation. In this demo, our [MRSD](https://mrsd.ri.cmu.edu) team has adapted a robot arm to transport a plate between an automatic liquid handler and shaker. The liquid handler and shaker are from our [MSAS](https://www.cmu.edu/cbd/education/msas.html) program. 
