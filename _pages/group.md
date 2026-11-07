@@ -18,6 +18,8 @@ classes: wide
 
 [Yuanhao Wang](https://yuanhaowang1213.github.io)
 
+Jingjing Li
+
 ---
 
 <h3>PhD students</h3>
